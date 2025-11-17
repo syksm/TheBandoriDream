@@ -1,0 +1,25 @@
+spriteTypes = {
+
+	
+spriteType = {
+	name = "GFX_bang_quanguo_xunyan_1"
+	texturefile = "gfx\texticons\banners\decisions\bang_quanguo_xunyan_1.png"
+	legacy_lazy_load = no
+    }
+spriteType = {
+	name = "GFX_bang_ppp_kiraism"
+	texturefile = "gfx\texticons\banners\ideology\bang_ppp_kiraism.png"
+	legacy_lazy_load = no
+    }
+spriteType = {
+	name = "GFX_idea_kiradoki_picture"
+	texturefile = "gfx\event_pictures\idea_kiradoki_picture.png"
+	legacy_lazy_load = no
+    }
+spriteType = {
+	name = "GFX_bang_osaka_kansai_1"
+	texturefile = "gfx\texticons\banners\decisions\bang_osaka_kansai_1.png"
+	legacy_lazy_load = no
+	}
+}
+

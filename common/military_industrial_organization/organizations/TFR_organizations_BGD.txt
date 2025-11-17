@@ -1,0 +1,170 @@
+JAP_howa_organization = {
+	include = generic_infantry_equipment_organization
+	icon = GFX_idea_JAP_howa
+	allowed = {
+		OR = {
+			tag = JAP
+			tag = BGD
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		FROM = {
+			NOT = {
+				has_country_flag = JAP_howa_organization_blocked
+			}
+		}
+	}
+}
+
+JAP_sumitomo_organization = {
+	include = generic_task_force_ship_organization
+	icon = GFX_idea_JAP_sumitomo
+	allowed = {
+		OR = {
+			tag = JAP
+			tag = BGD
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		FROM = {
+			NOT = {
+				has_country_flag = JAP_sumitomo_organization_blocked
+			}
+		}
+	}
+}
+
+JAP_komatsu_organization = {
+	include = generic_artillery_organization
+	icon = GFX_idea_JAP_komatsu
+	allowed = {
+		OR = {
+			tag = JAP
+			tag = BGD
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		FROM = {
+			NOT = {
+				has_country_flag = JAP_komatsu_organization_blocked
+			}
+		}
+	}
+}
+
+JAP_toyota_organization = {
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_JAP_toyota
+	allowed = {
+		OR = {
+			tag = JAP
+			tag = BGD
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		FROM = {
+			NOT = {
+				has_country_flag = JAP_toyota_organization_blocked
+			}
+		}
+	}
+}
+
+JAP_jsw_organization = {
+	include = generic_tank_organization
+	icon = GFX_idea_JAP_jsw
+	allowed = {
+		OR = {
+			tag = JAP
+			tag = BGD
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		FROM = {
+			NOT = {
+				has_country_flag = JAP_jsw_organization_blocked
+			}
+		}
+	}
+}
+
+JAP_ihi_organization = {
+	include = generic_escort_ship_organization
+	icon = GFX_idea_JAP_ihi
+	allowed = {
+		OR = {
+			tag = JAP
+			tag = BGD
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		FROM = {
+			NOT = {
+				has_country_flag = JAP_ihi_organization_blocked
+			}
+		}
+	}
+}
+
+JAP_mitsubishi_organization = {
+	include = generic_tank_refurbishment_plant_organization
+	icon = GFX_idea_JAP_mitsubishi
+	allowed = {
+		OR = {
+			tag = JAP
+			tag = BGD
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		FROM = {
+			NOT = {
+				has_country_flag = JAP_mitsubishi_organization_blocked
+			}
+		}
+	}
+}
+
+JAP_kawasaki_organization = {
+	include = generic_light_aircraft_organization
+	icon = GFX_idea_JAP_kawasaki
+	allowed = {
+		OR = {
+			tag = JAP
+			tag = BGD
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		FROM = {
+			NOT = {
+				has_country_flag = JAP_kawasaki_organization_blocked
+			}
+		}
+	}
+}
+
+JAP_subaru_organization = {
+	include = generic_medium_aircraft_organization
+	icon = GFX_idea_JAP_subaru
+	allowed = {
+		OR = {
+			tag = JAP
+			tag = BGD
+		}
+		has_dlc = "Arms Against Tyranny"
+	}
+	available = {
+		FROM = {
+			NOT = {
+				has_country_flag = JAP_subaru_organization_blocked
+			}
+		}
+	}
+}

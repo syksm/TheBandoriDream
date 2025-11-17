@@ -1,0 +1,907 @@
+ideas = {
+
+	country = {
+		BGD_junshi_xiaoji_zhuyi = {
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+                army_attack_factor = -0.3
+                breakthrough_factor = -0.2
+                army_defence_factor = 0.3
+				army_core_defence_factor = 0.2
+				max_dig_in_factor = 0.35
+				army_strength_factor = 0.15
+                war_support_factor = -0.5
+                stability_factor = 0.25
+                stability_weekly = 0.003
+                consumer_goods_factor = -0.1
+                expense_growth_factor = -0.15
+				industrial_capacity_factory = -0.15
+				military_development_monthly = 0.015
+				battalion_upkeep_factor = -0.2
+				aircraft_upkeep_factor = -0.2
+				ship_upkeep_factor = -0.2
+			}
+		}
+		BGD_liberty_equality_fraternity = {
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_stability_factor = 0.25
+				defensive_war_stability_factor = 0.25
+                war_support_factor = 0.05
+				war_support_weekly = 0.001
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_org_regain = 0.1
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_0 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_1 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.05
+				social_democrat_drift = 0.01
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_2 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				personal_value_factor = 0.03
+				political_power_factor = 0.02
+				social_democrat_drift = 0.02
+				poverty_development_monthly = 0.005
+				society_development_monthly = 0.005
+				personal_expense_factor = 0.05
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_3 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.002
+				party_popularity_stability_factor = 0.05
+				political_power_cost = 0.15
+				society_development_monthly = 0.005
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_4 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				poverty_development_monthly = 0.005
+				personal_expense_factor = 0.1
+				consumer_goods_factor = 0.05
+				stability_weekly = 0.003
+				party_popularity_stability_factor = 0.05
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_5 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.03
+				political_power_gain = 0.1
+				production_speed_buildings_factor = 0.1
+				production_speed_infrastructure_factor = 0.15
+				production_speed_industrial_complex_factor = 0.1
+				expense_growth_factor = 0.1
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_6 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				personal_expense_factor = -0.15
+				expense_growth_factor = -0.05
+				consumer_goods_factor = -0.1
+				stability_factor = -0.1
+				poverty_development_monthly = -0.01
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_7 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				personal_expense_factor = 0.15
+				consumer_goods_factor = 0.1
+				stability_factor = 0.1
+				party_popularity_stability_factor = 0.06
+				poverty_development_monthly = 0.015
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_8 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_factory_max_efficiency_factor = 0.05
+				party_popularity_stability_factor = 0.04
+				poverty_development_monthly = 0.01
+				society_development_monthly = 0.005
+				personal_value_factor = 0.05
+				business_value_factor = 0.05
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_9 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				personal_expense_factor = 0.2
+				consumer_goods_factor = 0.15
+				stability_factor = 0.1
+				stability_weekly = 0.003
+				party_popularity_stability_factor = 0.1
+				social_democrat_drift = 0.03
+				production_factory_max_efficiency_factor = 0.04
+				poverty_development_monthly = 0.02
+				personal_value_factor = 0.07
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_10 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				expense_growth_factor = -0.2
+				inflation_monthly = -0.002
+				consumer_goods_factor = -0.1
+				personal_expense_factor = -0.1
+				poverty_development_monthly = -0.01
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_11 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				income_growth_factor = 0.1
+				inflation_monthly = 0.001
+				personal_value_factor = 0.03
+				business_value_factor = 0.02
+				poverty_development_monthly = 0.005
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_12 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				production_speed_buildings_factor = 0.05
+				business_value_factor = 0.03
+				society_development_monthly = 0.01
+				academic_development_monthly = 0.01
+				consumer_goods_factor = 0.07
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_13 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.15
+				political_power_factor = 0.05
+				expense_growth_factor = 0.18
+				consumer_goods_factor = 0.12
+				production_speed_buildings_factor = 0.1
+				party_popularity_stability_factor = 0.05
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_14 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				business_value_factor = 0.1
+				personal_value_factor = 0.05
+				expense_growth_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.1
+				poverty_development_monthly = 0.01
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_15 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				business_value_factor = -0.04
+				stability_factor = 0.1
+				party_popularity_stability_factor = 0.05
+				consumer_goods_factor = -0.06
+				poverty_development_monthly = 0.015
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_16 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.07
+				personal_value_factor = 0.06
+				poverty_development_monthly = 0.01
+				society_development_monthly = 0.01
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_17 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				expense_growth_factor = 0.08
+				poverty_development_monthly = 0.02
+				society_development_monthly = 0.01
+				production_factory_max_efficiency_factor = 0.05
+				research_speed_factor = 0.05
+				stability_factor = 0.07
+				stability_weekly = 0.003
+				party_popularity_stability_factor = 0.05
+				social_democrat_drift = 0.05
+				personal_value_factor = 0.06
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				conscription_factor = -0.25
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_18 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				personal_value_factor = 0.05
+				expense_growth_factor = 0.1
+				consumer_goods_factor = 0.05
+				political_power_factor = 0.05
+				poverty_development_monthly = 0.015
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_19 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				social_liberal_drift = 0.03
+				stability_factor = 0.05
+				political_power_cost = 0.1
+				society_development_monthly = 0.01
+				personal_value_factor = 0.03
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_20 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				global_building_slots_factor = 0.2
+				society_development_monthly = 0.015
+				political_power_cost = 0.2
+				stability_factor = 0.1
+				income_growth_factor = -0.15
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_21 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = -0.15
+				stability_factor = 0.05
+				income_growth_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = 0.07
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_22 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.15
+				global_building_slots_factor = 0.15
+				income_growth_factor = -0.1
+				consumer_goods_factor = -0.1
+				society_development_monthly = 0.01
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_23 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.25
+				stability_weekly = 0.003
+				society_development_monthly = 0.02
+				poverty_development_monthly = 0.005
+				academic_development_monthly = 0.005
+				personal_value_factor = 0.1
+				social_liberal_drift = 0.02
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_24 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.15
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.08
+				society_development_monthly = 0.025
+				personal_value_factor = 0.07
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_25 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_weekly = -0.003
+				war_support_factor = -0.15
+				social_democrat_drift = 0.02
+				society_development_monthly = 0.015
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_26 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				social_liberal_drift = 0.03
+				society_development_monthly = 0.03
+				war_support_factor = -0.1
+				personal_value_factor = 0.1
+				poverty_development_monthly = 0.01
+				academic_development_monthly = 0.01
+				research_speed_factor = 0.1
+				production_factory_max_efficiency_factor = 0.03
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_27 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 0.15
+				production_speed_buildings_factor = 0.05
+				global_building_slots = 1
+				consumer_goods_factor = -0.05
+				expense_growth_factor = 0.04
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_28 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				business_value_factor = -0.07
+				consumer_goods_factor = -0.03
+				global_building_slots = 1
+				production_speed_buildings_factor = 0.03
+				personal_value_factor = 0.02
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_29 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				personal_value_factor = 0.06
+				farming_development_monthly = 0.015
+				global_building_slots = 1
+				consumer_goods_factor = -0.04
+				expense_growth_factor = 0.06
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_30 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				business_value_factor = -0.08
+				industrial_development_monthly = -0.015
+				global_building_slots = 1
+				production_speed_buildings_factor = 0.06
+				personal_value_factor = 0.03
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_31 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				farming_development_monthly = 0.01
+				industrial_development_monthly = -0.01
+				poverty_development_monthly = 0.025
+				global_building_slots = 2
+				consumer_goods_factor = -0.1
+				political_power_cost = 0.2
+				production_speed_buildings_factor = 0.1
+				expense_growth_factor = 0.1
+				business_value_factor = -0.1
+				personal_value_factor = 0.08
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_32 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.1
+				political_power_factor = 0.02
+				society_development_monthly = 0.01
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_33 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.02
+				society_development_monthly = 0.01
+				poverty_development_monthly = 0.005
+				expense_growth_factor = 0.02
+				consumer_goods_factor = 0.03
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_34 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				stability_weekly = 0.002
+				expense_growth_factor = 0.03
+				society_development_monthly = 0.015
+				poverty_development_monthly = 0.01
+				political_power_gain = 0.03
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_35 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.03
+				society_development_monthly = 0.005
+				poverty_development_monthly = 0.005
+				production_factory_max_efficiency_factor = 0.02
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		BGD_qiaokeliluo_shemin_zhuyi_36 = {
+		    name = BGD_qiaokeliluo_shemin_zhuyi_dynamic
+		   picture = jingshen_zhanwei
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				society_development_monthly = 0.01
+				production_factory_max_efficiency_factor = 0.03
+				personal_value_factor = 0.05
+				research_speed_factor = 0.08
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+    }
+}

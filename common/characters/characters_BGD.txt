@@ -1,0 +1,847 @@
+characters = {
+	BGD_kasumi_char = {
+		name = BGD_kasumi_char 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BGD/BGD_kasumi.png"
+			}
+		}
+		country_leader = {
+			ideology = kirakira_dokidoki
+			desc = BGD_KASUMI_DESC
+			traits = {
+				arisa_kuilei
+				yaoyan_xingxing	
+			}
+		}
+	}
+	BGD_arisa_char = {
+		name = BGD_arisa_char 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BGD/BGD_arisa.png"
+			}
+		}
+		country_leader = {
+			ideology = military_junta
+			desc = BGD_ARISA_DESC
+			traits = {
+				
+			}
+		}
+		country_leader = {
+			ideology = authoritarian_kiraism
+			desc = BGD_ARISA_DESC
+			traits = {
+				
+			}
+		}
+	}
+	BGD_rimi_char = {
+		name = BGD_rimi_char 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BGD/BGD_rimi.png"
+			}
+		}
+		country_leader = {
+			ideology = kirakira_dokidoki
+			desc = BGD_RIMI_DESC
+			traits = {
+				rimi_wenrou_zhiren
+			}
+		}
+	}
+	BGD_mugu_xionggui_char = {
+		name = BGD_mugu_xionggui_char
+		portraits = {
+			civilian = {
+				large = "gfx\leaders\JAP\generic\JGSDF_Generic_5.png"
+			}
+		}
+		country_leader = {
+			ideology = military_junta
+			desc = BGD_MUGU_XIONGGUI_DESC
+		}
+	}
+	BGD_lujun_bubing_char = {
+		portraits = {
+			army = {
+
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = BGD_lujun_bubing_char_army_chief
+			ledger = army
+			allowed = { 
+				original_tag = BGD
+			}
+			available = {
+				OR = {
+			        has_country_leader = {
+					    character = BGD_kasumi_char
+		            }
+					has_country_leader = {
+					    character = BGD_rimi_char
+		            }
+			    }
+			}
+			traits = {
+				bubing_zhuanjin
+			}
+			cost = 0
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	BGD_lujun_zhuangjia_char = {
+		portraits = {
+			army = {
+
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = BGD_lujun_zhuangjia_char_army_chief
+			ledger = army
+			allowed = { 
+				original_tag = BGD
+			}
+			available = {
+			    OR = {
+			        has_country_leader = {
+					    character = BGD_kasumi_char
+		            }
+					has_country_leader = {
+					    character = BGD_rimi_char
+		            }
+			    }
+			}
+			traits = {
+				zhuangjia_zhuanjin
+			}
+			cost = 0
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	BGD_haijun_shuimian_char = {
+		portraits = {
+			army = {
+
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = BGD_haijun_shuimian_char_navy_chief
+			ledger = navy
+			allowed = { 
+				original_tag = BGD
+			}
+			available = {
+			    OR = {
+			        has_country_leader = {
+					    character = BGD_kasumi_char
+		            }
+					has_country_leader = {
+					    character = BGD_rimi_char
+		            }
+			    }
+			}
+			traits = {
+				shuimian_zhuanjin
+			}
+			cost = 0
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	BGD_haijun_shuixia_char = {
+		portraits = {
+			army = {
+
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = BGD_haijun_shuixia_char_navy_chief
+			ledger = navy
+			allowed = { 
+				original_tag = BGD
+			}
+			available = {
+			    OR = {
+			        has_country_leader = {
+					    character = BGD_kasumi_char
+		            }
+					has_country_leader = {
+					    character = BGD_rimi_char
+		            }
+			    }
+			}
+			traits = {
+				shuixia_zhuanjin
+			}
+			cost = 0
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	BGD_kongjun_zhikong_char = {
+		portraits = {
+			army = {
+
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = BGD_kongjun_zhikong_char_air_chief
+			ledger = air
+			allowed = { 
+				original_tag = BGD
+			}
+			available = {
+			    OR = {
+			        has_country_leader = {
+					    character = BGD_kasumi_char
+		            }
+					has_country_leader = {
+					    character = BGD_rimi_char
+		            }
+			    }
+			}
+			traits = {
+				zhikong_zhuanjin
+			}
+			cost = 0
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	BGD_kongjun_dimian_char = {
+		portraits = {
+			army = {
+
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = BGD_kongjun_dimian_char_air_chief
+			ledger = air
+			allowed = { 
+				original_tag = BGD
+			}
+			available = {
+			    OR = {
+			        has_country_leader = {
+					    character = BGD_kasumi_char
+		            }
+					has_country_leader = {
+					    character = BGD_rimi_char
+		            }
+			    }
+			}
+			traits = {
+				dimian_zhuanjin
+			}
+			cost = 0
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	BGD_yukina_char = {
+		name = BGD_yukina_char
+		portraits = {
+			army = {
+				small = "gfx\interface\ideas\BGD\ministers\BGD_yukina_1.png"
+			}
+			army = {
+				large = "gfx\leaders\BGD\generals\BGD_yukina_2.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BGD_yukina_char_high_command
+			ledger = army
+			allowed = { 
+				original_tag = BGD
+			}
+			available = {
+			    OR = {
+			        has_country_leader = {
+					    character = BGD_kasumi_char
+		            }
+					has_country_leader = {
+					    character = BGD_rimi_char
+		            }
+			    }
+			}
+			traits = {
+				tezhong_aihao
+			}
+			cost = 0
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = {
+				shaonv_yvgangtie
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	BGD_lisa_char = {
+		name = BGD_lisa_char 
+		portraits = {
+			army = {
+				small = "gfx\interface\ideas\BGD\ministers\BGD_lisa_1.png"
+			}
+			army = {
+				large = "gfx\leaders\BGD\generals\BGD_lisa_2.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BGD_lisa_char_high_command
+			ledger = army
+			allowed = { 
+				original_tag = BGD
+			}
+			available = {
+			    OR = {
+			        has_country_leader = {
+					    character = BGD_kasumi_char
+		            }
+					has_country_leader = {
+					    character = BGD_rimi_char
+		            }
+			    }
+			}
+			traits = {
+				houqin_guanzhu
+			}
+			cost = 0
+			ai_will_do = {
+				factor = 1
+			}
+			desc = BGD_LISA_DESC
+		}
+		corps_commander = {
+			traits = {
+				shaonv_yvgangtie
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	BGD_sayo_char = {
+		name = BGD_sayo_char 
+		portraits = {
+			army = {
+				small = "gfx\interface\ideas\BGD\ministers\BGD_sayo_1.png"
+			}
+			army = {
+				large = "gfx\leaders\BGD\generals\BGD_sayo_2.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BGD_sayo_char_high_command
+			ledger = army
+			allowed = { 
+				original_tag = BGD
+			}
+			available = {
+			    OR = {
+			        has_country_leader = {
+					    character = BGD_kasumi_char
+		            }
+					has_country_leader = {
+					    character = BGD_rimi_char
+		            }
+			    }
+			}
+			traits = {
+				lianxi_yanchu
+			}
+			cost = 0
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		corps_commander = {
+			traits = {
+				shaonv_yvgangtie
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	BGD_ako_char = {
+		name = BGD_ako_char 
+		portraits = {
+			army = {
+				small = "gfx\interface\ideas\BGD\ministers\BGD_ako_1.png"
+			}
+			army = {
+				large = "gfx\leaders\BGD\generals\BGD_ako_2.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BGD_ako_char_high_command
+			ledger = air
+			allowed = { 
+				original_tag = BGD
+			}
+			available = {
+			    OR = {
+			        has_country_leader = {
+					    character = BGD_kasumi_char
+		            }
+					has_country_leader = {
+					    character = BGD_rimi_char
+		            }
+			    }
+			}
+			traits = {
+				tiankong_moji
+			}
+			cost = 0
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		corps_commander = {
+			traits = {
+				shaonv_yvgangtie
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	BGD_rinko_char = {
+		name = BGD_rinko_char 
+		portraits = {
+			army = {
+				small = "gfx\interface\ideas\BGD\ministers\BGD_rinko_1.png"
+			}
+			army = {
+				large = "gfx\leaders\BGD\generals\BGD_rinko_2.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BGD_rinko_char_high_command
+			ledger = navy
+			allowed = { 
+				original_tag = BGD
+			}
+			available = {
+			    OR = {
+			        has_country_leader = {
+					    character = BGD_kasumi_char
+		            }
+					has_country_leader = {
+					    character = BGD_rimi_char
+		            }
+			    }
+			}
+			traits = {
+				chenmo_jianpanshou
+			}
+			cost = 0
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		corps_commander = {
+			traits = {
+				shaonv_yvgangtie
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	BGD_chuchu_char = {
+		name = BGD_chuchu_char 
+		portraits = {
+			army = {
+				small = "gfx\interface\ideas\BGD\ministers\BGD_chuchu_1.png"
+			}
+			army = {
+				large = "gfx\leaders\BGD\generals\BGD_chuchu_2.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BGD_chuchu_char_high_command
+			ledger = army
+			allowed = { 
+				original_tag = BGD
+			}
+			available = {
+			    OR = {
+			        has_country_leader = {
+					    character = BGD_kasumi_char
+		            }
+					has_country_leader = {
+					    character = BGD_rimi_char
+		            }
+			    }
+			}
+			traits = {
+				niurougan_aihaozhe
+			}
+			cost = 0
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		field_marshal = {
+			traits = {
+				shaonv_yvgangtie
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	BGD_masking_char = {
+		name = BGD_masking_char 
+		portraits = {
+			army = {
+				small = "gfx\interface\ideas\BGD\ministers\BGD_masking_1.png"
+			}
+			army = {
+				large = "gfx\leaders\BGD\generals\BGD_masking_2.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BGD_masking_char_high_command
+			ledger = army
+			allowed = { 
+				original_tag = BGD
+			}
+			available = {
+			    OR = {
+			        has_country_leader = {
+					    character = BGD_kasumi_char
+		            }
+					has_country_leader = {
+					    character = BGD_rimi_char
+		            }
+			    }
+			}
+			traits = {
+				kuang_quan
+			}
+			cost = 0
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		corps_commander = {
+			traits = {
+				shaonv_yvgangtie
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	BGD_lock_char = {
+		name = BGD_lock_char 
+		portraits = {
+			army = {
+				small = "gfx\interface\ideas\BGD\ministers\BGD_lock_1.png"
+			}
+			army = {
+				large = "gfx\leaders\BGD\generals\BGD_lock_2.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BGD_lock_char_high_command
+			ledger = army
+			allowed = { 
+				original_tag = BGD
+			}
+			available = {
+			    OR = {
+			        has_country_leader = {
+					    character = BGD_kasumi_char
+		            }
+					has_country_leader = {
+					    character = BGD_rimi_char
+		            }
+			    }
+			}
+			traits = {
+				zhumeng_zhiren
+			}
+			cost = 0
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		corps_commander = {
+			traits = {
+				shaonv_yvgangtie
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	BGD_layer_char = {
+		name = BGD_layer_char 
+		portraits = {
+			army = {
+				small = "gfx\interface\ideas\BGD\ministers\BGD_layer_1.png"
+			}
+			army = {
+				large = "gfx\leaders\BGD\generals\BGD_layer_2.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BGD_layer_char_high_command
+			ledger = air
+			allowed = { 
+				original_tag = BGD
+			}
+			available = {
+			    OR = {
+			        has_country_leader = {
+					    character = BGD_kasumi_char
+		            }
+					has_country_leader = {
+					    character = BGD_rimi_char
+		            }
+			    }
+			}
+			traits = {
+				yuedui_zhongjian
+			}
+			cost = 0
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		corps_commander = {
+			traits = {
+				shaonv_yvgangtie
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	BGD_pareo_char = {
+		name = BGD_pareo_char 
+		portraits = {
+			army = {
+				small = "gfx\interface\ideas\BGD\ministers\BGD_pareo_1.png"
+			}
+			army = {
+				large = "gfx\leaders\BGD\generals\BGD_pareo_2.png"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BGD_pareo_char_high_command
+			ledger = navy
+			allowed = { 
+				original_tag = BGD
+			}
+			available = {
+			    OR = {
+			        has_country_leader = {
+					    character = BGD_kasumi_char
+		            }
+					has_country_leader = {
+					    character = BGD_rimi_char
+		            }
+			    }
+			}
+			traits = {
+				jinxin_jinli
+			}
+			cost = 0
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		corps_commander = {
+			traits = {
+				shaonv_yvgangtie
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	BGD_ishiba_shigeru = {
+		name = BGD_ishiba_shigeru
+		portraits = {
+			civilian = {
+				large = "gfx\texticons\HoG\JAP\JAP_Shigeru_Ishiba.png"
+			}
+		}
+		country_leader = {
+			ideology = right_centrist
+			traits = {
+				
+			}
+		}
+		country_leader = {
+			ideology = ultra_conservatism
+			traits = {
+				
+			}
+		}
+	}
+	BGD_edano_yukio = {
+		name = BGD_edano_yukio
+		portraits = {
+			civilian = {
+				large = "gfx\texticons\HoG\JAP\JAP_yukio_edano.png"
+			}
+		}
+		country_leader = {
+			ideology = reformist_socialism
+			traits = {
+				edano_ziyouzuoyi_dizhu
+			}
+		}
+	}
+	BGD_tamaki_yuichiro = {
+		name = BGD_tamaki_yuichiro
+		portraits = {
+			
+		}
+		country_leader = {
+			ideology = right_centrist
+			traits = {
+				
+			}
+		}
+		country_leader = {
+			ideology = ultra_conservatism
+			traits = {
+				
+			}
+		}
+	}
+	BGD_fukushima_mizuho = {
+		name = BGD_fukushima_mizuho
+		portraits = {
+			
+		}
+		country_leader = {
+			ideology = liberal_socialism
+			traits = {
+				
+			}
+		}
+	}
+	BGD_shii_kazuo = {
+		name = BGD_shii_kazuo
+		portraits = {
+			
+		}
+		country_leader = {
+			ideology = marxism_leninism
+			traits = {
+				
+			}
+		}
+	}
+	BGD_baba_nobuyuki = {
+		name = BGD_baba_nobuyuki
+		portraits = {
+			
+		}
+		country_leader = {
+			ideology = civic_nationalism
+			traits = {
+				
+			}
+		}
+	}
+	BGD_kamiya_sohei = {
+		name = BGD_kamiya_sohei
+		portraits = {
+			
+		}
+		country_leader = {
+			ideology = ethno_nationalism 
+			traits = {
+				
+			}
+		}
+	}
+	BGD_yamada_kazunari = {
+		name = BGD_yamada_kazunari
+		portraits = {
+			
+		}
+		country_leader = {
+			ideology = neonazism
+			traits = {
+				
+			}
+		}
+	}
+	BGD_saaya_char = {
+		name = BGD_saaya_char 
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BGD/BGD_saaya.png"
+			}
+		}
+		country_leader = {
+			ideology = centrist
+			desc = BGD_SAAYA_DESC
+			traits = {
+				
+			}
+		}
+	}
+}

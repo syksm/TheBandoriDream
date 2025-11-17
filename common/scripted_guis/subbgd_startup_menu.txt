@@ -1,0 +1,31 @@
+scripted_gui = {
+    BGD_country_info_start = {
+		parent_window_name = "startup_menu_"
+		context_type = player_context
+		window_name = "BGD_country_info_container"
+		ai_enabled = {
+			always = no
+		}
+		visible = {
+			is_ai = no
+			OR = {
+				tag = BGD
+				tag = JAP
+			}
+			check_variable = {
+				show_up = 0
+			}
+			check_variable = {
+				show_up_country = 1
+			}
+		}
+		dynamic_lists = {
+		}
+		properties = {
+		}
+		effects = {
+		}
+		triggers = {
+		}
+	}
+}

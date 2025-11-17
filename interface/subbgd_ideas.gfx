@@ -1,0 +1,114 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_kiradoki"
+		textureFile = "gfx\interface\ideas\BGD\kiradoki.png"
+	}
+	spriteType = {
+		name = "GFX_idea_tsugu"
+		textureFile = "gfx\interface\ideas\BGD\tsugu.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BGD_arisa_1"
+		textureFile = "gfx\interface\ideas\BGD\ministers\BGD_arisa_1.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BGD_yukina_1"
+		textureFile = "gfx\interface\ideas\BGD\ministers\BGD_yukina_1.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BGD_tae_1"
+		textureFile = "gfx\interface\ideas\BGD\ministers\BGD_tae_1.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BGD_rimi_1"
+		textureFile = "gfx\interface\ideas\BGD\ministers\BGD_rimi_1.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BGD_saaya_1"
+		textureFile = "gfx\interface\ideas\BGD\ministers\BGD_saaya_1.png"
+	}
+	spriteType = {
+		name = "GFX_idea_BGD_nanami_1"
+		textureFile = "gfx\interface\ideas\BGD\ministers\BGD_nanami_1.png"
+	}
+	spriteType = {
+		name = "GFX_idea_jingshen_zhanwei"
+		textureFile = "gfx\interface\ideas\BGD\jingshen_zhanwei.png"
+	}
+	spriteType = {
+		name = "GFX_idea_chongjian_weiyuanhui_jingshen"
+		textureFile = "gfx\interface\ideas\BGD\chongjian_weiyuanhui_jingshen.png"
+	}
+	spriteType = {
+		name = "GFX_idea_zhengfu_gaige_jingshen"
+		textureFile = "gfx\interface\ideas\BGD\zhengfu_gaige_jingshen.png"
+	}
+	spriteType = {
+		name = "GFX_idea_ziyou_minbing_jingshen"
+		textureFile = "gfx\interface\ideas\BGD\ziyou_minbing_jingshen.png"
+	}
+	spriteType = {
+		name = "GFX_idea_zhiye_jundui_jingshen"
+		textureFile = "gfx\interface\ideas\BGD\zhiye_jundui_jingshen.png"
+	}
+	spriteType = {
+		name = "GFX_jueyi_zhanweifu"
+		textureFile = "gfx\interface\decisions\BGD\jueyi_zhanweifu.png"
+	}
+	spriteType = {
+		name = "GFX_quanli_pingheng_shanyaodang"
+		textureFile = "gfx\interface\bop\quanli_pingheng_shanyaodang.png"
+	}
+	spriteType = {
+		name = "GFX_idea_guomin_jingji_jingshen"
+		textureFile = "gfx\interface\ideas\BGD\guomin_jingji_jingshen.png"
+	}
+	spriteType = {
+		name = "GFX_idea_haijun_shengchan_jingshen"
+		textureFile = "gfx\interface\ideas\BGD\haijun_shengchan_jingshen.png"
+	}
+	spriteType = {
+		name = "GFX_idea_lujun_shengchan_jingshen"
+		textureFile = "gfx\interface\ideas\BGD\lujun_shengchan_jingshen.png"
+	}
+	spriteType = {
+		name = "GFX_idea_guofangjun_jingshen"
+		textureFile = "gfx\interface\ideas\BGD\guofangjun_jingshen.png"
+	}
+	spriteType = {
+		name = "GFX_idea_mixieer_zhanjia_jingshen"
+		textureFile = "gfx\interface\ideas\BGD\mixieer_zhanjia_jingshen.png"
+	}
+	spriteType = {
+		name = "GFX_idea_yvsuan_lujun_jingshen"
+		textureFile = "gfx\interface\ideas\BGD\yvsuan_lujun_jingshen.png"
+	}
+	spriteType = {
+		name = "GFX_idea_yvsuan_haijun_jingshen"
+		textureFile = "gfx\interface\ideas\BGD\yvsuan_haijun_jingshen.png"
+	}
+	spriteType = {
+		name = "GFX_idea_yvsuan_kongjun_jingshen"
+		textureFile = "gfx\interface\ideas\BGD\yvsuan_kongjun_jingshen.png"
+	}
+	spriteType = {
+		name = "GFX_APFNO_Member"
+		textureFile = "gfx\interface\factions\APFNO_Member.png"
+	}
+	spriteType = {
+		name = "GFX_gov_type_1"
+		textureFile = "gfx\interface\ideas\gov_type_1.png"
+	}
+	spriteType = {
+		name = "GFX_shibo_changguan"
+		textureFile = "gfx\interface\decisions\BGD\shibo_changguan.png"
+	}
+	spriteType = {
+		name = "GFX_jueyi_rimi"
+		textureFile = "gfx\interface\decisions\BGD\jueyi_rimi.png"
+	}
+	spriteType = {
+		name = "GFX_idea_langsu_qiji"
+		textureFile = "gfx\interface\ideas\BGD\langsu_qiji.png"
+	}
+}

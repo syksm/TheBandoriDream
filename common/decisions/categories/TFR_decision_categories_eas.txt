@@ -1,0 +1,13 @@
+eas_dongya_waijiao = {
+    icon = GFX_desicion_category_jsdf
+
+    allowed = {
+       tag = PRC
+    }
+
+    visible = {
+        has_completed_focus = EAS_duiwai_kuozhang
+    }
+
+    priority = 98
+}

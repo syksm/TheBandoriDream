@@ -1,0 +1,490 @@
+eas_dongya_waijiao = {
+    eas_jingong_hanguo = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 0
+		days_remove = 30
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = PRC
+		}
+
+		available = {
+			BGD = {
+                has_completed_focus = BGD_benxiang_mingri
+                has_completed_focus = BGD_dingdian_zhijun
+                has_completed_focus = BGD_jingji_qiji
+                has_completed_focus = BGD_tuanjie_shijie
+            }
+		}
+
+		visible = {
+			
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			
+		}
+			
+		complete_effect = {
+			BGD = {
+				country_event = {
+					id = bgd.63
+					days = 10
+				}
+			}
+		}
+
+		remove_effect = {
+			BGD = {
+				country_event = {
+					id = bgd.64
+				}
+			}
+            PRK = {
+                declare_war_on = {
+                target = KOR
+                type = annex_everything
+            }
+            }
+		}
+	}
+	eas_baji_sitan = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 0
+		days_remove = 30
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = PRC
+		}
+
+		available = {
+			has_completed_focus = EAS_yingxiang_xiaoguo
+			PAK = {
+				OR = {
+					has_country_flag = PAK_lost_indo_pakistan_war
+					has_country_flag = PAK_won_indo_pakistan_war
+				}
+				NOT = {
+					is_ally_with = PRC
+				}
+			}
+		}
+
+		visible = {
+			has_completed_focus = EAS_yingxiang_xiaoguo
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			PRC = {
+			    add_to_faction = PAK
+		    }
+		}
+	}
+	eas_ruqin_budan = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 0
+		days_remove = 30
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = PRC
+		}
+
+		available = {
+			has_completed_focus = EAS_yingxiang_xiaoguo
+		}
+
+		visible = {
+			has_completed_focus = EAS_yingxiang_xiaoguo
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			declare_war_on = {
+                target = BHU
+                type = annex_everything
+			}
+		}
+	}
+	eas_nibo_er = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 0
+		days_remove = 30
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = PRC
+		}
+
+		available = {
+			has_completed_focus = EAS_yingxiang_xiaoguo
+		}
+
+		visible = {
+			has_completed_focus = EAS_yingxiang_xiaoguo
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			PRC = {
+			    add_to_faction = NEP
+		    }
+		}
+	}
+	eas_sili_lanka = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_daysili_lanka
+
+		cost = 0
+		days_remove = 30
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = PRC
+		}
+
+		available = {
+			has_completed_focus = EAS_yingxiang_xiaoguo
+		}
+
+		visible = {
+			has_completed_focus = EAS_yingxiang_xiaoguo
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			PRC = {
+			    add_to_faction = SRL
+		    }
+		}
+	}
+	eas_miandian_xiaqv = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_daysili_lanka
+
+		cost = 0
+		days_remove = 1
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = PRC
+		}
+
+		available = {
+			BRM = {
+				is_puppet_of = PRC
+			}
+		}
+
+		visible = {
+			
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			BRM = {
+				transfer_state = 1407
+				transfer_state = 1408
+				transfer_state = 1259
+				transfer_state = 1401
+				transfer_state = 1402
+				transfer_state = 1263
+				transfer_state = 1405
+				transfer_state = 1264
+				transfer_state = 1403
+				transfer_state = 1260
+				transfer_state = 1406
+				transfer_state = 1261
+				transfer_state = 1267
+				transfer_state = 640
+				transfer_state = 1265
+				transfer_state = 1262
+				transfer_state = 1271
+				transfer_state = 288
+				transfer_state = 1266
+				transfer_state = 1270
+				transfer_state = 1269
+				transfer_state = 1268
+				transfer_state = 1404
+				set_cosmetic_tag = BRM_miandian_xiaqv
+				set_politics = {
+					ruling_party = nationalist
+					elections_allowed = no
+				}
+				set_popularities = {
+					nationalist = 65
+					communist = 5
+					libertarian_socialist = 5
+					social_democrat = 10
+					social_liberal = 5
+					market_liberal = 5
+					conservative = 5
+				}
+			}
+		}
+	}
+	eas_zhongnan_xiaqv = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_daysili_lanka
+
+		cost = 0
+		days_remove = 1
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = PRC
+		}
+
+		available = {
+			VIN = {
+				is_puppet_of = PRC
+			}
+			LAO = {
+				is_puppet_of = PRC
+			}
+			CAM = {
+				is_puppet_of = PRC
+			}
+		}
+
+		visible = {
+			
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			VIN = {
+				annex_country = {
+					target = LAO
+				}
+				annex_country = {
+					target = CAM
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = LAO
+							is_core_of = CAM
+						}
+					}
+					add_core_of = VIN
+				}
+				set_cosmetic_tag = VIN_zhongnan_xiaqv
+				set_politics = {
+					ruling_party = nationalist
+					elections_allowed = no
+				}
+				set_popularities = {
+					nationalist = 65
+					communist = 5
+					libertarian_socialist = 5
+					social_democrat = 10
+					social_liberal = 5
+					market_liberal = 5
+					conservative = 5
+				}
+			}
+		}
+	}
+	eas_gaoyuan_xiaqv = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_daysili_lanka
+
+		cost = 0
+		days_remove = 1
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = PRC
+		}
+
+		available = {
+			BHU = {
+				is_puppet_of = PRC
+			}
+		}
+
+		visible = {
+			
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			BHU = {
+				set_cosmetic_tag = BHU_gaoyuan_xiaqv
+				set_politics = {
+					ruling_party = nationalist
+					elections_allowed = no
+				}
+				set_popularities = {
+					nationalist = 65
+					communist = 5
+					libertarian_socialist = 5
+					social_democrat = 10
+					social_liberal = 5
+					market_liberal = 5
+					conservative = 5
+				}
+			}
+		}
+	}
+	eas_jiaotu_zhengce = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_daysili_lanka
+
+		cost = 0
+		days_remove = 1
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = PRC
+		}
+
+		available = {
+			surrender_progress > 0.24
+		}
+
+		visible = {
+			
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			BGD = {
+				country_event = {
+					id = bgd.78
+				}
+			}
+		}
+	}
+}

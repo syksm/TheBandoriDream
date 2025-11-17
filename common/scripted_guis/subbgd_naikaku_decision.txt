@@ -1,0 +1,8 @@
+scripted_gui = {
+
+	bgd_naikaku_souri = {
+		context_type = decision_category
+		window_name = bgd_naikaku_sho_souri_guis
+	}
+	
+}

@@ -1,0 +1,178 @@
+focus_tree = {
+    id = TFR_tree_JAP_DFJ
+	country = {
+		base = 0
+	}
+	default = no
+	 
+	focus = {
+	    id = JDF_renmin_zhisheng
+		icon = GFX_focus_JAP_lets_do_our_best
+		cost = 2
+		x = 3
+		y = 0
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+			country_event = {
+			    id =  bgd.9   
+			}
+		}
+	}
+	focus = {
+	    id = JDF_chengnuo_heping
+		icon = GFX_focus_JAP_promises_of_peace
+		prerequisite = { focus = JDF_renmin_zhisheng }
+		cost = 2
+		x = 3
+		y = 1
+		completion_reward = {
+			add_political_power = 30
+			add_stability = 0.05
+			add_war_support = -0.05			
+	}
+	}
+	focus = {
+	id = JDF_duihua_huanhe
+	icon = GFX_focus_JAP_deal_with_devil
+	prerequisite = { focus = JDF_renmin_zhisheng }
+	cost = 2
+	x = 1
+	y = 1
+	completion_reward = {
+		add_political_power = -15
+		add_war_support = -0.05	
+		add_stability = 0.05
+			diplomatic_relation = {
+		    country = PRC
+		    relation = non_aggression_pact
+		    active = yes
+		}			
+	}
+	}
+	focus = {
+	id = JDF_qianghua_zuoyi
+	icon = GFX_focus_JAP_mobilize_zengakuren
+	prerequisite = { focus = JDF_renmin_zhisheng }
+	cost = 2
+	x = 5
+	y = 1
+	completion_reward = {
+		add_stability = -0.15
+		add_political_power = -25
+		add_war_support = -0.05	
+		add_popularity = {
+    		ideology = social_liberal
+    		popularity = 0.07
+		}
+		add_popularity = {
+    		ideology = social_democrat
+    		popularity = 0.05
+		}
+		add_popularity = {
+    		ideology = libertarian_socialist 
+    		popularity = 0.05
+		}
+		add_popularity = {
+    	    ideology = communist 
+    		popularity = 0.03
+		}
+	}
+    }
+	focus = {
+	id = JDF_jiaoyv_gaige
+	icon = GFX_focus_JAP_reform_the_education_system
+	prerequisite = { focus = JDF_duihua_huanhe }
+	cost = 2
+	x = 1
+	y = 2
+	completion_reward = {
+			add_political_power = -15
+			add_stability = 0.05
+			add_war_support = -0.1
+			add_popularity = {
+    			ideology = nationalist 
+    			popularity = -0.05
+			}				
+	}
+	}
+	focus = {
+	id = JDF_wuzhuang_zhongli
+	icon = GFX_focus_JAP_armed_neutrality
+	prerequisite = { focus = JDF_qianghua_zuoyi }
+	cost = 2
+	x = 5
+	y = 2
+	completion_reward = {
+		add_stability = 0.05
+		add_political_power = 15
+		add_war_support = 0.05					
+	}
+	}
+	focus = {
+	id = JDF_shehui_gongping
+	icon = GFX_focus_JAP_feed_the_people
+	prerequisite = { focus = JDF_chengnuo_heping }
+	cost = 2
+	x = 3
+	y = 2
+	completion_reward = {
+		add_stability = 0.1	
+		add_political_power = 25	
+	}
+	}
+	focus = {
+	id = JDF_kangji_youyi
+	icon = GFX_focus_JAP_fight_uyoku_dantai
+	prerequisite = { focus = JDF_jiaoyv_gaige }
+	prerequisite = { focus = JDF_shehui_gongping }
+	prerequisite = { focus = JDF_wuzhuang_zhongli }
+	cost = 2
+	x = 3
+	y = 3
+	completion_reward = {
+		add_stability = -0.15
+		add_political_power = -25
+		add_war_support = 0.05	
+		add_popularity = {
+    		ideology = nationalist 
+    		popularity = -0.1
+		}				
+		hidden_effect = {
+			country_event = {
+				id = bgd.132
+			}
+		}
+	}
+	}
+	focus = {
+	id = JDF_chongshen_lichang
+	icon = GFX_focus_JAP_calm_the_bureaucracy
+	prerequisite = { focus = JDF_kangji_youyi }
+	cost = 2
+	x = 3
+	y = 4
+	available = {
+		PRC = {
+			has_war_with = CHI
+		}
+	}
+	completion_reward = {
+		add_stability = 0.1
+		add_political_power = -75
+		add_war_support = -0.25	
+		add_popularity = {
+    		ideology = nationalist 
+    		popularity = 0.35
+		}
+		hidden_effect = {
+				country_event = {
+			    id =  bgd.1212    
+			}
+			country_event = {
+				id = bgd.86
+			}
+			}				
+	}
+	}
+}

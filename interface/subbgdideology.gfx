@@ -1,0 +1,7 @@
+spriteTypes = { 
+	#kirakira_dokidoki
+spriteType = {
+	name = "GFX_ideology_kirakira_dokidoki"
+	texturefile = "gfx\interface\ideologies\kirakira_dokidoki.png"
+    }
+}

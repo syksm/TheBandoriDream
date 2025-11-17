@@ -1,0 +1,691 @@
+focus_tree = {
+    id = TFR_tree_BGD_afterwar
+	country = {
+		base = 0
+	}
+	default = no
+
+	shared_focus = BGD_jianli_guofangjun
+	shared_focus = BGD_jingji_jianshe
+	shared_focus = BGD_yazi_zuzhi
+	shared_focus = BGD_zuizhong_zhizhan
+	 
+	focus = {
+	    id = BGD_zhixian_huiyi
+		icon = GFX_kaishi_zhixian
+		cost = 3
+		x = 7
+		y = 0
+		completion_reward = {
+		    country_event = {
+			    id =  bgd.43   
+			}
+			add_stability = 0.05
+			custom_effect_tooltip = BGD_zongtong_yicheng_tt
+			hidden_effect = {
+				add_country_leader_trait = kasumi_utopia_off
+				add_country_leader_trait = kasumi_starbeat_off
+				add_country_leader_trait = kasumi_APFNO_kiraism_off
+			}
+		}
+	}
+    focus = {
+	    id = BGD_chongjian_weiyuanhui
+		icon = GFX_guojia_chongjian
+        prerequisite = { focus = BGD_zhixian_huiyi }
+		cost = 3
+		x = 5
+		y = 1
+		completion_reward = {
+		unlock_decision_category_tooltip = BGD_chongjian_guojia
+		set_country_flag = BGD_chongjian_weiyuanhui
+		    country_event = {
+			    id =  bgd.42  
+			}
+		    add_political_power = 15
+            add_stability = 0.05
+			add_ideas = BGD_chongjian_wei
+			hidden_effect = {
+				country_event = {
+					id = bgd.96
+					days = 7
+				}
+			}
+			change_economy_type_collective_capitalism = yes
+		}
+	}
+     focus = {
+	    id = BGD_zhenggui_minbing
+		icon = GFX_zhengguihua_minbing
+        prerequisite = { focus = BGD_zhixian_huiyi }
+		cost = 3
+		x = 9
+		y = 1
+		completion_reward = {
+            add_war_support = 0.05
+			army_experience = 30
+			country_event = {
+				id = bgd.69
+			}
+		}
+	}
+    focus = {
+	    id = BGD_xingzheng_gaige
+		icon = GFX_xingzheng_tixi
+        prerequisite = { focus = BGD_zhixian_huiyi }
+		cost = 3
+		x = 7
+		y = 1
+		completion_reward = {
+			add_timed_idea = {
+					idea = BGD_zhengfu_gaige	
+					days = 365
+				}	
+				hidden_effect = {
+					country_event = {
+						id = bgd.111
+						days = 10
+					}
+				}
+		}
+	}
+	 focus = {
+	    id = BGD_gaige_weiyuanhui
+		icon = GFX_guoce_zhanwei
+        prerequisite = { focus = BGD_xingzheng_gaige }
+		cost = 3
+		x = 7
+		y = 2
+		completion_reward = {
+		country_event = {
+			id = bgd.83
+		}
+		hidden_effect = {
+			country_event = {
+				id = bgd.72
+				days = 14
+			}
+		}
+		unlock_decision_category_tooltip = BGD_guojia_gaige
+		unlock_decision_tooltip = BGD_jianhua_xingzheng
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_kira_doki_0
+			add_idea = BGD_kira_doki_1
+			}
+		}
+			add_to_variable = { BGD_kira_doki_political_power_factor_dynamic_var = 0.05 }
+			add_to_variable = { BGD_kira_doki_stability_factor_dynamic_var = 0.05 }
+		}
+	}
+	 focus = {
+	    id = BGD_kuoda_shanyaodang
+		icon = GFX_kuoda_jgp_1
+        prerequisite = { focus = BGD_gaige_weiyuanhui }
+		mutually_exclusive = { focus = BGD_kuoda_gongwuyuan }
+		cost = 4
+		x = 6
+		y = 3
+		completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_kira_doki_0
+			add_idea = BGD_kira_doki_2
+			}
+		}
+			add_to_variable = { BGD_kira_doki_political_power_gain_dynamic_var = 0.08 }
+			add_to_variable = { BGD_kira_doki_political_power_factor_dynamic_var = 0.05 }
+			add_to_variable = { BGD_kira_doki_stability_factor_dynamic_var = 0.07 }
+			add_to_variable = { BGD_kira_doki_war_support_factor_dynamic_var = 0.07 }
+		}
+	}
+	 focus = {
+	    id = BGD_kuoda_gongwuyuan
+		icon = GFX_guoce_zhanwei
+        prerequisite = { focus = BGD_gaige_weiyuanhui }
+		mutually_exclusive = { focus = BGD_kuoda_shanyaodang }
+		cost = 4
+		x = 8
+		y = 3
+		completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_kira_doki_0
+			add_idea = BGD_kira_doki_4
+			}
+		}
+		add_to_variable = { BGD_kira_doki_political_power_gain_dynamic_var = 0.15 }
+		add_to_variable = { BGD_kira_doki_political_power_factor_dynamic_var = 0.12 }
+		add_to_variable = { BGD_kira_doki_consumer_goods_factor = 0.12 }
+		}
+	}
+	focus = {
+	    id = BGD_guoyouhua_chanye
+		icon = GFX_guoce_zhanwei
+        prerequisite = { focus = BGD_kuoda_shanyaodang focus = BGD_kuoda_gongwuyuan }
+		cost = 4
+		x = 9
+		y = 4
+		completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_kira_doki_0
+			add_idea = BGD_kira_doki_5
+			}
+		}
+		add_to_variable = { BGD_kira_doki_consumer_goods_factor = 0.1 }
+		add_to_variable = { BGD_kira_doki_industrial_capacity_factory_dynamic = 0.1 }
+		add_to_variable = { BGD_kira_doki_industrial_capacity_dockyard_dynamic = 0.1 }
+		add_to_variable = { BGD_kira_doki_industrial_development_monthly_dynamic = 0.02 }
+		add_to_variable = { BGD_kira_doki_poverty_development_monthly_dynamic = 0.015 }
+		add_to_variable = { BGD_kira_doki_expense_growth_factor_dynamic_var = 0.1 }
+		add_to_variable = { BGD_kira_doki_income_growth_factor_dynamic_var = 0.05 }
+		}
+	}
+	focus = {
+	    id = BGD_shehui_gaige
+		icon = GFX_guoce_zhanwei
+        prerequisite = { focus = BGD_kuoda_shanyaodang focus = BGD_kuoda_gongwuyuan }
+		cost = 4
+		x = 11
+		y = 4
+		completion_reward = {
+		country_event = {
+			id = bgd.84
+		}
+		set_temp_variable = {
+			var = society_development_var_temp
+			value = 0.15
+		}
+		add_society_development = yes
+		}
+	}
+	focus = {
+	    id = BGD_kuoda_baozhang
+		icon = GFX_guoce_zhanwei
+        prerequisite = { focus = BGD_guoyouhua_chanye }
+		cost = 4
+		x = 8
+		y = 5
+		completion_reward = {
+		unlock_decision_tooltip = BGD_zhaogu_liqunzhe
+		unlock_decision_tooltip = BGD_fuyv_neizhanguer
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_kira_doki_0
+			add_idea = BGD_kira_doki_6
+			}
+		}
+		add_to_variable = { BGD_kira_doki_expense_growth_factor_dynamic_var = 0.05 }
+		add_to_variable = { BGD_kira_doki_poverty_development_monthly_dynamic = 0.02 }
+		add_to_variable = { BGD_kira_doki_society_development_monthly_dynamic = 0.015 }
+		add_to_variable = { BGD_kira_doki_stability_factor_dynamic_var = 0.07 }
+		add_to_variable = { BGD_kira_doki_consumer_goods_factor = 0.05 }
+		}
+	}
+	focus = {
+	    id = BGD_renxing_zibenzhuyi
+		icon = GFX_guoce_zhanwei
+        prerequisite = { focus = BGD_guoyouhua_chanye }
+		cost = 4
+		x = 10
+		y = 5
+		completion_reward = {
+		change_economy_type_shanyao_jingji = yes
+		unlock_decision_tooltip = BGD_gaishan_laodongfa
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_kira_doki_0
+			add_idea = BGD_kira_doki_7
+			}
+		}
+		add_to_variable = { BGD_kira_doki_poverty_development_monthly_dynamic = 0.015 }
+		add_to_variable = { BGD_kira_doki_society_development_monthly_dynamic = 0.015 }
+		add_to_variable = { BGD_kira_doki_stability_factor_dynamic_var = 0.1 }
+		add_to_variable = { BGD_kira_doki_production_factory_max_efficiency_factor_dynamic_var = 0.1 }
+		add_to_variable = { BGD_kira_doki_production_factory_efficiency_gain_factor_dynamic_var = 0.1 }
+		add_to_variable = { BGD_kira_doki_consumer_goods_factor = 0.05 }
+		add_to_variable = { BGD_kira_doki_personal_value_factor_dynamic = 0.07 }
+		}
+	}
+	focus = {
+	    id = BGD_jiaqiang_jiaoyv
+		icon = GFX_guoce_zhanwei
+        prerequisite = { focus = BGD_renxing_zibenzhuyi }
+		prerequisite = { focus = BGD_kuoda_baozhang }
+		cost = 4
+		x = 9
+		y = 6
+		completion_reward = {
+		unlock_decision_tooltip = BGD_zizhu_qiuxuezhe
+		unlock_decision_tooltip = BGD_jiaoyv_gaige
+		add_research_slot = 1
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_kira_doki_0
+			add_idea = BGD_kira_doki_8
+			}
+		}
+		swap_ideas = {
+            remove_idea = medium_education
+			add_idea = high_education
+		}
+		add_to_variable = { BGD_kira_doki_consumer_goods_factor = 0.05 }
+		add_to_variable = { BGD_kira_doki_academic_development_monthly_dynamic = 0.03 }
+		add_to_variable = { BGD_kira_doki_expense_growth_factor_dynamic_var = 0.1 }
+		add_to_variable = { BGD_kira_doki_research_speed_factor_dynamic = 0.1 }
+		}
+	}
+	focus = {
+	    id = BGD_zhengzhi_shehui
+		icon = GFX_guoce_zhanwei
+        prerequisite = { focus = BGD_shehui_gaige }
+		cost = 4
+		x = 12
+		y = 5
+		completion_reward = {
+		unlock_decision_tooltip = BGD_guanting_fengsu
+		add_stability = 0.1
+		add_political_power = -25
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_kira_doki_0
+			add_idea = BGD_kira_doki_9
+			}
+		}
+		add_to_variable = { BGD_kira_doki_society_development_monthly_dynamic = 0.015 }
+		add_to_variable = { BGD_kira_doki_stability_factor_dynamic_var = 0.05 }
+		add_to_variable = { BGD_kira_doki_poverty_development_monthly_dynamic = 0.015 }
+		}
+	}
+	focus = {
+	    id = BGD_ziyou_pingdeng
+		icon = GFX_ziyou_dengta
+        prerequisite = { focus = BGD_shehui_gaige }
+		cost = 4
+		x = 14
+		y = 5
+		completion_reward = {
+		unlock_decision_tooltip = BGD_qvxiao_fuqi_tongxing
+			swap_ideas = {
+            remove_idea = low_female
+			add_idea = medium_female
+			}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_kira_doki_0
+			add_idea = BGD_kira_doki_10
+			}
+		}
+		set_country_flag = BGD_qiyong_zhuanshu_jingcha
+		add_ideas = BGD_baozhang_ziyou
+		add_to_variable = { BGD_kira_doki_war_support_factor_dynamic_var = 0.1 }
+		add_to_variable = { BGD_kira_doki_stability_factor_dynamic_var = 0.05 }
+		add_to_variable = { BGD_kira_doki_society_development_monthly_dynamic = 0.015 }
+		add_to_variable = { BGD_kira_doki_poverty_development_monthly_dynamic = 0.01 }
+		add_to_variable = { BGD_kira_doki_army_org_factor_true_dynamic_var = 0.05 }
+		add_to_variable = { BGD_kira_doki_army_defence_factor_dynamic_var = 0.05 }
+		add_to_variable = { BGD_kira_doki_army_attack_factor_dynamic_var = 0.05 }
+		}
+	}
+	focus = {
+	    id = BGD_wenhua_qiangguo
+		icon = GFX_guoce_zhanwei
+        prerequisite = { focus = BGD_zhengzhi_shehui }
+		prerequisite = { focus = BGD_ziyou_pingdeng }
+		cost = 4
+		x = 13
+		y = 6		
+		completion_reward = {
+		unlock_decision_tooltip = BGD_zhichi_wenyv
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_kira_doki_0
+			add_idea = BGD_kira_doki_11
+			}
+		}
+		add_to_variable = { BGD_kira_doki_society_development_monthly_dynamic = 0.015 }
+		add_to_variable = { BGD_kira_doki_personal_value_factor_dynamic = 0.05 }
+		add_to_variable = { BGD_kira_doki_business_value_factor_dynamic = 0.05 }
+		add_to_variable = { BGD_kira_doki_income_growth_factor_dynamic_var = 0.05 }
+		add_to_variable = { BGD_kira_doki_research_speed_factor_dynamic = 0.05 }
+		}
+	}
+	focus = {
+	    id = BGD_mengxiang_jihua
+		icon = GFX_guoce_zhanwei
+        prerequisite = { focus = BGD_wenhua_qiangguo }
+		cost = 4
+		x = 13
+		y = 7
+		available = {
+			check_variable = { gaigei_jindu > 49 }
+	    }
+		completion_reward = {
+		custom_effect_tooltip = BGD_gaige_jindu_jiance_tt
+		unlock_decision_category_tooltip = BGD_quanguo_xunyan
+		unlock_decision_tooltip = BGD_touzi_mengxiang
+		set_country_flag = BGD_xunyan_jihua
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_kira_doki_0
+			add_idea = BGD_kira_doki_12
+			}
+		}
+		add_to_variable = { BGD_kira_doki_society_development_monthly_dynamic = 0.025 }
+		add_to_variable = { BGD_kira_doki_research_speed_factor_dynamic = 0.05 }
+		add_to_variable = { BGD_kira_doki_personal_value_factor_dynamic = 0.05 }
+		add_to_variable = { BGD_kira_doki_expense_growth_factor_dynamic_var = 0.05 }
+		add_to_variable = { BGD_kira_doki_consumer_goods_factor = 0.05 }
+		add_to_variable = { BGD_kira_doki_academic_development_monthly_dynamic = 0.02 }
+		}
+	}
+	focus = {
+	    id = BGD_wuzhi_chongshi
+		icon = GFX_guoce_zhanwei
+        prerequisite = { focus = BGD_jiaqiang_jiaoyv}
+		cost = 4
+		x = 9
+		y = 7
+		available = {
+			check_variable = { gaigei_jindu > 49 }
+	    }
+		completion_reward = {
+		custom_effect_tooltip = BGD_gaige_jindu_jiance_tt
+		unlock_decision_tooltip = BGD_butie_guomin
+		country_event = {
+			id = bgd.95
+		}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_kira_doki_0
+			add_idea = BGD_kira_doki_13
+			}
+		}
+		add_to_variable = { BGD_kira_doki_poverty_development_monthly_dynamic = 0.02 }
+		add_to_variable = { BGD_kira_doki_stability_factor_dynamic_var = 0.05 }
+		add_to_variable = { BGD_kira_doki_war_support_factor_dynamic_var = 0.05 }
+		}
+	}
+	focus = {
+	    id = BGD_wenhua_dagexin
+		icon = GFX_guoce_zhanwei
+        prerequisite = { focus = BGD_mengxiang_jihua }
+		prerequisite = { focus = BGD_wuzhi_chongshi }
+		cost = 4
+		x = 11
+		y = 8
+		available = {
+			check_variable = { gaigei_jindu > 74 }
+	    }
+		completion_reward = {
+		custom_effect_tooltip = BGD_gaige_jindu_jiance_2_tt
+		unlock_decision_tooltip = BGD_jianshe_gaosuzhi
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_kira_doki_0
+			add_idea = BGD_kira_doki_14
+			}
+		}
+		add_to_variable = { BGD_kira_doki_society_development_monthly_dynamic = 0.03 }
+		add_to_variable = { BGD_kira_doki_stability_factor_dynamic_var = 0.15 }
+		add_to_variable = { BGD_kira_doki_war_support_factor_dynamic_var = 0.1 }
+		add_to_variable = { BGD_kira_doki_poverty_development_monthly_dynamic = 0.025 }
+		add_to_variable = { BGD_kira_doki_personal_value_factor_dynamic = 0.05 }
+		add_to_variable = { BGD_kira_doki_business_value_factor_dynamic = 0.05 }
+		}
+	}
+	focus = {
+	    id = BGD_jianshe_dangpai
+		icon = GFX_guoce_zhanwei
+        prerequisite = { focus = BGD_kuoda_shanyaodang focus = BGD_kuoda_gongwuyuan }
+		cost = 4
+		x = 4
+		y = 4
+		completion_reward = {
+		country_event = {
+			id = bgd.82
+		}
+		unlock_decision_tooltip = BGD_xuanchuan_weiyuanhui
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+	focus = {
+	    id = BGD_bufu_guomin
+		icon = GFX_guoce_zhanwei
+        prerequisite = { focus = BGD_jianshe_dangpai }
+		cost = 4
+		x = 4
+		y = 5
+		completion_reward = {
+			add_power_balance_value = {
+				id = BGD_power_balance
+				value = 0.05
+			}
+		unlock_decision_tooltip = BGD_jianshe_dangji
+		unlock_decision_tooltip = BGD_jiceng_zuzhi
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_kira_doki_0
+			add_idea = BGD_kira_doki_15
+			}
+		}
+		add_to_variable = { BGD_kira_doki_political_power_gain_dynamic_var = 0.1 }
+		add_to_variable = { BGD_kira_doki_political_power_factor_dynamic_var = 0.05 }
+		}
+	}
+	focus = {
+	    id = BGD_xina_zuoyi
+		icon = GFX_xina_zuoyi_1
+        prerequisite = { focus = BGD_jianshe_dangpai }
+		cost = 3
+		x = 2
+		y = 5
+		completion_reward = {
+		add_power_balance_value = {
+			id = BGD_power_balance
+			value = 0.1
+		}
+		add_political_power = -35
+		add_popularity = {
+				ideology = social_democrat
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+	    id = BGD_qingxi_youyi
+		icon = GFX_qingxi_jiyouyi_1
+        prerequisite = { focus = BGD_jianshe_dangpai }
+		cost = 3
+		x = 6
+		y = 5
+		completion_reward = {
+		unlock_decision_tooltip = BGD_jiaomie_heidao
+		add_political_power = -35
+		swap_ideas = {
+			remove_idea = BGD_heidao_fanlan
+			add_idea = BGD_heidao_fanlan_1
+		}
+		add_popularity = {
+				ideology = social_democrat
+				popularity = 0.05
+			}
+		add_popularity = {
+				ideology = nationalist
+				popularity = -0.5
+			}
+		add_popularity = {
+				ideology = fascist 
+				popularity = -0.5
+			}
+		add_popularity = {
+				ideology = national_socialist 
+				popularity = -0.5
+			}
+		}
+	}
+	focus = {
+	    id = BGD_dapo_chuantong
+		icon = GFX_guoce_zhanwei
+        prerequisite = { focus = BGD_bufu_guomin }
+		prerequisite = { focus = BGD_xina_zuoyi }
+		prerequisite = { focus = BGD_qingxi_youyi }
+		cost = 4
+		x = 4
+		y = 6
+		completion_reward = {
+			add_power_balance_value = {
+				id = BGD_power_balance
+				value = 0.05
+			}
+			add_stability = -0.15
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.03
+			}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_kira_doki_0
+			add_idea = BGD_kira_doki_16
+			}
+		}
+		add_to_variable = { BGD_kira_doki_political_power_gain_dynamic_var = 0.05 }
+		add_to_variable = { BGD_kira_doki_political_power_factor_dynamic_var = 0.05 }
+		add_to_variable = { BGD_kira_doki_stability_weekly_dynamic_var = 0.005 }
+		add_to_variable = { BGD_kira_doki_political_power_cost_dynamic_var = -0.1 }
+		}
+	}
+	focus = {
+	    id = BGD_zhanxin_daolu
+		icon = GFX_guoce_zhanwei
+        prerequisite = { focus = BGD_dapo_chuantong }
+		cost = 4
+		x = 3
+		y = 7
+		completion_reward = {
+			add_power_balance_value = {
+				id = BGD_power_balance
+				value = 0.05
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.04
+			}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_kira_doki_0
+			add_idea = BGD_kira_doki_17
+			}
+		}
+		add_to_variable = { BGD_kira_doki_consumer_goods_factor = -0.03 }
+		add_to_variable = { BGD_kira_doki_political_power_factor_dynamic_var = 0.05 }
+		add_to_variable = { BGD_kira_doki_production_factory_max_efficiency_factor_dynamic_var = 0.05 }
+		add_to_variable = { BGD_kira_doki_production_factory_efficiency_gain_factor_dynamic_var = 0.05 }
+		}
+	}
+	focus = {
+	    id = BGD_nianqing_zhichi
+		icon = GFX_guoce_zhanwei
+        prerequisite = { focus = BGD_dapo_chuantong }
+		cost = 4
+		x = 5
+		y = 7
+		completion_reward = {
+			add_power_balance_value = {
+				id = BGD_power_balance
+				value = 0.05
+			}
+		unlock_decision_tooltip = BGD_guwu_nianqing
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.06
+			}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_kira_doki_0
+			add_idea = BGD_kira_doki_18
+			}
+		}
+		add_to_variable = { BGD_kira_doki_party_popularity_stability_factor_dynamic_var = 0.25 }
+		add_to_variable = { BGD_kira_doki_political_power_gain_dynamic_var = 0.05 }
+		add_to_variable = { BGD_kira_doki_stability_factor_dynamic_var = 0.05 }
+		add_to_variable = { BGD_kira_doki_war_support_factor_dynamic_var = 0.05 }
+		}
+	}
+	focus = {
+	    id = BGD_guohui_gaige
+		icon = GFX_guohui_gaige_1
+        prerequisite = { focus = BGD_zhanxin_daolu }
+		prerequisite = { focus = BGD_nianqing_zhichi }
+		cost = 4
+		x = 4
+		y = 8
+		available = {
+			has_country_flag = BGD_minzhen_wajie
+	    }
+		completion_reward = {
+			change_government_type_gailiang_chaoji_zongtongzhi = yes
+			custom_effect_tooltip = BGD_wajie_minzhen_tt
+			custom_effect_tooltip = BGD_gaige_jindu_tt
+			add_to_variable = { gaigei_jindu = 15 }
+			add_country_leader_trait = xingzhi_lingxiu	
+			remove_country_leader_trait = arisa_kuilei	
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.05
+			}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_kira_doki_0
+			add_idea = BGD_kira_doki_19
+			}
+		}
+		country_event = {
+			id =  bgd.87   
+		}
+		add_to_variable = { BGD_kira_doki_political_power_factor_dynamic_var = 0.1 }
+		add_to_variable = { BGD_kira_doki_political_power_gain_dynamic_var = 0.1 }
+		}
+	}
+	focus = {
+	    id = BGD_benxiang_mingri
+		icon = GFX_guoce_zhanwei
+        prerequisite = { focus = BGD_guohui_gaige }
+		prerequisite = { focus = BGD_wenhua_dagexin }
+		cost = 4
+		x = 7.5
+		y = 9
+		available = {
+			check_variable = { gaigei_jindu > 99 }
+	    }
+		completion_reward = {
+			custom_effect_tooltip = BGD_gaige_jindu_jiance_1_tt
+			country_event = {
+				id = bgd.62
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = 0.1
+			}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_kira_doki_0
+			add_idea = BGD_kira_doki_20
+			}
+		}
+		swap_ideas = {
+            remove_idea = BGD_renkou_wenti
+			add_idea = BGD_renkou_wenti_1
+			}
+		add_to_variable = { BGD_kira_doki_society_development_monthly_dynamic = 0.01 }
+		add_to_variable = { BGD_kira_doki_poverty_development_monthly_dynamic = 0.01 }
+		add_to_variable = { BGD_kira_doki_academic_development_monthly_dynamic = 0.01 }
+		add_to_variable = { BGD_kira_doki_stability_factor_dynamic_var = 0.1 }
+		add_to_variable = { BGD_kira_doki_war_support_factor_dynamic_var = 0.1 }
+		add_to_variable = { BGD_kira_doki_personal_value_factor_dynamic = 0.03 }
+		add_to_variable = { BGD_kira_doki_business_value_factor_dynamic = 0.03 }
+		}
+	}
+}

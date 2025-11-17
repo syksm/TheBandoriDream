@@ -1,0 +1,41 @@
+ideas = {
+	police_laws = {
+		law = yes
+		use_list_view = yes
+		BGD_baozhang_ziyou = {
+			removal_cost = -1
+			cost = 100
+			level = 6
+			picture = laws_security2
+			allowed = {
+			    tag = BGD
+		    }
+		    available = {
+			    has_country_flag = BGD_qiyong_zhuanshu_jingcha
+		    }
+	        visible = {
+			    has_country_flag = BGD_qiyong_zhuanshu_jingcha
+		    }
+		    allowed_to_remove = {
+			    always = no
+		    }
+			modifier = {
+				political_power_gain = -0.15
+				political_power_factor = -0.03
+				stability_factor = 0.12
+				personal_value_factor = 0.11
+				personal_expense = 0.07
+				resistance_growth = 0.12
+				resistance_decay = -0.13
+				compliance_growth = 0.15
+				army_intel_to_others = 35
+				airforce_intel_to_others = 35
+				navy_intel_to_others = 35
+				civilian_intel_to_others = 35
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+}

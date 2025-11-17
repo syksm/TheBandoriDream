@@ -1,0 +1,2 @@
+BGD = "countries/BangDream.txt"
+DFJ = "countries/DFJ1.txt"

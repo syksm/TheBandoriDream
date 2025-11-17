@@ -1,0 +1,278 @@
+BGD_power_balance = {
+	initial_value = 0
+	left_side = BGD_minzhuzhenxian_side
+	right_side = BGD_shanyaodang_side
+	decision_category = BGD_quanli_pingheng
+	range = {
+		id = BGD_pingheng_side
+		min = -0.15
+		max = 0.15
+		modifier = {
+			political_power_cost = 0.15
+            stability_factor = 0.1
+		}
+		on_activate = {
+		}
+		on_deactivate = {
+		}
+	}
+	side = {
+		id = BGD_minzhuzhenxian_side
+		icon = GFX_bop_PRC_nationalization
+		range = {
+			id = BGD_min_1_side
+			min = -0.45
+			max = -0.15
+			modifier = {
+                political_power_gain = -0.05
+                political_power_factor = -0.05
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = BGD_min_2_side
+			min = -0.75
+			max = -0.45
+			modifier = {
+				political_power_gain = -0.1
+                political_power_factor = -0.1
+				stability_factor = -0.15
+				war_support_factor = -0.15
+			}
+			on_activate = {
+			    country_event = {
+				    id = bgd.113
+				}
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = BGD_min_3_side
+			min = -1
+			max = -0.75
+			modifier = {
+				political_power_gain = -0.15
+                political_power_factor = -0.15
+				stability_factor = -0.35
+				war_support_factor = -0.35
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+	}
+	side = {
+		id = BGD_shanyaodang_side
+		icon = GFX_quanli_pingheng_shanyaodang
+		range = {
+			id = BGD_shan_1_side
+			min = 0.15
+			max = 0.45
+			modifier = {
+				political_power_gain = 0.05
+                political_power_factor = 0.05
+				stability_factor = 0.05
+				war_support_factor = 0.05
+            }
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+        }
+		range = {
+			id = BGD_shan_2_side
+			min = 0.45
+			max = 0.75
+			modifier = {
+				political_power_gain = 0.1
+                political_power_factor = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				production_factory_max_efficiency_factor = 0.03
+				production_factory_efficiency_gain_factor = 0.03
+				consumer_goods_factor = -0.03
+            }
+			on_activate = {
+				hidden_effect = {
+					country_event = {
+						id = bgd.92
+					}
+				}
+			}
+			on_deactivate = {
+			}
+        }
+		range = {
+			id = BGD_shan_3_side
+			min = 0.75
+			max = 1
+			modifier = {
+				political_power_gain = 0.15
+                political_power_factor = 0.15
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				consumer_goods_factor = -0.05
+            }
+			on_activate = {
+				country_event = {
+					id = bgd.59
+				}
+			}
+			on_deactivate = {
+			}
+		}
+    }
+}
+BGD_rimi_power_balance = {
+	initial_value = 0
+	left_side = BGD_lengmo_shehui_side
+	right_side = BGD_boai_shehui_side
+	range = {
+		id = BGD_nuli_zhizhong_side
+		min = -0.25
+		max = 0.25
+		modifier = {
+			political_power_gain = 0.08
+			political_power_factor = 0.02
+			stability_weekly = 0.001
+			consumer_goods_factor = 0.07
+			expense_growth_factor = 0.06
+			poverty_development_monthly = 0.005
+		}
+		on_activate = {
+		}
+		on_deactivate = {
+		}
+	}
+	side = {
+		id = BGD_lengmo_shehui_side
+		range = {
+			id = BGD_lengmo_1_side
+			min = -0.5
+			max = -0.25
+			modifier = {
+				political_power_gain = -0.25
+				poverty_development_monthly = -0.01
+				society_development_monthly = -0.015
+				stability_factor = -0.15
+				war_support_factor = -0.2
+				expense_growth_factor = -0.05
+				consumer_goods_factor = -0.1
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = BGD_lengmo_2_side
+			min = -0.75
+			max = -0.5
+			modifier = {
+				political_power_gain = -0.35
+				poverty_development_monthly = -0.02
+				society_development_monthly = -0.03
+				stability_factor = -0.25
+				war_support_factor = -0.3
+				expense_growth_factor = -0.1
+				consumer_goods_factor = -0.15
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+		range = {
+			id = BGD_lengmo_3_side
+			min = -1
+			max = -0.75
+			modifier = {
+				political_power_gain = -0.5
+				poverty_development_monthly = -0.03
+				society_development_monthly = -0.05
+				stability_factor = -0.35
+				war_support_factor = -0.5
+				expense_growth_factor = -0.15
+				consumer_goods_factor = -0.2
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+	}
+	side = {
+		id = BGD_boai_shehui_side
+		icon = GFX_quanli_pingheng_shanyaodang
+		range = {
+			id = BGD_boai_1_side
+			min = 0.25
+			max = 0.5
+			modifier = {
+				political_power_cost = -0.2
+                poverty_development_monthly = 0.015
+				society_development_monthly = 0.01
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				stability_weekly = 0.002
+				expense_growth_factor = 0.05
+				consumer_goods_factor = 0.1
+            }
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+        }
+		range = {
+			id = BGD_boai_2_side
+			min = 0.5
+			max = 0.75
+			modifier = {
+				political_power_cost = -0.4
+                poverty_development_monthly = 0.03
+				society_development_monthly = 0.02
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				production_factory_max_efficiency_factor = 0.10
+				stability_weekly = 0.004
+				expense_growth_factor = 0.1
+				consumer_goods_factor = 0.2
+            }
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+        }
+		range = {
+			id = BGD_boai_3_side
+			min = 0.75
+			max = 1
+			modifier = {
+				political_power_cost = -0.8
+                poverty_development_monthly = 0.05
+				society_development_monthly = 0.03
+				stability_factor = 0.3
+				war_support_factor = 0.3
+				production_factory_max_efficiency_factor = 0.25
+				stability_weekly = 0.006
+				expense_growth_factor = 0.2
+				consumer_goods_factor = 0.35
+            }
+			on_activate = {
+			}
+			on_deactivate = {
+			}
+		}
+    }
+}
+

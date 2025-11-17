@@ -1,0 +1,6 @@
+opinion_modifiers = {
+	
+	chenhuo_dajie = {
+		value = -25
+	}	
+}

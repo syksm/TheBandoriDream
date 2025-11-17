@@ -1,0 +1,1529 @@
+shared_focus = {
+	id = BGD_jianli_guofangjun
+	icon = GFX_jianli_fangweijun
+	cost = 4
+	x = -4
+	y = 0
+	available = {
+		has_country_flag = BGD_shanyaodang_dangxuan
+	}
+	completion_reward = {
+		effect_tooltip = {
+			add_ideas = BGD_guomin_fangweijun_1
+		}
+		hidden_effect = {
+			add_dynamic_modifier = {
+				modifier = BGD_guomin_fangweijun
+			}
+			}
+			add_to_variable = { BGD_guomin_fangweijun_max_planning_factor = -0.15 }
+			add_to_variable = { BGD_guomin_fangweijun_planning_speed = 0.15 }
+			add_to_variable = { BGD_guomin_fangweijun_command_power_gain = 0.1 }
+	}
+}
+shared_focus = {
+	id = BGD_yvsuan_qvshe
+	icon = GFX_yvsuan_qvshe_1
+	prerequisite = { focus = BGD_jianli_guofangjun }
+	cost = 4
+	x = -7
+	y = 1
+	completion_reward = {
+		country_event = {
+			id = bgd.57
+		}
+	}
+}
+shared_focus = {
+	id = BGD_guanbing_pingdeng
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_jianli_guofangjun }
+	cost = 4
+	x = -1
+	y = 1
+	completion_reward = {
+	effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_fangweijun_0
+			add_idea = BGD_guomin_fangweijun_2
+			}
+		}
+		add_to_variable = { BGD_guomin_fangweijun_army_org = 3 }
+		add_to_variable = { BGD_guomin_fangweijun_army_org_factor = 0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_army_org_regain = 0.15 }
+	}
+}
+shared_focus = {
+	id = BGD_lixiang_jianjun
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_jianli_guofangjun }
+	cost = 4
+	x = -4
+	y = 1
+	completion_reward = {
+	effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_fangweijun_0
+			add_idea = BGD_guomin_fangweijun_3
+			}
+		}
+		set_country_flag = BGD_qiyong_zhuanshu_zhengbing
+		add_ideas = BGD_reqing_zhiyuanbing
+		add_to_variable = { BGD_guomin_fangweijun_army_attack_factor = 0.05 }
+		add_to_variable = { BGD_guomin_fangweijun_army_defence_factor = 0.05 }
+		add_to_variable = { BGD_guomin_fangweijun_army_speed_factor = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_war_support_factor = 0.1 }
+	}
+}
+shared_focus = {
+	id = BGD_quanmian_gaige
+	icon = GFX_quanmian_jungai_1
+	prerequisite = { focus = BGD_lixiang_jianjun }
+	prerequisite = { focus = BGD_yvsuan_qvshe }
+	prerequisite = { focus = BGD_guanbing_pingdeng }
+	cost = 4
+	x = -4
+	y = 2
+	completion_reward = {
+		custom_effect_tooltip = BGD_junshi_gaige_tt
+		activate_mission = BGD_GCAP
+		country_event = {
+			id = bgd.117
+		}
+		set_temp_variable = {
+			var = military_development_var_temp
+			value = 0.15
+		}
+		add_military_development = yes
+		unlock_decision_category_tooltip = BGD_junshi_gaige
+		unlock_decision_tooltip = BGD_jianli_haijun_luzhandui
+		unlock_decision_tooltip = BGD_baba_jiandui
+		add_to_variable = { jungai_jindu = 5 }
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_fangweijun_0
+			add_idea = BGD_guomin_fangweijun_4
+			}
+		}
+		add_to_variable = { BGD_guomin_fangweijun_military_development_monthly = 0.015 }
+		add_to_variable = { BGD_guomin_fangweijun_experience_gain_army_factor = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_experience_gain_air_factor = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_experience_gain_navy_factor = 0.1 }
+	}
+}
+shared_focus = {
+	id = BGD_huoli_zhishang
+	icon = GFX_huoli_zhishang_1
+	prerequisite = { focus = BGD_quanmian_gaige }
+	cost = 4
+	x = -4
+	y = 3
+	completion_reward = {
+		custom_effect_tooltip = BGD_junshi_gaige_tt
+		add_ideas = BGD_lujun_shengchan
+		add_to_variable = { jungai_jindu = 5 }
+		add_tech_bonus = {
+			name = BGD_artillery
+			bonus = 0.75
+			uses = 2
+			category = artillery
+		}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_fangweijun_0
+			add_idea = BGD_guomin_fangweijun_5
+			}
+		}
+		add_to_variable = { BGD_guomin_fangweijun_army_attack_factor = 0.05 }
+		add_to_variable = { BGD_guomin_fangweijun_army_defence_factor = 0.05 }
+	}
+}
+shared_focus = {
+	id = BGD_zhuangjia_zuozhan
+	icon = GFX_qianghua_zhuangjia_1
+	prerequisite = { focus = BGD_huoli_zhishang }
+	cost = 4
+	x = -4
+	y = 4
+	completion_reward = {
+		custom_effect_tooltip = BGD_junshi_gaige_tt
+		swap_ideas = {
+            remove_idea = BGD_lujun_shengchan
+			add_idea = BGD_lujun_shengchan_1
+		}
+		add_to_variable = { jungai_jindu = 5 }
+		add_tech_bonus = {
+			name = BGD_armor
+			bonus = 1
+			uses = 1
+			category = armor
+		}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_fangweijun_0
+			add_idea = BGD_guomin_fangweijun_6
+			}
+		}
+		add_to_variable = { BGD_guomin_fangweijun_army_armor_attack_factor = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_breakthrough_factor = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_army_armor_defence_factor = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_army_armor_speed_factor = 0.1 }
+	}
+}
+shared_focus = {
+	id = BGD_houqin_gaishan
+	icon = GFX_houqin_gaishan_1
+	prerequisite = { focus = BGD_zhuangjia_zuozhan }
+	cost = 4
+	x = -4
+	y = 5
+	completion_reward = {
+		custom_effect_tooltip = BGD_junshi_gaige_tt
+		add_to_variable = { jungai_jindu = 5 }
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_fangweijun_0
+			add_idea = BGD_guomin_fangweijun_7
+			}
+		}
+		add_to_variable = { BGD_guomin_fangweijun_supply_consumption_factor = -0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_supply_node_range = 0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_org_loss_when_moving = -0.2 }
+	}
+}
+shared_focus = {
+	id = BGD_weilai_zhanzheng
+	icon = GFX_weilai_zhanzheng_1
+	prerequisite = { focus = BGD_houqin_gaishan }
+	cost = 4
+	x = -4
+	y = 6
+	completion_reward = {
+		custom_effect_tooltip = BGD_junshi_gaige_tt
+		country_event = {
+			id = bgd.70
+		}
+		add_to_variable = { jungai_jindu = 5 }
+		unlock_decision_tooltip = BGD_weilai_keji
+		unlock_decision_tooltip = BGD_weilai_keji_1
+		add_tech_bonus = {
+			name = BGD_infantry
+			bonus = 1
+			uses = 1
+			category = infantry_tech
+			category = infantry_weapons
+		}
+		set_technology = {
+			body_armor6 = 1
+			support_weapons6 = 1
+		}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_fangweijun_0
+			add_idea = BGD_guomin_fangweijun_8
+			}
+		}
+		add_to_variable = { BGD_guomin_fangweijun_army_attack_factor = 0.05 }
+		add_to_variable = { BGD_guomin_fangweijun_army_defence_factor = 0.05 }
+		add_to_variable = { BGD_guomin_fangweijun_army_org_factor = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_research_speed_factor = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_military_development_monthly = 0.015 }
+		add_to_variable = { BGD_guomin_fangweijun_breakthrough_factor = 0.05 }
+		add_to_variable = { BGD_guomin_fangweijun_coordination_bonus = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_initiative_factor = 0.05 }
+		add_to_variable = { BGD_guomin_fangweijun_land_reinforce_rate = 0.06 }
+		add_to_variable = { BGD_guomin_fangweijun_recon_factor = 0.2 }
+	}
+}
+shared_focus = {
+	id = BGD_zhikong_youxian
+	icon = GFX_zhikong_youxian_1
+	prerequisite = { focus = BGD_quanmian_gaige}
+	cost = 4
+	x = -7
+	y = 3
+	completion_reward = {
+		custom_effect_tooltip = BGD_junshi_gaige_tt
+		add_to_variable = { jungai_jindu = 5 }
+		add_tech_bonus = {
+			name = BGD_airforce
+			bonus = 1
+			uses = 1
+			category = light_fighter
+		}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_fangweijun_0
+			add_idea = BGD_guomin_fangweijun_9
+			}
+		}
+		add_to_variable = { BGD_guomin_fangweijun_air_attack_factor = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_air_defence_factor = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_army_bonus_air_superiority_factor = 0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_air_agility_factor = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_air_superiority_bonus_in_combat = 0.2 }
+	}
+}
+shared_focus = {
+	id = BGD_wuren_zhanji
+	icon = GFX_fazhan_wurenji
+	prerequisite = { focus = BGD_zhikong_youxian }
+	cost = 4
+	x = -7
+	y = 4
+	completion_reward = {
+		custom_effect_tooltip = BGD_junshi_gaige_tt
+		add_to_variable = { jungai_jindu = 5 }
+		add_tech_bonus = {
+			name = BGD_airforce
+			bonus = 1
+			uses = 1
+			category = cas_bomber
+		}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_fangweijun_0
+			add_idea = BGD_guomin_fangweijun_10
+			}
+		}
+		add_to_variable = { BGD_guomin_fangweijun_air_cas_present_factor = 0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_ground_attack_factor = 0.15 }
+	}
+}
+shared_focus = {
+	id = BGD_sanwei_zuozhan
+	icon = GFX_xietiao_zuozhan_1
+	prerequisite = { focus = BGD_wuren_zhanji }
+	cost = 4
+	x = -7
+	y = 5
+	completion_reward = {
+		custom_effect_tooltip = BGD_junshi_gaige_tt
+		add_to_variable = { jungai_jindu = 5 }
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_fangweijun_0
+			add_idea = BGD_guomin_fangweijun_11
+			}
+		}
+		add_to_variable = { BGD_guomin_fangweijun_air_mission_efficiency = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_air_cas_efficiency = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_air_nav_efficiency = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_air_superiority_efficiency = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_air_intercept_efficiency = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_air_escort_efficiency = 0.1 }
+	}
+}
+shared_focus = {
+	id = BGD_kuoda_shengchan
+	icon = GFX_kuoda_zhanji_shengchan_1
+	prerequisite = { focus = BGD_sanwei_zuozhan }
+	cost = 4
+	x = -7
+	y = 6
+	completion_reward = {
+		custom_effect_tooltip = BGD_junshi_gaige_tt
+		add_offsite_building = { 
+			type = arms_factory
+			level = 3
+		}
+		add_to_variable = { jungai_jindu = 5 }
+		add_ideas = BGD_zhanji_shengchan
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_fangweijun_0
+			add_idea = BGD_guomin_fangweijun_12
+			}
+		}
+		add_to_variable = { BGD_guomin_fangweijun_industrial_capacity_factory = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_research_speed_factor = 0.05 }
+	}
+}
+shared_focus = {
+	id = BGD_chuanduo_shizhong
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_quanmian_gaige}
+	cost = 4
+	x = -1
+	y = 3
+	completion_reward = {
+		custom_effect_tooltip = BGD_junshi_gaige_tt
+		add_ideas = BGD_haijun_shengchan
+		add_offsite_building = { 
+			type = dockyard
+			level = 5
+		}
+		add_to_variable = { jungai_jindu = 5 }
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_fangweijun_0
+			add_idea = BGD_guomin_fangweijun_13
+			}
+		}
+		add_to_variable = { BGD_guomin_fangweijun_industrial_capacity_dockyard = 0.25 }
+	}
+}
+shared_focus = {
+	id = BGD_xiandai_haizhan
+	icon = GFX_xiandai_haizhan_1
+	prerequisite = { focus = BGD_chuanduo_shizhong }
+	cost = 4
+	x = -1
+	y = 4
+	completion_reward = {
+		custom_effect_tooltip = BGD_junshi_gaige_tt
+		add_to_variable = { jungai_jindu = 5 }
+		add_tech_bonus = {
+			name = BGD_navy
+			bonus = 0.65
+			uses = 3
+			category = naval_equipment
+		}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_fangweijun_0
+			add_idea = BGD_guomin_fangweijun_14
+			}
+		}
+		add_to_variable = { BGD_guomin_fangweijun_navy_org_factor = 0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_naval_speed_factor = 0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_naval_detection = 0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_navy_max_range_factor = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_spotting_chance = 0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_screening_efficiency = 0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_positioning = 0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_naval_coordination = 0.15 }
+	}
+}
+shared_focus = {
+	id = BGD_langqun_zhanshu
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_xiandai_haizhan }
+	cost = 4
+	x = -1
+	y = 5
+	completion_reward = {
+		custom_effect_tooltip = BGD_junshi_gaige_tt
+		add_to_variable = { jungai_jindu = 5 }
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_fangweijun_0
+			add_idea = BGD_guomin_fangweijun_15
+			}
+		}
+		add_to_variable = { BGD_guomin_fangweijun_navy_submarine_attack_factor = 0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_convoy_raiding_efficiency_factor = 0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_naval_torpedo_cooldown_factor = -0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_naval_torpedo_hit_chance_factor = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_naval_torpedo_reveal_chance_factor = -0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_naval_torpedo_screen_penetration_factor = 0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_navy_visibility = -0.2 }
+	}
+}
+shared_focus = {
+	id = BGD_yingdui_dongya
+	icon = GFX_yingdui_dihaijun
+	prerequisite = { focus = BGD_langqun_zhanshu }
+	cost = 4
+	x = -1
+	y = 6
+	completion_reward = {
+		custom_effect_tooltip = BGD_junshi_gaige_tt
+		add_to_variable = { jungai_jindu = 5 }
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_fangweijun_0
+			add_idea = BGD_guomin_fangweijun_16
+			}
+		}
+		add_to_variable = { BGD_guomin_fangweijun_navy_anti_air_attack_factor = 0.4 }
+		add_to_variable = { BGD_guomin_fangweijun_fighter_sortie_efficiency = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_sortie_efficiency = 0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_naval_strike_agility_factor = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_naval_strike_attack_factor = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_naval_strike = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_naval_strike_targetting_factor = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_navy_carrier_air_attack_factor = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_navy_carrier_air_targetting_factor = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_navy_carrier_air_agility_factor = 0.1 }
+	}
+}
+shared_focus = {
+	id = BGD_luli_tongxin
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_heping_shiyan }
+	cost = 4
+	x = -6
+	y = 8
+	completion_reward = {
+		army_experience = 50
+		air_experience = 50
+		navy_experience = 50
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_fangweijun_0
+			add_idea = BGD_guomin_fangweijun_18
+			}
+		}
+		add_to_variable = { BGD_guomin_fangweijun_max_planning_factor = 0.4 }
+		add_to_variable = { BGD_guomin_fangweijun_planning_speed = 0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_command_power_gain = 0.5 }
+		add_to_variable = { BGD_guomin_fangweijun_command_power_gain_mult = 0.25 }
+		add_to_variable = { BGD_guomin_fangweijun_max_command_power = 120 }
+	}
+}
+shared_focus = {
+	id = BGD_mengxiang_zhijun
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_heping_shiyan }
+	cost = 4
+	x = -2
+	y = 8
+	completion_reward = {
+		add_stability = 0.05
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_fangweijun_0
+			add_idea = BGD_guomin_fangweijun_19
+			}
+		}
+		add_to_variable = { BGD_guomin_fangweijun_conscription_factor = 0.25 }
+		add_to_variable = { BGD_guomin_fangweijun_conscription = 0.015 }
+	}
+}
+shared_focus = {
+	id = BGD_heping_shiyan
+	icon = GFX_heping_shiyan_1
+	prerequisite = { focus = BGD_yingdui_dongya }
+	prerequisite = { focus = BGD_weilai_zhanzheng }
+	prerequisite = { focus = BGD_kuoda_shengchan }
+	cost = 4
+	x = -4
+	y = 7
+	completion_reward = {
+		add_war_support = 0.1
+		set_country_flag = BGD_zhuanshu_junshi_jiandu_faan
+		add_ideas = BGD_wangdao_zhishi
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_fangweijun_0
+			add_idea = BGD_guomin_fangweijun_17
+			}
+		}
+		add_to_variable = { BGD_guomin_fangweijun_war_support_weekly = 0.005 }
+		add_to_variable = { BGD_guomin_fangweijun_resistance_damage_to_garrison = -0.25 }
+		add_to_variable = { BGD_guomin_fangweijun_compliance_gain = 0.03 }
+		add_to_variable = { BGD_guomin_fangweijun_compliance_growth = 0.25 }
+		add_to_variable = { BGD_guomin_fangweijun_resistance_growth = -0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_resistance_decay = 0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_army_defence_factor = 0.1 }
+	}
+}
+shared_focus = {
+	id = BGD_dingdian_zhijun
+	icon = GFX_dingdian_jundui
+	prerequisite = { focus = BGD_mengxiang_zhijun }
+	prerequisite = { focus = BGD_luli_tongxin }
+	cost = 4
+	x = -4
+	y = 9
+	available = {
+		check_variable = { jungai_jindu > 99 }
+	}
+	completion_reward = {
+		custom_effect_tooltip = BGD_jungai_jindu_jiance_tt
+		country_event = {
+			id = bgd.80
+		}
+		set_temp_variable = {
+			var = military_development_var_temp
+			value = 0.5
+		}
+		add_military_development = yes
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_fangweijun_0
+			add_idea = BGD_guomin_fangweijun_20
+			}
+		}
+		add_to_variable = { BGD_guomin_fangweijun_military_development_monthly = 0.03 }
+		add_to_variable = { BGD_guomin_fangweijun_war_support_factor = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_experience_gain_army_factor = 0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_experience_gain_air_factor = 0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_experience_gain_navy_factor = 0.15 }
+		add_to_variable = { BGD_guomin_fangweijun_experience_loss_factor = -0.25 }
+		add_to_variable = { BGD_guomin_fangweijun_experience_gain_army_unit_factor = 0.25 }
+		add_to_variable = { BGD_guomin_fangweijun_research_speed_factor = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_breakthrough_factor = 0.05 }
+		add_to_variable = { BGD_guomin_fangweijun_industrial_capacity_dockyard = 0.1 }
+		add_to_variable = { BGD_guomin_fangweijun_industrial_capacity_factory = 0.05 }
+	}
+}
+shared_focus = {
+	id = BGD_jingji_jianshe
+	icon = GFX_jianshe_jingji_1
+	cost = 4
+	x = 19
+	y = 0
+	available = {
+		NOT = {
+			has_dynamic_modifier = {
+				modifier = BGD_neizhan_feixv
+			}
+		}
+	}
+	completion_reward = {
+		unlock_decision_category_tooltip = BGD_jingji_gongzuo
+		unlock_decision_tooltip = BGD_jiashui
+		add_political_power = 50
+		set_country_flag = BGD_qiyong_zhuanshu_jingji
+		add_ideas = BGD_jingji_jianshe_jinxingshi
+		effect_tooltip = {
+			add_ideas = BGD_guomin_jingji_1
+		}
+		hidden_effect = {
+			add_dynamic_modifier = {
+				modifier = BGD_guomin_jingji
+			}
+			}
+			add_to_variable = { BGD_guomin_jingji_personal_value_factor = 0.02 }
+			add_to_variable = { BGD_guomin_jingji_business_value_factor = 0.02 }
+			add_to_variable = { BGD_guomin_jingji_income_growth_factor = 0.03 }
+			custom_effect_tooltip = BGD_fulilv_qiyong
+	}
+}
+shared_focus = {
+	id = BGD_jijian_gongcheng
+	icon = GFX_pukai_jijian_1
+	prerequisite = { focus = BGD_jingji_jianshe }
+	cost = 4
+	x = 17
+	y = 1
+	completion_reward = {
+		add_tech_bonus = {
+			name = BGD_jianshe
+			bonus = 1
+			uses = 1
+			category = industry
+		}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_jingji_0
+			add_idea = BGD_guomin_jingji_2
+			}
+		}
+			add_to_variable = { BGD_guomin_jingji_production_speed_buildings_factor = 0.1 }
+			add_to_variable = { BGD_guomin_jingji_business_value_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_expense_growth_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_consumer_goods_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_industrial_development_monthly = 0.01 }
+			add_to_variable = { BGD_guomin_jingji_poverty_development_monthly = 0.01 }
+	}
+}
+shared_focus = {
+	id = BGD_qvyv_fazhan
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_jingji_jianshe }
+	cost = 4
+	x = 22
+	y = 1
+	completion_reward = {
+		set_temp_variable = {
+			var = industrial_development_var_temp
+			value = 0.15
+		}
+		add_industrial_development = yes
+	every_owned_state = {
+				limit = {
+					is_core_of = BGD
+				}
+				add_extra_state_shared_building_slots = 2
+		}
+	}
+}
+shared_focus = {
+	id = BGD_gaokeji_fazhan
+	icon = GFX_gaokeji_fazhan_1
+	prerequisite = { focus = BGD_jingji_jianshe }
+	cost = 4
+	x = 15
+	y = 1
+	completion_reward = {
+		add_tech_bonus = {
+			name = BGD_computer
+			bonus = 1
+			uses = 1
+			category = computing_tech
+		}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_jingji_0
+			add_idea = BGD_guomin_jingji_5
+			}
+		}
+			add_to_variable = { BGD_guomin_jingji_research_speed_factor = 0.1 }
+			add_to_variable = { BGD_guomin_jingji_production_factory_max_efficiency_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_production_factory_efficiency_gain_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_consumer_goods_factor = -0.02 }
+			add_to_variable = { BGD_guomin_jingji_academic_development_monthly = 0.02 }
+			add_to_variable = { BGD_guomin_jingji_industrial_development_monthly = 0.015 }
+	}
+}
+shared_focus = {
+	id = BGD_zhongxiao_qiye
+	icon = GFX_butie_qiye_1
+	prerequisite = { focus = BGD_jijian_gongcheng }
+	cost = 4
+	x = 17
+	y = 2
+	completion_reward = {
+		country_event = {
+			id = bgd.109
+		}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_jingji_0
+			add_idea = BGD_guomin_jingji_3
+			}
+		}
+			add_to_variable = { BGD_guomin_jingji_personal_value_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_business_value_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_expense_growth_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_consumer_goods_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_production_factory_max_efficiency_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_production_factory_start_efficiency_factor = 0.25 }
+			add_to_variable = { BGD_guomin_jingji_industrial_development_monthly = 0.01 }
+			add_to_variable = { BGD_guomin_jingji_poverty_development_monthly = 0.015 }
+	}
+}
+shared_focus = {
+	id = BGD_fazhan_zhonggong
+	icon = GFX_fazhan_zhonggong_1
+	prerequisite = { focus = BGD_zhongxiao_qiye }
+	cost = 4
+	x = 17
+	y = 3
+	completion_reward = {
+		add_tech_bonus = {
+			name = BGD_industry
+			bonus = 1
+			uses = 1
+			category = industry
+		}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_jingji_0
+			add_idea = BGD_guomin_jingji_4
+			}
+		}
+			add_to_variable = { BGD_guomin_jingji_industrial_capacity_factory = 0.1 }
+			add_to_variable = { BGD_guomin_jingji_industrial_capacity_dockyard = 0.1 }
+			add_to_variable = { BGD_guomin_jingji_production_speed_buildings_factor = 0.1 }
+			add_to_variable = { BGD_guomin_jingji_consumer_goods_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_expense_growth_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_industrial_development_monthly = 0.03 }
+	}
+}
+shared_focus = {
+	id = BGD_beibu_fazhan
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_nanbu_fazhan }
+	cost = 4
+	x = 23
+	y = 4
+	completion_reward = {
+		unlock_decision_tooltip = BGD_beibu_mingong
+		unlock_decision_tooltip = BGD_beibu_jungong
+		unlock_decision_tooltip = BGD_beibu_bangong
+		unlock_decision_tooltip = BGD_beibu_jijian
+		unlock_decision_tooltip = BGD_beibu_heneng
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_jingji_0
+			add_idea = BGD_guomin_jingji_9
+			}
+		}
+			add_to_variable = { BGD_guomin_jingji_farming_development_monthly = 0.02 }
+			add_to_variable = { BGD_guomin_jingji_production_speed_buildings_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_personal_value_factor = 0.02 }
+			add_to_variable = { BGD_guomin_jingji_business_value_factor = 0.03 }
+			add_to_variable = { BGD_guomin_jingji_global_building_slots_factor = 0.15 }
+	}
+}
+shared_focus = {
+	id = BGD_zhongbu_fazhan
+	icon = GFX_dachengshi_zhiguang_2
+	prerequisite = { focus = BGD_qvyv_fazhan }
+	cost = 4
+	x = 23
+	y = 2
+	completion_reward = {
+		unlock_decision_tooltip = BGD_zhongbu_mingong
+		unlock_decision_tooltip = BGD_zhongbu_jungong
+		unlock_decision_tooltip = BGD_zhongbu_bangong
+		unlock_decision_tooltip = BGD_zhongbu_jijian
+		unlock_decision_tooltip = BGD_zhongbu_heneng
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_jingji_0
+			add_idea = BGD_guomin_jingji_10
+			}
+		}
+			add_to_variable = { BGD_guomin_jingji_industrial_development_monthly = 0.01 }
+			add_to_variable = { BGD_guomin_jingji_poverty_development_monthly = 0.01 }
+			add_to_variable = { BGD_guomin_jingji_production_speed_buildings_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_personal_value_factor = 0.02 }
+			add_to_variable = { BGD_guomin_jingji_business_value_factor = 0.03 }
+			add_to_variable = { BGD_guomin_jingji_global_building_slots_factor = 0.15 }
+	}
+}
+shared_focus = {
+	id = BGD_xiangcun_zhenxing
+	icon = GFX_xiangcun_zhenxing_1
+	prerequisite = { focus = BGD_qvyv_fazhan }
+	cost = 4
+	x = 21
+	y = 2
+	completion_reward = {
+		every_owned_state = {
+				limit = {
+					is_core_of = BGD
+					OR = {
+						has_state_category = rural
+						has_state_category = village
+						has_state_category = town
+						has_state_category = large_town
+						has_state_category = suburb
+						has_state_category = large_suburb
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				increase_state_category = yes
+		}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_jingji_0
+			add_idea = BGD_guomin_jingji_12
+			}
+		}
+			add_to_variable = { BGD_guomin_jingji_farming_development_monthly = 0.025 }
+			add_to_variable = { BGD_guomin_jingji_poverty_development_monthly = 0.015 }
+			add_to_variable = { BGD_guomin_jingji_consumer_goods_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_expense_growth_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_monthly_population = 0.1 }
+			add_to_variable = { BGD_guomin_jingji_personal_value_factor = 0.05 }
+	}
+}
+shared_focus = {
+	id = BGD_nanbu_fazhan
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_zhongbu_fazhan }
+	cost = 4
+	x = 23
+	y = 3
+	completion_reward = {
+		unlock_decision_tooltip = BGD_nanbu_mingong
+		unlock_decision_tooltip = BGD_nanbu_jungong
+		unlock_decision_tooltip = BGD_nanbu_bangong
+		unlock_decision_tooltip = BGD_nanbu_jijian
+		unlock_decision_tooltip = BGD_nanbu_heneng
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_jingji_0
+			add_idea = BGD_guomin_jingji_11
+			}
+		}
+			add_to_variable = { BGD_guomin_jingji_industrial_development_monthly = 0.01 }
+			add_to_variable = { BGD_guomin_jingji_poverty_development_monthly = 0.01 }
+			add_to_variable = { BGD_guomin_jingji_production_speed_buildings_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_personal_value_factor = 0.02 }
+			add_to_variable = { BGD_guomin_jingji_business_value_factor = 0.03 }
+			add_to_variable = { BGD_guomin_jingji_global_building_slots_factor = 0.15 }
+	}
+}
+shared_focus = {
+	id = BGD_liangshi_ziji
+	icon = GFX_liangshi_ziji_1
+	prerequisite = { focus = BGD_xiangcun_zhenxing }
+	cost = 4
+	x = 21
+	y = 3
+	completion_reward = {
+		set_temp_variable = {
+			var = farming_development_var_temp
+			value = 0.5
+		}
+		add_farming_development = yes
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_jingji_0
+			add_idea = BGD_guomin_jingji_13
+			}
+		}
+			add_to_variable = { BGD_guomin_jingji_farming_development_monthly = 0.035 }
+			add_to_variable = { BGD_guomin_jingji_production_lack_of_resource_penalty_factor = -0.15 }
+			add_to_variable = { BGD_guomin_jingji_consumer_goods_factor = -0.03 }
+			add_to_variable = { BGD_guomin_jingji_monthly_population = 0.25 }
+			add_to_variable = { BGD_guomin_jingji_war_stability_factor = 0.25 }
+	}
+}
+shared_focus = {
+	id = BGD_dachengshi_zhiguang
+	icon = GFX_dachengshi_zhiguang_1
+	prerequisite = { focus = BGD_liangshi_ziji }
+	cost = 4
+	x = 21
+	y = 4
+	completion_reward = {
+		every_owned_state = {
+				limit = {
+					is_core_of = BGD
+					OR = {
+						has_state_category = city
+						has_state_category = large_city
+						has_state_category = metropolis
+						has_state_category = conurbation
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				increase_state_category = yes
+		}
+		every_owned_state = {
+				limit = {
+					is_core_of = BGD
+					has_state_category = megalopolis
+				}
+				add_extra_state_shared_building_slots = 2
+		}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_jingji_0
+			add_idea = BGD_guomin_jingji_14
+			}
+		}
+			add_to_variable = { BGD_guomin_jingji_industrial_development_monthly = 0.01 }
+			add_to_variable = { BGD_guomin_jingji_poverty_development_monthly = 0.01 }
+			add_to_variable = { BGD_guomin_jingji_personal_value_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_business_value_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_monthly_population = 0.1 }
+			add_to_variable = { BGD_guomin_jingji_industrial_capacity_factory = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_industrial_capacity_dockyard = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_expense_growth_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_consumer_goods_factor = 0.05 }
+	}
+}
+shared_focus = {
+	id = BGD_xianjin_wenyv
+	icon = GFX_nengyuan_duli
+	prerequisite = { focus = BGD_gaokeji_fazhan }
+	cost = 4
+	x = 15
+	y = 2
+	completion_reward = {
+		add_tech_bonus = {
+			name = BGD_resource
+			bonus = 1
+			uses = 1
+			category = synth_resources
+		}
+		add_tech_bonus = {
+			name = BGD_nuke
+			bonus = 1
+			uses = 1
+			category = nuclear
+		}
+		set_technology = {
+			nuclear_reactors3 = 1
+		}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_jingji_0
+			add_idea = BGD_guomin_jingji_6
+			}
+		}
+			add_to_variable = { BGD_guomin_jingji_production_lack_of_resource_penalty_factor = -0.25 }
+			add_to_variable = { BGD_guomin_jingji_industrial_capacity_factory = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_industrial_capacity_dockyard = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_consumer_goods_factor = -0.03 }
+			add_to_variable = { BGD_guomin_jingji_industrial_development_monthly = 0.015 }
+			add_to_variable = { BGD_guomin_jingji_base_fuel_gain_factor = 0.25 }
+			add_to_variable = { BGD_guomin_jingji_local_resources_factor = 0.25 }
+	}
+}
+shared_focus = {
+	id = BGD_wangluo_geming
+	icon = GFX_wangluo_shidai
+	prerequisite = { focus = BGD_xianjin_wenyv }
+	cost = 4
+	x = 15
+	y = 3
+	completion_reward = {
+		country_event = {
+			id = bgd.88
+		}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_jingji_0
+			add_idea = BGD_guomin_jingji_7
+			}
+		}
+			add_to_variable = { BGD_guomin_jingji_production_factory_max_efficiency_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_production_factory_efficiency_gain_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_personal_value_factor = 0.02 }
+			add_to_variable = { BGD_guomin_jingji_business_value_factor = 0.03 }
+			add_to_variable = { BGD_guomin_jingji_consumer_goods_factor = -0.02 }
+			add_to_variable = { BGD_guomin_jingji_academic_development_monthly = 0.01 }
+			add_to_variable = { BGD_guomin_jingji_society_development_monthly = 0.02 }
+			add_to_variable = { BGD_guomin_jingji_political_power_cost = -0.2 }
+	}
+}
+shared_focus = {
+	id = BGD_gaozhi_jingji
+	icon = GFX_gaozhiliang_jingji
+	prerequisite = { focus = BGD_wangluo_geming }
+	prerequisite = { focus = BGD_fazhan_zhonggong }
+	cost = 4
+	x = 16
+	y = 4
+	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_jingji_0
+			add_idea = BGD_guomin_jingji_8
+			}
+		}
+			add_to_variable = { BGD_guomin_jingji_production_factory_max_efficiency_factor = 0.1 }
+			add_to_variable = { BGD_guomin_jingji_production_factory_efficiency_gain_factor = 0.1 }
+			add_to_variable = { BGD_guomin_jingji_personal_value_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_business_value_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_consumer_goods_factor = -0.05 }
+			add_to_variable = { BGD_guomin_jingji_research_speed_factor = 0.05 }
+			add_to_variable = { BGD_guomin_jingji_income_growth_factor = 0.05 }
+	}
+}
+shared_focus = {
+	id = BGD_jingji_qiji
+	icon = GFX_huangjin_jingji
+	prerequisite = { focus = BGD_gaozhi_jingji }
+	prerequisite = { focus = BGD_beibu_fazhan }
+	prerequisite = { focus = BGD_dachengshi_zhiguang }
+	cost = 4
+	x = 19
+	y = 5
+	completion_reward = {
+		country_event = {
+			id = bgd.79
+		}
+		add_research_slot = 1
+		add_political_power = 100
+		add_stability = 0.15
+		set_country_flag = BGD_qiyong_zhuanshu_jingji_1
+		clr_country_flag = BGD_qiyong_zhuanshu_jingji
+		add_ideas = BGD_jingji_huangjin_shidai
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_guomin_jingji_0
+			add_idea = BGD_guomin_jingji_15
+			}
+		}
+			add_to_variable = { BGD_guomin_jingji_industrial_development_monthly = 0.02 }
+			add_to_variable = { BGD_guomin_jingji_poverty_development_monthly = 0.02 }
+			add_to_variable = { BGD_guomin_jingji_farming_development_monthly = 0.02 }
+			add_to_variable = { BGD_guomin_jingji_personal_value_factor = 0.1 }
+			add_to_variable = { BGD_guomin_jingji_business_value_factor = 0.1 }
+			add_to_variable = { BGD_guomin_jingji_monthly_population = 0.15 }
+			add_to_variable = { BGD_guomin_jingji_industrial_capacity_factory = 0.15 }
+			add_to_variable = { BGD_guomin_jingji_industrial_capacity_dockyard = 0.15 }
+			add_to_variable = { BGD_guomin_jingji_income_growth_factor = 0.25 }
+			add_to_variable = { BGD_guomin_jingji_consumer_goods_factor = -0.35 }
+			add_to_variable = { BGD_guomin_jingji_production_factory_max_efficiency_factor = 0.15 }
+			add_to_variable = { BGD_guomin_jingji_production_factory_efficiency_gain_factor = 0.15 }
+			add_to_variable = { BGD_guomin_jingji_research_speed_factor = 0.1 }
+			add_to_variable = { BGD_guomin_jingji_production_speed_buildings_factor = 0.25 }
+			add_to_variable = { BGD_guomin_jingji_global_building_slots_factor = 0.15 }
+	}
+}
+shared_focus = {
+	id = BGD_yazi_zuzhi
+	icon = GFX_chengli_APFNO
+	cost = 3
+	x = 32
+	y = 0
+	available = {
+		has_country_flag = BGD_shanyaodang_dangxuan
+	}
+	completion_reward = {
+		unlock_decision_category_tooltip = BGD_guojia_waijiao
+		unlock_decision_tooltip = BGD_yaoqing_aoxin
+		unlock_decision_tooltip = BGD_yaoqing_taiguo
+		unlock_decision_tooltip = BGD_yaoqing_maxin
+		unlock_decision_tooltip = BGD_yaoqing_yinni
+		unlock_decision_tooltip = BGD_yaoqing_feilvbing
+		unlock_decision_tooltip = BGD_yaoqing_yindu
+		create_faction = BANGAPFNO
+		set_country_flag = APFNO_member
+		effect_tooltip = {
+			add_ideas = BGD_yazi_lingdao_1
+		}
+		hidden_effect = {
+			add_dynamic_modifier = {
+				modifier = BGD_yazi_lingdao
+			}
+			news_event = {
+				id = news.1220
+			}
+			}
+			add_to_variable = { BGD_yazi_lingdao_stability_factor = 0.05 }
+			add_to_variable = { BGD_yazi_lingdao_war_support_factor = 0.05 }
+			add_to_variable = { BGD_yazi_lingdao_political_power_gain = -0.15 }
+	}
+}
+shared_focus = {
+	id = BGD_duikang_dongya
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_yazi_zuzhi }
+	cost = 3
+	x = 35
+	y = 1
+	completion_reward = {
+		country_event = {
+			id = bgd.81
+		}
+		PRC = {
+			add_stability = -0.25
+			add_war_support = -0.25
+			add_timed_idea = {
+				idea = EAS_dikang_kuangchao	
+				days = 250
+			}	
+		}
+		unlock_decision_tooltip = BGD_jiena_nanmin
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_yazi_lingdao_0
+			add_idea = BGD_yazi_lingdao_2
+			}
+		}
+			add_to_variable = { BGD_yazi_lingdao_weekly_manpower = 1500 }
+			add_to_variable = { BGD_yazi_lingdao_war_support_factor = 0.05 }
+	}
+}
+shared_focus = {
+	id = BGD_tuanjie_yatai
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_duikang_dongya }
+	cost = 3
+	x = 36
+	y = 2
+	completion_reward = {
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_yazi_lingdao_0
+			add_idea = BGD_yazi_lingdao_3
+			}
+		}
+			add_to_variable = { BGD_yazi_lingdao_stability_factor = 0.05 }
+			add_to_variable = { BGD_yazi_lingdao_war_support_factor = 0.05 }
+			add_to_variable = { BGD_yazi_lingdao_political_power_gain = 0.05 }
+			add_to_variable = { BGD_yazi_lingdao_political_power_factor = 0.05 }
+	}
+}
+shared_focus = {
+	id = BGD_guoji_zhichi
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_duikang_dongya }
+	cost = 3
+	x = 34
+	y = 2
+	completion_reward = {
+		unlock_decision_tooltip = BGD_jielu_dongya
+		add_offsite_building = { 
+			type = industrial_complex
+			level = 2
+		}
+		add_offsite_building = { 
+			type = arms_factory
+			level = 2
+		}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_yazi_lingdao_0
+			add_idea = BGD_yazi_lingdao_4
+			}
+		}
+			add_to_variable = { BGD_yazi_lingdao_trade_opinion_factor = 0.35 }
+			add_to_variable = { BGD_yazi_lingdao_opinion_gain_monthly_factor = 0.25 }
+			add_to_variable = { BGD_yazi_lingdao_improve_relations_maintain_cost_factor = -0.2 }
+			add_to_variable = { BGD_yazi_lingdao_consumer_goods_factor = -0.03 }
+	}
+}
+shared_focus = {
+	id = BGD_chuanbo_shanyao
+	icon = GFX_chuanbo_shanyao_1
+	prerequisite = { focus = BGD_guoji_zhichi }
+	prerequisite = { focus = BGD_tuanjie_yatai }
+	cost = 3
+	x = 35
+	y = 3
+	completion_reward = {
+		unlock_decision_tooltip = BGD_chuanbo_zhuyi
+		unlock_decision_tooltip = BGD_aoguo_shanyao
+		unlock_decision_tooltip = BGD_xinxilan_shanyao
+		unlock_decision_tooltip = BGD_bby_shanyao
+		unlock_decision_tooltip = BGD_yinni_shanyao
+		unlock_decision_tooltip = BGD_feilvbing_shanyao
+		unlock_decision_tooltip = BGD_mlxy_shanyao
+		unlock_decision_tooltip = BGD_xinjiapo_shanyao
+		unlock_decision_tooltip = BGD_taiguo_shanyao
+		unlock_decision_tooltip = BGD_yindu_shanyao
+		unlock_decision_tooltip = BGD_mengjiala_shanyao
+		add_political_power = 50
+	}
+}
+shared_focus = {
+	id = BGD_chengli_jingjiquan
+	icon = GFX_chengli_jingjiquan_1
+	prerequisite = { focus = BGD_yazi_zuzhi }
+	cost = 3
+	x = 29
+	y = 1
+	completion_reward = {
+		unlock_decision_tooltip = BGD_chukou_shangpin
+		set_country_flag = BGD_zhuanshu_maoyi_faan
+		add_ideas = BGD_jiagong_chukou_maoyi
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_yazi_lingdao_0
+			add_idea = BGD_yazi_lingdao_5
+			}
+		}
+			add_to_variable = { BGD_yazi_lingdao_income_growth_factor = 0.1 }
+			add_to_variable = { BGD_yazi_lingdao_consumer_goods_factor = -0.05 }
+	}
+}
+shared_focus = {
+	id = BGD_wenhua_jiaoliu
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_chengli_jingjiquan }
+	cost = 3
+	x = 28
+	y = 2
+	completion_reward = {
+		unlock_decision_tooltip = BGD_zuzhi_jiaoliu
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_yazi_lingdao_0
+			add_idea = BGD_yazi_lingdao_6
+			}
+		}
+			add_to_variable = { BGD_yazi_lingdao_political_power_gain = 0.05 }
+			add_to_variable = { BGD_yazi_lingdao_political_power_factor = 0.05 }
+			add_to_variable = { BGD_yazi_lingdao_faction_trade_opinion_factor = 0.25 }
+	}
+}
+shared_focus = {
+	id = BGD_keji_xiezuo
+	icon = GFX_keji_xiezuo_1
+	prerequisite = { focus = BGD_chengli_jingjiquan }
+	cost = 3
+	x = 30
+	y = 2
+	completion_reward = {
+		unlock_decision_tooltip = BGD_keji_hezuo
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_yazi_lingdao_0
+			add_idea = BGD_yazi_lingdao_7
+			}
+		}
+			add_to_variable = { BGD_yazi_lingdao_research_speed_factor = 0.05 }
+	}
+}
+shared_focus = {
+	id = BGD_shendu_hezuo
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_wenhua_jiaoliu }
+	prerequisite = { focus = BGD_keji_xiezuo }
+	cost = 3
+	x = 29
+	y = 3
+	completion_reward = {
+		unlock_decision_tooltip = BGD_tuijin_hezuo
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_yazi_lingdao_0
+			add_idea = BGD_yazi_lingdao_8
+			}
+		}
+			add_to_variable = { BGD_yazi_lingdao_research_speed_factor = 0.05 }
+			add_to_variable = { BGD_yazi_lingdao_consumer_goods_factor = -0.05 }
+			add_to_variable = { BGD_yazi_lingdao_political_power_gain = -0.15 }
+			add_to_variable = { BGD_yazi_lingdao_production_factory_max_efficiency_factor = 0.05 }
+			add_to_variable = { BGD_yazi_lingdao_industrial_capacity_factory = 0.05 }
+			add_to_variable = { BGD_yazi_lingdao_industrial_capacity_dockyard = 0.05 }
+			add_to_variable = { BGD_yazi_lingdao_income_growth_factor = 0.05 }
+	}
+}
+shared_focus = {
+	id = BGD_tuanjie_shijie
+	icon = GFX_tuanjie_shijie_1
+	prerequisite = { focus = BGD_shendu_hezuo }
+	prerequisite = { focus = BGD_chuanbo_shanyao }
+	cost = 3
+	x = 32
+	y = 4
+	completion_reward = {
+		unlock_decision_tooltip = BGD_ouzhou_hezuo
+		unlock_decision_tooltip = BGD_eguo_hezuo
+		unlock_decision_tooltip = BGD_disanshijie_hezuo
+		add_offsite_building = { 
+			type = industrial_complex
+			level = 5
+		}
+		add_offsite_building = { 
+			type = arms_factory
+			level = 5
+		}
+		effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_yazi_lingdao_0
+			add_idea = BGD_yazi_lingdao_9
+			}
+		}
+			add_to_variable = { BGD_yazi_lingdao_political_power_factor = 0.05 }
+			add_to_variable = { BGD_yazi_lingdao_political_power_gain = 0.1 }
+			add_to_variable = { BGD_yazi_lingdao_consumer_goods_factor = -0.05 }
+			add_to_variable = { BGD_yazi_lingdao_income_growth_factor = 0.05 }
+	}
+}
+shared_focus = {
+	id = BGD_zuizhong_zhizhan
+	icon = GFX_guoce_zhanwei
+	cost = 1
+	x = 25
+	y = 10
+	allow_branch = {
+		has_country_flag = BGD_gaw_begin
+	}
+	available = {
+		is_completed_by_event = yes
+	}
+	completion_reward = {
+		add_war_support = 0.05
+	}
+}
+shared_focus = {
+	id = BGD_shangdianjie_xingdong
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_zuizhong_zhizhan }
+	cost = 3
+	x = 25
+	y = 11
+	completion_reward = {
+		add_timed_idea = {
+			idea = BGD_shangdianjie	
+			days = 250
+		}	
+	}
+}
+shared_focus = {
+	id = BGD_dongbeiya_zhanyi
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_shangdianjie_xingdong }
+	cost = 3
+	x = 24
+	y = 12
+	completion_reward = {
+		add_timed_idea = {
+			idea = BGD_dongbeiya	
+			days = 180
+		}
+	}
+}
+shared_focus = {
+	id = BGD_taihai_zhanyi
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_shangdianjie_xingdong }
+	cost = 3
+	x = 26
+	y = 12
+	completion_reward = {
+		add_timed_idea = {
+			idea = BGD_taihai
+			days = 180
+		}
+	}
+}
+shared_focus = {
+	id = BGD_ring_xingdong
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_zuizhong_zhizhan }
+	cost = 3
+	x = 20
+	y = 11
+	completion_reward = {
+		add_timed_idea = {
+			idea = BGD_ring
+			days = 250
+		}
+	}
+}
+shared_focus = {
+	id = BGD_jibai_pak
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_ring_xingdong }
+	cost = 3
+	x = 19
+	y = 12
+	completion_reward = {
+		add_timed_idea = {
+			idea = BGD_pak
+			days = 180
+		}
+	}
+}
+shared_focus = {
+	id = BGD_nanya_xiaoguo
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_ring_xingdong }
+	cost = 3
+	x = 21
+	y = 12
+	completion_reward = {
+		add_timed_idea = {
+			idea = BGD_nanya
+			days = 180
+		}
+	}
+}
+shared_focus = {
+	id = BGD_circle_xingdong
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_zuizhong_zhizhan }
+	cost = 3
+	x = 30
+	y = 11
+	completion_reward = {
+		add_timed_idea = {
+			idea = BGD_circle
+			days = 250
+		}
+	}
+}
+shared_focus = {
+	id = BGD_miandian_zhanyi
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_circle_xingdong }
+	cost = 3
+	x = 29
+	y = 12
+	completion_reward = {
+		add_timed_idea = {
+			idea = BGD_miandian
+			days = 180
+		}
+	}
+}
+shared_focus = {
+	id = BGD_yuenan_zhanyi
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_circle_xingdong }
+	cost = 3
+	x = 31
+	y = 12
+	completion_reward = {
+		add_timed_idea = {
+			idea = BGD_yuenan
+			days = 180
+		}
+	}
+}
+shared_focus = {
+	id = BGD_space_jihua
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_zuizhong_zhizhan }
+	cost = 3
+	x = 36
+	y = 11
+	completion_reward = {
+		add_war_support = 0.15
+		add_manpower = 50000
+		add_ideas = BGD_space
+	}
+}
+shared_focus = {
+	id = BGD_chongran_jingshen
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_space_jihua }
+	cost = 3
+	x = 35
+	y = 12
+	completion_reward = {
+		add_ideas = BGD_mengxiang_1
+	}
+}
+shared_focus = {
+	id = BGD_zhanshi_zhuangtai
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_space_jihua }
+	cost = 3
+	x = 37
+	y = 12
+	completion_reward = {
+		add_war_support = 0.05
+		add_political_power = 100
+		add_manpower = 35000
+	}
+}
+shared_focus = {
+	id = BGD_yuanzhu_dikang
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_chongran_jingshen }
+	mutually_exclusive = { focus = BGD_jixian_dongyuan }
+	cost = 3
+	x = 35
+	y = 13
+	completion_reward = {
+		PRC = {
+			add_ideas = BGD_houfang_qihuo
+		}
+	}
+}
+shared_focus = {
+	id = BGD_jixian_dongyuan
+	icon = GFX_guoce_zhanwei
+	prerequisite = { focus = BGD_zhanshi_zhuangtai }
+	mutually_exclusive = { focus = BGD_yuanzhu_dikang }
+	cost = 3
+	x = 37
+	y = 13
+	completion_reward = {
+		add_manpower = 150000
+		add_war_support = 0.05
+		add_political_power = 100
+		swap_ideas = {
+			remove_idea = BGD_space
+			add_idea = BGD_space_1
+		}
+	}
+}
+shared_focus = {
+	id = BGD_zhameng_xingdong
+	icon = GFX_zhameng_xingdong_1
+	prerequisite = { focus = BGD_jixian_dongyuan focus = BGD_yuanzhu_dikang }
+	prerequisite = { focus = BGD_dongbeiya_zhanyi }
+	prerequisite = { focus = BGD_taihai_zhanyi }
+	cost = 3
+	x = 27
+	y = 14
+	available = {
+		PRC = {
+			surrender_progress > 0.54
+		}
+	}
+	completion_reward = {
+		country_event = {
+			id = bgd.66
+		}
+	}
+}

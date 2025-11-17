@@ -1,0 +1,12 @@
+leader_traits = {
+	int_putong_deshen = {
+		random = no
+		operative_slot = 2
+		intelligence_agency_defense = 0.35
+		decryption_power_factor = 0.25
+        intel_network_gain_factor = 0.75
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

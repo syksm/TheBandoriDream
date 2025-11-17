@@ -1,0 +1,221 @@
+focus_tree = {
+    id = TFR_tree_Japanese_Socialism_Fake
+	country = {
+		base = 0
+	}
+	default = no
+
+	focus = {
+	    id = BGD_diuren_xianyan
+		icon = GFX_focus_JAP_defeat_enduring
+		cost = 1
+		x = 3
+		y = 0
+		completion_reward = {
+		   add_stability = -0.1
+		}
+	}
+	focus = {
+	    id = BGD_jiesan_guohui
+		icon = GFX_focus_JAP_each_to_his_own
+		prerequisite = { focus = BGD_diuren_xianyan }
+		cost = 1
+		x = 2
+		y = 1
+		completion_reward = {
+		   add_political_power = -50
+		   add_popularity = {
+			    ideology = social_democrat
+			    popularity = -0.05
+		    }
+		}
+	}
+	focus = {
+	    id = BGD_jinxing_daxuan
+		icon = GFX_focus_JAP_defeat_constitutional_referendum
+		prerequisite = { focus = BGD_diuren_xianyan }
+		cost = 2
+		x = 4
+		y = 1
+		available = {
+			has_completed_focus = BGD_jiesan_guohui
+	    }
+		completion_reward = {
+			add_stability = 0.05
+		   add_popularity = {
+			    ideology = libertarian_socialist
+			    popularity = 0.15
+		    }
+			add_popularity = {
+			    ideology = communist
+			    popularity = 0.08
+		    }
+			add_popularity = {
+			    ideology = totalitarian_socialist
+			    popularity = 0.04
+		    }
+			add_popularity = {
+			    ideology = social_democrat
+			    popularity = 0.02
+		    }
+		}
+	}
+	focus = {
+	    id = BGD_chiri_dongsheng
+		icon = GFX_focus_JAP_peoples_japan
+		prerequisite = { focus = BGD_jiesan_guohui }
+		prerequisite = { focus = BGD_jinxing_daxuan }
+		cost = 0.3
+		x = 3
+		y = 2
+		completion_reward = {
+			set_politics = {
+				ruling_party = libertarian_socialist
+				elections_allowed = yes
+				election_frequency = 48
+			}
+			add_popularity = {
+			    ideology = libertarian_socialist
+			    popularity = 0.08
+		    }
+		   hidden_effect = {
+			    country_event = {
+			        id = bgd.116
+			    }
+		    }
+		}
+	}
+	focus = {
+	    id = BGD_zhongjie_ruanruo
+		icon = GFX_focus_JAP_defeat_declare_martial_law
+		prerequisite = { focus = BGD_chiri_dongsheng }
+		mutually_exclusive = {
+			focus = BGD_zhunbei_dangdaihui
+		}
+		cost = 2
+		x = 2
+		y = 3
+		allow_branch = {
+			has_government = nationalist
+		}
+		completion_reward = {
+			custom_effect_tooltip = BGD_weiquan_paixi
+			add_political_power = 250
+			add_stability = -0.15
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+	    id = BGD_zhunbei_dangdaihui
+        icon = GFX_focus_JAP_coordination_opinions
+		prerequisite = { focus = BGD_chiri_dongsheng }
+		mutually_exclusive = {
+			focus = BGD_zhongjie_ruanruo
+		}
+		cost = 2
+		x = 4
+		y = 3
+		allow_branch = {
+			has_government = nationalist
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.1
+		}
+	}
+	focus = {
+	    id = BGD_zongwu_kongzhi
+		icon = GFX_focus_JAP_defeat_uncontested_civil_administration
+		prerequisite = { focus = BGD_zhunbei_dangdaihui }
+		mutually_exclusive = {
+			focus = BGD_caiwu_yingxiang
+		}
+		cost = 1
+		x = 3
+		y = 4
+		completion_reward = {
+			custom_effect_tooltip = BGD_shemin_paixi
+			promote_character = {
+				character = BGD_rimi_char
+				ideology = kirakira_dokidoki
+			}
+		}
+	}
+	focus = {
+	    id = BGD_caiwu_yingxiang
+		icon = GFX_focus_JAP_state_budgeting
+		prerequisite = { focus = BGD_zhunbei_dangdaihui }
+		mutually_exclusive = {
+			focus = BGD_zongwu_kongzhi
+		}
+		cost = 1
+		x = 5
+		y = 4
+		completion_reward = {
+			custom_effect_tooltip = BGD_shezi_paixi
+			promote_character = {
+				character = BGD_saaya_char
+				ideology = centrist
+			}
+			set_party_name = {
+			    ideology = social_liberal
+			    long_name = JGP_liberal_long
+			    name = JGP_liberal
+		    }
+		}
+	}
+	focus = {
+	    id = BGD_zhaokai_huiyi
+		icon = GFX_focus_JAP_defeat_national_security_council
+		prerequisite = { 
+			focus = BGD_zongwu_kongzhi
+		    focus = BGD_caiwu_yingxiang
+	    }
+		cost = 1
+		x = 4
+		y = 5
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.2
+			if = {
+				limit = {
+					has_completed_focus = BGD_zongwu_kongzhi
+				}
+				set_politics = {
+				    ruling_party = social_democrat
+				    elections_allowed = yes
+				    election_frequency = 48
+			    }
+				set_temp_variable = {
+			        ruling_party_wing_var_temp = token:authoritarian_democrat
+		        }
+		        add_ruling_party_wing = yes
+				set_party_name = {
+			        ideology = nationalist
+			        long_name = guomin_fangweijun_long
+			        name = guomin_fangweijun
+		        }
+				load_focus_tree = TFR_tree_Rimi
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = BGD_caiwu_yingxiang
+				}
+				set_politics = {
+				    ruling_party = social_liberal
+				    elections_allowed = yes
+				    election_frequency = 48
+			    }
+				set_temp_variable = {
+			        ruling_party_wing_var_temp = token:authoritarian_democrat
+		        }
+		        add_ruling_party_wing = yes
+				set_party_name = {
+			        ideology = nationalist
+			        long_name = guomin_fangweijun_long
+			        name = guomin_fangweijun
+		        }
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+BGD_zonglifu_jueyi = {
+    icon = GFX_jueyi_zhanweifu
+
+    allowed = {
+       tag = BGD
+    }
+
+    visible = {
+      tag = BGD
+      has_country_flag = open_naikaku_sho_souri_window
+    }
+
+    priority = 99
+    
+    visible_when_empty = yes
+    scripted_gui = bgd_naikaku_souri
+}

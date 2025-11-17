@@ -1,0 +1,13 @@
+	spriteTypes = {	
+
+		spriteType = {
+			name = "GFX_bang_victory"
+			texturefile = "gfx\super_events\bang_victory.png"
+			legacy_lazy_load = no
+		}
+		spriteType = {
+			name = "GFX_popipa_starbeat"
+			texturefile = "gfx\super_events\popipa_starbeat.png"
+			legacy_lazy_load = no
+		}
+	}

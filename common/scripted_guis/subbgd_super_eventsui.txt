@@ -1,0 +1,44 @@
+scripted_gui = {
+bang_gaw_win = {
+			context_type = player_context
+			window_name = "bang_gaw_win_event"
+
+			visible = {
+				has_country_flag = BGD_gaw_victory_win
+            }
+			
+			effects = {
+				Super_Event_Close_click = {
+					clr_country_flag = BGD_gaw_victory_win
+				}
+			}
+		}
+bang_tongyi = {
+			context_type = player_context
+			window_name = "bang_tongyi_event"
+
+			visible = {
+				has_country_flag = BGD_tongyi_guojia
+            }
+			
+			effects = {
+				Super_Event_Close_click = {
+					clr_country_flag = BGD_tongyi_guojia
+				}
+			}
+		}
+bang_neizhan = {
+			context_type = player_context
+			window_name = "bang_neizhan_event"
+
+			visible = {
+				has_country_flag = BGD_neizhan
+            }
+			
+			effects = {
+				Super_Event_Close_click = {
+					clr_country_flag = BGD_neizhan
+				}
+			}
+		}
+}

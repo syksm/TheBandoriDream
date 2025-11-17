@@ -1,0 +1,73 @@
+remove_gov_types = {
+	remove_ideas = {
+		ZZZ_russian_political_system
+		ZZZ_chinese_political_system
+		ZZZ_absolute_monarchy
+		ZZZ_military_dictatorship
+		ZZZ_socialist_republic
+		ZZZ_semi_constitutional_monarchy
+		ZZZ_constitutional_monarchy
+		ZZZ_neo_soviet_republic
+		ZZZ_nazi_dictatorship
+		ZZZ_fascist_dictatorship
+		ZZZ_revolutionary_front
+		ZZZ_communist_party_state
+		ZZZ_semi_presidential_system
+		ZZZ_parliamentary_republic
+		ZZZ_presidential_republic
+		ZZZ_presidential_dictatorship
+		ZZZ_ultranationalist_dictatorship
+		ZZZ_islamic_republic
+		ZZZ_american_presidential_republic
+		ZZZ_provisional_government
+		ZZZ_eurasianist_system
+		ZZZ_american_peoples_dictatorship
+		ZZZ_annihilation_cult
+		ZZZ_gailiang_chaoji_zongtongzhi
+	}
+}
+
+change_government_type_gailiang_chaoji_zongtongzhi = {
+	custom_effect_tooltip = change_government_type_gailiang_chaoji_zongtongzhi_tt
+	hidden_effect = {
+		remove_gov_types = yes
+		add_ideas = ZZZ_gailiang_chaoji_zongtongzhi
+	}
+}
+
+remove_economy_types = {
+	remove_ideas = {
+		ZZZ_capitalist_economy
+		ZZZ_american_capitalism
+		ZZZ_collective_capitalism
+		ZZZ_oligopolistic_capitalism
+		ZZZ_welfare_capitalism
+		ZZZ_corporatism
+		ZZZ_managed_economy
+		ZZZ_command_economy
+		ZZZ_planned_economy
+		ZZZ_socialist_market
+		ZZZ_developed_socialism
+		ZZZ_military_controlled_economy
+		ZZZ_worker_controlled_economy
+		ZZZ_chaostic_economy
+		ZZZ_minarchism
+		ZZZ_ancap
+		ZZZ_state_capitalism
+		ZZZ_kaiser_economy
+		ZZZ_maga_capitalism
+		ZZZ_america_first_capitalism
+		ZZZ_mixed_economy
+		ZZZ_party_state_capitalism
+		ZZZ_left_corporatism
+		ZZZ_liberal_corporatism
+		ZZZ_shanyao_jingji
+	}
+}
+change_economy_type_shanyao_jingji = {
+	custom_effect_tooltip = change_economy_type_shanyao_jingji_tt
+	hidden_effect = {
+		remove_economy_types = yes
+		add_ideas = ZZZ_shanyao_jingji
+	}
+}

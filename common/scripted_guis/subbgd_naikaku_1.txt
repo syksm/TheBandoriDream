@@ -1,0 +1,174 @@
+scripted_gui = {
+	#.gui文件的name去掉
+	name_ui_window = {
+		#gui出现的部件名称；
+		#decision_category决议gui
+		#player_context正常的界面gui（如超事件）
+		context_type = player_context
+		#.gui文件的name
+		window_name = "bgd_naikaku_guis"
+		#小部件条件
+		triggers = {
+			bgd_naikaku_guis_enabled = {
+				has_country_flag = naikaku_enabled
+			}
+			bgd_naikaku_guis_visible = {
+				has_country_flag = naikaku_enabled
+			}
+		}
+		#大界面出现条件（主窗口）
+		visible = {
+			has_country_flag = naikaku_enabled
+		}
+		#按钮效果
+		effects = {
+			naikaku_button_click = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = open_naikaku_main_window
+						}
+					}
+					set_country_flag = open_naikaku_main_window
+				}
+			}
+		}
+	}
+	bgd_naikaku_sho_guis = {
+		context_type = player_context
+		window_name = "bgd_naikaku_sho_guis"
+		visible = {
+			has_country_flag = open_naikaku_main_window
+		}
+		triggers = {
+			naikaku_sho_souri_button_enabled = {
+				tag = BGD
+			}
+			naikaku_sho_souri_button_visible = {
+				tag = BGD
+			}
+		}
+		effects = {
+			naikaku_sho_button_click = {
+				clr_country_flag = open_naikaku_main_window
+			}
+			naikaku_sho_souri_button_click = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = open_naikaku_sho_souri_window
+						}
+					}
+					set_country_flag = open_naikaku_sho_souri_window
+				}
+			}
+			naikaku_sho_zaimu_button_click = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = open_naikaku_sho_zaimu_window
+						}
+					}
+					set_country_flag = open_naikaku_sho_zaimu_window
+				}
+			}
+			naikaku_sho_somu_button_click = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = open_naikaku_sho_somu_window
+						}
+					}
+					set_country_flag = open_naikaku_sho_somu_window
+				}
+			}
+		}
+	}
+	bgd_naikaku_sho_souri_guis = {
+		context_type = player_context
+		window_name = "bgd_naikaku_sho_souri_guis"
+		visible = {
+			has_country_flag = open_naikaku_sho_souri_window
+		}
+		effects = {
+			naikaku_sho_souri_close_button_click = {
+				clr_country_flag = open_naikaku_sho_souri_window
+			}
+			naikaku_sho_souri_choose_button_click = {
+			    if = {
+					limit = {
+						OR = {
+			                has_country_leader = {
+					            character = BGD_kasumi_char
+		                    }
+					        has_country_leader = {
+					            character = BGD_rimi_char
+		                    }
+						}
+				    }
+			        country_event = {
+					    id = bgd.118
+				    }
+			    }
+			}
+		}
+	}
+	bgd_naikaku_sho_zaimu_guis = {
+		context_type = player_context
+		window_name = "bgd_naikaku_sho_zaimu_guis"
+		visible = {
+			has_country_flag = open_naikaku_sho_zaimu_window
+		}
+		effects = {
+			naikaku_sho_zaimu_close_button_click = {
+				clr_country_flag = open_naikaku_sho_zaimu_window
+			}
+			naikaku_sho_zaimu_choose_button_click = {
+			    if = {
+					limit = {
+						OR = {
+			                has_country_leader = {
+					            character = BGD_kasumi_char
+		                    }
+					        has_country_leader = {
+					            character = BGD_rimi_char
+		                    }
+						}
+				    }
+			        country_event = {
+					    id = bgd.119
+				    }
+			    }
+			}
+		}
+	}
+	bgd_naikaku_sho_somu_guis = {
+		context_type = player_context
+		window_name = "bgd_naikaku_sho_somu_guis"
+		visible = {
+			has_country_flag = open_naikaku_sho_somu_window
+		}
+		effects = {
+			naikaku_sho_somu_close_button_click = {
+				clr_country_flag = open_naikaku_sho_somu_window
+			}
+			naikaku_sho_somu_choose_button_click = {
+			    if = {
+					limit = {
+						OR = {
+			                has_country_leader = {
+					            character = BGD_kasumi_char
+		                    }
+					        has_country_leader = {
+					            character = BGD_rimi_char
+		                    }
+						}
+				    }
+			        country_event = {
+					    id = bgd.120
+				    }
+			    }
+			}
+		}
+	}
+}

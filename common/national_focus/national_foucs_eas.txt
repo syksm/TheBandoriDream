@@ -1,0 +1,374 @@
+focus_tree = {
+    id = TFR_tree_eas
+	country = {
+		base = 0
+	}
+	default = no
+    focus = {
+	    id = EAS_dongya_jueqi
+		icon = GFX_focus_PRC_the_great_chinese_nation
+		cost = 10
+		x = 7
+		y = 0
+		completion_reward = {
+			add_ideas = EAS_heian_yinying
+			add_country_leader_trait = quanli_huashen
+		}
+	}
+    focus = {
+	    id = EAS_chuli_guonei
+		icon = GFX_focus_PRC_the_great_chinese_nation
+        prerequisite = { focus = EAS_dongya_jueqi }
+		cost = 10
+		x = 7
+		y = 1
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = EAS_guonei_panluan
+				add_idea = EAS_guonei_panluan_1
+			}
+		}
+	}
+    focus = {
+	    id = EAS_dangwei_diyi
+		icon = GFX_focus_PRC_the_great_chinese_nation
+        prerequisite = { focus = EAS_chuli_guonei }
+		cost = 10
+		x = 6
+		y = 2
+		completion_reward = {
+			add_ideas = EAS_laodage
+		}
+	}
+    focus = {
+	    id = EAS_zhidu_pinkun
+		icon = GFX_focus_PRC_the_great_chinese_nation
+        prerequisite = { focus = EAS_chuli_guonei }
+		cost = 10
+		x = 8
+		y = 2
+		completion_reward = {
+			add_ideas = EAS_zhiduxing_pinkun
+		}
+	}
+    focus = {
+	    id = EAS_jiquan_tongzhi
+		icon = GFX_focus_PRC_the_great_chinese_nation
+        prerequisite = { focus = EAS_dangwei_diyi }
+		cost = 10
+		x = 6
+		y = 3
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = EAS_laodage
+				add_idea = EAS_laodage_1
+			}
+		}
+	}
+    focus = {
+	    id = EAS_neiwai_fenming
+		icon = GFX_focus_PRC_the_great_chinese_nation
+        prerequisite = { focus = EAS_zhidu_pinkun }
+		cost = 10
+		x = 8
+		y = 3
+		completion_reward = {
+			add_ideas = EAS_zhixv_senyan
+		}
+	}
+    focus = {
+	    id = EAS_yiyi_bucun
+		icon = GFX_focus_PRC_the_great_chinese_nation
+        prerequisite = { focus = EAS_jiquan_tongzhi }
+        prerequisite = { focus = EAS_neiwai_fenming }
+		cost = 10
+		x = 7
+		y = 4
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = EAS_heian_yinying
+				add_idea = EAS_heian_yinying_1
+			}
+		}
+	}
+    focus = {
+	    id = EAS_quanli_yongheng
+		icon = GFX_focus_PRC_the_great_chinese_nation
+        prerequisite = { focus = EAS_yiyi_bucun }
+		cost = 10
+		x = 7
+		y = 5
+		completion_reward = {
+			add_stability = -0.35
+			remove_ideas = EAS_guonei_panluan_1
+			swap_ideas = {
+				remove_idea = EAS_heian_yinying_1
+				add_idea = EAS_heian_yinying_2
+			}
+		}
+	}
+    focus = {
+	    id = EAS_gangtie_zhijun
+		icon = GFX_focus_PRC_the_great_chinese_nation
+        prerequisite = { focus = EAS_dongya_jueqi }
+		cost = 10
+		x = 2
+		y = 1
+		completion_reward = {
+			add_ideas = EAS_gangtie_yizhi
+		}
+	}
+    focus = {
+	    id = EAS_quanli_shengchan
+		icon = GFX_focus_PRC_the_great_chinese_nation
+        prerequisite = { focus = EAS_gangtie_zhijun }
+		cost = 10
+		x = 2
+		y = 2
+		completion_reward = {
+			add_ideas = EAS_wuzhuang_yachi
+		}
+	}
+    focus = {
+	    id = EAS_renhai_zhanshu
+		icon = GFX_focus_PRC_the_great_chinese_nation
+        prerequisite = { focus = EAS_quanli_shengchan }
+		cost = 10
+		x = 3
+		y = 3
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = EAS_gangtie_yizhi
+				add_idea = EAS_gangtie_yizhi_1
+			}
+		}
+	}
+    focus = {
+	    id = EAS_paohuo_xili
+		icon = GFX_focus_PRC_the_great_chinese_nation
+        prerequisite = { focus = EAS_quanli_shengchan }
+		cost = 10
+		x = 1
+		y = 3
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = EAS_wuzhuang_yachi
+				add_idea = EAS_wuzhuang_yachi_1
+			}
+		}
+	}
+    focus = {
+	    id = EAS_keji_xianjin
+		icon = GFX_focus_PRC_the_great_chinese_nation
+        prerequisite = { focus = EAS_paohuo_xili }
+        prerequisite = { focus = EAS_renhai_zhanshu }
+		cost = 10
+		x = 2
+		y = 4
+		completion_reward = {
+			add_research_slot = 1
+			swap_ideas = {
+				remove_idea = EAS_wuzhuang_yachi_1
+				add_idea = EAS_wuzhuang_yachi_2
+			}
+		}
+	}
+    focus = {
+	    id = EAS_haobu_liuqing
+		icon = GFX_focus_PRC_the_great_chinese_nation
+        prerequisite = { focus = EAS_keji_xianjin }
+		cost = 10
+		x = 2
+		y = 5
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = EAS_gangtie_yizhi_1
+				add_idea = EAS_gangtie_yizhi_2
+			}
+		}
+	}
+    focus = {
+	    id = EAS_chao_gongyehua
+		icon = GFX_focus_PRC_the_great_chinese_nation
+        prerequisite = { focus = EAS_dongya_jueqi }
+		cost = 10
+		x = 12
+		y = 1
+		completion_reward = {
+			add_ideas = EAS_chaosu_gongye
+		}
+	}
+    focus = {
+	    id = EAS_duiwai_kuozhang
+		icon = GFX_focus_PRC_the_great_chinese_nation
+        prerequisite = { focus = EAS_chao_gongyehua }
+		cost = 10
+		x = 12
+		y = 2
+		completion_reward = {
+			create_faction = BANGSCDA
+			unlock_decision_category_tooltip = eas_dongya_waijiao
+			add_ideas = EAS_shijie_yexin
+			hidden_effect = {
+		    BGD = {
+		        news_event = {
+			    id = news.1219
+		    }
+		}  
+		}
+		}
+	}
+    focus = {
+	    id = EAS_ruqin_zhongnan
+		icon = GFX_focus_PRC_the_great_chinese_nation
+        prerequisite = { focus = EAS_duiwai_kuozhang }
+		cost = 10
+		x = 10
+		y = 3
+		completion_reward = {
+		declare_war_on = {
+             target = VIN
+             type = annex_everything
+        }
+		declare_war_on = {
+             target = LAO
+             type = annex_everything
+        }
+		declare_war_on = {
+             target = CAM
+             type = annex_everything
+        }
+		hidden_effect = {
+		    BGD = {
+		        news_event = {
+			    id = news.1221
+		    }
+		}  
+		}
+		}
+	}
+    focus = {
+	    id = EAS_zhengfu_menggu
+		icon = GFX_focus_PRC_the_great_chinese_nation
+        prerequisite = { focus = EAS_duiwai_kuozhang }
+		cost = 10
+		x = 12
+		y = 3
+		completion_reward = {
+		hidden_effect = {
+		    BGD = {
+		        news_event = {
+			    id = news.1222
+		    }
+		}  
+		}
+		declare_war_on = {
+            target = MON
+            type = annex_everything
+        }
+		}
+	}
+    focus = {
+	    id = EAS_jingong_miandian
+		icon = GFX_focus_PRC_the_great_chinese_nation
+        prerequisite = { focus = EAS_duiwai_kuozhang }
+		cost = 10
+		x = 14
+		y = 3
+		completion_reward = {
+		hidden_effect = {
+		    BGD = {
+		        news_event = {
+			    id = news.1223
+		    }
+		}  
+		}
+		declare_war_on = {
+            target = BRM
+            type = annex_everything
+        }
+		declare_war_on = {
+            target = PDF
+            type = annex_everything
+        }
+		declare_war_on = {
+            target = WAT
+            type = annex_everything
+        }
+		declare_war_on = {
+            target = KLA
+            type = annex_everything
+        }
+		declare_war_on = {
+            target = SSA
+            type = annex_everything
+        }
+		declare_war_on = {
+            target = MOA
+            type = annex_everything
+        }
+		declare_war_on = {
+            target = CNF
+            type = annex_everything
+        }
+		declare_war_on = {
+            target = KNU
+            type = annex_everything
+        }
+		PRC = {
+			add_to_faction = MND
+		}
+		hidden_effect = {
+			every_state = {
+				limit = {
+					is_core_of = BRM
+				}
+				remove_dynamic_modifier = { modifier = BRM_peoples_war }
+			}
+		}
+		}
+	}
+    focus = {
+	    id = EAS_yingxiang_xiaoguo
+		icon = GFX_focus_PRC_the_great_chinese_nation
+        prerequisite = { focus = EAS_zhengfu_menggu }
+        prerequisite = { focus = EAS_ruqin_zhongnan }
+        prerequisite = { focus = EAS_jingong_miandian }
+		cost = 10
+		x = 12
+		y = 4
+		completion_reward = {
+			unlock_decision_tooltip = eas_baji_sitan
+			unlock_decision_tooltip = eas_ruqin_budan
+			unlock_decision_tooltip = eas_nibo_er
+			unlock_decision_tooltip = eas_sili_lanka
+		}
+	}
+    focus = {
+	    id = EAS_yatai_zhizhu
+		icon = GFX_focus_PRC_the_great_chinese_nation
+        prerequisite = { focus = EAS_yingxiang_xiaoguo }
+		cost = 10
+		x = 12
+		y = 5
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = EAS_shijie_yexin
+				add_idea = EAS_shijie_yexin_1
+			}
+		}
+	}
+    focus = {
+	    id = EAS_dongya_yongheng
+		icon = GFX_focus_PRC_the_great_chinese_nation
+        prerequisite = { focus = EAS_haobu_liuqing }
+        prerequisite = { focus = EAS_quanli_yongheng }
+        prerequisite = { focus = EAS_yatai_zhizhu }
+		cost = 10
+		x = 7
+		y = 6
+		completion_reward = {
+			add_ideas = EAS_weiyi_zhigao
+		}
+	}
+}

@@ -1,0 +1,216 @@
+spriteTypes = {	
+
+	SpriteType = {
+	name = "GFX_goal_BGD_zhanweifu"
+	texturefile = "gfx\interface\goals\BGD\BGD_zhanweifu.png"			
+	}	
+	SpriteType = {
+		name = "GFX_goal_unknown_2"
+		texturefile = "gfx/interface/goals/goal_unknown_2.dds"
+		legacy_lazy_load = no
+	}	
+	SpriteType = {
+		name = "GFX_goal_unknown"
+		texturefile = "gfx/interface/goals/goal_unknown.dds"
+	}	
+	SpriteType = {
+		name = "GFX_kaishi_zhixian"
+		texturefile = "gfx\interface\goals\BGD\BGD_kaishi_zhixian.png"
+	}	
+	SpriteType = {
+		name = "GFX_zhengguihua_minbing"
+		texturefile = "gfx\interface\goals\BGD\BGD_zhengguihua_minbing.png"
+	}	
+	SpriteType = {
+		name = "GFX_guojia_chongjian"
+		texturefile = "gfx\interface\goals\BGD\BGD_guojia_chongjian.png"
+	}	
+	SpriteType = {
+		name = "GFX_jianli_fangweijun"
+		texturefile = "gfx\interface\goals\BGD\BGD_jianli_fangweijun.png"
+	}	
+	SpriteType = {
+		name = "GFX_fazhan_wurenji"
+		texturefile = "gfx\interface\goals\BGD\BGD_fazhan_wurenji.png"
+	}	
+	SpriteType = {
+		name = "GFX_xingzheng_tixi"
+		texturefile = "gfx\interface\goals\BGD\BGD_xingzheng_tixi.png"
+	}	
+	SpriteType = {
+		name = "GFX_yingdui_dihaijun"
+		texturefile = "gfx\interface\goals\BGD\BGD_yingdui_dihaijun.png"
+	}	
+	SpriteType = {
+		name = "GFX_zhongbu_zhanyi"
+		texturefile = "gfx\interface\goals\BGD\BGD_zhongbu_zhanyi.png"
+	}	
+	SpriteType = {
+		name = "GFX_chengli_APFNO"
+		texturefile = "gfx\interface\goals\BGD\BGD_chengli_APFNO.png"
+	}	
+	SpriteType = {
+		name = "GFX_zhanji_toucheng"
+		texturefile = "gfx\interface\goals\BGD\BGD_zhanji_toucheng.png"
+	}	
+	SpriteType = {
+		name = "GFX_gaozhiliang_jingji"
+		texturefile = "gfx\interface\goals\BGD\BGD_gaozhiliang_jingji.png"
+	}	
+	SpriteType = {
+		name = "GFX_ziyou_dengta"
+		texturefile = "gfx\interface\goals\BGD\BGD_ziyou_dengta.png"
+	}	
+	SpriteType = {
+		name = "GFX_dingdian_jundui"
+		texturefile = "gfx\interface\goals\BGD\BGD_dingdian_jundui.png"
+	}
+	SpriteType = {
+		name = "GFX_huangjin_jingji"
+		texturefile = "gfx\interface\goals\BGD\BGD_huangjin_jingji.png"
+	}
+	SpriteType = {
+		name = "GFX_nengyuan_duli"
+		texturefile = "gfx\interface\goals\BGD\BGD_nengyuan_duli.png"
+	}
+	SpriteType = {
+		name = "GFX_wangluo_shidai"
+		texturefile = "gfx\interface\goals\BGD\BGD_wangluo_shidai.png"
+	}
+	SpriteType = {
+		name = "GFX_dachengshi_zhiguang_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_dachengshi_zhiguang_1.png"
+	}
+	SpriteType = {
+		name = "GFX_gaokeji_fazhan_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_gaokeji_fazhan_1.png"
+	}
+	SpriteType = {
+		name = "GFX_nanfang_gongshi_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_nanfang_gongshi_1.png"
+	}
+	SpriteType = {
+		name = "GFX_pukai_jijian_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_pukai_jijian_1.png"
+	}
+	SpriteType = {
+		name = "GFX_liangshi_ziji_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_liangshi_ziji_1.png"
+	}
+	SpriteType = {
+		name = "GFX_xiangcun_zhenxing_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_xiangcun_zhenxing_1.png"
+	}
+	SpriteType = {
+		name = "GFX_zhameng_xingdong_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_zhameng_xingdong_1.png"
+	}
+	SpriteType = {
+		name = "GFX_zhikong_youxian_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_zhikong_youxian_1.png"
+	}
+	SpriteType = {
+		name = "GFX_zuizhong_gongshi_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_zuizhong_gongshi_1.png"
+	}
+	SpriteType = {
+		name = "GFX_tuanjie_shijie_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_tuanjie_shijie_1.png"
+	}
+	SpriteType = {
+		name = "GFX_huoli_zhishang_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_huoli_zhishang_1.png"
+	}
+	SpriteType = {
+		name = "GFX_qianghua_zhuangjia_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_qianghua_zhuangjia_1.png"
+	}
+	SpriteType = {
+		name = "GFX_houqin_gaishan_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_houqin_gaishan_1.png"
+	}
+	SpriteType = {
+		name = "GFX_xietiao_zuozhan_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_xietiao_zuozhan_1.png"
+	}
+	SpriteType = {
+		name = "GFX_keji_xiezuo_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_keji_xiezuo_1.png"
+	}
+	SpriteType = {
+		name = "GFX_weilai_zhanzheng_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_weilai_zhanzheng_1.png"
+	}
+	SpriteType = {
+		name = "GFX_fazhan_zhonggong_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_fazhan_zhonggong_1.png"
+	}
+	SpriteType = {
+		name = "GFX_guoce_zhanwei"
+		texturefile = "gfx\interface\goals\BGD\guoce_zhanwei.png"
+	}
+	SpriteType = {
+		name = "GFX_heping_shiyan_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_heping_shiyan_1.png"
+	}
+	SpriteType = {
+		name = "GFX_jianshe_jingji_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_jianshe_jingji_1.png"
+	}
+	SpriteType = {
+		name = "GFX_chengli_jingjiquan_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_chengli_jingjiquan_1.png"
+	}
+	SpriteType = {
+		name = "GFX_guohui_gaige_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_guohui_gaige_1.png"
+	}
+	SpriteType = {
+		name = "GFX_butie_qiye_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_butie_qiye_1.png"
+	}
+	SpriteType = {
+		name = "GFX_jichuan_mengxiang_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_jichuan_mengxiang_1.png"
+	}
+	SpriteType = {
+		name = "GFX_tashang_zhengtu_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_tashang_zhengtu_1.png"
+	}
+	SpriteType = {
+		name = "GFX_xina_zuoyi_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_xina_zuoyi_1.png"
+	}
+	SpriteType = {
+		name = "GFX_quanmian_jungai_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_quanmian_jungai_1.png"
+	}
+	SpriteType = {
+		name = "GFX_kuoda_jgp_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_kuoda_jgp_1.png"
+	}
+	SpriteType = {
+		name = "GFX_qingxi_jiyouyi_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_qingxi_jiyouyi_1.png"
+	}
+	SpriteType = {
+		name = "GFX_yvsuan_qvshe_1"
+		texturefile = "gfx\interface\goals\BGD\BGD_yvsuan_qvshe_1.png"
+	}
+	SpriteType = {
+		name = "GFX_kuoda_zhanji_shengchan_1"
+		texturefile = "gfx\interface\goals\BGD\kuoda_zhanji_shengchan_1.png"
+	}
+	SpriteType = {
+		name = "GFX_xiandai_haizhan_1"
+		texturefile = "gfx\interface\goals\BGD\xiandai_haizhan_1.png"
+	}
+	SpriteType = {
+		name = "GFX_dachengshi_zhiguang_2"
+		texturefile = "gfx\interface\goals\BGD\dachengshi_zhiguang_2.png"
+	}
+	SpriteType = {
+		name = "GFX_chuanbo_shanyao_1"
+		texturefile = "gfx\interface\goals\BGD\chuanbo_shanyao_1.png"
+	}
+}

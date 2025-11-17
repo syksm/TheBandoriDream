@@ -1,0 +1,66 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_gui_kasumi_small"
+		texturefile = "gfx\interface\subbgd_gui\Bandori_Kasumi_icon.png"
+	}
+	spriteType = {
+		name = "GFX_gui_arisa_small"
+		texturefile = "gfx\interface\subbgd_gui\Bandori_Arisa_icon.png"
+	}
+	spriteType = {
+		name = "GFX_gui_saaya_small"
+		texturefile = "gfx\interface\subbgd_gui\Bandori_Saaya_icon.png"
+	}
+	spriteType = {
+		name = "GFX_gui_rimi_small"
+		texturefile = "gfx\interface\subbgd_gui\Bandori_Rimi_icon.png"
+	}
+	spriteType = {
+		name = "GFX_gui_otae_small"
+		texturefile = "gfx\interface\subbgd_gui\Bandori_Tae_icon.png"
+	}
+	spriteType = {
+		name = "GFX_gui_asuka_small"
+		texturefile = "gfx\interface\subbgd_gui\Asuka_icon.png"
+	}
+
+
+	spriteType = {
+		name = "GFX_gui_ars_large"
+		texturefile = "gfx\interface\subbgd_gui\ars_large.png"
+	}
+	spriteType = {
+		name = "GFX_gui_ksm_large"
+		texturefile = "gfx\interface\subbgd_gui\ksm_large.png"
+	}
+	spriteType = {
+		name = "GFX_gui_otae_large"
+		texturefile = "gfx\interface\subbgd_gui\otae_large.png"
+	}
+	spriteType = {
+		name = "GFX_gui_rimi_large"
+		texturefile = "gfx\interface\subbgd_gui\rimi_large.png"
+	}
+	spriteType = {
+		name = "GFX_gui_saaya_large"
+		texturefile = "gfx\interface\subbgd_gui\saaya_large.png"
+	}
+
+	spriteType = {
+		name = "GFX_gui_BGD_cabinet_background"
+		texturefile = "gfx\interface\subbgd_gui\BGD_cabinet_background.png"
+	}
+	spriteType = {
+		name = "GFX_gui_BGD_cabinet_ppp_party"
+		texturefile = "gfx\interface\subbgd_gui\ppp_party.png"
+	}
+
+	spriteType = {
+		name = "GFX_gui_ppp_logo_small"
+		texturefile = "gfx\interface\subbgd_gui\ppp_logo_small.png"
+	}
+	spriteType = {
+		name = "GFX_gui_ppp_party_small"
+		texturefile = "gfx\interface\subbgd_gui\ppp_party_small.png"
+	}
+}

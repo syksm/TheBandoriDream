@@ -1,0 +1,98 @@
+spriteTypes = { 
+spriteType = {
+	name = "GFX_bangdream_victory"
+	texturefile = "gfx\event_pictures\bangdream_victory.png"
+    }
+spriteType = {
+	name = "GFX_popipa_doublerainbow"
+	texturefile = "gfx\event_pictures\popipa_doublerainbow.png"
+    }
+spriteType = {
+	name = "GFX_bang_girlsband_party"
+	texturefile = "gfx\event_pictures\news_event\bgdnews\bang_girlsband_party.png"
+    }
+spriteType = {
+	name = "GFX_bang_zhanjia"
+	texturefile = "gfx\event_pictures\bang_zhanjia.png"
+    }
+spriteType = {
+	name = "GFX_tsugu_heidao"
+	texturefile = "gfx\event_pictures\tsugu_heidao.png"
+    }
+spriteType = {
+	name = "GFX_bang_dsnydsd"
+	texturefile = "gfx\event_pictures\bang_dsnydsd.png"
+    }
+spriteType = {
+	name = "GFX_bang_gaw_baofa"
+	texturefile = "gfx\event_pictures\news_event\bgdnews\bang_gaw_baofa.png"
+    }
+spriteType = {
+	name = "GFX_bang_gaw_shengli"
+	texturefile = "gfx\event_pictures\news_event\bgdnews\bang_gaw_shengli.png"
+    }
+spriteType = {
+	name = "GFX_bang_ldp_question"
+	texturefile = "gfx\event_pictures\bang_ldp_question.png"
+	}
+spriteType = {
+	name = "GFX_bang_shijian_zhanwei"
+	texturefile = "gfx\event_pictures\bang_shijian_zhanwei.png"
+	}
+spriteType = {
+	name = "GFX_JAP_BGD_start_menu"
+	texturefile = "gfx\interface\JAP_BGD_start_menu.png"
+	}
+spriteType = {
+	name = "GFX_osaka_kansai"
+	texturefile = "gfx\event_pictures\osaka_kansai.png"
+	}
+spriteType = {
+	name = "GFX_bang_shibo_kaimu"
+	texturefile = "gfx\event_pictures\news_event\bgdnews\bang_shibo_kaimu.png"
+	}
+spriteType = {
+	name = "GFX_rimi1"
+	texturefile = "gfx\event_pictures\rimi1.png"
+	}
+spriteType = {
+	name = "GFX_daban_weixinhui"
+	texturefile = "gfx\event_pictures\daban_weixinhui.png"
+	}
+spriteType = {
+	name = "GFX_rimi2"
+	texturefile = "gfx\event_pictures\rimi2.png"
+	}
+spriteType = {
+	name = "GFX_rimi3"
+	texturefile = "gfx\event_pictures\rimi3.png"
+	}
+spriteType = {
+	name = "GFX_rimi4"
+	texturefile = "gfx\event_pictures\rimi4.png"
+	}
+spriteType = {
+	name = "GFX_rimi5"
+	texturefile = "gfx\event_pictures\rimi5.png"
+	}
+spriteType = {
+	name = "GFX_rimi6"
+	texturefile = "gfx\event_pictures\rimi6.png"
+	}
+spriteType = {
+	name = "GFX_afterglow1"
+	texturefile = "gfx\event_pictures\afterglow1.png"
+	}
+spriteType = {
+	name = "GFX_paspale1"
+	texturefile = "gfx\event_pictures\paspale1.png"
+	}
+spriteType = {
+	name = "GFX_arisa1"
+	texturefile = "gfx\event_pictures\arisa1.png"
+	}
+spriteType = {
+	name = "GFX_ksar1"
+	texturefile = "gfx\event_pictures\ksar1.png"
+	}
+}

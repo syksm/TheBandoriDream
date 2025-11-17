@@ -1,0 +1,10 @@
+debug_decisions_BGD_afterwar = {
+		icon = marco_debug 
+		
+		visible = {
+			is_debug = yes
+			is_ai = no
+		}
+		
+		priority = 100
+	}

@@ -1,0 +1,3107 @@
+add_namespace = bgd
+country_event = {
+	#闪耀党成立
+	id = bgd.1
+	title = bgd.1.t
+	desc = bgd.1.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			
+		}
+	}
+	option = {
+		name = bgd.1.a
+		add_political_power = 70
+		effect_tooltip = {
+			
+		}
+	}
+}
+country_event = {
+	#ppp最终胜利
+	id = bgd.2014
+	title = bgd.2014.t
+	desc = bgd.2014.d
+	picture = GFX_bangdream_victory
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			scoped_play_song = "Poppin'Party - Yes! BanG_Dream!"	
+		}
+	}
+	option = {
+		name = bgd.2014.a
+		custom_effect_tooltip = BGD_ganxie_tt
+	}
+}
+country_event = {
+	#东京军事政变
+	id = bgd.1212
+	title = bgd.1212.t
+	desc = bgd.1212.d
+	picture = GFX_military_takeover
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_politics = {
+				ruling_party = nationalist
+				elections_allowed = no
+				last_election = "2021.10.31"
+				election_frequency = 48
+			}
+			add_popularity = {
+				ideology = nationalist
+				popularity = 0.4
+			}
+			add_popularity = {
+				ideology = libertarian_socialist
+				popularity = -0.5
+			}
+			add_popularity = {
+				ideology = social_democrat
+				popularity = -0.5
+			}
+			add_popularity = {
+				ideology = social_liberal
+				popularity = -0.5
+			}
+			add_popularity = {
+				ideology = market_liberal
+				popularity = -0.5
+			}
+			add_popularity = {
+				ideology = communist
+				popularity = -0.5
+			}
+			set_party_name = {
+				ideology = libertarian_socialist
+				long_name = JAP_totalitarian_socialist_party_long
+				name = JAP_totalitarian_socialist_party
+			}
+			set_party_name = {
+				ideology = social_democrat
+				long_name = JAP_totalitarian_socialist_party_long
+				name = JAP_totalitarian_socialist_party
+			}
+			set_party_name = {
+				ideology = social_liberal
+				long_name = JAP_totalitarian_socialist_party_long
+				name = JAP_totalitarian_socialist_party
+			}
+			set_party_name = {
+				ideology = market_liberal
+				long_name = JAP_totalitarian_socialist_party_long
+				name = JAP_totalitarian_socialist_party
+			}
+			set_party_name = {
+				ideology = communist
+				long_name = JAP_totalitarian_socialist_party_long
+				name = JAP_totalitarian_socialist_party
+			}
+			set_country_flag = JAP_military_coup_flag
+			add_popularity = {
+				ideology = fascist
+				popularity = 0.07
+			}
+			add_popularity = {
+				ideology = national_socialist
+				popularity = 0.025
+			}
+			clr_country_flag = JAP_kasai_elected
+			clr_country_flag = JAP_koike_elected
+			clr_country_flag = JAP_nagatsuma_elected
+			clr_country_flag = JAP_shii_elected_eco
+			clr_country_flag = JAP_fukushima_elected
+			clr_country_flag = JAP_izumi_elected
+			clr_country_flag = JAP_tamaki_elected
+			clr_country_flag = JAP_matsui_elected
+			clr_country_flag = JAP_kushibuchi_elected
+			set_cosmetic_tag = JAP_military_junta
+			set_temp_variable = {
+			    coalition_partner_var_temp = token:authoritarian_democrat
+		    }
+		    add_to_coalition = yes
+		    set_temp_variable = {
+			    coalition_partner_var_temp = token:conservative
+		    }
+		    add_to_coalition = yes
+		    set_temp_variable = {
+			    coalition_partner_var_temp = token:libertarian_socialist
+		    }
+		    remove_from_coalition = yes
+		    set_temp_variable = {
+			    coalition_partner_var_temp = token:social_democrat
+		    }
+		    remove_from_coalition = yes
+		    set_temp_variable = {
+			    coalition_partner_var_temp = token:social_liberal
+		    }
+		    remove_from_coalition = yes
+		    set_temp_variable = {
+			    coalition_partner_var_temp = token:market_liberal
+		    }
+		    remove_from_coalition = yes
+		    remove_ideas = JAP_yukio_edano
+		    remove_ideas = JAP_akira_kasai
+		    remove_ideas = JAP_mizuho_fukushima
+		    remove_ideas = JAP_kenta_izumi
+		    remove_ideas = JAP_akira_nagatsuma
+		    add_ideas = vacant_theorist
+		}
+	}
+	option = {
+		name = bgd.1212.a
+		add_ideas = JAP_koji_yamazaki
+		add_ideas = JAP_mitsuhiro_kimura
+		add_ideas = JAP_tadae_takubo
+		add_ideas = JAP_yuzo_kabashima
+		add_ideas = JAP_toshio_tamogami 
+		hidden_effect = {
+		news_event = {
+			id = news.1212
+			hours = 12
+		}
+		country_event = {
+			id = bgd.36
+			hours = 72
+		}
+		country_event = {
+			id = bgd.35
+			hours = 168
+		}
+		}
+	}
+}
+country_event = {
+	#民主阵线成立
+	id = bgd.35
+	title = bgd.35.t
+	desc = bgd.35.d
+	picture = GFX_udf_forms
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.35.a
+		load_oob = ziweidui_minbing_1
+		country_event = {
+		    id = bgd.32
+		    hours = 336
+		}
+		DFJ = {
+		country_event = {
+			id = bgd.37
+			hours = 12
+		}
+		}
+		hidden_effect = {
+		BGD = {
+		news_event = {
+			id = news.1213
+			hours = 6
+		}
+		}
+			DFJ = {
+				transfer_state = 1334
+				transfer_state = 536
+				transfer_state = 1333
+				transfer_state = 1336
+				transfer_state = 1335
+				add_state_core = 1334
+				add_state_core = 536
+				add_state_core = 1333
+				add_state_core = 1336
+				add_state_core = 1335
+				set_capital = {
+					state = 1334
+				}
+				set_politics = {
+					ruling_party = libertarian_socialist
+					elections_allowed = yes
+					election_frequency = 48
+				}
+				set_popularities = {
+					libertarian_socialist = 62
+					communist = 20
+					totalitarian_socialist = 8
+					social_democrat = 10
+				}
+			}
+	    }
+	}
+}
+country_event = {
+	#成立东京军管区
+	id = bgd.36
+	title = bgd.36.t
+	desc = bgd.36.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.36.a
+		custom_effect_tooltip = BGD_qiehuan_guojia_tt
+		hidden_effect = {
+			JAP = {
+				puppet = BGD
+			}
+			BGD = {
+				transfer_state = 1332
+				add_state_core = 1332
+				set_capital = {
+					state = 1332
+				}
+				set_politics = {
+					ruling_party = nationalist
+					elections_allowed = no
+				}
+				set_popularities = {
+					nationalist = 75
+					authoritarian_democrat = 20
+					conservative = 5
+				}
+				inherit_technology = JAP
+				promote_character = {
+			        character = BGD_ishiba_shigeru
+			        ideology = right_centrist
+		        }
+			    promote_character = {
+			        character = BGD_ishiba_shigeru
+			        ideology = ultra_conservatism
+		        }    
+			}
+			country_event = {
+				id = bgd.54
+			}
+	    }
+	}
+}
+country_event = {
+	#东京市民赶走自卫队
+	id = bgd.10
+	title = bgd.10.t
+	desc = bgd.10.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+	hidden_effect = {
+	white_peace = DFJ
+	set_politics = {
+		ruling_party = social_democrat
+        election_frequency = 48
+		elections_allowed = yes
+		last_election = "2021.10.31"
+	}
+		end_puppet = JAP
+		set_popularities = {
+			libertarian_socialist = 20
+			communist = 11
+			totalitarian_socialist = 5
+			social_democrat = 48
+			social_liberal = 6
+            market_liberal = 5
+			conservative = 3
+			authoritarian_democrat = 2
+			}
+	    }
+	}		    
+	option = {
+		name = bgd.10.a
+		set_country_flag = BGD_shenmi_jita_yingxiang
+		set_cosmetic_tag = BGD_ziyou_zhenxian
+		add_ideas = BGD_shenmi_jita_1
+		add_timed_idea = {
+				idea = BGD_jingyan_buzu	
+				days = 400
+			}				
+		country_event = {
+			id = bgd.34
+			hours = 24
+		}
+		country_event = {
+			id = bgd.38
+			hours = 2
+		}
+		add_political_power = 15
+		load_oob = BGD_minbing_1
+		change_government_type_provisional_government = yes
+		change_economy_type_chaostic = yes
+	}
+}
+country_event = {
+	#胜选之后
+	id = bgd.9
+	title = bgd.9.t
+	desc = bgd.9.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.9.a
+	}
+}
+country_event = {
+	#人民联合胜选
+	id = bgd.18
+	title = bgd.18.t
+	desc = bgd.18.d
+	picture = GFX_JAP_voting_booth
+	fire_only_once = yes
+	is_triggered_only = yes
+	trigger = {
+		has_global_flag = JAP_cc_won
+	}
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = JAP_cc_won
+				}
+			}
+			set_global_flag = JAP_cc_won
+		}
+	}
+	option = {
+		name = bgd.18.a
+		load_focus_tree = TFR_tree_JAP_DFJ
+		set_politics = {
+			ruling_party = social_liberal
+			elections_allowed = yes
+			last_election = "2021.10.31"
+			election_frequency = 48
+		}
+		set_temp_variable = {
+			coalition_partner_var_temp = token:social_democrat
+		}
+		add_to_coalition = yes
+		set_temp_variable = {
+			coalition_partner_var_temp = token:market_liberal
+		}
+		add_to_coalition = yes
+		set_temp_variable = {
+			coalition_partner_var_temp = token:libertarian_socialist
+		}
+		add_to_coalition = yes
+		end_ruling_party_wings = yes
+		add_ideas = JAP_yukio_edano
+		add_ideas = JAP_akira_kasai
+		add_ideas = JAP_mizuho_fukushima
+		add_ideas = JAP_kenta_izumi
+		add_ideas = JAP_akira_nagatsuma
+		add_ideas = JAP_hiroshi_ogushi_defence
+	}
+			set_country_flag = JAP_general_election_is_over
+			set_country_flag = JAP_cc_won_flag
+}
+country_event = {
+	#香澄失踪
+	id = bgd.11
+	title = bgd.11.t
+	desc = bgd.11.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.11.a
+		country_event = {
+			id = bgd.12
+			hours = 12
+		}
+	}
+}
+country_event = {
+	#香澄找到神秘吉他
+	id = bgd.12
+	title = bgd.12.t
+	desc = bgd.12.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.12.a
+		country_event = {
+			id = bgd.13
+			hours = 12
+		}
+	}
+}
+country_event = {
+	#发现古代地点
+	id = bgd.13
+	title = bgd.13.t
+	desc = bgd.13.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.13.a
+		country_event = {
+			id = bgd.14
+			hours = 3
+		}
+	}
+}
+country_event = {
+	#演出
+	id = bgd.14
+	title = bgd.14.t
+	desc = bgd.14.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.14.a
+		country_event = {
+			id = bgd.15
+			hours = 3
+		}
+	}
+}
+country_event = {
+	#号召市民
+	id = bgd.15
+	title = bgd.15.t
+	desc = bgd.15.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.15.a
+		country_event = {
+			id = bgd.10
+			hours = 12
+		}
+	}
+}
+country_event = {
+	#加入阵线
+	id = bgd.31
+	title = bgd.31.t
+	desc = bgd.31.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.31.a
+		DFJ = {
+			add_to_faction = BGD
+		}
+	}
+}
+country_event = {
+	#自卫队进攻民主阵线
+	id = bgd.32
+	title = bgd.32.t
+	desc = bgd.32.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.32.a
+		add_ideas = BGD_mingyun_zhizhan
+		BGD = {
+		news_event = {
+			id = news.1214
+			hours = 6
+		}
+		declare_war_on = {
+			target = DFJ
+			type = annex_everything
+		}
+		}
+	declare_war_on = {
+        target = DFJ
+        type = annex_everything
+    }
+	}
+}
+country_event = {
+	#自卫队进攻东京
+	id = bgd.33
+	title = bgd.33.t
+	desc = bgd.33.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.33.a
+		BGD = {
+			add_ideas = BGD_mingyun_zhizhan
+			country_event = {
+				id = bgd.71
+				days = 7
+			}
+			country_event = {
+				id = bgd.31
+				days = 10
+			}
+		}
+	declare_war_on = {
+        target = BGD
+        type = annex_everything
+    }
+	}
+}
+country_event = {
+	#部分自卫队投诚
+	id = bgd.34
+	title = bgd.34.t
+	desc = bgd.34.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.34.a
+		load_oob = BGD_ziweidui_1
+		transfer_state = 1341
+		transfer_state = 282
+		add_state_core = 1341
+		add_state_core = 282
+		JAP = {
+		country_event = {
+			id = bgd.33
+			days = 7
+		}
+		}
+	}
+}
+country_event = {
+	#民主阵线组建武装
+	id = bgd.37
+	title = bgd.37.t
+	desc = bgd.37.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.37.a
+		load_oob = DFJ_ziweidui_1
+		load_oob = DFJ_minbing_1
+		create_faction = BANGUDF
+	}
+}
+country_event = {
+	#香澄演讲
+	id = bgd.38
+	title = bgd.38.t
+	desc = bgd.38.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.38.a
+	}
+}
+country_event = {
+	#转移海军
+	id = bgd.39
+	title = bgd.39.t
+	desc = bgd.39.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.39.a
+		load_oob = BGD_2000_naval_mtg
+	}
+}
+country_event = {
+	#和平统一民主阵线
+	id = bgd.40
+	title = bgd.40.t
+	desc = bgd.40.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+		DFJ = {
+			dismantle_faction = yes
+		}
+		}
+	}
+	option = {
+		name = bgd.40.a
+		country_event = {
+			id = bgd.41
+			hours = 24
+		}
+		add_state_core = 1334
+		add_state_core = 536
+		add_state_core = 1333
+		add_state_core = 1336
+		add_state_core = 1335
+		hidden_effect = {
+		JAP = {
+			every_core_state = {		
+				remove_core_of = JAP
+			}
+			remove_state_claim = 555
+		}
+		DFJ = {
+			every_core_state = {		
+				remove_core_of = DFJ
+			}
+		}
+		BGD = {
+			add_state_claim = 555
+		}
+	}
+	annex_country = {
+        target = DFJ
+    }
+	}
+}
+country_event = {
+	#内战告终
+	id = bgd.41
+	title = bgd.41.t
+	desc = bgd.41.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.41.a
+		set_cosmetic_tag = BGD_linshizhengfu
+		add_to_variable = { BGD_neizhan_feixv_monthly_population = -0.5 }
+		add_to_variable = { BGD_neizhan_feixv_consumer_goods_factor = 0.35 }
+		add_to_variable = { BGD_neizhan_feixv_industrial_capacity_factory = -0.5 }
+		add_to_variable = { BGD_neizhan_feixv_production_speed_buildings_factor = -0.35 }
+		add_to_variable = { BGD_neizhan_feixv_stability_factor = -0.5 }
+		add_to_variable = { BGD_neizhan_feixv_war_support_factor = -0.5 }
+		add_to_variable = { BGD_neizhan_feixv_industrial_capacity_dockyard = -0.5 }
+		add_to_variable = { BGD_neizhan_feixv_poverty_development_monthly = -0.05 }
+		add_to_variable = { BGD_neizhan_feixv_society_development_monthly = -0.04 }
+		add_to_variable = { BGD_neizhan_feixv_industrial_development_monthly = -0.03 }
+		add_to_variable = { BGD_neizhan_feixv_farming_development_monthly = -0.03 }
+		add_to_variable = { BGD_neizhan_feixv_business_value_factor = -0.25 }
+		add_to_variable = { BGD_neizhan_feixv_personal_value_factor = -0.25 }
+		effect_tooltip = {
+			add_ideas = BGD_neizhan_feixv_0
+			}
+		load_focus_tree = TFR_tree_BGD_afterwar
+		remove_ideas = BGD_mingyun_zhizhan
+		country_event = {
+			id = bgd.39
+			hours = 72
+		}
+		news_event = {
+			id = news.1215
+			hours = 24
+		}
+		hidden_effect = {
+			add_dynamic_modifier = {
+				modifier = BGD_neizhan_feixv
+			}
+			country_event = {
+			id = bgd.47
+		    days = 18
+		}
+		country_event = {
+			id = bgd.48
+			days = 20
+		}
+		country_event = {
+			id = bgd.52
+			days = 30
+		}
+		country_event = {
+			id = bgd.58
+			days = 40
+		}
+	}
+	}
+}
+country_event = {
+	#欢迎游玩
+	id = bgd.0
+	title = bgd.0.t
+	desc = bgd.0.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.0.a
+	}
+}
+country_event = {
+	#重建国家
+	id = bgd.42
+	title = bgd.42.t
+	desc = bgd.42.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.42.a
+		add_political_power = 50
+	}
+}
+country_event = {
+	#开始制宪
+	id = bgd.43
+	title = bgd.43.t
+	desc = bgd.43.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.43.a
+		country_event = {
+			id = bgd.44 
+			days = 14
+		}
+		add_political_power = 25
+		country_event = {
+			id = bgd.56
+			days = 3
+		}
+	}
+}
+country_event = {
+	#有咲的第二次东京军事政变
+	id = bgd.226
+	title = bgd.226.t
+	desc = bgd.226.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		name = bgd.226.a
+		add_stability = -0.35
+		add_political_power = 150
+		remove_power_balance = {
+            id = BGD_power_balance
+        }
+		remove_mission = BGD_minzhen_xingdong
+		remove_mission = BGD_chongjian_jsp
+		set_country_flag = BGD_minzhen_wajie
+		clr_country_flag = BGD_quanli_tianping_1
+		clr_country_flag = BGD_quanli_tianping
+		promote_character = {
+			character = BGD_arisa_char
+			ideology = military_junta
+		}
+		set_party_name = {
+			ideology = social_democrat
+			long_name = JGP_zhengtongpai_long
+			name = JGP_zhengtongpai
+		}
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = JGP_weiquanpai_long
+			name = JGP_weiquanpai
+		}
+		set_party_name = {
+			ideology = nationalist
+			long_name = jinji_weiyuanhui_long
+			name = jinji_weiyuanhui
+		}
+		set_politics = {
+			ruling_party = nationalist
+			elections_allowed = no
+		}
+		set_temp_variable = {
+			ruling_party_wing_var_temp = token:authoritarian_democrat
+		}
+		add_ruling_party_wing = yes
+		set_temp_variable = {
+			ruling_party_wing_var_temp = token:social_democrat
+		}
+		add_ruling_party_wing = yes
+		set_popularities = {
+			libertarian_socialist = 10
+			communist = 5
+			totalitarian_socialist = 3
+			social_democrat = 15
+			social_liberal = 5
+            market_liberal = 6
+			conservative = 3
+			authoritarian_democrat = 15
+			nationalist = 38
+		}
+	}
+}
+country_event = {
+	#确立国体
+	id = bgd.44
+	title = bgd.44.t
+	desc = bgd.44.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.44.a
+		country_event = {
+			id = bgd.45 
+			days = 14
+		}
+	}
+}
+country_event = {
+	#和平宪法第九条
+	id = bgd.45
+	title = bgd.45.t
+	desc = bgd.45.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.45.a
+		country_event = {
+			id = bgd.46
+			days = 14
+		}
+	}
+}
+country_event = {
+	#基本权利与其他杂项
+	id = bgd.46
+	title = bgd.46.t
+	desc = bgd.46.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.46.a
+		country_event = {
+			id = bgd.49
+			days = 1
+		}
+	}
+}
+country_event = {
+	#大会闭幕
+	id = bgd.49
+	title = bgd.49.t
+	desc = bgd.49.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.49.a
+		set_cosmetic_tag = BGD_ziyou_gongheguo
+		add_political_power = 80
+		add_stability = 0.1
+		country_event = {
+			id = bgd.50
+			days = 1
+		}
+	}
+}
+country_event = {
+	#首次大选
+	id = bgd.50
+	title = bgd.50.t
+	desc = bgd.50.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.50.a
+		add_political_power = -30
+		country_event = {
+			id = bgd.51
+			days = 15
+		}
+		set_country_flag = cabinet_up
+		custom_effect_tooltip = BGD_shaonv_neige_qiyong_tt
+	}
+}
+country_event = {
+	#闪耀党当选
+	id = bgd.51
+	title = bgd.51.t
+	desc = bgd.51.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.51.a
+		add_popularity = {
+				ideology = social_democrat
+				popularity = 0.07
+			}
+			set_power_balance = {
+				id = BGD_power_balance
+				left_side = BGD_minzhuzhenxian_side
+				right_side = BGD_shanyaodang_side
+				set_value = 0
+			}
+			country_event = {
+				id = bgd.60
+				days = 7
+			}
+			set_country_flag = BGD_quanli_tianping
+			set_country_flag = BGD_quanli_tianping_1
+			set_country_flag = BGD_shanyaodang_dangxuan
+			change_government_type_parliamentary_republic = yes
+	}
+}
+country_event = {
+	#工农业崩溃
+	id = bgd.47
+	title = bgd.47.t
+	desc = bgd.47.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.47.a
+		swap_ideas = {
+			remove_idea = higher_industry
+			add_idea = medium_industry
+		}
+		swap_ideas = {
+			remove_idea = higher_farming
+			add_idea = medium_farming
+		}
+	}
+}
+country_event = {
+	#经济与社会崩坏
+	id = bgd.48
+	title = bgd.48.t
+	desc = bgd.48.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.48.a
+		swap_ideas = {
+			remove_idea = medium_society
+			add_idea = lower_society
+		}
+		swap_ideas = {
+			remove_idea = high_poverty
+			add_idea = low_poverty
+		}
+	}
+}
+country_event = {
+	#极右翼分子抵抗报告
+	id = bgd.52
+	title = bgd.52.t
+	desc = bgd.52.d
+	picture = GFX_tsugu_heidao
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.52.a
+		add_ideas = BGD_heidao_fanlan
+	}
+}
+country_event = {
+	#神秘吉他力量变动
+	id = bgd.53
+	title = bgd.53.t
+	desc = bgd.53.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = bgd.53.a
+		random_list = {
+				40 = {
+					add_ideas = BGD_shenmi_jita_1
+				}
+				30 = {
+					add_ideas = BGD_shenmi_jita_2
+				}
+				30 = {
+					add_ideas = BGD_shenmi_jita_3
+				}
+			}
+	}
+}
+country_event = {
+	#切换国家
+	id = bgd.54
+	title = bgd.54.t
+	desc = bgd.54.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		BGD = {
+			change_tag_from = ROOT
+		}
+	}
+	option = {
+		name = bgd.54.a
+	}
+}
+country_event = {
+	#重建完成
+	id = bgd.55
+	title = bgd.55.t
+	desc = bgd.55.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.55.a
+		remove_dynamic_modifier = {
+			modifier = BGD_neizhan_feixv
+		}
+		remove_ideas = BGD_chongjian_wei
+		clr_country_flag = BGD_chongjian_weiyuanhui
+	}
+}
+country_event = {
+	#立宪争吵
+	id = bgd.56
+	title = bgd.56.t
+	desc = bgd.56.d
+	picture = GFX_ksar1
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.56.a
+	}
+}
+country_event = {
+	#军事预算问题
+	id = bgd.57
+	title = bgd.57.t
+	desc = bgd.57.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.57.a
+		add_ideas = BGD_yvsuan_lujun
+		add_offsite_building = { 
+			type = arms_factory
+			level = 3
+		}
+	}
+	option = {
+		name = bgd.57.b
+		add_ideas = BGD_yvsuan_haijun
+		add_offsite_building = { 
+			type = dockyard
+			level = 3
+		}
+	}
+	option = {
+		name = bgd.57.c
+		add_ideas = BGD_yvsuan_kongjun
+	}
+}
+country_event = {
+	#继承债务
+	id = bgd.58
+	title = bgd.58.t
+	desc = bgd.58.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.58.a
+		set_temp_variable = {
+				var = debt_var_temp
+				value = 9470
+			}
+			add_debt = yes
+	}
+}
+country_event = {
+	#民主阵线瓦解
+	id = bgd.59
+	title = bgd.59.t
+	desc = bgd.59.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.59.a
+		set_country_flag = BGD_minzhen_wajie
+		clr_country_flag = BGD_quanli_tianping_1
+	}
+}
+country_event = {
+	#东亚国崛起
+	id = bgd.1984
+	title = bgd.1984.t
+	desc = bgd.1984.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+		immediate = {
+			hidden_effect = {
+			dismantle_faction = yes
+			set_politics = {
+				ruling_party = nationalist
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = nationalist
+				popularity = 0.75
+			}
+			set_party_name = {
+				ideology = nationalist
+				long_name = EAS_dongya_guojiadang_long
+				name = EAS_dongya_guojiadang
+			}
+			set_cosmetic_tag = PRC_dongyaguo
+			create_country_leader = {
+					name = "BGD_shounao_char"
+					desc = "BGD_SHOUNAO_DESC"
+					picture = GFX_portrait_shounao
+					ideology = autocrat
+					traits = {
+					}
+					}
+			remove_ideas = PRC_insufficient_understanding_of_modern_warfare_idea
+			remove_ideas = PRC_insufficient_understanding_of_modern_warfare_idea2
+			remove_ideas = PRC_insufficient_understanding_of_modern_warfare_idea3
+			remove_ideas = PRC_insufficient_understanding_of_modern_warfare_idea4
+			remove_ideas = PRC_insufficient_understanding_of_modern_warfare_idea5
+			remove_ideas = PRC_chinese_triumphalism
+			remove_ideas = PRC_corrupt_bureaucracy_idea
+			remove_ideas = PRC_corrupt_bureaucracy2_idea
+			remove_ideas = PRC_corrupt_bureaucracy3_idea
+			remove_ideas = PRC_corrupt_bureaucracy4_idea
+			remove_ideas = PRC_corrupt_bureaucracy5_idea
+			remove_ideas = PRC_chinese_communist_party_idea
+			remove_ideas = PRC_chinese_communist_party_idea2
+			remove_ideas = PRC_the_separatist_problem
+			remove_ideas = PRC_the_separatist_problem_2
+			remove_ideas = PRC_the_separatist_problem_3
+			remove_ideas = PRC_the_separatist_problem_4
+			}
+		}
+	option = {
+		name = bgd.1984.a
+		add_ideas = EAS_chaoziran_yingxiang
+		add_ideas = EAS_guonei_panluan
+		add_stability = -0.7
+		add_war_support = -0.7
+		BGD = {
+			news_event = {
+				id = news.1984
+				days = 3
+			}
+		}
+		load_focus_tree = TFR_tree_eas
+	}
+}
+country_event = {
+	#政治简报
+	id = bgd.60
+	title = bgd.60.t
+	desc = bgd.60.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.60.a
+		set_party_name = {
+			ideology = nationalist
+			long_name = BGD_zunhuan_taojian_long
+			name = BGD_zunhuan_taojian
+		}
+		hidden_effect = {
+			country_event = {
+				id = bgd.89
+				days = 10
+			}
+		}
+	}
+}
+country_event = {
+	#社会党重建
+	id = bgd.61
+	title = bgd.61.t
+	desc = bgd.61.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.61.a
+		set_party_name = {
+			ideology = libertarian_socialist
+			long_name = BGD_jsp_long
+			name = BGD_jsp
+		}
+		add_popularity = {
+			ideology = libertarian_socialist
+			popularity = 0.08
+		}
+		add_power_balance_value = {
+				id = BGD_power_balance
+				value = -0.15
+		}
+	}
+}
+country_event = {
+	#双重彩虹
+	id = bgd.62
+	title = bgd.62.t
+	desc = bgd.62.d
+	picture = GFX_popipa_doublerainbow
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			scoped_play_song = "Poppin'Party - 二重の虹(ダブル レインボウ)"	
+		}
+	}
+	option = {
+		name = bgd.62.a
+	}
+}
+country_event = {
+	#朝鲜准备南下
+	id = bgd.63
+	title = bgd.63.t
+	desc = bgd.63.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		custom_effect_tooltip = BGD_nanxia_tishi_tt
+		add_war_support = 0.05
+		name = bgd.63.a
+	}
+}
+country_event = {
+	#朝鲜进攻韩国
+	id = bgd.64
+	title = bgd.64.t
+	desc = bgd.64.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		custom_effect_tooltip = BGD_jingong_tishi_tt
+		add_war_support = 0.05
+		diplomatic_relation = {
+		    country = KOR
+			target = BGD
+		    relation = military_access
+		    active = yes
+		}			
+		name = bgd.64.a
+		country_event = {
+			id = bgd.67
+			days = 15
+		}
+	}
+}
+country_event = {
+	#友谊的华丽乐章
+	id = bgd.65
+	title = bgd.65.t
+	desc = bgd.65.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			scoped_play_song = "Poppin'Party - キズナミュージック♪"	
+		}
+	}
+	option = {
+		name = bgd.65.a
+		complete_national_focus = BGD_zuizhong_zhizhan
+	}
+}
+country_event = {
+	#炸梦行动
+	id = bgd.66
+	title = bgd.66.t
+	desc = bgd.66.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.66.a
+		hidden_effect = {
+		country_event = {
+			id = bgd.73
+			days = 3
+		}
+		}
+	}
+}
+country_event = {
+	#东亚国崩溃
+	id = bgd.4981
+	title = bgd.4981.t
+	desc = bgd.4981.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			white_peace = PRC
+			white_peace = VIN
+			white_peace = PAK
+			white_peace = BRM
+			white_peace = NEP
+			white_peace = BHU
+			white_peace = SRL
+			white_peace = PRK
+			TIB = {
+				transfer_state = 322
+				transfer_state = 1152
+				transfer_state = 1153
+				transfer_state = 1155
+				transfer_state = 1156
+				add_state_core = 322
+				add_state_core = 1152
+				add_state_core = 1153
+				add_state_core = 1155
+				add_state_core = 1156
+				set_capital = {
+					state = 1156
+				}
+				set_politics = {
+					ruling_party = nationalist
+					elections_allowed = no
+				}
+				set_popularities = {
+					nationalist = 40
+					authoritarian_democrat = 10
+					conservative = 30
+					market_liberal = 5
+					social_liberal = 15
+				}
+			}
+			SIK = {
+				transfer_state = 287
+				transfer_state = 619
+				transfer_state = 1160
+				transfer_state = 1164
+				transfer_state = 788
+				add_state_core = 287
+				add_state_core = 619
+				add_state_core = 1160
+				add_state_core = 1164
+				add_state_core = 788
+				set_capital = {
+					state = 287
+				}
+			}
+			XIN = {
+				transfer_state = 1158
+				transfer_state = 1161
+				transfer_state = 617
+				transfer_state = 1165
+				transfer_state = 1162
+				transfer_state = 1163
+				transfer_state = 618
+				add_state_core = 1158
+				add_state_core = 1161
+				add_state_core = 617
+				add_state_core = 1165
+				add_state_core = 1162
+				add_state_core = 1163
+				add_state_core = 618
+				set_capital = {
+					state = 1165
+				}
+			}
+			SIC = {
+				transfer_state = 601
+				transfer_state = 605
+				transfer_state = 1168
+				transfer_state = 1188
+				transfer_state = 1189
+				transfer_state = 1190
+				add_state_core = 601
+				add_state_core = 605
+				add_state_core = 1168
+				add_state_core = 1188
+				add_state_core = 1189
+				add_state_core = 1190
+			}
+			INM = {
+				transfer_state = 612
+				transfer_state = 621
+				add_state_core = 612
+				add_state_core = 621
+			}
+			IMA = {
+				transfer_state = 1166
+				transfer_state = 1198
+				add_state_core = 1166
+				add_state_core = 1198
+			}
+			NCM = {
+				transfer_state = 1201
+				transfer_state = 1202
+				transfer_state = 1199
+				transfer_state = 1193
+				add_state_core = 1201
+				add_state_core = 1202
+				add_state_core = 1199
+				add_state_core = 1193
+			}
+			SHA = {
+				transfer_state = 622
+				transfer_state = 1200
+				add_state_core = 622
+				add_state_core = 1200
+			}
+			YUN = {
+				transfer_state = 1196
+				transfer_state = 1195
+				transfer_state = 1192
+				transfer_state = 325
+				add_state_core = 1196
+				add_state_core = 1195
+				add_state_core = 1192
+				add_state_core = 325
+			}
+			XIE = {
+				transfer_state = 1186
+				add_state_core = 1186
+			}
+			NIS = {
+				transfer_state = 1187
+				add_state_core = 1187
+				set_capital = {
+					state = 1187
+				}
+			}
+			NSF = {
+				transfer_state = 616
+				transfer_state = 283
+				transfer_state = 604
+				add_state_core = 616
+				add_state_core = 283
+				add_state_core = 604
+				set_capital = {
+					state = 283
+				}
+			}
+			MON = {
+				transfer_state = 330
+				transfer_state = 1388
+				transfer_state = 1389
+				transfer_state = 1390
+				transfer_state = 1391
+			}
+			VIN = {
+				set_cosmetic_tag = VIN_yuenan_gongheguo
+				transfer_state = 671
+				set_country_flag = APFNO_member
+				remove_state_core = 670
+				remove_state_core = 286
+				end_puppet = PRC
+				set_politics = {
+					ruling_party = social_democrat
+					elections_allowed = yes
+					election_frequency = 48
+				}
+				set_party_name = {
+			        ideology = social_democrat
+			        long_name = VIN_yuenan_shanyaodang_long
+			        name = VIN_yuenan_shanyaodang
+		        }
+				add_popularity = {
+			        ideology = social_democrat
+			        popularity = 0.5
+		        }
+			}
+			LAO = {
+				set_cosmetic_tag = LAO_laowo_gongheguo
+				transfer_state = 670
+				set_country_flag = APFNO_member
+				set_politics = {
+					ruling_party = social_democrat
+					elections_allowed = yes
+					election_frequency = 48
+				}
+				set_party_name = {
+			        ideology = social_democrat
+			        long_name = LAO_laowo_shanyaodang_long
+			        name = LAO_laowo_shanyaodang
+		        }
+				add_popularity = {
+			        ideology = social_democrat
+			        popularity = 0.5
+		        }
+			}
+			CAM = {
+				set_cosmetic_tag = CAM_jianpuzhai_gongheguo
+				transfer_state = 286
+				set_country_flag = APFNO_member
+				set_politics = {
+					ruling_party = social_democrat
+					elections_allowed = yes
+					election_frequency = 48
+				}
+				set_party_name = {
+			        ideology = social_democrat
+			        long_name = CAM_jianpuzhai_shanyaodang_long
+			        name = CAM_jianpuzhai_shanyaodang
+		        }
+				add_popularity = {
+			        ideology = social_democrat
+			        popularity = 0.5
+		        }
+			}
+			BRM = {
+				transfer_state = 1407
+				transfer_state = 1408
+				transfer_state = 1259
+				transfer_state = 1401
+				transfer_state = 1402
+				transfer_state = 1263
+				transfer_state = 1405
+				transfer_state = 1264
+				transfer_state = 1403
+				transfer_state = 1260
+				transfer_state = 1406
+				transfer_state = 1261
+				transfer_state = 1267
+				transfer_state = 640
+				transfer_state = 1265
+				transfer_state = 1262
+				transfer_state = 1271
+				transfer_state = 288
+				transfer_state = 1266
+				transfer_state = 1270
+				transfer_state = 1269
+				transfer_state = 1268
+				transfer_state = 1404
+				set_cosmetic_tag = BRM_miandian_gongheguo
+				set_country_flag = APFNO_member
+				end_puppet = PRC
+				end_puppet = RAJ
+				set_politics = {
+					ruling_party = social_democrat
+					elections_allowed = yes
+					election_frequency = 48
+				}
+				set_party_name = {
+			        ideology = social_democrat
+			        long_name = BRM_miandian_shanyaodang_long
+			        name = BRM_miandian_shanyaodang
+		        }
+				add_popularity = {
+			        ideology = social_democrat
+			        popularity = 0.5
+		        }
+			}
+			BHU = {
+				transfer_state = 324
+				set_cosmetic_tag = BHU_budan_gongheguo
+				set_country_flag = APFNO_member
+				end_puppet = PRC
+				end_puppet = RAJ
+				set_politics = {
+					ruling_party = social_democrat
+					elections_allowed = yes
+					election_frequency = 48
+				}
+				set_party_name = {
+			        ideology = social_democrat
+			        long_name = BHU_budan_shanyaodang_long
+			        name = BHU_budan_shanyaodang
+		        }
+				add_popularity = {
+			        ideology = social_democrat
+			        popularity = 0.5
+		        }
+			}
+			PAK = {
+				transfer_state = 440
+				transfer_state = 442
+				transfer_state = 1321
+				transfer_state = 1323
+				transfer_state = 445
+				transfer_state = 1380
+				transfer_state = 443
+				transfer_state = 1324
+				transfer_state = 1322
+				transfer_state = 444
+				end_puppet = RAJ
+				end_puppet = PRC
+				set_country_flag = APFNO_member
+				set_politics = {
+					ruling_party = social_democrat
+					elections_allowed = yes
+					election_frequency = 48
+				}
+				set_party_name = {
+			        ideology = social_democrat
+			        long_name = PAK_bajisitan_shanyaodang_long
+			        name = PAK_bajisitan_shanyaodang
+		        }
+				add_popularity = {
+			        ideology = social_democrat
+			        popularity = 0.5
+		        }
+			}
+			NEP = {
+				transfer_state = 323
+				set_country_flag = APFNO_member
+				end_puppet = RAJ
+				set_politics = {
+					ruling_party = social_democrat
+					elections_allowed = yes
+					election_frequency = 48
+				}
+				set_party_name = {
+			        ideology = social_democrat
+			        long_name = NEP_niboer_shanyaodang_long
+			        name = NEP_niboer_shanyaodang
+		        }
+				add_popularity = {
+			        ideology = social_democrat
+			        popularity = 0.5
+		        }
+			}
+			SRL = {
+				transfer_state = 422
+				set_country_flag = APFNO_member
+				set_politics = {
+					ruling_party = social_democrat
+					elections_allowed = yes
+					election_frequency = 48
+				}
+				set_party_name = {
+			        ideology = social_democrat
+			        long_name = SRL_sililanka_shanyaodang_long
+			        name = SRL_sililanka_shanyaodang
+		        }
+				add_popularity = {
+			        ideology = social_democrat
+			        popularity = 0.5
+		        }
+			}
+			RAJ = {
+				transfer_state = 787
+				transfer_state = 1131
+				transfer_state = 441
+				transfer_state = 434
+				add_state_core = 787
+			}
+			KOR = {
+				annex_country = {
+					target = PRK
+				}
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = PRK
+						}
+					}
+					add_core_of = KOR
+				}
+			}
+			PRC = {
+				set_cosmetic_tag = PRC_chongjian_zhengfu
+				set_country_flag = APFNO_member
+				set_politics = {
+					ruling_party = social_democrat
+					elections_allowed = yes
+					election_frequency = 48
+				}
+				set_popularities = {
+					social_democrat = 50
+					social_liberal = 5
+					libertarian_socialist = 5
+					communist = 25
+					market_liberal = 5
+					conservative = 5
+					authoritarian_democrat = 5
+				}
+				set_party_name = {
+			        ideology = social_democrat
+			        long_name = PRC_zhonghua_shanyaodang_long
+			        name = PRC_zhonghua_shanyaodang
+		        }
+				add_ideas = EAS_riben_jingti_zhuyi
+				add_ideas = EAS_zhongguo_chongjian
+				add_ideas = EAS_lianhe_zhengfu
+				add_ideas = EAS_xijin_tongyi
+				remove_ideas = EAS_laodage_1
+				remove_ideas = EAS_zhiduxing_pinkun
+				remove_ideas = EAS_zhixv_senyan
+				remove_ideas = EAS_heian_yinying_2
+				remove_ideas = EAS_gangtie_yizhi_2
+				remove_ideas = EAS_wuzhuang_yachi_2
+				remove_ideas = EAS_chaosu_gongye
+				remove_ideas = EAS_shijie_yexin_1
+				remove_ideas = EAS_weiyi_zhigao
+				remove_ideas = EAS_chaoziran_yingxiang
+				remove_ideas = EAS_dayazhou_zhanzheng
+				remove_ideas = EAS_jiaotu_zhanshu
+				remove_ideas = EAS_jiaotu_zhanshu_1
+				remove_ideas = EAS_jiaqiang_di
+				remove_ideas = EAS_jiaqiang_zhong
+				remove_ideas = EAS_jiaqiang_gao
+				remove_ideas = BGD_quanmian_bengkui
+				remove_ideas = BGD_houfang_qihuo
+			}
+			BGD = {
+			    add_to_faction = PRC
+			    add_to_faction = PAK
+				add_to_faction = VIN
+				add_to_faction = LAO
+				add_to_faction = CAM
+				add_to_faction = BRM
+				add_to_faction = BHU
+				add_to_faction = SRL
+				add_to_faction = NEP
+				transfer_state = 876
+		    }
+		}
+	}
+	option = {
+		name = bgd.4981.a
+	}
+}
+country_event = {
+	#韩国加入亚自组织
+	id = bgd.67
+	title = bgd.67.t
+	desc = bgd.67.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.67.a
+		BGD = {
+			add_to_faction = KOR
+		}
+		KOR = {
+			set_country_flag = APFNO_member
+		}
+		country_event = {
+			id = bgd.68
+			days = 3
+		}
+	}
+}
+country_event = {
+	#朝鲜加入上集联盟
+	id = bgd.68
+	title = bgd.68.t
+	desc = bgd.68.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.68.a
+		PRC = {
+			add_to_faction = PRK
+			declare_war_on = {
+                target = BGD
+                type = annex_everything
+            }
+		}
+	}
+}
+country_event = {
+	#民兵问题
+	id = bgd.69
+	title = bgd.69.t
+	desc = bgd.69.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.69.a
+		swap_ideas = {
+			remove_idea = BGD_ziyou_minbing
+			add_idea = BGD_ziyou_minbing_1
+		}
+	}
+	option = {
+		name = bgd.69.b
+		swap_ideas = {
+			remove_idea = BGD_ziyou_minbing
+			add_idea = BGD_zhengui_jundui
+		}
+	}
+}
+country_event = {
+	#研制米歇尔战甲
+	id = bgd.70
+	title = bgd.70.t
+	desc = bgd.70.d
+	picture = GFX_bang_zhanjia
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.70.a
+		add_ideas = BGD_mixieer_zhanjia
+	}
+}
+country_event = {
+	#中国夺取钓鱼岛
+	id = bgd.71
+	title = bgd.71.t
+	desc = bgd.71.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.71.a
+		PRC = {
+			transfer_state = 876
+		}
+	}
+}
+country_event = {
+	#查封自民党问题
+	id = bgd.72
+	title = bgd.72.t
+	desc = bgd.72.d
+	picture = GFX_bang_ldp_question
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.72.a
+		add_timed_idea = {
+			idea = BGD_youyi_jiduanhua
+			days = 180
+		}	
+		add_popularity = {
+			ideology = conservative
+			popularity = -0.1
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = -0.05
+		}
+		set_party_name = {
+			ideology = conservative
+			long_name = BGD_guomin_minzhudang_long
+			name = BGD_guomin_minzhudang
+		}
+		set_party_name = {
+			ideology = authoritarian_democrat
+			long_name = BGD_guomin_minzhudang_long
+			name = BGD_guomin_minzhudang
+		}
+		promote_character = {
+			character = BGD_tamaki_yuichiro
+			ideology = right_centrist
+		}
+		promote_character = {
+			character = BGD_tamaki_yuichiro
+			ideology = ultra_conservatism
+		}
+	}
+	option = {
+		name = bgd.72.b
+		add_timed_idea = {
+			idea = BGD_youyi_jizhong
+			days = 180
+		}	
+		add_popularity = {
+			ideology = conservative
+			popularity = 0.05
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.03
+		}
+	}
+}
+country_event = {
+	#炸梦行动成功
+	id = bgd.73
+	title = bgd.73.t
+	desc = bgd.73.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.73.a
+		PRC = {
+			add_ideas = BGD_quanmian_bengkui
+		}
+	}
+}
+country_event = {
+	#研究超自然力量存在
+	id = bgd.74
+	title = bgd.74.t
+	desc = bgd.74.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.74.a
+		custom_effect_tooltip = BGD_yanjiu_czrll_tt
+		hidden_effect = {
+			country_event = {
+				id = bgd.75
+				days = 380
+			}
+		}
+	}
+}
+country_event = {
+	#揭露超自然力量存在
+	id = bgd.75
+	title = bgd.75.t
+	desc = bgd.75.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.75.a
+		news_event = {
+			id = news.1224
+			days = 2
+		}
+	}
+}
+country_event = {
+	#新年快乐
+	id = bgd.76
+	title = bgd.76.t
+	desc = bgd.76.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	trigger = {
+		tag = BGD
+		date > 2023.12.1
+	}
+	mean_time_to_happen = {
+        days = 31
+    }
+	option = {
+		name = bgd.76.a
+		add_political_power = 15
+		hidden_effect = {
+			country_event = {
+				id = bgd.110
+				days = 365
+			}
+		}
+	}
+	option = {
+		name = bgd.76.b
+		add_political_power = 15
+		hidden_effect = {
+			scoped_play_song = "Poppin'Party - クリスマスのうた"	
+			country_event = {
+				id = bgd.110
+				days = 365
+			}
+		}
+	}
+}
+country_event = {
+	#大少女乐队时代来临
+	id = bgd.77
+	title = bgd.77.t
+	desc = bgd.77.d
+	picture = GFX_bang_dsnydsd
+	fire_only_once = yes
+	trigger = {
+		date > 2021.3.20
+		tag = JAP
+	}
+	immediate = {
+		hidden_effect = {
+			scoped_play_song = "Poppin'Party - ときめきエクスペリエンス！"	
+		}
+	}
+	option = {
+		name = bgd.77.a
+		add_stability = 0.01
+	}
+}
+country_event = {
+	#东亚国实行焦土政策
+	id = bgd.78
+	title = bgd.78.t
+	desc = bgd.78.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.78.a
+		PRC = {
+			add_ideas = EAS_jiaotu_zhanshu
+		}
+	}
+	option = {
+		name = bgd.78.b
+		PRC = {
+			add_ideas = EAS_jiaotu_zhanshu_1
+		}
+		add_timed_idea = {
+			idea = BGD_yuanzhu_pingmin
+			days = 365
+		}
+		custom_effect_tooltip = BGD_yuanjiu_pingmin_tt
+	}
+}
+country_event = {
+	#庆祝经济奇迹
+	id = bgd.79
+	title = bgd.79.t
+	desc = bgd.79.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.79.a
+		add_political_power = 50
+	}
+}
+country_event = {
+	#顶点之军
+	id = bgd.80
+	title = bgd.80.t
+	desc = bgd.80.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.80.a
+		army_experience = 35
+		air_experience = 35
+		navy_experience = 35
+	}
+}
+country_event = {
+	#终将到来的一天
+	id = bgd.81
+	title = bgd.81.t
+	desc = bgd.81.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.81.a
+		add_political_power = 25
+		add_war_support = 0.01
+	}
+}
+country_event = {
+	#偶像的责任
+	id = bgd.82
+	title = bgd.82.t
+	desc = bgd.82.d
+	picture = GFX_paspale1
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.82.a
+	}
+}
+country_event = {
+	#有咲难眠的夜晚
+	id = bgd.83
+	title = bgd.83.t
+	desc = bgd.83.d
+	picture = GFX_arisa1
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.83.a
+	}
+}
+country_event = {
+	#香澄的梦想
+	id = bgd.84
+	title = bgd.84.t
+	desc = bgd.84.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.84.a
+	}
+}
+country_event = {
+	#加强东亚国
+	id = bgd.85
+	title = bgd.85.t
+	desc = bgd.85.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.85.a
+	}
+	option = {
+		name = bgd.85.b
+		PRC = {
+			add_ideas = EAS_jiaqiang_di
+		}
+	}
+	option = {
+		name = bgd.85.c
+		PRC = {
+			add_ideas = EAS_jiaqiang_zhong
+			add_research_slot = 1
+		}
+	}
+	option = {
+		name = bgd.85.e
+		PRC = {
+			add_ideas = EAS_jiaqiang_gao
+			add_research_slot = 2
+		}
+	}
+}
+country_event = {
+	#消除非交战区
+	id = bgd.86
+	title = bgd.86.t
+	desc = bgd.86.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	hidden = yes
+	immediate = {
+		every_state = { 
+				limit = {
+					is_owned_by = JAP
+					NOT = {
+						OR = {
+							state = 526
+							state = 876
+						}
+					}
+				}
+				remove_dynamic_modifier = {
+					modifier = PRC_non_combat_area
+				}
+			}
+	}
+	option = {
+		name = bgd.86.a
+	}
+}
+country_event = {
+	#国会改革
+	id = bgd.87
+	title = bgd.87.t
+	desc = bgd.87.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.87.a
+		add_political_power = -100
+		add_stability = 0.05
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.05
+		}
+	}
+}
+country_event = {
+	#总统的个人账号
+	id = bgd.88
+	title = bgd.88.t
+	desc = bgd.88.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.88.a
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.01
+		}
+	}
+}
+country_event = {
+	#少女派阀
+	id = bgd.89
+	title = bgd.89.t
+	desc = bgd.89.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.89.a
+		set_variable = { zhengce_dianshu = 150 }
+		set_country_flag = BGD_shaonv_yuedui_paifa
+		unlock_decision_category_tooltip = BGD_shaonv_paifa
+	}
+}
+country_event = {
+	#实现一亿总中流
+	id = bgd.90
+	title = bgd.90.t
+	desc = bgd.90.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	trigger = {
+		tag = BGD
+		has_idea = highest_poverty
+	}
+	mean_time_to_happen = {
+        days = 7
+    }
+	option = {
+		name = bgd.90.a
+		add_ideas = BGD_yiyi_zongzhongliu
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.05
+		}
+		add_political_power = 50
+	}
+}
+country_event = {
+	#夺取北方四岛与桦太岛
+	id = bgd.91
+	title = bgd.91.t
+	desc = bgd.91.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes 
+	trigger = {
+		tag = BGD
+		SOV = {
+		    has_idea = SOV_national_catastrophe
+		}
+	}
+	mean_time_to_happen = {
+        days = 10
+    }
+	option = {
+		name = bgd.91.a
+		transfer_state = 555
+		add_state_core = 555
+		transfer_state = 537
+		537 = {
+			set_compliance = 35
+			set_state_name = huatai_state_537_japan 
+		}
+		555 = {
+			set_state_name = sidao_state_555_japan 
+		}
+		add_political_power = -40
+		add_war_support = 0.05
+		SOV = {
+		    add_opinion_modifier = {
+		 	    target = BGD
+			    modifier = chenhuo_dajie
+		    }   
+	    }
+	}
+	option = {
+		name = bgd.91.b
+		add_political_power = 50
+	}
+}
+country_event = {
+	#《洪水退潮》出版
+	id = bgd.92
+	title = bgd.92.t
+	desc = bgd.92.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.92.a
+	}
+}
+country_event = {
+	#右翼排外浪潮
+	id = bgd.93
+	title = bgd.93.t
+	desc = bgd.93.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.93.a
+		add_political_power = -55
+	}
+}
+country_event = {
+	#寺川与伊藤
+	id = bgd.94
+	title = bgd.94.t
+	desc = bgd.94.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.94.a
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.06
+		}
+	}
+	option = {
+		name = bgd.94.b
+		add_political_power = -30
+		add_popularity = {
+			ideology = market_liberal
+			popularity = 0.02
+		}
+	}
+}
+country_event = {
+	#进一步扩大福利？
+	id = bgd.95
+	title = bgd.95.t
+	desc = bgd.95.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.95.a
+		add_ideas = chaofuli_guojia
+		add_ideas = geren_mianshui
+		set_country_flag = BGD_zhuanshu_shuishou_faan
+		set_country_flag = BGD_zhuanshu_fuli_faan
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.03
+		}
+	}
+	option = {
+		name = bgd.95.b
+		add_political_power = 50
+	}
+}
+#####里美相关事件#####
+country_event = {
+	#内战后复兴大阪关西世博计划
+	id = bgd.96
+	title = bgd.96.t
+	desc = bgd.96.d
+	picture = GFX_osaka_kansai
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.96.a
+		add_political_power = 100
+		set_country_flag = BGD_osaka_kansai_start
+		add_ideas = BGD_shibo_jianshe_kaixiao
+		unlock_decision_category_tooltip = BGD_osaka_kansai
+		activate_mission = BGD_osaka_kansai_daojishi
+		activate_mission = BGD_osaka_kansai_shigong
+		set_variable = {
+		    shibo_jindu = 5
+		}
+		set_variable = {
+		    shibo_zhiliang = 5
+		}
+		clamp_variable = {
+			var = shibo_jindu
+			min = 0
+			max = 100
+		}
+		clamp_variable = {
+			var = shibo_zhiliang
+			min = 0
+			max = 100
+		}
+	}
+}
+country_event = {
+	#大阪世博会圆满举办（最好结局）
+	id = bgd.97
+	title = bgd.97.t
+	desc = bgd.97.d
+	picture = GFX_osaka_kansai
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.97.a
+		add_political_power = 50
+		add_stability = 0.1
+		add_ideas = BGD_langsu_qiji
+		remove_ideas = BGD_shibo_jianshe_kaixiao
+		1340 = {
+			add_dynamic_modifier = {
+				modifier = BGD_chenggong_shibohui
+			}
+		}
+		531 = {
+			add_dynamic_modifier = {
+				modifier = BGD_chenggong_shibohui
+			}
+		}
+		hidden_effect = {
+		    remove_mission = BGD_osaka_kansai_shigong
+			news_event = {
+				id = news.1225
+			}
+		}
+	}
+}
+country_event = {
+	#大阪世博会顺利举办（一般结局）
+	id = bgd.98
+	title = bgd.98.t
+	desc = bgd.98.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.98.a
+		add_political_power = 20
+		add_stability = 0.05
+		remove_ideas = BGD_shibo_jianshe_kaixiao
+		hidden_effect = {
+		    remove_mission = BGD_osaka_kansai_shigong
+		}
+	}
+}
+country_event = {
+	#大阪世博会糟糕举办（次坏结局）
+	id = bgd.99
+	title = bgd.99.t
+	desc = bgd.99.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.99.a
+		remove_ideas = BGD_shibo_jianshe_kaixiao
+		hidden_effect = {
+		    remove_mission = BGD_osaka_kansai_shigong
+		}
+	}
+}
+country_event = {
+	#大阪世博会因工程问题遭取消（最坏结局）
+	id = bgd.100
+	title = bgd.100.t
+	desc = bgd.100.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.100.a
+		add_political_power = -50
+		add_stability = -0.05
+		add_popularity = {
+			ideology = social_democrat
+			popularity = -0.04
+		}
+		remove_ideas = BGD_shibo_jianshe_kaixiao
+		add_timed_idea = {
+			idea = BGD_xiaochen_limei
+			days = 365
+		}		
+		clr_country_flag = BGD_osaka_kansai_start
+		hidden_effect = {
+		    remove_mission = BGD_osaka_kansai_shigong
+		}
+	}
+}
+country_event = {
+	#天降钦差
+	id = bgd.101
+	title = bgd.101.t
+	desc = bgd.101.d
+	picture = GFX_rimi6
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.101.a
+		add_political_power = 25
+		add_days_mission_timeout = {
+			mission = BGD_osaka_kansai_shigong
+			days = -15
+		}
+		add_to_variable = { 
+			shibo_zhiliang = 4
+			tooltip = shibo_zhiliang_zengjia_4_tt
+		}
+		clamp_variable = {
+			var = shibo_zhiliang
+			min = 0
+			max = 100
+		}
+	}
+}
+country_event = {
+	#里美与关西政商界人士的交谈
+	id = bgd.102
+	title = bgd.102.t
+	desc = bgd.102.d
+	picture = GFX_rimi1
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.102.a
+		add_political_power = 10
+		add_days_mission_timeout = {
+			mission = BGD_osaka_kansai_shigong
+			days = -20
+		}
+		add_to_variable = { 
+			shibo_zhiliang = 4
+			tooltip = shibo_zhiliang_zengjia_4_tt
+		}
+		clamp_variable = {
+			var = shibo_zhiliang
+			min = 0
+			max = 100
+		}
+	}
+}
+country_event = {
+	#里美与维新会的会谈
+	id = bgd.103
+	title = bgd.103.t
+	desc = bgd.103.d
+	picture = GFX_daban_weixinhui
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.103.a
+		add_political_power = 5
+		add_days_mission_timeout = {
+			mission = BGD_osaka_kansai_shigong
+			days = -25
+		}
+		add_to_variable = { 
+			shibo_zhiliang = 4
+			tooltip = shibo_zhiliang_zengjia_4_tt
+		}
+		clamp_variable = {
+			var = shibo_zhiliang
+			min = 0
+			max = 100
+		}
+	}
+}
+country_event = {
+	#里美在东京与有咲的聊天
+	id = bgd.104
+	title = bgd.104.t
+	desc = bgd.104.d
+	picture = GFX_rimi5
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.104.a
+		add_political_power = 30
+		add_days_mission_timeout = {
+			mission = BGD_osaka_kansai_shigong
+			days = -10
+		}
+		add_to_variable = { 
+			shibo_zhiliang = 3
+			tooltip = shibo_zhiliang_zengjia_3_tt
+		}
+		clamp_variable = {
+			var = shibo_zhiliang
+			min = 0
+			max = 100
+		}
+	}
+}
+country_event = {
+	#募捐演讲
+	id = bgd.105
+	title = bgd.105.t
+	desc = bgd.105.d
+	picture = GFX_rimi3
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.105.a
+		add_political_power = 35
+		add_days_mission_timeout = {
+			mission = BGD_osaka_kansai_shigong
+			days = -5
+		}
+		add_to_variable = { 
+			shibo_zhiliang = 2
+			tooltip = shibo_zhiliang_zengjia_2_tt
+		}
+		clamp_variable = {
+			var = shibo_zhiliang
+			min = 0
+			max = 100
+		}
+	}
+}
+country_event = {
+	#顺便选择一下吉祥物吧
+	id = bgd.106
+	title = bgd.106.t
+	desc = bgd.106.d
+	picture = GFX_rimi7
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.106.a
+		add_political_power = 10
+		add_days_mission_timeout = {
+			mission = BGD_osaka_kansai_shigong
+			days = -15
+		}
+		add_to_variable = { 
+			shibo_zhiliang = 3
+			tooltip = shibo_zhiliang_zengjia_3_tt
+		}
+		clamp_variable = {
+			var = shibo_zhiliang
+			min = 0
+			max = 100
+		}
+	}
+	option = {
+		name = bgd.106.b
+		add_political_power = 5
+		add_days_mission_timeout = {
+			mission = BGD_osaka_kansai_shigong
+			days = -30
+		}
+		add_to_variable = { 
+			shibo_zhiliang = 2
+			tooltip = shibo_zhiliang_zengjia_2_tt
+		}
+		clamp_variable = {
+			var = shibo_zhiliang
+			min = 0
+			max = 100
+		}
+	}
+}
+country_event = {
+	#ppp的鼓励
+	id = bgd.107
+	title = bgd.107.t
+	desc = bgd.107.d
+	picture = GFX_rimi4
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.107.a
+		add_political_power = 20
+		add_days_mission_timeout = {
+			mission = BGD_osaka_kansai_shigong
+			days = -5
+		}
+		add_to_variable = { 
+			shibo_zhiliang = 5
+			tooltip = shibo_zhiliang_zengjia_5_tt
+		}
+		clamp_variable = {
+			var = shibo_zhiliang
+			min = 0
+			max = 100
+		}
+	}
+}
+country_event = {
+	#最终宣传与演讲
+	id = bgd.108
+	title = bgd.108.t
+	desc = bgd.108.d
+	picture = GFX_rimi2
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.108.a
+		add_political_power = 10
+		add_days_mission_timeout = {
+			mission = BGD_osaka_kansai_shigong
+			days = -50
+		}
+		add_to_variable = { 
+			shibo_zhiliang = 3
+			tooltip = shibo_zhiliang_zengjia_3_tt
+		}
+		clamp_variable = {
+			var = shibo_zhiliang
+			min = 0
+			max = 100
+		}
+	}
+}
+#####里美剧情线前半段结束#####
+country_event = {
+	#不变的夕阳——Afterglow
+	id = bgd.109
+	title = bgd.109.t
+	desc = bgd.109.d
+	picture = GFX_afterglow1
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.109.a
+	}
+}
+country_event = {
+	#新年快乐
+	id = bgd.110
+	title = bgd.110.t
+	desc = bgd.110.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = bgd.110.a
+		add_political_power = 15
+		hidden_effect = {
+			country_event = {
+				id = bgd.110
+				days = 365
+			}
+		}
+	}
+	option = {
+		name = bgd.110.b
+		add_political_power = 15
+		hidden_effect = {
+			scoped_play_song = "Poppin'Party - クリスマスのうた"	
+			country_event = {
+				id = bgd.110
+				days = 365
+			}
+		}
+	}
+}
+country_event = {
+	#新形式年号？
+	id = bgd.111
+	title = bgd.111.t
+	desc = bgd.111.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.111.a
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.01
+		}
+	}
+	option = {
+		name = bgd.111.b
+		add_stability = 0.01
+	}
+	option = {
+		name = bgd.111.c
+		add_political_power = 10
+	}
+}
+country_event = {
+	#威权闪耀主义
+	id = bgd.112
+	title = bgd.112.t
+	desc = bgd.112.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.112.a
+		add_stability = 0.1
+		add_political_power = 30
+		promote_character = {
+			character = BGD_arisa_char
+			ideology = authoritarian_kiraism
+		}
+		set_politics = {
+			ruling_party = authoritarian_democrat
+			elections_allowed = yes
+			election_frequency = 60
+		}
+		set_party_name = {
+			ideology = nationalist
+			long_name = guomin_fangweijun_long
+			name = guomin_fangweijun
+		}
+		add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.25
+		}
+		set_temp_variable = {
+			coalition_partner_var_temp = token:nationalist
+		}
+		add_to_coalition = yes
+	}
+}
+country_event = {
+	#闪耀党政治危机——是否换人（目前仅有ppp线，但日后可通过该事件换为其他乐队路线）
+	id = bgd.113
+	title = bgd.113.t
+	desc = bgd.113.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.113.a
+		add_power_balance_value = {
+			id = BGD_power_balance
+			value = -0.15
+		}
+	}
+}
+country_event = {
+	#民主阵线不信任案
+	id = bgd.114
+	title = bgd.114.t
+	desc = bgd.114.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.114.a
+		add_political_power = -50
+		add_popularity = {
+			ideology = social_democrat
+			popularity = -0.15
+		}
+		country_event = {
+			id = bgd.115
+			days = 3
+		}
+	}
+}
+country_event = {
+	#民主阵线不信任案通过！
+	id = bgd.115
+	title = bgd.115.t
+	desc = bgd.115.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.115.a
+		add_political_power = -100
+		add_stability = -0.1
+		add_popularity = {
+			ideology = social_democrat
+			popularity = -0.2
+		}
+		load_focus_tree = TFR_tree_Japanese_Socialism_Fake
+	}
+}
+country_event = {
+	#异常军事调动
+	id = bgd.116
+	title = bgd.116.t
+	desc = bgd.116.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.116.a
+		add_command_power = -150
+		add_stability = -0.01
+		add_war_support = 0.03
+		hidden_effect = {
+			country_event = {
+			    id = bgd.226
+			    hours = 20
+		    }
+		}
+	}
+}
+country_event = {
+	#核弹数量：-2+1
+	id = bgd.117
+	title = bgd.117.t
+	desc = bgd.117.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = bgd.117.a
+		add_political_power = 100
+		add_stability = 0.05
+		add_war_support = -0.1
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.05
+		}
+	}
+	option = {
+		name = bgd.117.b
+		add_stability = -0.1
+		add_war_support = 0.05
+		add_popularity = {
+			ideology = nationalist
+			popularity = 0.05
+		}
+		add_ideas = BGD_hewu_touzi
+		activate_mission = BGD_riben_hewuhua
+		set_country_flag = kaishi_hewu_yanfa
+	}
+}
+country_event = {
+	#任命总理(ppp)
+	id = bgd.118
+	title = bgd.118.t
+	desc = bgd.118.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = bgd.118.a
+		add_political_power = -25
+		add_ideas = BGD_arisa
+		set_variable = { Var_with_Token = token:BGD_souri }
+		add_to_variable = { 
+			souri_arisa = 1
+	    }
+		clamp_variable = {
+			var = souri_arisa
+			min = 0
+			max = 1
+		}
+		trigger = {
+			has_idea = vacant_hog
+		}
+	}
+	option = {
+		name = bgd.118.b
+		add_political_power = -1
+		add_political_power = 1
+		trigger = {
+			has_idea = BGD_arisa
+		}
+	}
+}
+country_event = {
+	#任命财相
+	id = bgd.119
+	title = bgd.119.t
+	desc = bgd.119.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = bgd.119.a
+		add_ideas = BGD_saaya
+		add_political_power = -15
+		add_to_variable = { 
+			zaimu_saaya = 1
+	    }
+		clamp_variable = {
+			var = zaimu_saaya
+			min = 0
+			max = 1
+		}
+		trigger = {
+			has_idea = vacant_eco
+		}
+	}
+	option = {
+		name = bgd.119.b
+		set_temp_variable = {
+			var = debt_var_temp
+			value = 0.1
+		}
+		add_debt = yes
+		set_temp_variable = {
+			var = debt_var_temp
+			value = -0.1
+		}
+		add_debt = yes
+		trigger = {
+			has_idea = BGD_saaya
+		}
+	}
+}
+country_event = {
+	#任命总务相
+	id = bgd.120
+	title = bgd.120.t
+	desc = bgd.120.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = bgd.120.a
+		add_ideas = BGD_rimi
+		add_political_power = -15
+		set_variable = { Var_with_Token_rimi = token:BGD_rimi }
+		add_to_variable = { 
+			somu_rimi = 1
+	    }
+		clamp_variable = {
+			var = somu_rimi
+			min = 0
+			max = 1
+		}
+		trigger = {
+			has_idea = vacant_sec
+		}
+	}
+	option = {
+		name = bgd.120.b
+		add_stability = -0.01
+		add_stability = 0.01
+		trigger = {
+			has_idea = BGD_rimi
+		}
+	}
+}
+country_event = {
+	#里美权力平衡
+	id = bgd.130
+	title = bgd.130.t
+	desc = bgd.130.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = bgd.130.a
+		set_power_balance = {
+			id = BGD_rimi_power_balance
+			left_side = BGD_lengmo_shehui_side
+			right_side = BGD_boai_shehui_side
+			set_value = -0.15
+		}
+	}
+}
+country_event = {
+	#设置复兴省？
+	id = bgd.131
+	title = bgd.131.t
+	desc = bgd.131.d
+	picture = GFX_bang_shijian_zhanwei
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = bgd.131.a
+		add_ideas = BGD_fuxing_sheng
+		add_political_power = -25
+		add_stability = 0.03
+	}
+	option = {
+		name = bgd.131.b
+		add_political_power = 30
+	}
+}
+country_event = {
+	#右派退出人民联合
+	id = bgd.132
+	title = bgd.132.t
+	desc = bgd.132.d
+	picture = GFX_JAP_yukio_edano_cc
+	fire_only_once = no
+	is_triggered_only = yes
+	option = {
+		name = bgd.132.a
+		add_political_power = -50
+		add_stability = -0.07
+		set_temp_variable = {
+			coalition_partner_var_temp = token:market_liberal
+		}
+		remove_from_coalition = yes
+	}
+}
+

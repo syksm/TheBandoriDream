@@ -1,0 +1,234 @@
+ideas = {
+	economy = {
+		law = yes
+		use_list_view = yes
+		BGD_jingji_jianshe_jinxingshi = {
+		picture = laws_economic_focus
+		removal_cost = -1
+		level = 7
+		cancel_if_invalid = no
+		allowed = {
+			tag = BGD
+		}
+		available = {
+			has_country_flag = BGD_qiyong_zhuanshu_jingji
+		}
+		visible = {
+			has_country_flag = BGD_qiyong_zhuanshu_jingji
+		}
+		allowed_to_remove = {
+			has_completed_focus = BGD_jingji_qiji
+		}
+		modifier = {
+			business_value_factor = 0.1
+			personal_value_factor = 0.05
+			expense_growth_factor = 0.15
+			consumer_goods_expected_value = 0.3
+			production_speed_arms_factory_factor = 0.05
+			production_speed_dockyard_factor = 0.05
+			production_speed_infrastructure_factor = 0.15
+			production_speed_industrial_complex_factor = 0.15
+			production_speed_office_park_factor = 0.15
+			conversion_cost_civ_to_mil_factor = 0.25
+			max_fuel_factor = -0.25
+		}
+		ai_will_do = {
+			base = 1
+		}
+		}
+		BGD_jingji_huangjin_shidai = {
+		picture = laws_economic_focus
+		removal_cost = -1
+		level = 6
+		cancel_if_invalid = no
+		allowed = {
+			tag = BGD
+		}
+		available = {
+			has_country_flag = BGD_qiyong_zhuanshu_jingji_1
+		}
+		visible = {
+			has_country_flag = BGD_qiyong_zhuanshu_jingji_1
+		}
+		allowed_to_remove = {
+			always = no
+		}
+		modifier = {
+			business_value_factor = 0.15
+			personal_value_factor = 0.15
+			income_growth_factor = 0.1
+			consumer_goods_expected_value = 0.2
+			production_speed_arms_factory_factor = 0.15
+			production_speed_dockyard_factor = 0.15
+			production_speed_infrastructure_factor = 0.2
+			production_speed_industrial_complex_factor = 0.2
+			production_speed_office_park_factor = 0.2
+			production_speed_buildings_factor = 0.1
+			production_factory_max_efficiency_factor = 0.05
+			production_factory_efficiency_gain_factor = 0.05
+			industrial_capacity_factory = 0.07
+			industrial_capacity_dockyard = 0.07
+			conversion_cost_civ_to_mil_factor = -0.2
+			max_fuel_factor = 0.2
+		}
+		ai_will_do = {
+			base = 1
+		}
+		}
+	}
+	trade_laws = {
+		law = yes
+		use_list_view = yes
+		BGD_jiagong_chukou_maoyi = {
+			picture = laws_trade4
+			cost = 100
+			level = 5
+			removal_cost = -1
+			cancel_if_invalid = no
+			available = {
+				has_country_flag = BGD_zhuanshu_maoyi_faan
+			}
+			visible = {
+				has_country_flag = BGD_zhuanshu_maoyi_faan
+			}
+			allowed = {
+				tag = BGD
+			}
+			allowed_to_remove = {
+			    always = no
+		    }
+			modifier = {
+				business_value_factor = 0.2
+				min_export = 0.1
+				consumer_goods_factor = 0.25
+				industrial_capacity_factory = 0.25
+				industrial_capacity_dockyard = 0.25
+				production_factory_max_efficiency_factor = 0.1
+				industrial_factory_donations = 5
+				research_speed_factor = 0.15
+				civilian_intel_to_others = 65
+				navy_intel_to_others = 20
+			}
+			ai_will_do = {
+			    base = 1
+		    }
+		}
+	}
+	tax_laws = {
+		law = yes
+		use_list_view = yes
+		geren_mianshui = {
+			removal_cost = -1
+			cost = 100
+			level = 5
+			picture = laws_taxes
+			available = {
+				has_country_flag = BGD_zhuanshu_shuishou_faan
+			}
+			visible = {
+				has_country_flag = BGD_zhuanshu_shuishou_faan
+			}
+			allowed = {
+				tag = BGD
+			}
+			allowed_to_remove = {
+			    always = no
+		    }
+			modifier = {
+				tax_business_rate = 0.35
+				tax_personal_rate = 0.1
+				political_power_cost = 0.25
+				political_power_factor = -0.03
+				consumer_goods_factor = -0.25
+				conversion_cost_mil_to_civ_factor = 0.3
+				production_speed_industrial_complex_factor = -0.3
+				production_speed_office_park_factor = -0.3
+				production_factory_max_efficiency_factor = 0.08
+				research_speed_factor = 0.05
+				stability_factor = 0.15
+				war_support_factor = 0.1
+				fuel_gain_factor = -0.3
+				poverty_development_monthly = 0.025
+			}
+			ai_will_do = {
+			    base = 1
+		    }
+		}
+	}
+	welfare_laws = {
+		law = yes
+		use_list_view = yes
+		chaofuli_guojia = {
+			removal_cost = -1
+			cost = 100
+			level = 6
+			picture = laws_welfare4
+			available = {
+				has_country_flag = BGD_zhuanshu_fuli_faan
+			}
+			visible = {
+				has_country_flag = BGD_zhuanshu_fuli_faan
+			}
+			allowed = {
+				tag = BGD
+			}
+			allowed_to_remove = {
+			    always = no
+		    }
+			modifier = {
+				personal_expense = 0.8
+				poverty_development_monthly = 0.03
+				society_development_monthly = 0.02
+				production_speed_infrastructure_factor = 0.3
+				low_stability_weekly = 0.01
+				stability_factor = 0.2
+				war_stability_factor = 0.1
+				expense_growth_factor = 0.2
+				consumer_goods_factor = 0.1
+				research_speed_factor = 0.05
+				political_power_cost = 0.5
+				party_popularity_stability_factor = 0.1
+				conscription_factor = -0.15
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+			}
+			ai_will_do = {
+			    base = 1
+		    }
+		}
+	}
+	interest_rate_laws = {
+		law = yes
+		use_list_view = yes
+		fulilv_zhengce = {
+			removal_cost = -1
+			cost = 0
+			level = 7
+			picture = laws_interest_rates
+			available = {
+				tag = BGD
+				has_completed_focus = BGD_jingji_jianshe
+			}
+			visible = {
+				tag = BGD
+			}
+			allowed = {
+				tag = BGD
+			}
+			modifier = {
+				interest_rate = -0.025
+				inflation_monthly = 0.008
+				poverty_development_monthly = 0.005
+				production_speed_buildings_factor = 0.25
+				consumer_goods_factor = 0.1
+				stability_factor = -0.1
+				income_growth_factor = 0.15
+			}
+			ai_will_do = {
+			    base = 1
+		    }
+		}
+	}
+}

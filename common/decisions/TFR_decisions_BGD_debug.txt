@@ -1,0 +1,191 @@
+debug_decisions_BGD_afterwar = {
+    BGD_load_ppp_tree_debug = {
+		icon = generic_industry
+		fire_only_once = no
+		days_re_enable = 1
+		cost = 0
+		allowed = {
+			tag = BGD
+		}
+		visible = {
+		}
+		available = {
+			tag = BGD
+		}
+		ai_will_do = {
+			base = 0
+		}
+		complete_effect = {
+			load_focus_tree = TFR_tree_BGD_afterwar
+			add_dynamic_modifier = {
+				modifier = BGD_kira_doki
+			}
+		}
+	}
+	 BGD_arisa_military_coup_debug = {
+		icon = generic_industry
+		fire_only_once = no
+		days_re_enable = 1
+		cost = 0
+		allowed = {
+			tag = BGD
+		}
+		visible = {
+		}
+		available = {
+			tag = BGD
+		}
+		ai_will_do = {
+			base = 0
+		}
+		complete_effect = {
+			promote_character = {
+				character = BGD_arisa_char
+				ideology = military_junta
+			}
+			set_politics = {
+				ruling_party = nationalist
+				elections_allowed = no
+			}
+		}
+	}
+	BGD_zengjia_zhengcedian_debug = {
+		icon = generic_industry
+		fire_only_once = no
+		days_re_enable = 1
+		cost = 0
+		allowed = {
+			tag = BGD
+		}
+		visible = {
+		}
+		available = {
+			tag = BGD
+		}
+		ai_will_do = {
+			base = 0
+		}
+		complete_effect = {
+			add_to_variable = { zhengce_dianshu = 5000 }
+		}
+	}
+	BGD_zengjia_shibohui_jindu = {
+		icon = generic_industry
+		fire_only_once = no
+		days_re_enable = 1
+		cost = 0
+		allowed = {
+			tag = BGD
+		}
+		visible = {
+		}
+		available = {
+			tag = BGD
+		}
+		ai_will_do = {
+			base = 0
+		}
+		complete_effect = {
+			add_to_variable = { shibo_jindu = 100 }
+			clamp_variable = {
+				var = shibo_jindu
+				min = 0
+				max = 100
+			}
+	    }
+    }
+    BGD_zengjia_shibohui_zhiliang_yuanman = {
+	    icon = generic_industry
+	    fire_only_once = no
+	    days_re_enable = 1
+	    cost = 0
+	    allowed = {
+		    tag = BGD
+	    }
+	    visible = {
+	    }
+	    available = {
+		    tag = BGD
+	    }
+	    ai_will_do = {
+		    base = 0
+	    }
+	    complete_effect = {
+		    add_to_variable = { shibo_zhiliang = 100 }
+			clamp_variable = {
+				var = shibo_zhiliang
+				min = 0
+				max = 100
+	        }
+        }
+    }
+	BGD_zengjia_shibohui_zhiliang_shunli = {
+	    icon = generic_industry
+	    fire_only_once = no
+	    days_re_enable = 1
+	    cost = 0
+	    allowed = {
+		    tag = BGD
+	    }
+	    visible = {
+	    }
+	    available = {
+		    tag = BGD
+	    }
+	    ai_will_do = {
+		    base = 0
+	    }
+	    complete_effect = {
+		    add_to_variable = { shibo_zhiliang = 60 }
+			clamp_variable = {
+				var = shibo_zhiliang
+				min = 0
+				max = 100
+	        }
+        }
+    }  
+	BGD_load_rimi_focus_tree = {
+	    icon = generic_industry
+	    fire_only_once = no
+	    days_re_enable = 1
+	    cost = 0
+	    allowed = {
+		    tag = BGD
+	    }
+	    visible = {
+	    }
+	    available = {
+		    tag = BGD
+	    }
+	    ai_will_do = {
+		    base = 0
+	    }
+	    complete_effect = {
+		    load_focus_tree = TFR_tree_Rimi
+		    promote_character = {
+				character = BGD_rimi_char
+				ideology = kirakira_dokidoki
+			}
+			set_temp_variable = {
+			    ruling_party_wing_var_temp = token:authoritarian_democrat
+		    }
+		    add_ruling_party_wing = yes
+			set_party_name = {
+			    ideology = social_democrat
+			    long_name = JGP_zhengtongpai_long
+			    name = JGP_zhengtongpai
+		    }
+			set_party_name = {
+			    ideology = authoritarian_democrat
+			    long_name = JGP_weiquanpai_long
+			    name = JGP_weiquanpai
+		    }
+	        set_party_name = {
+			    ideology = nationalist
+			    long_name = guomin_fangweijun_long
+			    name = guomin_fangweijun
+		    }
+			set_country_flag = naikaku_enabled
+		}
+    }  
+}

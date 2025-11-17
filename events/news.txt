@@ -1,0 +1,266 @@
+add_namespace = news
+news_event = {
+	id = news.1212
+	title = news.1212.t
+	desc = news.1212.d
+	picture = GFX_JAP_soliders_news
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.1212.a
+	}
+}
+news_event = {
+	id = news.1213
+	title = news.1213.t
+	desc = news.1213.d
+	picture = GFX_JAP_soliders_news
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.1213.a
+	}
+}
+news_event = {
+	#日本内战
+	id = news.1214
+	title = news.1214.t
+	desc = news.1214.d
+	picture = GFX_news_japanese_civil_war
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.1214.a
+		set_country_flag = BGD_neizhan
+		hidden_effect = {
+		scoped_play_song = "one_minute_of_silence"
+		scoped_sound_effect = TFR_se_japan_civil_war
+		}
+	}
+}
+news_event = {
+	#闪耀党统一日本
+	id = news.1215
+	title = news.1215.t
+	desc = news.1215.d
+	picture = GFX_bang_girlsband_party
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.1215.a
+		set_country_flag = BGD_tongyi_guojia
+		hidden_effect = {
+		scoped_play_song = "Poppin'Party - STAR BEAT!～ホシノコドウ～"
+		}
+	}
+}
+news_event = {
+	#东亚国崛起
+	id = news.1984
+	title = news.1984.t
+	desc = news.1984.d
+	picture = GFX_JAP_soliders_news
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.1984.a
+		hidden_effect = {
+			BGD = {
+				country_event = {
+					id = bgd.74
+					days = 5
+				}
+			}
+			BGD = {
+				country_event = {
+					id = bgd.85
+					days = 12
+				}
+			}
+		}
+	}
+}
+news_event = {
+	#日本核武化
+	id = news.1216
+	title = news.1216.t
+	desc = news.1216.d
+	picture = GFX_event_nuke
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.1216.a
+	}
+}
+news_event = {
+	#gaw获胜
+	id = news.1217
+	title = news.1217.t
+	desc = news.1217.d
+	picture = GFX_bang_gaw_shengli
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.1217.a
+		set_country_flag = BGD_gaw_huosheng
+		set_country_flag = BGD_gaw_victory_win
+		clr_country_flag = BGD_gaw_begin_1
+		custom_effect_tooltip = BGD_gaw_huosheng_tt
+		hidden_effect = {
+			scoped_play_song = "CiRCLE THANKS MUSiC"
+			country_event = {
+				id = bgd.2014
+				days = 7
+			}
+		}
+	}
+}
+news_event = {
+	#gaw爆发
+	id = news.1218
+	title = news.1218.t
+	desc = news.1218.d
+	picture = GFX_bang_gaw_baofa
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.1218.a
+		set_country_flag = BGD_gaw_begin
+		set_country_flag = BGD_gaw_begin_1
+		mark_focus_tree_layout_dirty = yes
+		hidden_effect = {
+		every_country = {
+			limit = {
+				is_ally_with = BGD
+				NOT = {
+					tag = BGD
+				}
+			}
+			add_timed_idea = {
+				idea = BGD_jianshou_zhanxian
+				days = 500
+			}
+		}
+		PRC = {
+			add_ideas = EAS_dayazhou_zhanzheng
+		}
+		BGD = {
+			country_event = {
+				id = bgd.65 
+				days = 3
+			}
+		}
+		}
+	}
+}
+news_event = {
+	#东亚国成立上集联盟
+	id = news.1219
+	title = news.1219.t
+	desc = news.1219.d
+	picture = GFX_event_nuke
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.1219.a
+	}
+}
+news_event = {
+	#亚太自由国家组织成立
+	id = news.1220
+	title = news.1220.t
+	desc = news.1220.d
+	picture = GFX_event_nuke
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.1220.a
+	}
+}
+news_event = {
+	#东亚国入侵越老柬三国
+	id = news.1221
+	title = news.1221.t
+	desc = news.1221.d
+	picture = GFX_pla_mongolia_news
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.1221.a
+	}
+}
+news_event = {
+	#东亚国入侵蒙古国
+	id = news.1222
+	title = news.1222.t
+	desc = news.1222.d
+	picture = GFX_pla_mongolia_news
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.1222.a
+	}
+}
+news_event = {
+	#东亚国入侵缅甸
+	id = news.1223
+	title = news.1223.t
+	desc = news.1223.d
+	picture = GFX_pla_mongolia_news
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.1223.a
+	}
+}
+news_event = {
+	#揭露超自然力量
+	id = news.1224
+	title = news.1224.t
+	desc = news.1224.d
+	picture = GFX_event_nuke
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.1224.a
+		every_country = {
+			limit = {
+			OR = {
+				tag = PRC
+				tag = BGD
+			}
+			}
+			add_timed_idea = {
+				idea = BGD_czrll_baolu 
+				days = 200
+			}
+		}
+	}
+}
+news_event = {
+	#大阪关西世博会开幕
+	id = news.1225
+	title = news.1225.t
+	desc = news.1225.d
+	picture = GFX_bang_shibo_kaimu
+	fire_only_once = yes
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = news.1225.a
+	}
+}

@@ -1,0 +1,39 @@
+BGD_zonglifu_jueyi = {
+	BGD_neigefu_renshifa = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 15
+		days_remove = 20
+
+		fire_only_once = no
+		days_re_enable = 60
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+
+		}
+
+		visible = {
+           tag = BGD
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			add_stability = 0.1
+			add_political_power = 5
+		}
+	}
+}

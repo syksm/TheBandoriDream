@@ -1,0 +1,245 @@
+focus_tree = {
+    id = TFR_tree_BGD
+	country = {
+	    factor = 0
+		modifier = {
+		    add = 20
+			tag = BGD
+		}
+	}
+	default = no
+	 
+	focus = {
+	    id = BGD_civil_war_begin
+		icon = GFX_tashang_zhengtu_1
+		cost = 1
+		x = 5
+		y = 0
+		available = {
+			has_war_with = JAP
+	    }
+		completion_reward = {
+			custom_effect_tooltip = BGD_neizhan_tishi_tt
+			effect_tooltip = {
+				add_ideas = BGD_kira_doki_3
+			}
+		    country_event = {
+			    id =  bgd.1    
+			}
+		    add_political_power = 70
+			hidden_effect = {
+				scoped_play_song = "Poppin'Party - ティアドロップス"
+			}
+			unlock_decision_category_tooltip = BGD_riben_neizhan
+			unlock_decision_tooltip = BGD_guwu_shiqi
+			hidden_effect = {
+			add_dynamic_modifier = {
+				modifier = BGD_kira_doki
+			}
+			}
+			add_to_variable = { BGD_kira_doki_political_power_factor_dynamic_var = 0.05 }
+			add_to_variable = { BGD_kira_doki_stability_factor_dynamic_var = 0.05 }
+			add_to_variable = { BGD_kira_doki_war_support_factor_dynamic_var = 0.05 }
+		}
+	}
+		focus = {
+			id = BGD_dongyuan_minbing
+			icon = GFX_guoce_zhanwei
+			prerequisite = { focus = BGD_civil_war_begin }
+			cost = 2
+			x = 4
+			y = 1
+			completion_reward = {
+				add_ideas = BGD_ziyou_minbing
+				add_ideas = BGD_yukina
+				add_war_support = 0.15
+				add_manpower = 35000
+				load_oob = BGD_minbing	
+				unlock_decision_tooltip = BGD_jixv_dongyuan	
+				custom_effect_tooltip = BGD_dongyuan_minbing_tt
+			}	
+			}
+		focus = {
+				id = BGD_jianli_zhengfu
+				icon = GFX_guoce_zhanwei
+				prerequisite = { focus = BGD_civil_war_begin }
+				cost = 2
+				x = 6
+				y = 1
+				completion_reward = {
+					add_ideas = BGD_arisa
+					add_ideas = BGD_tae
+					add_ideas = BGD_saaya
+					add_ideas = BGD_rimi
+					add_stability = 0.15
+					add_political_power = 35
+					unlock_decision_tooltip = BGD_anfu_renmin
+				}	
+				}
+		focus = {
+			id = BGD_sougua_kucun
+			icon = GFX_guoce_zhanwei
+			prerequisite = { focus = BGD_civil_war_begin }
+			cost = 2
+			x = 2
+			y = 1
+			completion_reward = {
+				add_equipment_to_stockpile = {
+				type = infantry_equipment_3
+				amount = 7500
+				producer = BGD
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_1 
+				amount = 200
+				producer = BGD
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_2
+				amount = 250
+				producer = BGD
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1  
+				amount = 800
+				producer = BGD
+			}
+			unlock_decision_tooltip = BGD_jiada_sougua
+		    }
+			}
+		focus = {
+			id = BGD_zhanji_qifei
+			icon = GFX_zhanji_toucheng
+			prerequisite = { focus = BGD_dongyuan_minbing }
+			cost = 2
+			x = 4
+			y = 2
+			completion_reward = {
+				air_experience = 25
+				add_equipment_to_stockpile = {
+					type = small_plane_airframe_1
+					variant_name = "F-15J"
+					amount = 70
+					producer = BGD
+				}
+				add_equipment_to_stockpile = {
+					type = small_plane_cas_airframe_1
+					variant_name = "Mitsubishi F-2"
+					amount = 50
+					producer = BGD
+				}
+		    }	
+			}
+		focus = {
+			id = BGD_shanyao_houqin
+			icon = GFX_guoce_zhanwei
+			prerequisite = { focus = BGD_sougua_kucun }
+			cost = 2
+			x = 2
+			y = 2
+			completion_reward = {
+				add_timed_idea = {
+					idea = BGD_houqin_dongyuan	
+					days = 240
+				}	
+			}
+		    }	
+		focus = {
+			id = BGD_mimi_zhanxian
+			icon = GFX_guoce_zhanwei
+			prerequisite = { focus = BGD_jianli_zhengfu }
+			cost = 2
+			x = 6
+			y = 2
+			completion_reward = {
+				add_ideas = BGD_nanami	
+				JAP = {
+					add_ideas = BGD_dikang_ziweidui
+				}	
+			}		
+			}
+		focus = {
+			id = BGD_mengxiang_buqv
+			icon = GFX_guoce_zhanwei
+			prerequisite = { focus = BGD_zhanji_qifei }
+			prerequisite = { focus = BGD_shanyao_houqin }
+			prerequisite = { focus = BGD_mimi_zhanxian }
+			cost = 2
+			x = 5
+			y = 3
+			completion_reward = {
+				add_timed_idea = {
+					idea = BGD_mengxiang	
+					days = 90
+				}	
+			}	
+			}
+		focus = {
+			id = BGD_jichuan_mengxiang
+			icon = GFX_jichuan_mengxiang_1
+			prerequisite = { focus = BGD_mengxiang_buqv }
+			cost = 2
+			x = 5
+			y = 4
+			completion_reward = {
+				swap_ideas = {
+				remove_idea = BGD_mengxiang
+				add_idea = BGD_mengxiang_1
+			}
+			modify_timed_idea = {
+				idea = BGD_mengxiang_1
+				days = 90
+			}	
+			}	          
+			}	
+		focus = {
+			id = BGD_zhongbu_gongshi
+			icon = GFX_zhongbu_zhanyi
+			prerequisite = { focus = BGD_civil_war_begin }
+			cost = 2
+			x = 10
+			y = 1
+			completion_reward = {
+				add_timed_idea = {
+					idea = BGD_neizhan_gongshi	
+					days = 100
+				}				
+			}	          
+			}
+		focus = {
+			id = BGD_nanbu_gongshi
+			icon = GFX_nanfang_gongshi_1
+			prerequisite = { focus = BGD_zhongbu_gongshi }
+			cost = 2
+			x = 10
+			y = 2.5
+			completion_reward = {
+				add_timed_idea = {
+					idea = BGD_neizhan_gongshi	
+					days = 100
+				}				
+				modify_timed_idea = {
+					idea = BGD_neizhan_gongshi
+					days = 100
+				}				
+			}	      
+			}
+		focus = {
+			id = BGD_zuizhong_gongshi
+			icon = GFX_zuizhong_gongshi_1
+			prerequisite = { focus = BGD_nanbu_gongshi }
+			cost = 2
+			x = 10
+			y = 4
+			completion_reward = {
+				add_timed_idea = {
+					idea = BGD_neizhan_gongshi	
+					days = 100
+				}				
+				modify_timed_idea = {
+					idea = BGD_neizhan_gongshi
+					days = 100
+				}				
+			}	        
+			}
+}

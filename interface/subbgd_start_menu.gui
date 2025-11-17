@@ -1,0 +1,62 @@
+guiTypes = {
+	
+	containerWindowType = {
+		name = "BGD_country_info_container"
+		position = {x=0 y=0}
+		size = { width=1108 height=720 }
+
+		iconType = {
+			name = "BGD_startmenu_Background" 
+			spriteType = "GFX_JAP_BGD_start_menu"
+			position = {x = 27 y = 62 }
+		}
+		
+		iconType = {
+			name = "BGD_poster" 
+			position = {x = 417 y = 58 }
+		}
+
+		instantTextboxType = {
+			name = "BGD_Country_Name"
+			position = {x = 300 y = 75}
+			font = "VCR02_26"
+			text = "COUNTRY_NAME"
+			maxWidth = 500
+			maxHeight = 23 
+			format = center
+		}
+		
+		#Put whatever you want about the country here
+		instantTextboxType = {
+			name = "BGD_Country_Summary" 
+			position = {x = 50 y = 250}
+			font = "VCR02_14"
+			text = "BGD_COUNTRY_SUMMARY"
+			maxWidth = 1000
+			maxHeight = 500
+			format = left
+		}
+		
+		#Self explanitory
+		instantTextboxType = {
+			name = "BGD_Country_Paths"
+			position = {x = 50 y = 400}
+			font = "VCR02_14"
+			text = "BGD_COUNTRY_PATHS" 
+			maxWidth = 1000
+			maxHeight = 500
+			format = left
+		}
+		
+		#Any other info you think the player should know
+		instantTextboxType = {
+			name = "BGD_Country_Other"
+			position = {x = 50 y = 540 }  
+			font = "VCR02_14"  
+			text = "BGD_COUNTRY_OTHER"
+			maxWidth = 350
+			maxHeight = 500
+			format = left
+		}
+	}
+}

@@ -1,0 +1,570 @@
+guiTypes = {
+	containerWindowType = {
+		#名称，在scripted_guis有用
+		name = "bgd_naikaku_guis"
+
+		#gui初始位置
+		position = { x = 610 y = 5 }
+
+		#起始位置，不写则默认左上角为起始位置
+		Orientation = center
+		#Orientation = lower_left左下
+		#Orientation = left左
+		#Orientation = lower_right右下
+		#Orientation = right右
+		#Orientation = upper_right右上
+		#Orientation = center_up中上
+		#Orientation = center_down中下
+		#Orientation = center正中
+
+		#gui最大大小
+		#在决议gui里，width可以写“100%”（不用双引号）
+		size = { width = 400 height= 400 }
+
+		#显示图片（无效果，仅仅显示一个图）
+		iconType = {
+			#与gui初始位置的相对位置
+			position = { x= 0 y= 0 }
+
+			#名称不可重复
+			name ="naikaku_icon" 
+
+			#显示的图片名称，如果要新图片就要在interface里绑定
+			#spriteType = "GFX_constructions_bg4"
+		}
+		#按钮
+		buttonType = {
+			#名称不可重复
+			name = "naikaku_button"
+
+			position = { x = 180 y = 50 }
+			
+			#按钮图标名称
+			quadTextureSprite ="GFX_small_button_71x26"
+
+			#字体名称，hoi_18mbs是小字体，适用大部分场景
+			buttonFont = "hoi_18mbs"
+
+			#按钮上显示的名字，名字随意起，本地化即可，直接在双引号里写也可以
+			buttonText = "内阁"
+
+			#点击音效（没啥用，有需要再说）可以直接搬原版的
+			clicksound = click_close
+
+			#把鼠标放到按钮上显示的提示，必须在本地化里写
+			pdx_tooltip = "naikaku"
+		}
+
+		#文本框，显示文本
+		instantTextboxType = {
+			#名称不可重复
+			name = "naikaku_1"
+
+			position = { x = 150 y = 0}
+
+			#字体
+			font = "hoi_16mbs"
+
+			#文本框的文本，在本地化里写
+			text = "naikaku_2"
+			
+			#文本框最大宽度
+			maxWidth = 350
+
+			#文本框最大高度
+			maxHeight = 250 
+
+			borderSize = {x = 150 y = 0}
+
+			#文本与文本框对齐方式，center left right
+			format = left
+			
+			#始终透明
+			alwaystransparent = yes
+		}
+	}
+	containerWindowType = {
+		#名称，在scripted_guis有用
+		name = "bgd_naikaku_sho_guis"
+
+		#gui初始位置
+		position = { x = -250 y = -200 }
+
+		#起始位置，不写则默认左上角为起始位置
+		Orientation = center
+		#Orientation = lower_left左下
+		#Orientation = left左
+		#Orientation = lower_right右下
+		#Orientation = right右
+		#Orientation = upper_right右上
+		#Orientation = center_up中上
+		#Orientation = center_down中下
+		#Orientation = center正中
+
+		#gui最大大小
+		#在决议gui里，width可以写“100%”（不用双引号）
+		size = { width = 800 height= 600 }
+		background = {
+			name = "sho_Background"
+			quadTextureSprite = "GFX_gui_BGD_cabinet_background"
+		}
+
+		#显示图片（无效果，仅仅显示一个图）
+		iconType = {
+			#与gui初始位置的相对位置
+			position = { x= 0 y= 0 }
+
+			#名称不可重复
+			name ="naikaku_sho_icon" 
+
+			#显示的图片名称，如果要新图片就要在interface里绑定
+			#spriteType = "GFX_constructions_bg4"
+		}
+		#按钮
+		buttonType = {
+			#名称不可重复
+			name = "naikaku_sho_button"
+
+			position = { x = 570 y = 0 }
+			
+			#按钮图标名称
+			quadTextureSprite ="GFX_small_button_71x26"
+
+			#字体名称，hoi_18mbs是小字体，适用大部分场景
+			buttonFont = "hoi_18mbs"
+
+			#按钮上显示的名字，名字随意起，本地化即可，直接在双引号里写也可以
+			buttonText = "关闭"
+
+			#点击音效（没啥用，有需要再说）可以直接搬原版的
+			clicksound = click_close
+
+			#把鼠标放到按钮上显示的提示，必须在本地化里写
+			pdx_tooltip = "naikaku_sho"
+		}
+
+		buttonType = {
+			#名称不可重复
+			name = "naikaku_sho_souri_button"
+
+			position = { x = 270 y = 50 }
+			
+			#按钮图标名称
+			quadTextureSprite ="GFX_small_button_71x26"
+
+			#字体名称，hoi_18mbs是小字体，适用大部分场景
+			buttonFont = "hoi_18mbs"
+
+			#按钮上显示的名字，名字随意起，本地化即可，直接在双引号里写也可以
+			buttonText = "总理府"
+
+			#点击音效（没啥用，有需要再说）可以直接搬原版的
+			clicksound = click_close
+
+			#把鼠标放到按钮上显示的提示，必须在本地化里写
+			pdx_tooltip = "naikaku_sho_souri"
+		}
+
+		buttonType = {
+			#名称不可重复
+			name = "naikaku_sho_zaimu_button"
+
+			position = { x = 270 y = 100 }
+			
+			#按钮图标名称
+			quadTextureSprite ="GFX_small_button_71x26"
+
+			#字体名称，hoi_18mbs是小字体，适用大部分场景
+			buttonFont = "hoi_18mbs"
+
+			#按钮上显示的名字，名字随意起，本地化即可，直接在双引号里写也可以
+			buttonText = "财务省"
+
+			#点击音效（没啥用，有需要再说）可以直接搬原版的
+			clicksound = click_close
+
+			#把鼠标放到按钮上显示的提示，必须在本地化里写
+			pdx_tooltip = "naikaku_sho_zaimu"
+		}
+
+		buttonType = {
+			#名称不可重复
+			name = "naikaku_sho_somu_button"
+
+			position = { x = 270 y = 150 }
+			
+			#按钮图标名称
+			quadTextureSprite ="GFX_small_button_71x26"
+
+			#字体名称，hoi_18mbs是小字体，适用大部分场景
+			buttonFont = "hoi_18mbs"
+
+			#按钮上显示的名字，名字随意起，本地化即可，直接在双引号里写也可以
+			buttonText = "总务省"
+
+			#点击音效（没啥用，有需要再说）可以直接搬原版的
+			clicksound = click_close
+
+			#把鼠标放到按钮上显示的提示，必须在本地化里写
+			pdx_tooltip = "naikaku_sho_somu"
+		}
+
+		#文本框，显示文本
+		instantTextboxType = {
+			#名称不可重复
+			name = "naikaku_sho_1"
+
+			position = { x = 250 y = 0}
+
+			#字体
+			font = "hoi_36header"
+
+			#文本框的文本，在本地化里写
+			text = "naikaku_sho_2"
+			
+			#文本框最大宽度
+			maxWidth = 350
+
+			#文本框最大高度
+			maxHeight = 250 
+
+			borderSize = {x = 0 y = 0}
+
+			#文本与文本框对齐方式，center left right
+			format = left
+			
+			#始终透明
+			alwaystransparent = yes
+		}
+	}
+	containerWindowType = {
+		#名称，在scripted_guis有用
+		name = "bgd_naikaku_sho_souri_guis"
+
+		#gui初始位置
+		position = { x = -250 y = -200 }
+
+		#起始位置，不写则默认左上角为起始位置
+		Orientation = center
+		#Orientation = lower_left左下
+		#Orientation = left左
+		#Orientation = lower_right右下
+		#Orientation = right右
+		#Orientation = upper_right右上
+		#Orientation = center_up中上
+		#Orientation = center_down中下
+		#Orientation = center正中
+
+		#gui最大大小
+		#在决议gui里，width可以写“100%”（不用双引号）
+		size = { width = 800 height= 600 }
+		background = {
+			name = "sho_Background"
+			quadTextureSprite = "GFX_gui_BGD_cabinet_background"
+		}
+
+		#显示图片（无效果，仅仅显示一个图）
+		iconType = {
+			#与gui初始位置的相对位置
+			position = { x= 0 y= 0 }
+
+			#名称不可重复
+			name ="naikaku_sho_souri_icon" 
+
+			#显示的图片名称，如果要新图片就要在interface里绑定
+			#spriteType = "GFX_constructions_bg4"
+		}
+		#按钮
+
+		buttonType = {
+			#名称不可重复
+			name = "naikaku_sho_souri_close_button"
+
+			position = { x = 570 y = 0 }
+			
+			#按钮图标名称
+			quadTextureSprite ="GFX_small_button_71x26"
+
+			#字体名称，hoi_18mbs是小字体，适用大部分场景
+			buttonFont = "hoi_18mbs"
+
+			#按钮上显示的名字，名字随意起，本地化即可，直接在双引号里写也可以
+			buttonText = "关闭"
+
+			#点击音效（没啥用，有需要再说）可以直接搬原版的
+			clicksound = click_close
+
+			#把鼠标放到按钮上显示的提示，必须在本地化里写
+			pdx_tooltip = "naikaku_sho_souri_close"
+		}
+		buttonType = {
+			#名称不可重复
+			name = "naikaku_sho_souri_choose_button"
+
+			position = { x = 400 y = 100 }
+			
+			#按钮图标名称
+			quadTextureSprite ="GFX_small_button_71x26"
+
+			#字体名称，hoi_18mbs是小字体，适用大部分场景
+			buttonFont = "hoi_18mbs"
+
+			#按钮上显示的名字，名字随意起，本地化即可，直接在双引号里写也可以
+			buttonText = "任命总理"
+
+			#点击音效（没啥用，有需要再说）可以直接搬原版的
+			clicksound = click_close
+
+			#把鼠标放到按钮上显示的提示，必须在本地化里写
+			pdx_tooltip = "naikaku_sho_souri_choose"
+		}
+
+		#文本框，显示文本
+		instantTextboxType = {
+			#名称不可重复
+			name = "naikaku_sho_souri_1"
+
+			position = { x = 220 y = 0}
+
+			#字体
+			font = "hoi_36header"
+
+			#文本框的文本，在本地化里写
+			text = "naikaku_sho_souri_2"
+			
+			#文本框最大宽度
+			maxWidth = 350
+
+			#文本框最大高度
+			maxHeight = 250 
+
+			borderSize = {x = 0 y = 0}
+
+			#文本与文本框对齐方式，center left right
+			format = left
+			
+			#始终透明
+			alwaystransparent = yes
+		}
+	}
+	containerWindowType = {
+		#名称，在scripted_guis有用
+		name = "bgd_naikaku_sho_zaimu_guis"
+
+		#gui初始位置
+		position = { x = -250 y = -200 }
+
+		#起始位置，不写则默认左上角为起始位置
+		Orientation = center
+		#Orientation = lower_left左下
+		#Orientation = left左
+		#Orientation = lower_right右下
+		#Orientation = right右
+		#Orientation = upper_right右上
+		#Orientation = center_up中上
+		#Orientation = center_down中下
+		#Orientation = center正中
+
+		#gui最大大小
+		#在决议gui里，width可以写“100%”（不用双引号）
+		size = { width = 800 height= 600 }
+		background = {
+			name = "sho_Background"
+			quadTextureSprite = "GFX_gui_BGD_cabinet_background"
+		}
+
+		#显示图片（无效果，仅仅显示一个图）
+		iconType = {
+			#与gui初始位置的相对位置
+			position = { x= 0 y= 0 }
+
+			#名称不可重复
+			name ="naikaku_sho_zaimu_icon" 
+
+			#显示的图片名称，如果要新图片就要在interface里绑定
+			#spriteType = "GFX_constructions_bg4"
+		}
+		#按钮
+
+		buttonType = {
+			#名称不可重复
+			name = "naikaku_sho_zaimu_close_button"
+
+			position = { x = 570 y = 0 }
+			
+			#按钮图标名称
+			quadTextureSprite ="GFX_small_button_71x26"
+
+			#字体名称，hoi_18mbs是小字体，适用大部分场景
+			buttonFont = "hoi_18mbs"
+
+			#按钮上显示的名字，名字随意起，本地化即可，直接在双引号里写也可以
+			buttonText = "关闭"
+
+			#点击音效（没啥用，有需要再说）可以直接搬原版的
+			clicksound = click_close
+
+			#把鼠标放到按钮上显示的提示，必须在本地化里写
+			pdx_tooltip = "naikaku_sho_zaimu_close"
+		}
+		buttonType = {
+			#名称不可重复
+			name = "naikaku_sho_zaimu_choose_button"
+
+			position = { x = 400 y = 100 }
+			
+			#按钮图标名称
+			quadTextureSprite ="GFX_small_button_71x26"
+
+			#字体名称，hoi_18mbs是小字体，适用大部分场景
+			buttonFont = "hoi_18mbs"
+
+			#按钮上显示的名字，名字随意起，本地化即可，直接在双引号里写也可以
+			buttonText = "任命财相"
+
+			#点击音效（没啥用，有需要再说）可以直接搬原版的
+			clicksound = click_close
+
+			#把鼠标放到按钮上显示的提示，必须在本地化里写
+			pdx_tooltip = "naikaku_sho_zaimu_choose"
+		}
+
+		#文本框，显示文本
+		instantTextboxType = {
+			#名称不可重复
+			name = "naikaku_sho_zaimu_1"
+
+			position = { x = 220 y = 0}
+
+			#字体
+			font = "hoi_36header"
+
+			#文本框的文本，在本地化里写
+			text = "naikaku_sho_zaimu_2"
+			
+			#文本框最大宽度
+			maxWidth = 350
+
+			#文本框最大高度
+			maxHeight = 250 
+
+			borderSize = {x = 0 y = 0}
+
+			#文本与文本框对齐方式，center left right
+			format = left
+			
+			#始终透明
+			alwaystransparent = yes
+		}
+	}
+	containerWindowType = {
+		#名称，在scripted_guis有用
+		name = "bgd_naikaku_sho_somu_guis"
+
+		#gui初始位置
+		position = { x = -250 y = -200 }
+
+		#起始位置，不写则默认左上角为起始位置
+		Orientation = center
+		#Orientation = lower_left左下
+		#Orientation = left左
+		#Orientation = lower_right右下
+		#Orientation = right右
+		#Orientation = upper_right右上
+		#Orientation = center_up中上
+		#Orientation = center_down中下
+		#Orientation = center正中
+
+		#gui最大大小
+		#在决议gui里，width可以写“100%”（不用双引号）
+		size = { width = 800 height= 600 }
+		background = {
+			name = "sho_Background"
+			quadTextureSprite = "GFX_gui_BGD_cabinet_background"
+		}
+
+		#显示图片（无效果，仅仅显示一个图）
+		iconType = {
+			#与gui初始位置的相对位置
+			position = { x= 0 y= 0 }
+
+			#名称不可重复
+			name ="naikaku_sho_somu_icon" 
+
+			#显示的图片名称，如果要新图片就要在interface里绑定
+			#spriteType = "GFX_constructions_bg4"
+		}
+		#按钮
+
+		buttonType = {
+			#名称不可重复
+			name = "naikaku_sho_somu_close_button"
+
+			position = { x = 570 y = 0 }
+			
+			#按钮图标名称
+			quadTextureSprite ="GFX_small_button_71x26"
+
+			#字体名称，hoi_18mbs是小字体，适用大部分场景
+			buttonFont = "hoi_18mbs"
+
+			#按钮上显示的名字，名字随意起，本地化即可，直接在双引号里写也可以
+			buttonText = "关闭"
+
+			#点击音效（没啥用，有需要再说）可以直接搬原版的
+			clicksound = click_close
+
+			#把鼠标放到按钮上显示的提示，必须在本地化里写
+			pdx_tooltip = "naikaku_sho_somu_close"
+		}
+		buttonType = {
+			#名称不可重复
+			name = "naikaku_sho_somu_choose_button"
+
+			position = { x = 400 y = 100 }
+			
+			#按钮图标名称
+			quadTextureSprite ="GFX_small_button_71x26"
+
+			#字体名称，hoi_18mbs是小字体，适用大部分场景
+			buttonFont = "hoi_18mbs"
+
+			#按钮上显示的名字，名字随意起，本地化即可，直接在双引号里写也可以
+			buttonText = "任命总务相"
+
+			#点击音效（没啥用，有需要再说）可以直接搬原版的
+			clicksound = click_close
+
+			#把鼠标放到按钮上显示的提示，必须在本地化里写
+			pdx_tooltip = "naikaku_sho_somu_choose"
+		}
+
+		#文本框，显示文本
+		instantTextboxType = {
+			#名称不可重复
+			name = "naikaku_sho_somu_1"
+
+			position = { x = 220 y = 0}
+
+			#字体
+			font = "hoi_36header"
+
+			#文本框的文本，在本地化里写
+			text = "naikaku_sho_somu_2"
+			
+			#文本框最大宽度
+			maxWidth = 350
+
+			#文本框最大高度
+			maxHeight = 250 
+
+			borderSize = {x = 0 y = 0}
+
+			#文本与文本框对齐方式，center left right
+			format = left
+			
+			#始终透明
+			alwaystransparent = yes
+		}
+	}
+}

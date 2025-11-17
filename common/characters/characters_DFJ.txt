@@ -1,0 +1,17 @@
+characters = {
+    JDF_yukio_edano = {
+		name = JDF_yukio_edano
+		portraits = {
+			civilian = {
+				large = "gfx\texticons\HoG\JAP\JAP_yukio_edano.png"
+			}
+		}
+		country_leader = {
+			ideology = reformist_socialism
+			desc = BGD_yukio_DESC
+			traits = {
+				edano_ziyouzuoyi_dizhu
+			}
+		}
+	}
+}

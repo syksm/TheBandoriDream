@@ -1,0 +1,165 @@
+BGD_riben_neizhan = {
+    icon = GFX_jueyi_zhanweifu
+
+    allowed = {
+       tag = BGD
+    }
+
+    visible = {
+      has_completed_focus = BGD_civil_war_begin
+    }
+
+    priority = 99
+}
+BGD_chongjian_guojia = {
+    icon = GFX_jueyi_zhanweifu
+
+    allowed = {
+       tag = BGD
+    }
+
+    visible = {
+      has_country_flag = BGD_chongjian_weiyuanhui
+    }
+
+    priority = 98
+}
+BGD_quanli_pingheng = {
+    icon = GFX_jueyi_zhanweifu
+
+    allowed = {
+       tag = BGD
+    }
+
+    visible = {
+     
+    }
+
+    priority = 98
+}
+BGD_guojia_gaige = {
+    icon = GFX_jueyi_zhanweifu
+
+    allowed = {
+       tag = BGD
+    }
+
+    visible = {
+     has_completed_focus = BGD_gaige_weiyuanhui
+    }
+
+    priority = 99
+}
+BGD_jita_yingxiang = {
+    icon = GFX_jueyi_zhanweifu
+
+    allowed = {
+       tag = BGD
+    }
+
+    visible = {
+        has_country_flag = BGD_shenmi_jita_yingxiang
+    }
+
+    priority = 100
+}
+BGD_junshi_gaige = {
+    icon = GFX_jueyi_zhanweifu
+
+    allowed = {
+       tag = BGD
+    }
+
+    visible = {
+        has_completed_focus = BGD_quanmian_gaige
+    }
+
+    priority = 98
+}
+BGD_jingji_gongzuo = {
+    icon = GFX_jueyi_zhanweifu
+
+    allowed = {
+       tag = BGD
+    }
+
+    visible = {
+        has_completed_focus = BGD_jingji_jianshe
+    }
+
+    priority = 98
+}
+BGD_guojia_waijiao = {
+    icon = GFX_jueyi_zhanweifu
+
+    allowed = {
+       tag = BGD
+    }
+
+    visible = {
+        
+    }
+
+    priority = 98
+}
+BGD_dadongya_zhanzheng = {
+    icon = GFX_jueyi_zhanweifu
+
+    allowed = {
+       tag = BGD
+    }
+
+    visible = {
+        has_country_flag = BGD_gaw_begin
+    }
+
+    priority = 99
+}
+BGD_quanguo_xunyan = {
+
+    allowed = {
+       tag = BGD
+    }
+
+    visible = {
+       has_country_flag = BGD_xunyan_jihua
+    }
+
+    priority = 99
+}
+BGD_shaonv_paifa = {
+
+    allowed = {
+       tag = BGD
+    }
+
+    visible = {
+       has_country_flag = BGD_shaonv_yuedui_paifa
+    }
+
+    priority = 80
+}
+decisions_BGD_cabinet = {
+	priority = 101
+	icon = GFX_gui_ppp_party_small
+	
+	
+	visible = {
+		has_country_flag = cabinet_up
+	}
+	
+	scripted_gui = bgd_cabinet_guis
+}
+BGD_osaka_kansai = {
+    icon = GFX_shibo_changguan
+
+    allowed = {
+       tag = BGD
+    }
+
+    visible = {
+       has_country_flag = BGD_osaka_kansai_start
+    }
+
+    priority = 90
+}

@@ -1,0 +1,1280 @@
+defined_text = {
+	name = GetSubIdeologyLocSocDem
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = SOV_mikhail_delyagin
+					ruling_only = yes
+				}	
+			}
+			has_country_leader_ideology = sovereign_democracy_left_socdem
+		}
+		localization_key = SOV_moderate_socialism
+	}
+	text = {
+		trigger = {
+			tag = FRA
+			has_country_leader_ideology = left_populism
+		}
+		localization_key = FRA_popular_front
+	}	
+	text = {
+		trigger = {
+			original_tag = JAP
+			has_country_leader_ideology = left_populism
+		}
+		localization_key = JAP_japanese_liberalism
+	}	
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = APA_julia_salazar_char
+					ruling_only = yes
+				}	
+			}
+			has_country_leader_ideology = neo_socialism_socdem
+		}
+		localization_key = APA_democratic_socialism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = progressivism
+		}
+		localization_key = progressivism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = social_democracy
+			has_country_leader = {
+				character = ARG_alberto_fernandez_char
+				ruling_only = yes
+			}
+		}
+		localization_key = kirchnerist_peronism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = social_patriotism
+			has_country_leader = {
+				character = ARG_sergio_massa_char
+				ruling_only = yes
+			}
+		}
+		localization_key = federal_peronism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = left_centrist
+			has_country_leader = {
+				character = USB_AOC_char
+				ruling_only = yes
+			}
+		}
+		localization_key = USB_left_centrist_ideology
+	}
+	text = {
+		trigger = {
+			tag = TUR
+			has_country_leader_ideology = social_democracy
+		}
+		localization_key = TUR_kemalism_socdem
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = social_democracy
+		}
+		localization_key = social_democracy
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = left_centrist
+		}
+		localization_key = left_centrist
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = left_populism
+			has_country_leader = {
+				character = SAF_cyril_ramaphosa_char
+				ruling_only = yes
+			}
+		}
+		localization_key = african_socialism
+	}	
+	text = {
+		trigger = {
+			has_country_leader_ideology = left_populism
+		}
+		localization_key = left_populism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = green_politics
+		}
+		localization_key = green_politics
+	}
+	text = {
+		trigger = {
+			tag = SOV
+			has_country_leader_ideology = technocracy
+		}
+		localization_key = SOV_socialist_technocracy
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = technocracy
+		}
+		localization_key = technocracy
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = sovereign_democracy_left_socdem
+		}
+		localization_key = sovereign_democracy_left_socdem
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = neo_socialism_socdem
+		}
+		localization_key = neo_socialism_socdem
+	}	
+	text = {
+		trigger = {
+			has_country_leader_ideology = putinism_social_democrat
+		}
+		localization_key = putinism_social_democrat
+	}	
+	text = {
+		trigger = {
+			has_country_leader_ideology = social_patriotism
+		}
+		localization_key = social_patriotism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = kirakira_dokidoki
+			NOT = {
+			    has_country_leader = {
+				    character = BGD_rimi_char
+				    ruling_only = yes
+			    }
+			}
+		}
+		localization_key = BGD_kiraism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = kirakira_dokidoki
+			has_country_flag = kiraism_Japanese_socdem
+		}
+		localization_key = BGD_kiraism_Japanese_socdem
+	}
+}
+
+defined_text = {
+	name = GetSubIdeologyLocDespot
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = SOV_sergei_naryshkin
+					ruling_only = yes
+				}
+			}
+			has_country_leader_ideology = autocrat
+		}
+		localization_key = SOV_Interim_government_ideology
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = BLR_alexander_lukashenko
+					ruling_only = yes
+				}		
+			}
+			has_country_leader_ideology = autocrat
+		}
+		localization_key = BLR_populist_autocracy
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = GER_Heinrich_XIII
+					ruling_only = yes
+				}
+			}
+			has_country_leader_ideology = absolute_monarchist
+		}
+		localization_key = GER_imperial_souveranism
+	}
+	text = {
+		trigger = {
+			OR = {
+				original_tag = IKA
+			}
+			has_country_leader_ideology = theocracy
+		}
+		localization_key = IKA_christian_fundamentalism
+	}
+	text = {
+		trigger = {
+			tag = FAF
+			OR = {
+				has_country_leader = {
+					character = FRA_Jean_Pierre_Bosser
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = FRA_Francois_Lecointre
+					ruling_only = yes
+				}
+			}
+			has_country_leader_ideology = military_junta
+		}
+		localization_key = FAF_petainism_junta
+	}	
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = USA_robert_b._abrams_char
+					ruling_only = yes
+				}
+			}
+			has_country_leader_ideology = military_junta
+		}
+		localization_key = junta_bidenism
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = USG_barron_trump_char
+					ruling_only = yes
+				}
+			}
+			has_country_leader_ideology = purification_administration
+		}
+		localization_key = trumpist_caligula
+	}	
+	text = {
+		trigger = {
+			OR = {
+				original_tag = USC
+			}
+			has_country_leader_ideology = autocrat
+		}
+		localization_key = USC_autocratic_populism
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = USC_emptiness
+					ruling_only = yes
+				}
+			}
+			has_country_leader_ideology = radical_nationalism
+		}
+		localization_key = empty_nationalism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = autocrat
+		}
+		localization_key = autocrat
+	}
+	text = {
+		trigger = {
+			has_country_leader = {
+				character = LDS_Warren_Jeffs_char
+				ruling_only = yes
+			}
+			has_country_leader_ideology = theocracy
+		}
+		localization_key = theocracy_LDS
+	}	
+	text = {
+		trigger = {
+			original_tag = ATF
+			has_country_leader_ideology = military_junta
+		}
+		localization_key = ATF_ex_dicatorship
+	}	
+	text = {
+		trigger = {
+			original_tag = LOS
+			has_country_leader_ideology = radical_nationalism
+		}
+		localization_key = LOS_southern_nationalism
+	}
+	text = {
+		trigger = {
+			original_tag = LST
+			has_country_leader_ideology = radical_nationalism
+		}
+		localization_key = LOS_southern_nationalism
+	}
+	text = {
+		trigger = {
+			original_tag = TNM
+			has_country_leader_ideology = radical_nationalism
+		}
+		localization_key = TNM_texan_nationalism
+	}	
+	text = {
+		trigger = {
+			OR = {
+				original_tag = VOL
+				original_tag = NGR
+				original_tag = MLI
+				original_tag = GNA
+			}
+			has_country_leader_ideology = radical_nationalism
+		}
+		localization_key = SOV_multipolar_pan_africanism
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = NIR_Micheal_o_Conghaile
+					ruling_only = yes
+				}	
+			}
+			has_country_leader_ideology = radical_nationalism
+		}
+		localization_key = IRA_irish_republicanism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = theocracy
+		}
+		localization_key = theocracy
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = mafia_state
+		}
+		localization_key = mafia_state
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = mafia_state_2
+			original_tag = RPP
+		}
+		localization_key = mafia_state_ballas
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = mafia_state_2
+			original_tag = RGA
+		}
+		localization_key = mafia_state_grove
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = absolute_monarchist
+		}
+		localization_key = absolute_monarchist
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = salafi
+		}
+		localization_key = salafi
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = wahabi
+		}
+		localization_key = wahabi
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = military_junta
+			NOT = {
+				tag = BGD
+			}
+		}
+		localization_key = military_junta
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = neo_luddism
+		}
+		localization_key = neo_luddism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = purification_administration
+		}
+		localization_key = purification_administration
+	}	
+	text = {
+		trigger = {
+			has_country_leader_ideology = radical_nationalism
+		}
+		localization_key = radical_nationalism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = right_wing_accelerationist
+		}
+		localization_key = right_wing_accelerationist
+	}	
+	text = {
+		trigger = {
+			has_country_leader_ideology = putinism_despot
+		}
+		localization_key = putinism_despot
+	}
+	text = {
+		trigger = {
+			has_country_leader = {
+				character = BGD_arisa_char
+				ruling_only = yes
+			}
+			has_country_leader_ideology = military_junta
+		}
+		localization_key = xianzheng_ducai
+	}
+}
+
+defined_text = {
+	name = GetSubIdeologyLocAuthDem
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = CAR_Gleb
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = CAR_Central_African_MD
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = CAR_Kinshasa_MD
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = CAR_GV_MD
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = CAR_Katanga_MD
+					ruling_only = yes
+				}
+			}
+			has_country_leader_ideology = corporatocracy
+		}
+		localization_key = CAR_merc_state
+	}	
+	text = {
+		trigger = {
+			tag = FRA
+			OR = {
+				has_country_leader_trait = hos_The_Second_De_Gaulle
+			}
+			has_country_leader_ideology = sovereign_democracy
+		}
+		localization_key = FAF_gaullism_auth_dem
+	}	
+	text = {
+		trigger = {
+			tag = FAF
+			OR = {
+				has_country_leader = {
+					character = FRA_Bertrand_Ract_Madoux
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = FRA_Pierre_de_Villiers
+					ruling_only = yes
+				}
+			}
+			has_country_leader_ideology = military_democracy
+		}
+		localization_key = FAF_gaullism_auth_dem
+	}	
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = NIR_Micheal_o_Conghaile
+					ruling_only = yes
+				}	
+			}
+			has_country_leader_ideology = sovereign_democracy_auth_dem
+		}
+		localization_key = IRA_irish_republicanism
+	}
+	text = {
+		trigger = {
+			tag = JAP
+			has_country_leader_ideology = ultra_conservatism
+		}
+		localization_key = JAP_japanese_conservatism
+	}
+	text = {
+		trigger = {
+			tag = TUR
+			has_country_leader_ideology = ultra_conservatism
+		}
+		localization_key = TUR_kemalism_authdem
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = SOV_vyacheslav_volodin
+					ruling_only = yes
+				}
+			}
+			has_country_leader_ideology = sovereign_democracy_auth_dem
+		}
+		localization_key = SOV_idiosyncratic_putinism
+	}	
+	text = {
+		trigger = {
+			OR = {
+				original_tag = USC
+			}
+			has_country_leader_ideology = hybrid_regime
+		}
+		localization_key = USC_managed_democracy
+	}	
+	text = {
+		trigger = {
+			tag = JAP
+			has_country_leader_ideology = hybrid_regime
+		}
+		localization_key = JAP_japanese_conservatism
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = FRA_emmanuel_macron_char
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = CAN_justin_trudeau
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = A24_Nick_Offerman
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = NCY_Andrew_Cuomo
+					ruling_only = yes
+				}
+			}
+			has_country_leader_ideology = hybrid_regime
+		}
+		localization_key = FRA_authoritarian_liberalism
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = SOV_dmitry_medvedev
+					ruling_only = yes
+				}
+			}
+			has_country_leader_ideology = putinism
+		}
+		localization_key = SOV_putinist_orthodoxy
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = USC_donald_trump_char
+					ruling_only = yes
+				}
+			}
+			has_country_leader_ideology = ultra_conservatism
+		}
+		localization_key = USA_paternal_trumpism
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = GER_frankwalter_steinmeir
+					ruling_only = yes
+				}	
+				has_country_leader = {
+					character = GER_max_otte_char
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = GER_bernd_baumann
+					ruling_only = yes
+				}
+			}
+			has_country_leader_ideology = ultra_conservatism
+		}
+		localization_key = GER_populist_nationalism
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = SOV_vladimir_putin
+					ruling_only = yes
+				}	
+				has_country_leader = {
+					character = SOV_dmitry_medvedev
+					ruling_only = yes
+				}
+			}
+			has_country_leader_ideology = oligarchist
+		}
+		localization_key = SOV_oligarchic_democracy
+	}	
+	text = {
+		trigger = {
+			tag = JAP
+			has_country_leader_ideology = oligarchist
+		}
+		localization_key = JAP_japanese_conservatism
+	}
+	text = {
+		trigger = {
+			has_country_leader = {
+				character = SOV_valery_rashkin
+				ruling_only = yes
+			}
+			has_country_leader_ideology = hybrid_regime
+		}
+		localization_key = SOV_soviet_neocommunism
+	}	
+	text = {
+		trigger = {
+			tag = SOV
+			has_country_leader_ideology = hybrid_regime
+		}
+		localization_key = SOV_pragmatic_socialism
+	}	
+	text = {
+		trigger = {
+			tag = ITA
+			has_country_leader_ideology = patriotic_socialism
+		}
+		localization_key = SOV_sovereigntism
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = DPR_denis_pushilin
+					ruling_only = yes
+				}		
+				has_country_leader = {
+					character = NOV_denis_pushilin
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = NOV_leonid_paschenik
+					ruling_only = yes
+				}
+			}
+			has_country_leader_ideology = hybrid_regime
+		}
+		localization_key = SOV_donbass_separatism
+	}	
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = NOV_denis_pushilin
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = NOV_leonid_paschenik
+					ruling_only = yes
+				}
+			}
+			has_country_leader_ideology = ultra_conservatism
+		}
+		localization_key = SOV_novorossiyan_republicanism
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_leader = {
+					character = BLR_alexander_lukashenko
+					ruling_only = yes
+				}		
+			}
+			has_country_leader_ideology = hybrid_regime
+		}
+		localization_key = BLR_populist_autocracy
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = oligarchist
+		}
+		localization_key = oligarchist
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = ultra_conservatism
+			has_country_leader = {
+				character = LDS_russel_m_nelson_char
+				ruling_only = yes
+			}
+		}
+		localization_key = mormon_ultra_conservatism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = ultra_conservatism
+		}
+		localization_key = ultra_conservatism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = islamic_authoritarian
+		}
+		localization_key = islamic_authoritarian
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = confucian_hyperconservativism
+		}
+		localization_key = confucian_hyperconservativism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = hybrid_regime
+			has_country_leader = {
+				character = CAC_provisional_government
+				ruling_only = yes
+			}
+		}
+		localization_key = CAC_cascadian_nationalism_authdem
+	}
+	text = {
+		trigger = {
+			tag = TUR
+			has_country_leader = {
+				character = TUR_recep_tayyip_erdogan_char
+				ruling_only = yes
+			}
+			has_country_leader_ideology = hybrid_regime
+		}
+		localization_key = TUR_erdoganism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = hybrid_regime
+		}
+		localization_key = hybrid_regime
+	}
+	text = {
+		trigger = {
+			tag = FAF
+			OR = {
+				has_country_leader = {
+					character = FRA_Bertrand_Ract_Madoux
+					ruling_only = yes
+				}
+			}
+			has_country_leader_ideology = military_democracy
+		}
+		localization_key = FAF_gaullism_auth_dem
+	}	
+	text = {
+		trigger = {
+			tag = JAP
+			has_country_leader_ideology = military_democracy
+		}
+		localization_key = JAP_japanese_conservatism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = military_democracy
+		}
+		localization_key = military_democracy
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = corporatocracy
+		}
+		localization_key = corporatocracy
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = assadist_baathism
+		}
+		localization_key = assadist_baathism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = sovereign_democracy_auth_dem
+		}
+		localization_key = sovereign_democracy_auth_dem
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = putinism
+		}
+		localization_key = putinism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = putinism_conservative
+		}
+		localization_key = putinism_conservative
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = patriotic_socialism
+			has_country_leader = {
+				character = SAF_dark_cyril_ramaphosa_char
+				ruling_only = yes
+			}
+		}
+		localization_key = african_socialism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = patriotic_socialism
+		}
+		localization_key = patriotic_socialism
+	}	
+	text = {
+		trigger = {
+			has_country_leader_ideology = novocommunism
+		}
+		localization_key = novocommunism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = russian_patriotic_meritocracy
+		}
+		localization_key = russian_patriotic_meritocracy
+	}	
+	text = {
+		trigger = {
+			has_country_leader_ideology = russian_monarchist_conservative
+		}
+		localization_key = russian_monarchist_conservative
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = trumpism_authdem
+		}
+		localization_key = trumpism_authdem
+	}
+	text = {
+		trigger = {
+			has_country_leader = {
+				character = BGD_arisa_char
+				ruling_only = yes
+			}
+			has_country_leader_ideology = authoritarian_kiraism
+		}
+		localization_key = weiquan_shanyao_zhuyi
+	}
+}
+
+defined_text = {
+	name = GetGovernmentType
+	text = {
+		trigger = {
+			has_idea = ZZZ_russian_political_system
+		}
+		localization_key = ZZZ_russian_political_system
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_chinese_political_system
+		}
+		localization_key = ZZZ_chinese_political_system
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_absolute_monarchy
+		}
+		localization_key = ZZZ_absolute_monarchy
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_islamic_republic
+		}
+		localization_key = ZZZ_islamic_republic
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_socialist_republic
+		}
+		localization_key = ZZZ_socialist_republic
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_military_dictatorship
+		}
+		localization_key = ZZZ_military_dictatorship
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_semi_constitutional_monarchy
+		}
+		localization_key = ZZZ_semi_constitutional_monarchy
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_constitutional_monarchy
+		}
+		localization_key = ZZZ_constitutional_monarchy
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_neo_soviet_republic
+		}
+		localization_key = ZZZ_neo_soviet_republic
+	}
+	text = {
+		trigger = {
+			has_idea = ZZZ_nazi_dictatorship
+		}
+		localization_key = ZZZ_nazi_dictatorship
+	}
+	text = {
+		trigger = {
+			has_idea = ZZZ_fascist_dictatorship
+		}
+		localization_key = ZZZ_fascist_dictatorship
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_revolutionary_front
+		}
+		localization_key = ZZZ_revolutionary_front
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_communist_party_state
+		}
+		localization_key = ZZZ_communist_party_state
+	}
+	text = {
+		trigger = {
+			has_idea = ZZZ_semi_presidential_system
+		}
+		localization_key = ZZZ_semi_presidential_system
+	}
+	text = {
+		trigger = {
+			has_idea = ZZZ_parliamentary_republic
+		}
+		localization_key = ZZZ_parliamentary_republic
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_presidential_republic
+		}
+		localization_key = ZZZ_presidential_republic
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_american_presidential_republic
+		}
+		localization_key = ZZZ_american_presidential_republic
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_presidential_dictatorship
+		}
+		localization_key = ZZZ_presidential_dictatorship
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_ultranationalist_dictatorship
+		}
+		localization_key = ZZZ_ultranationalist_dictatorship
+	}		
+	text = {
+		trigger = {
+			has_idea = ZZZ_provisional_government
+		}
+		localization_key = ZZZ_provisional_government
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_annihilation_cult
+		}
+		localization_key = ZZZ_annihilation_cult
+	}
+	text = {
+		trigger = {
+			has_idea = ZZZ_theocracy
+		}
+		localization_key = ZZZ_theocracy
+	}
+	text = {
+		trigger = {
+			has_idea = ZZZ_ai_governance
+		}
+		localization_key = ZZZ_ai_governance
+	}
+	text = {
+		trigger = {
+			has_idea = ZZZ_gailiang_chaoji_zongtongzhi
+		}
+		localization_key = ZZZ_gailiang_chaoji_zongtongzhi_name
+	}	
+	text = {
+		trigger = {
+			NOT = {
+				has_idea = ZZZ_russian_political_system
+				has_idea = ZZZ_chinese_political_system
+				has_idea = ZZZ_absolute_monarchy
+				has_idea = ZZZ_military_dictatorship
+				has_idea = ZZZ_socialist_republic
+				has_idea = ZZZ_semi_constitutional_monarchy
+				has_idea = ZZZ_constitutional_monarchy
+				has_idea = ZZZ_neo_soviet_republic
+				has_idea = ZZZ_nazi_dictatorship
+				has_idea = ZZZ_fascist_dictatorship
+				has_idea = ZZZ_revolutionary_front
+				has_idea = ZZZ_communist_party_state
+				has_idea = ZZZ_semi_presidential_system
+				has_idea = ZZZ_parliamentary_republic
+				has_idea = ZZZ_presidential_republic
+				has_idea = ZZZ_presidential_dictatorship
+				has_idea = ZZZ_ultranationalist_dictatorship
+				has_idea = ZZZ_islamic_republic
+				has_idea = ZZZ_chinese_political_system
+				has_idea = ZZZ_provisional_government
+				has_idea = ZZZ_annihilation_cult
+				has_idea = ZZZ_theocracy
+				has_idea = ZZZ_ai_governance
+				has_idea = ZZZ_eurasianist_system
+				has_idea = ZZZ_american_peoples_dictatorship
+				has_idea = ZZZ_gailiang_chaoji_zongtongzhi
+			}
+		}
+		localization_key = ZZZ_anarchy
+	}
+}
+defined_text = {
+	name = GetEconomyType
+	text = {
+		trigger = {
+			has_idea = ZZZ_capitalist_economy
+		}
+		localization_key = ZZZ_capitalist_economy
+	}		
+	text = {
+		trigger = {
+			has_idea = ZZZ_american_capitalism
+		}
+		localization_key = ZZZ_american_capitalism
+	}	
+	text = {
+		trigger = {
+			OR = {
+				has_idea = ZZZ_collective_capitalism
+				has_idea = ZZZ_collective_capitalism2
+			}
+		}
+		localization_key = ZZZ_collective_capitalism
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_oligopolistic_capitalism
+		}
+		localization_key = ZZZ_oligopolistic_capitalism
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_welfare_capitalism
+		}
+		localization_key = ZZZ_welfare_capitalism
+	}		
+	text = {
+		trigger = {
+			has_idea = ZZZ_corporatism
+		}
+		localization_key = ZZZ_corporatism
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_managed_economy
+		}
+		localization_key = ZZZ_managed_economy
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_command_economy
+		}
+		localization_key = ZZZ_command_economy
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_planned_economy
+		}
+		localization_key = ZZZ_planned_economy
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_socialist_market
+		}
+		localization_key = ZZZ_socialist_market
+	}
+	text = {
+		trigger = {
+			has_idea = ZZZ_developed_socialism
+		}
+		localization_key = ZZZ_developed_socialism
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_military_controlled_economy
+		}
+		localization_key = ZZZ_military_controlled_economy
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_worker_controlled_economy
+		}
+		localization_key = ZZZ_worker_controlled_economy
+	}
+	text = {
+		trigger = {
+			has_idea = ZZZ_chaostic_economy
+		}
+		localization_key = ZZZ_chaostic_economy
+	}
+	text = {
+		trigger = {
+			has_idea = ZZZ_minarchism
+		}
+		localization_key = ZZZ_minarchism
+	}
+	text = {
+		trigger = {
+			has_idea = ZZZ_ancap
+		}
+		localization_key = ZZZ_ancap
+	}
+	text = {
+		trigger = {
+			has_idea = ZZZ_mixed_economy
+		}
+		localization_key = ZZZ_mixed_economy
+	}
+	text = {
+		trigger = {
+			has_idea = ZZZ_party_state_capitalism
+		}
+		localization_key = ZZZ_party_state_capitalism
+	}
+	text = {
+		trigger = {
+			has_idea = ZZZ_state_capitalism
+		}
+		localization_key = ZZZ_state_capitalism
+	}
+	text = {
+		trigger = {
+			has_idea = ZZZ_america_first_capitalism
+		}
+		localization_key = ZZZ_america_first_capitalism
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_maga_capitalism
+		}
+		localization_key = ZZZ_maga_capitalism
+	}	
+	text = {
+		trigger = {
+			has_idea = ZZZ_left_corporatism
+		}
+		localization_key = ZZZ_left_corporatism
+	}
+	text = {
+		trigger = {
+			has_idea = ZZZ_liberal_corporatism
+		}
+		localization_key = ZZZ_liberal_corporatism
+	}
+	text = {
+		trigger = {
+			has_idea = ZZZ_kaiser_economy
+		}
+		localization_key = ZZZ_kaiser_economy
+	}
+	text = {
+		trigger = {
+			has_idea = ZZZ_shanyao_jingji
+		}
+		localization_key = ZZZ_shanyao_jingji_name
+	}
+	text = {
+		trigger = {
+			NOT = {
+				has_idea = ZZZ_capitalist_economy
+				has_idea = ZZZ_american_capitalism
+				has_idea = ZZZ_collective_capitalism
+				has_idea = ZZZ_oligopolistic_capitalism
+				has_idea = ZZZ_welfare_capitalism
+				has_idea = ZZZ_corporatism
+				has_idea = ZZZ_managed_economy
+				has_idea = ZZZ_command_economy
+				has_idea = ZZZ_planned_economy
+				has_idea = ZZZ_socialist_market
+				has_idea = ZZZ_developed_socialism
+				has_idea = ZZZ_military_controlled_economy
+				has_idea = ZZZ_worker_controlled_economy
+				has_idea = ZZZ_chaostic_economy
+				has_idea = ZZZ_minarchism
+				has_idea = ZZZ_ancap
+				has_idea = ZZZ_mixed_economy
+				has_idea = ZZZ_party_state_capitalism
+				has_idea = ZZZ_state_capitalism
+				has_idea = ZZZ_america_first_capitalism
+				has_idea = ZZZ_maga_capitalism
+				has_idea = ZZZ_left_corporatism
+				has_idea = ZZZ_liberal_corporatism
+				has_idea = ZZZ_kaiser_economy
+				has_idea = ZZZ_shanyao_jingji
+			}
+		}
+		localization_key = ZZZ_no_economy
+	}
+}
+defined_text = {
+	name = Get_souri_name
+	text = {
+		trigger = {
+			check_variable = {
+				Var_with_Token = token:BGD_souri
+			}
+		}
+		localization_key = souri_daijin_arisa
+	}
+}
+defined_text = {
+	name = Get_soumu_name
+	text = {
+		trigger = {
+			check_variable = {
+				Var_with_Token_rimi = token:BGD_rimi
+			}
+		}
+		localization_key = soumu_daijin_rimi
+	}
+}

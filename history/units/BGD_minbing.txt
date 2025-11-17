@@ -1,0 +1,90 @@
+division_template = {
+	name = "民兵部队"
+	
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 0 y = 3 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 1 y = 2 }
+		militia = { x = 1 y = 3 }
+		militia = { x = 2 y = 0 }
+	}
+	
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+}
+
+units = {
+	
+	division = {
+		name = "1.民兵部队"
+		location = 14695
+		division_template = "民兵部队"
+		start_experience_factor = 0.02
+	}
+	
+	division = {
+		name = "2.民兵部队"
+		location = 9998
+		division_template = "民兵部队"
+		start_experience_factor = 0.02
+	}
+	
+	division = {
+		name = "3.民兵部队"
+		location = 4100
+		division_template = "民兵部队"
+		start_experience_factor = 0.02
+	}
+	
+	division = {
+		name = "4.民兵部队"
+		location = 1113
+		division_template = "民兵部队"
+		start_experience_factor = 0.02
+	}
+	
+	division = {
+		name = "5.民兵部队"
+		location = 14698
+		division_template = "民兵部队"
+		start_experience_factor = 0.02
+	}
+	division = {
+		name = "6.民兵部队"
+		location = 14695
+		division_template = "民兵部队"
+		start_experience_factor = 0.02
+	}
+	
+	division = {
+		name = "7.民兵部队"
+		location = 9998
+		division_template = "民兵部队"
+		start_experience_factor = 0.02
+	}
+	division = {
+		name = "8.民兵部队"
+		location = 14698
+		division_template = "民兵部队"
+		start_experience_factor = 0.02
+	}
+	division = {
+		name = "9.民兵部队"
+		location = 14695
+		division_template = "民兵部队"
+		start_experience_factor = 0.02
+	}
+	division = {
+		name = "10.民兵部队"
+		location = 14695
+		division_template = "民兵部队"
+		start_experience_factor = 0.02
+	}
+}
+

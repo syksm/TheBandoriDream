@@ -1,0 +1,107 @@
+leader_traits = {
+	arisa_kuilei = {
+		random = no
+		stability_factor = -0.2
+		political_power_gain = 0.15
+		political_power_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	yaoyan_xingxing = {
+		random = no
+		stability_factor = 0.1
+		stability_weekly = 0.002
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	xingzhi_lingxiu = {
+		random = no
+		stability_factor = 0.15
+		war_support_factor = 0.15
+		political_power_gain = 0.2
+		political_power_factor = 0.1
+		conscription_factor = 0.12
+		social_democrat_drift = 0.25
+		weekly_casualties_war_support = 0.001
+		weekly_bombing_war_support = 0.001
+		weekly_convoys_war_support = 0.001
+		consumer_goods_factor = -0.05
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	quanli_huashen = {
+		random = no
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		breakthrough_factor = 0.05
+		political_power_gain = 1
+		political_power_factor = 0.5
+		stability_factor = -0.25
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	kasumi_utopia_off = {
+		random = no
+	}
+	kasumi_utopia_on = {
+		political_power_gain = 0.15
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.05
+		research_speed_factor = 0.1
+		production_speed_buildings_factor = 0.05
+		stability_factor = 0.15
+		war_stability_factor = 0.2
+		social_democrat_drift = 0.05
+		random = no
+	}
+	kasumi_starbeat_off = {
+		random = no
+	}
+	kasumi_starbeat_on = {
+		consumer_goods_factor = -0.1
+		political_power_cost = -0.1
+		social_democrat_drift = 0.05
+		weekly_manpower = 5000
+		power_balance_weekly = 0.005
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
+		random = no
+	}
+	kasumi_APFNO_kiraism_off = {
+		random = no
+	}
+	kasumi_APFNO_kiraism_on = {
+		income_growth_factor = 0.06
+		army_attack_factor = 0.03
+		army_defence_factor = 0.03
+		army_org_factor = 0.05
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
+		consumer_goods_factor = -0.05
+		random = no
+	}
+	edano_ziyouzuoyi_dizhu = {
+		political_power_gain = 0.1
+		army_attack_factor = 0.05
+		army_defence_factor = 0.05
+		breakthrough_factor = 0.03
+		war_support_factor = 0.1
+		stability_factor = 0.15
+		random = no
+	}
+	rimi_wenrou_zhiren = {
+		stability_factor = 0.15
+		poverty_development_monthly = 0.01
+		political_power_gain = -0.1
+		consumer_goods_factor = 0.1
+		random = no
+	}
+}	

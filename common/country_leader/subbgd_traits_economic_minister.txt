@@ -1,0 +1,15 @@
+leader_traits = {
+	eco_jieyue_zhishang = {
+		random = no
+		stability_factor = 0.05
+		consumer_goods_factor = -0.15
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
+		personal_value_factor = 0.05
+		business_value_factor = 0.05
+		income_growth_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

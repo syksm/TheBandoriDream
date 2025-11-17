@@ -1,0 +1,45 @@
+leader_traits = {
+	shaonv_yvgangtie = {
+		type = all
+		trait_type = personality_trait
+		
+		trait_xp_factor = {
+			organizer = 2
+			infantry_leader = 2
+			panzer_leader = 2
+			trait_engineer = 2
+			cavalry_leader = 2
+			trickster = 2
+			commando = 2
+			naval_invader = 2
+			skilled_staffer = 2
+			winter_specialist = 1.7
+			swamp_fox = 1.7
+			ranger = 1.7
+			hill_fighter = 1.7
+			urban_assault_specialist = 1.7
+			jungle_rat = 1.7
+			desert_fox = 1.7
+			trait_mountaineer = 1.7
+		}
+		
+		modifier = {
+			max_army_group_size = -1
+			max_commander_army_size = 6
+		}
+		
+		non_shared_modifier = {
+			experience_gain_factor = 2
+			promote_cost_factor = -0.5
+			reassignment_duration_factor = 0.5
+		}
+		
+		new_commander_weight = {
+			factor = 0
+		}
+		attack_skill = 2
+		defense_skill = 2
+		logistics_skill = 2
+		planning_skill = 2
+	}
+}

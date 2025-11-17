@@ -1,0 +1,7488 @@
+BGD_riben_neizhan = {
+	BGD_anfu_renmin = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 15
+		days_remove = 20
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+
+		}
+
+		visible = {
+            has_completed_focus = BGD_jianli_zhengfu
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			add_stability = 0.1
+			add_political_power = 5
+		}
+	}
+	BGD_guwu_shiqi = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 25
+		days_remove = 1
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+
+		}
+
+		visible = {
+            has_completed_focus = BGD_civil_war_begin
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			add_timed_idea = {
+					idea = BGD_guwu_shibing	
+					days = 100
+				}			
+		}
+	}
+	BGD_jixv_dongyuan = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 25
+		days_remove = 20
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+
+		}
+
+		visible = {
+            has_completed_focus = BGD_dongyuan_minbing
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			load_oob = BGD_minbing_1
+			custom_effect_tooltip = BGD_zujian_mibing_tt			
+		}
+	}
+	BGD_jiada_sougua = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 25
+		days_remove = 20
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+
+		}
+
+		visible = {
+            has_completed_focus = BGD_sougua_kucun
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_3
+				amount = 7500
+				producer = BGD
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment_1 
+				amount = 200
+				producer = BGD
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_2
+				amount = 250
+				producer = BGD
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment_1  
+				amount = 800
+				producer = BGD
+			}			
+		}
+	}
+}
+BGD_chongjian_guojia = {
+	BGD_fuquan_fuxingting = {
+
+		priority = 7
+
+		icon = GFX_JAP_election_day
+
+		cost = 100
+		days_remove = 50
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+
+		}
+
+		visible = {
+           
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_cost = 0.25
+			consumer_goods_factor = 0.1
+			expense_growth_factor = 0.07
+		}
+			
+		complete_effect = {
+			set_temp_variable = {
+				var = debt_var_temp
+				value = 150
+			}
+			add_debt = yes
+		}
+
+		remove_effect = {
+			add_to_variable = { chongjian_jindu = 10 }	
+			custom_effect_tooltip = BGD_chongjian_fuxingting_tt
+			set_country_flag = fuxingting_jieguan
+			effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_neizhan_feixv_2
+			add_idea = BGD_neizhan_feixv_1
+			}
+			}
+			add_to_variable = { BGD_neizhan_feixv_business_value_factor = 0.1 }
+		    add_to_variable = { BGD_neizhan_feixv_personal_value_factor = 0.1 }
+		    add_to_variable = { BGD_neizhan_feixv_consumer_goods_factor = -0.1 }
+		    add_to_variable = { BGD_neizhan_feixv_production_speed_buildings_factor = 0.1 }
+		}
+	}
+	BGD_anzhi_nanmin = {
+
+		priority = 6
+
+		icon = GFX_JAP_election_day
+
+		cost = 100
+		days_remove = 120
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_country_flag = fuxingting_jieguan
+		}
+
+		visible = {
+           
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			production_speed_buildings_factor = -0.1
+			consumer_goods_factor = 0.12
+			expense_growth_factor = 0.08
+		}
+			
+		complete_effect = {
+			set_temp_variable = {
+				var = debt_var_temp
+				value = 250
+			}
+			add_debt = yes
+		}
+
+		remove_effect = {
+			add_to_variable = { chongjian_jindu = 15 }		
+			custom_effect_tooltip = BGD_anzhi_nanmin_tt
+			set_country_flag = anzhi_nanmin
+			effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_neizhan_feixv_2
+			add_idea = BGD_neizhan_feixv_4
+			}
+			}
+			add_to_variable = { BGD_neizhan_feixv_monthly_population = 0.2 }
+			add_to_variable = { BGD_neizhan_feixv_poverty_development_monthly = 0.015 }
+		    add_to_variable = { BGD_neizhan_feixv_consumer_goods_factor = -0.05 }
+			add_to_variable = { BGD_neizhan_feixv_personal_value_factor = 0.1 }
+		    add_to_variable = { BGD_neizhan_feixv_stability_factor = 0.15 }
+		    add_to_variable = { BGD_neizhan_feixv_war_support_factor = 0.05 }
+		}
+	}
+	BGD_duikang_shiye = {
+
+		priority = 6
+
+		icon = GFX_JAP_election_day
+
+		cost = 100
+		days_remove = 120
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_country_flag = fuxingting_jieguan
+		}
+
+		visible = {
+           
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			expense_growth_factor = 0.15
+			consumer_goods_factor = 0.11
+			production_speed_buildings_factor = 0.13
+		}
+			
+		complete_effect = {
+			set_temp_variable = {
+				var = debt_var_temp
+				value = 280
+			}
+			add_debt = yes
+		}
+
+		remove_effect = {
+			add_to_variable = { chongjian_jindu = 15 }		
+			custom_effect_tooltip = BGD_duikang_shiye_tt
+			set_country_flag = duikang_shiye
+			effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_neizhan_feixv_2
+			add_idea = BGD_neizhan_feixv_5
+			}
+			}
+			add_to_variable = { BGD_neizhan_feixv_personal_value_factor = 0.05 }
+		    add_to_variable = { BGD_neizhan_feixv_consumer_goods_factor = -0.1 }
+		    add_to_variable = { BGD_neizhan_feixv_industrial_capacity_factory = 0.2 }
+		    add_to_variable = { BGD_neizhan_feixv_production_speed_buildings_factor = 0.1 }
+		    add_to_variable = { BGD_neizhan_feixv_stability_factor = 0.15 }
+		    add_to_variable = { BGD_neizhan_feixv_war_support_factor = 0.05 }
+		    add_to_variable = { BGD_neizhan_feixv_industrial_capacity_dockyard = 0.2 }	
+			add_to_variable = { BGD_neizhan_feixv_poverty_development_monthly = 0.02 }
+			add_to_variable = { BGD_neizhan_feixv_business_value_factor = 0.1 }
+			add_to_variable = { BGD_neizhan_feixv_industrial_development_monthly = 0.01 }
+		}
+	}
+	BGD_tianman_huojia = {
+
+		priority = 4
+
+		icon = GFX_JAP_election_day
+
+		cost = 80
+		days_remove = 90
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_country_flag = fuxingting_jieguan
+			has_country_flag = chongjian_lianxi
+		}
+
+		visible = { 
+
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.07
+			expense_growth_factor = 0.04
+			civilian_factory_use = 5
+		}
+			
+		complete_effect = {
+		    set_temp_variable = {
+				var = debt_var_temp
+				value = 190
+			}
+			add_debt = yes
+		}
+
+		remove_effect = {
+			add_to_variable = { chongjian_jindu = 10 }		
+			custom_effect_tooltip = BGD_tianman_huojia_tt
+			effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_neizhan_feixv_2
+			add_idea = BGD_neizhan_feixv_6
+			}
+			}
+			add_to_variable = { BGD_neizhan_feixv_monthly_population = 0.1 }
+		    add_to_variable = { BGD_neizhan_feixv_consumer_goods_factor = -0.05 }
+		    add_to_variable = { BGD_neizhan_feixv_stability_factor = 0.1 }
+		    add_to_variable = { BGD_neizhan_feixv_war_support_factor = 0.05 }
+		    add_to_variable = { BGD_neizhan_feixv_poverty_development_monthly = 0.01 }	
+			add_to_variable = { BGD_neizhan_feixv_society_development_monthly = 0.02 }	
+		}
+	}
+	BGD_chongjian_chengxiang_lianxi = {
+
+		priority = 5
+
+		icon = GFX_JAP_election_day
+
+		cost = 90
+		days_remove = 70
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_country_flag = fuxingting_jieguan
+		}
+
+		visible = {
+           
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_cost = 0.3
+			expense_growth_factor = 0.09
+			consumer_goods_factor = 0.1
+		}
+			
+		complete_effect = {
+			set_temp_variable = {
+				var = debt_var_temp
+				value = 200
+			}
+			add_debt = yes
+		}
+
+		remove_effect = {
+			add_to_variable = { chongjian_jindu = 15 }		
+			custom_effect_tooltip = BGD_chongjian_chengxiang_lianxi_tt
+			set_country_flag = chongjian_lianxi
+			effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_neizhan_feixv_2
+			add_idea = BGD_neizhan_feixv_7
+			}
+			}
+			add_to_variable = { BGD_neizhan_feixv_monthly_population = 0.2 }
+		    add_to_variable = { BGD_neizhan_feixv_consumer_goods_factor = -0.05 }
+		    add_to_variable = { BGD_neizhan_feixv_industrial_capacity_factory = 0.1 }
+		    add_to_variable = { BGD_neizhan_feixv_stability_factor = 0.05 }
+		    add_to_variable = { BGD_neizhan_feixv_war_support_factor = 0.1 }
+		    add_to_variable = { BGD_neizhan_feixv_industrial_capacity_dockyard = 0.1 }	
+			add_to_variable = { BGD_neizhan_feixv_poverty_development_monthly = 0.005 }
+			add_to_variable = { BGD_neizhan_feixv_farming_development_monthly = 0.02 }
+			add_to_variable = { BGD_neizhan_feixv_society_development_monthly = 0.01 }
+		}
+	}
+	BGD_quanmian_xiufu_sheshi = {
+
+		priority = 3
+
+		icon = GFX_JAP_election_day
+
+		cost = 120
+		days_remove = 180
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_country_flag = fuxingting_jieguan
+			has_country_flag = anzhi_nanmin
+			has_country_flag = duikang_shiye
+		}
+
+		visible = {
+           
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			production_speed_buildings_factor = 0.2
+			civilian_factory_use = 10
+			expense_growth_factor = 0.18
+		}
+			
+		complete_effect = {
+			set_temp_variable = {
+				var = debt_var_temp
+				value = 350
+			}
+			add_debt = yes
+		}
+
+		remove_effect = {
+			add_to_variable = { chongjian_jindu = 25 }	
+			custom_effect_tooltip = BGD_quanmian_xiufu_sheshi_tt
+			effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_neizhan_feixv_2
+			add_idea = BGD_neizhan_feixv_8
+			}
+			}
+		    add_to_variable = { BGD_neizhan_feixv_industrial_capacity_factory = 0.2 }
+		    add_to_variable = { BGD_neizhan_feixv_industrial_capacity_dockyard = 0.2 }	
+			add_to_variable = { BGD_neizhan_feixv_industrial_development_monthly = 0.02 }
+			add_to_variable = { BGD_neizhan_feixv_farming_development_monthly = 0.01 }
+			add_to_variable = { BGD_neizhan_feixv_production_speed_buildings_factor = 0.15 }
+			add_to_variable = { BGD_neizhan_feixv_business_value_factor = 0.05 }
+		}
+	}
+	BGD_huifu_shehui_fenghua = {
+
+		priority = 2
+
+		icon = GFX_JAP_election_day
+
+		cost = 60
+		days_remove = 250
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_country_flag = fuxingting_jieguan
+		}
+
+		visible = {
+           
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			expense_growth_factor = 0.04
+			consumer_goods_factor = 0.06
+			stability_weekly = 0.002
+			political_power_gain = 0.5
+			political_power_factor = 0.1
+		}
+			
+		complete_effect = {
+			set_temp_variable = {
+				var = debt_var_temp
+				value = 90
+			}
+			add_debt = yes
+		}
+
+		remove_effect = {
+			add_to_variable = { chongjian_jindu = 10 }	
+			custom_effect_tooltip = BGD_huifu_shehui_fenghua_tt
+			effect_tooltip = {
+			swap_ideas = {
+            remove_idea = BGD_neizhan_feixv_2
+			add_idea = BGD_neizhan_feixv_9
+			}
+			}
+		    add_to_variable = { BGD_neizhan_feixv_stability_factor = 0.05 }
+		    add_to_variable = { BGD_neizhan_feixv_war_support_factor = 0.25 }	
+			add_to_variable = { BGD_neizhan_feixv_society_development_monthly = 0.01 }
+		}
+	}
+}
+BGD_guojia_gaige = {
+	BGD_qvxiao_fuqi_tongxing = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 70
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_ziyou_pingdeng
+		}
+
+		visible = {
+            has_completed_focus = BGD_ziyou_pingdeng
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			stability_factor = 0.05
+			political_power_cost = -0.05
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		custom_effect_tooltip = BGD_guojia_gaige_tt
+		add_to_variable = { gaigei_jindu = 5 }
+		set_temp_variable = {
+			var = society_development_var_temp
+			value = 0.08
+		}
+		add_society_development = yes
+		add_stability = 0.05
+		}
+	}
+	BGD_jiaoyv_gaige = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 70
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_jiaqiang_jiaoyv
+		}
+
+		visible = {
+           has_completed_focus = BGD_jiaqiang_jiaoyv
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			research_speed_factor = 0.1
+			expense_growth_factor = 0.05
+			consumer_goods_factor = 0.05
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		custom_effect_tooltip = BGD_guojia_gaige_tt
+		add_to_variable = { gaigei_jindu = 5 }
+		set_temp_variable = {
+			var = academic_development_var_temp
+			value = 0.1
+		}
+		add_academic_development = yes
+		}
+	}
+	BGD_jianhua_xingzheng = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 70
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_gaige_weiyuanhui
+		}
+
+		visible = {
+           has_completed_focus = BGD_gaige_weiyuanhui
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = 0.07
+			political_power_factor = 0.04
+			political_power_cost = -0.1
+			consumer_goods_factor = -0.03
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		custom_effect_tooltip = BGD_guojia_gaige_tt
+		add_to_variable = { gaigei_jindu = 5 }
+		add_political_power = 120
+		}
+	}
+	BGD_zhaogu_liqunzhe = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 70
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_kuoda_baozhang
+		}
+
+		visible = {
+           has_completed_focus = BGD_kuoda_baozhang
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			expense_growth_factor = 0.05
+			stability_factor = 0.05
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		custom_effect_tooltip = BGD_guojia_gaige_tt
+		add_to_variable = { gaigei_jindu = 5 }
+		set_temp_variable = {
+			var = society_development_var_temp
+			value = 0.1
+		}
+		add_society_development = yes
+		set_temp_variable = {
+			var = poverty_development_var_temp
+			value = 0.1
+		}
+		add_poverty_development = yes
+		add_stability = 0.05
+		}
+	}
+	BGD_fuyv_neizhanguer = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 70
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_kuoda_baozhang
+		}
+
+		visible = {
+           has_completed_focus = BGD_kuoda_baozhang
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			expense_growth_factor = 0.05
+			stability_factor = 0.05
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		custom_effect_tooltip = BGD_guojia_gaige_tt
+		add_to_variable = { gaigei_jindu = 5 }
+		set_temp_variable = {
+			var = society_development_var_temp
+			value = 0.1
+		}
+		add_society_development = yes
+		set_temp_variable = {
+			var = poverty_development_var_temp
+			value = 0.1
+		}
+		add_poverty_development = yes
+		add_stability = 0.05
+		}
+	}
+	BGD_gaishan_laodongfa = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 70
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_renxing_zibenzhuyi
+		}
+
+		visible = {
+            has_completed_focus = BGD_renxing_zibenzhuyi
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			stability_factor = 0.05
+			production_factory_max_efficiency_factor = 0.07
+			production_factory_efficiency_gain_factor = 0.07
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		custom_effect_tooltip = BGD_guojia_gaige_tt
+		add_to_variable = { gaigei_jindu = 5 }
+		set_temp_variable = {
+			var = poverty_development_var_temp
+			value = 0.08
+		}
+		add_poverty_development = yes
+		add_stability = 0.05
+		}
+	}
+	BGD_zizhu_qiuxuezhe = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 70
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_jiaqiang_jiaoyv
+		}
+
+		visible = {
+           has_completed_focus = BGD_jiaqiang_jiaoyv
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.04
+			expense_growth_factor = 0.04
+			research_speed_factor = 0.08
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		custom_effect_tooltip = BGD_guojia_gaige_tt
+		add_to_variable = { gaigei_jindu = 5 }
+		set_temp_variable = {
+			var = academic_development_var_temp
+			value = 0.07
+		}
+		add_academic_development = yes
+		}
+	}
+	BGD_touzi_mengxiang = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 70
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_mengxiang_jihua
+		}
+
+		visible = {
+           has_completed_focus = BGD_mengxiang_jihua
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			expense_growth_factor = 0.05
+			political_power_gain = 0.08
+			production_factory_max_efficiency_factor = 0.05
+			production_factory_efficiency_gain_factor = 0.05
+			stability_factor = 0.05
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		custom_effect_tooltip = BGD_guojia_gaige_tt
+		add_to_variable = { gaigei_jindu = 5 }
+		set_temp_variable = {
+			var = society_development_var_temp
+			value = 0.12
+		}
+		add_society_development = yes
+		add_stability = 0.05
+		}
+	}
+	BGD_butie_guomin = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 70
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_wuzhi_chongshi
+		}
+
+		visible = {
+           has_completed_focus = BGD_wuzhi_chongshi
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.07
+			expense_growth_factor = 0.07
+			political_power_gain = 0.12
+			political_power_factor = 0.06
+			stability_factor = 0.12
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		custom_effect_tooltip = BGD_guojia_gaige_tt
+		add_to_variable = { gaigei_jindu = 5 }
+		set_temp_variable = {
+			var = poverty_development_var_temp
+			value = 0.13
+		}
+		add_poverty_development = yes
+		add_stability = 0.12
+		}
+	}
+	BGD_zhichi_wenyv = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 70
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_wenhua_qiangguo
+		}
+
+		visible = {
+           has_completed_focus = BGD_wenhua_qiangguo
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = -0.05
+			income_growth_factor = 0.1
+			political_power_gain = 0.06
+			stability_factor = 0.06
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		custom_effect_tooltip = BGD_guojia_gaige_tt
+		add_to_variable = { gaigei_jindu = 5 }
+		set_temp_variable = {
+			var = society_development_var_temp
+			value = 0.07
+		}
+		add_society_development = yes
+		add_stability = 0.06
+		}
+	}
+	BGD_guanting_fengsu = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 70
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_zhengzhi_shehui
+		}
+
+		visible = {
+           has_completed_focus = BGD_zhengzhi_shehui
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = -0.12
+			stability_factor = 0.07
+			production_factory_max_efficiency_factor = 0.03
+			production_factory_efficiency_gain_factor = 0.03
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		custom_effect_tooltip = BGD_guojia_gaige_tt
+		add_to_variable = { gaigei_jindu = 5 }
+		set_temp_variable = {
+			var = society_development_var_temp
+			value = 0.08
+		}
+		add_society_development = yes
+		set_temp_variable = {
+			var = poverty_development_var_temp
+			value = 0.08
+		}
+		add_poverty_development = yes
+		add_stability = 0.07
+		}
+	}
+	BGD_jiaomie_heidao = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 70
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_qingxi_youyi
+		}
+
+		visible = {
+           has_completed_focus = BGD_qingxi_youyi
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = -0.13
+			stability_factor = 0.1
+		}
+			
+		complete_effect = {
+			add_manpower = -7500
+		}
+
+		remove_effect = {
+		remove_ideas = BGD_heidao_fanlan_1
+		custom_effect_tooltip = BGD_guojia_gaige_tt
+		add_to_variable = { gaigei_jindu = 5 }
+		set_temp_variable = {
+			var = society_development_var_temp
+			value = 0.1
+		}
+		add_society_development = yes
+		set_temp_variable = {
+			var = poverty_development_var_temp
+			value = 0.1
+		}
+		add_poverty_development = yes
+		add_stability = 0.1
+		}
+	}
+	BGD_xuanchuan_weiyuanhui = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 70
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_jianshe_dangpai
+		}
+
+		visible = {
+           has_completed_focus = BGD_jianshe_dangpai
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = 0.1
+			political_power_factor = 0.06
+			stability_factor = 0.08
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		custom_effect_tooltip = BGD_guojia_gaige_tt
+		add_to_variable = { gaigei_jindu = 5 }
+		add_stability = 0.08
+		set_temp_variable = {
+			var = society_development_var_temp
+			value = 0.05
+		}
+		add_society_development = yes
+		}
+	}
+	BGD_guwu_nianqing = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 70
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_nianqing_zhichi
+		}
+
+		visible = {
+           has_completed_focus = BGD_nianqing_zhichi
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = 0.12
+			stability_factor = 0.07
+			consumer_goods_factor = -0.04
+			production_factory_max_efficiency_factor = 0.03
+			production_factory_efficiency_gain_factor = 0.03
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		custom_effect_tooltip = BGD_guojia_gaige_tt
+		add_to_variable = { gaigei_jindu = 5 }
+		set_temp_variable = {
+			var = society_development_var_temp
+			value = 0.06
+		}
+		add_society_development = yes
+		add_stability = 0.07
+		}
+	}
+	BGD_jianshe_dangji = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 70
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_bufu_guomin
+		}
+
+		visible = {
+           has_completed_focus = BGD_bufu_guomin
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = -0.1
+			stability_factor = 0.05
+			stability_weekly = 0.005
+			expense_growth_factor = 0.04
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		custom_effect_tooltip = BGD_guojia_gaige_tt
+		add_to_variable = { gaigei_jindu = 5 }
+		set_temp_variable = {
+			var = society_development_var_temp
+			value = 0.07
+		}
+		add_society_development = yes
+		add_stability = 0.05
+		}
+	}
+	BGD_jiceng_zuzhi = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 70
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_bufu_guomin
+		}
+
+		visible = {
+           has_completed_focus = BGD_bufu_guomin
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = -0.12
+			stability_factor = 0.05
+			stability_weekly = 0.005
+			consumer_goods_factor = 0.05
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		custom_effect_tooltip = BGD_guojia_gaige_tt
+		add_to_variable = { gaigei_jindu = 5 }
+		set_temp_variable = {
+			var = society_development_var_temp
+			value = 0.11
+		}
+		add_society_development = yes
+		add_stability = 0.05
+		}
+	}
+	BGD_jianshe_gaosuzhi = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 100
+		days_remove = 100
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_wenhua_dagexin
+		}
+
+		visible = {
+           has_completed_focus = BGD_wenhua_dagexin
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = -0.15
+			stability_factor = 0.15
+			consumer_goods_factor = 0.07
+			expense_growth_factor = 0.05
+			production_factory_max_efficiency_factor = 0.1
+			production_factory_efficiency_gain_factor = 0.1
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		custom_effect_tooltip = BGD_guojia_gaige_tt
+		add_to_variable = { gaigei_jindu = 5 }
+		add_stability = 0.15
+		set_temp_variable = {
+			var = society_development_var_temp
+			value = 0.25
+		}
+		add_society_development = yes
+		}
+	}
+}
+BGD_quanli_pingheng = {
+	BGD_xuanchuan_shanyao = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 40
+		days_remove = 30
+
+		fire_only_once = no
+		days_re_enable = 30
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			
+		}
+
+		visible = {
+           
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = 0.04
+			political_power_factor = 0.04
+			stability_weekly = 0.005
+			expense_growth_factor = 0.04
+			production_factory_max_efficiency_factor = 0.03
+			production_factory_efficiency_gain_factor = 0.05
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			add_power_balance_value = {
+				id = BGD_power_balance
+				value = 0.05
+			}
+		}
+	}
+	BGD_dongyuan_zhichizhe = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 50
+		days_remove = 30
+
+		fire_only_once = no
+		days_re_enable = 30
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			
+		}
+
+		visible = {
+           
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = 0.1
+			stability_factor = -0.12
+			industrial_capacity_dockyard = 0.05
+			industrial_capacity_factory = 0.05
+			consumer_goods_factor = -0.03
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			add_power_balance_value = {
+				id = BGD_power_balance
+				value = 0.05
+			}
+		}
+	}
+	BGD_zhangwo_xingzheng = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 60
+		days_remove = 30
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			
+		}
+
+		visible = {
+           
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = 0.15
+			political_power_factor = 0.05
+			consumer_goods_factor = 0.06
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			add_power_balance_value = {
+				id = BGD_power_balance
+				value = 0.1
+			}
+			add_political_power = 120
+		}
+	}
+	BGD_xvnuo_weilai = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 60
+		days_remove = 30
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			
+		}
+
+		visible = {
+           
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = 0.1
+			political_power_factor = 0.03
+			stability_weekly = 0.01
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			add_power_balance_value = {
+				id = BGD_power_balance
+				value = 0.1
+			}
+			add_political_power = 60
+		}
+	}
+	BGD_tuijin_gaige = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 45
+		days_remove = 35
+
+		fire_only_once = no
+		days_re_enable = 30
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			
+		}
+
+		visible = {
+           
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = -0.12
+			society_development_monthly = 0.02
+			poverty_development_monthly = 0.02
+			stability_factor = 0.05
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			add_power_balance_value = {
+				id = BGD_power_balance
+				value = 0.05
+			}
+		}
+	}
+	BGD_tuoxie_minzhen = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 0
+		days_remove = 30
+
+		fire_only_once = no
+		days_re_enable = 30
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			
+		}
+
+		visible = {
+           
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = 0.12
+			stability_factor = 0.1
+			consumer_goods_factor = -0.07
+			production_factory_max_efficiency_factor = 0.05
+			production_factory_efficiency_gain_factor = 0.1
+			production_speed_buildings_factor = 0.07
+			political_power_cost = -0.1
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			add_power_balance_value = {
+				id = BGD_power_balance
+				value = -0.1
+			}
+			add_political_power = 40
+		}
+	}
+	BGD_minzhen_xingdong = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		days_mission_timeout = 90
+		
+		allowed = {
+			tag = BGD
+		}
+
+		activation = {
+			has_country_flag = BGD_quanli_tianping_1
+		}
+
+		available = {
+			has_country_flag = BGD_minzhen_wajie
+		}
+
+        is_good = no
+
+		visible = {
+    
+        }
+
+		cancel_trigger = {
+			
+		}
+		timeout_effect = {
+			add_power_balance_value = {
+				id = BGD_power_balance
+				value = -0.05
+			}
+			activate_mission = BGD_minzhen_xingdong
+		}
+		cancel_effect = {
+		}
+	}
+	BGD_chongjian_jsp = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		fire_only_once = yes
+		days_mission_timeout = 205
+	
+		allowed = {
+			tag = BGD
+		}
+
+		activation = {
+			has_country_flag = BGD_quanli_tianping
+		}
+
+		available = {
+			always = no
+		}
+
+        is_good = no
+
+		visible = {
+           
+        }
+
+		cancel_trigger = {
+			
+		}
+		timeout_effect = {
+			country_event = {
+				id = bgd.61
+			}
+		}
+		cancel_effect = {
+		}
+	}
+}
+BGD_jita_yingxiang = {
+	BGD_jita_bianhua = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		days_mission_timeout = 365
+		
+		allowed = {
+			tag = BGD
+		}
+
+		activation = {
+			has_country_flag = BGD_shenmi_jita_yingxiang
+		}
+
+		available = {
+			always = no
+		}
+
+        is_good = no
+
+		visible = {
+			has_country_flag = BGD_shenmi_jita_yingxiang
+        }
+
+		cancel_trigger = {
+		}
+		timeout_effect = {
+			remove_ideas = BGD_shenmi_jita_1
+			remove_ideas = BGD_shenmi_jita_2
+			remove_ideas = BGD_shenmi_jita_3
+			country_event = {
+				id = bgd.53
+			}
+			activate_mission = BGD_jita_yingxiang
+		}
+		cancel_effect = {
+		}
+	}
+}
+BGD_junshi_gaige = {
+	BGD_lujun_xunlian = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 20
+		days_remove = 60
+
+		fire_only_once = no
+		days_re_enable = 40
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			command_power > 20
+		}
+
+		visible = {
+            
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			experience_gain_army = 0.5
+			experience_gain_army_factor = 0.2
+		}
+			
+		complete_effect = {
+			add_command_power = -20
+		}
+
+		remove_effect = {
+		add_to_variable = { jungai_jindu = 5 }
+		custom_effect_tooltip = BGD_junshi_gaige_tt
+		}
+	}
+	BGD_kongjun_xunlian = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 20
+		days_remove = 60
+
+		fire_only_once = no
+		days_re_enable = 40
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			command_power > 20
+		}
+
+		visible = {
+            
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			experience_gain_air = 0.5
+			experience_gain_air_factor = 0.2
+		}
+			
+		complete_effect = {
+			add_command_power = -20
+		}
+
+		remove_effect = {
+		add_to_variable = { jungai_jindu = 5 }
+		custom_effect_tooltip = BGD_junshi_gaige_tt
+		}
+	}
+	BGD_haijun_xunlian = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 20
+		days_remove = 60
+
+		fire_only_once = no
+		days_re_enable = 40
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			command_power > 20
+		}
+
+		visible = {
+            
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			experience_gain_navy = 0.5
+			experience_gain_navy_factor = 0.2
+		}
+			
+		complete_effect = {
+			add_command_power = -20
+		}
+
+		remove_effect = {
+		add_to_variable = { jungai_jindu = 5 }
+		custom_effect_tooltip = BGD_junshi_gaige_tt
+		}
+	}
+	BGD_weilai_keji = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 120
+		days_remove = 365
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_tech = body_armor6
+			has_completed_focus = BGD_weilai_zhanzheng
+		}
+
+		visible = {
+            has_completed_focus = BGD_weilai_zhanzheng
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			expense_growth_factor = 0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			set_technology = {
+				body_armor7 = 1
+				body_armor8 = 1
+			}
+		}
+	}
+	BGD_weilai_keji_1 = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 120
+		days_remove = 365
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_tech = support_weapons6
+			has_completed_focus = BGD_weilai_zhanzheng
+		}
+
+		visible = {
+            has_completed_focus = BGD_weilai_zhanzheng
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			expense_growth_factor = 0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			set_technology = {
+				support_weapons7 = 1
+				support_weapons8 = 1
+			}
+		}
+	}
+	BGD_riben_hewuhua = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		days_mission_timeout = 1350
+		
+		allowed = {
+			tag = BGD
+		}
+
+		activation = {
+			always = no
+		}
+
+		available = {
+			always = no
+		}
+
+        is_good = no
+
+		visible = {
+    
+        }
+
+		cancel_trigger = {
+			
+		}
+		timeout_effect = {
+			set_technology = {
+				nukes = 1
+			}
+			add_nuclear_bombs = 1
+			add_ideas = BGD_riben_hewu
+			remove_ideas = BGD_hewu_touzi
+			news_event = {
+				id = news.1216
+			}
+			clr_country_flag = kaishi_hewu_yanfa
+		}
+		cancel_effect = {
+			
+		}
+	}
+	BGD_goumai_yindu_jishu = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 150
+		days_remove = 250
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_country_flag = kaishi_hewu_yanfa
+			    RAJ = {
+				    is_ally_with = BGD
+			    }
+			}
+
+		visible = {
+           has_country_flag = kaishi_hewu_yanfa
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			expense_growth_factor = 0.2
+			political_power_cost = 0.25
+		}
+			
+		complete_effect = {
+			
+		} 
+
+		remove_effect = {
+			add_days_mission_timeout = {
+				mission = BGD_riben_hewuhua
+				days = -300
+			}
+		}
+    }
+	BGD_jixian_touru = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 150
+		days_remove = 90
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_country_flag = kaishi_hewu_yanfa
+		}
+
+		visible = {
+           has_country_flag = kaishi_hewu_yanfa
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			expense_growth_factor = 0.25
+			consumer_goods_factor = 0.1
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			add_days_mission_timeout = {
+				mission = BGD_riben_hewuhua
+				days = -300
+			}
+		}
+    }
+	BGD_jianli_haijun_luzhandui = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 50
+		days_remove = -1
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_quanmian_gaige
+		}
+
+		visible = {
+           has_completed_focus = BGD_quanmian_gaige
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			special_forces_cap = 0.1
+			special_forces_training_time_factor = 0.25
+			special_forces_attack_factor = 0.1
+			special_forces_defence_factor = 0.1
+			invasion_preparation = -0.5
+			naval_invasion_prep_speed = 0.25
+			naval_invasion_penalty = -0.15
+		}
+			
+		complete_effect = {
+			army_experience = -25
+		    navy_experience = -35
+		}
+
+		remove_effect = {
+			
+		}
+	}
+	BGD_baba_jiandui = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 100
+		days_remove = 0
+
+		fire_only_once = no
+		days_re_enable = 1
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_quanmian_gaige
+			NOT = {
+				has_idea = BGD_baba_jiandui_jihua
+			}
+		}
+
+		visible = {
+            has_completed_focus = BGD_quanmian_gaige
+			NOT = {
+				has_idea = BGD_baba_jiandui_jihua
+			}
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			
+		}
+			
+		complete_effect = {
+			add_ideas = BGD_baba_jiandui_jihua
+		}
+
+		remove_effect = {
+			
+		}
+	}
+	BGD_qvxiao_baba_jiandui = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 0
+		days_remove = 0
+
+		fire_only_once = no
+		days_re_enable = 1
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_quanmian_gaige
+			has_idea = BGD_baba_jiandui_jihua
+		}
+
+		visible = {
+            has_completed_focus = BGD_quanmian_gaige
+			has_idea = BGD_baba_jiandui_jihua
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			
+		}
+			
+		complete_effect = {
+			remove_ideas = BGD_baba_jiandui_jihua
+		}
+
+		remove_effect = {
+			
+		}
+	}
+	BGD_GCAP = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		days_mission_timeout = 1050
+		
+		allowed = {
+			tag = BGD
+		}
+
+		activation = {
+			always = no
+		}
+
+		available = {
+			always = no
+		}
+
+        is_good = no
+
+		visible = {
+    
+        }
+
+		cancel_trigger = {
+			
+		}
+		timeout_effect = {
+		ENG = {
+		    set_technology = {
+			    advanced_small_airframe = 1
+		    }
+		}
+		ITA = {
+		    set_technology = {
+			    advanced_small_airframe = 1
+		    }
+		}
+			set_technology = {
+				advanced_small_airframe = 1
+			}
+		}
+		cancel_effect = {
+			
+		}
+	}
+	BGD_GCAP_touru = {
+
+		priority = 1
+	
+		icon = GFX_JAP_election_day
+	
+		cost = 25
+		days_remove = 60
+	
+		fire_only_once = no
+		days_re_enable = 30
+			
+		allowed = {
+			tag = BGD
+		}
+	
+		available = {
+			has_completed_focus = BGD_quanmian_gaige
+			NOT = {
+				has_tech = advanced_small_airframe
+			}
+		}
+	
+		visible = {
+			has_completed_focus = BGD_quanmian_gaige
+			NOT = {
+				has_tech = advanced_small_airframe
+			}
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		modifier = {
+			civilian_factory_use = 3
+			expense_growth_factor = 0.15
+			consumer_goods_factor = 0.05
+			research_speed_factor = -0.1
+		}
+				
+		complete_effect = {
+			add_days_mission_timeout = {
+				mission = BGD_GCAP
+				days = -90
+			}
+		}
+	
+		remove_effect = {
+			
+		}
+	}
+}
+BGD_jingji_gongzuo = {
+	BGD_jiashui = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 60
+		days_remove = 365
+
+		fire_only_once = no
+		days_re_enable = 1
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_jingji_jianshe
+		}
+
+		visible = {
+			has_completed_focus = BGD_jingji_jianshe
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			tax_business_rate_factor = 0.15
+			tax_personal_rate_factor = 0.15
+			political_power_gain = 0.1
+			stability_factor = -0.15
+			consumer_goods_factor = -0.1
+			industrial_capacity_factory = -0.08
+			industrial_capacity_dockyard = -0.08
+			production_speed_buildings_factor = -0.07
+			income_growth_factor = 0.2
+		}
+			
+		complete_effect = {
+			hidden_effect = {
+				country_event = {
+					id = bgd.94
+					days = 7
+				}
+			}
+		}
+
+		remove_effect = {
+
+		}
+	}
+	BGD_zhongbu_mingong = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 100
+		days_remove = 260
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_fazhan_zhonggong
+			has_completed_focus = BGD_zhongbu_fazhan
+		}
+
+		visible = {
+			has_completed_focus = BGD_zhongbu_fazhan
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			expense_growth_factor = 0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			282 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			534 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			535 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			532 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			533 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			1337 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			1332 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			1341 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	BGD_zhongbu_jungong = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 100
+		days_remove = 260
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_fazhan_zhonggong
+			has_completed_focus = BGD_zhongbu_fazhan
+		}
+
+		visible = {
+			has_completed_focus = BGD_zhongbu_fazhan
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			expense_growth_factor = 0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			282 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			534 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			535 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			532 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			533 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			1337 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			1332 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			1341 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	BGD_zhongbu_bangong = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 100
+		days_remove = 260
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_zhongxiao_qiye
+			has_completed_focus = BGD_zhongbu_fazhan
+		}
+
+		visible = {
+			has_completed_focus = BGD_zhongbu_fazhan
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			expense_growth_factor = 0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			282 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}
+			}
+			534 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}
+			}
+			535 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}
+			}
+			532 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}
+			}
+			533 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}
+			}
+			1337 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}
+			}
+			1332 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}
+			}
+			1341 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	BGD_nanbu_mingong = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 100
+		days_remove = 260
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_fazhan_zhonggong
+			has_completed_focus = BGD_nanbu_fazhan
+		}
+
+		visible = {
+			has_completed_focus = BGD_nanbu_fazhan
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			expense_growth_factor = 0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			1340 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			531 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			529 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			530 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			528 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			1338 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			526 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	BGD_nanbu_jungong = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 100
+		days_remove = 260
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_fazhan_zhonggong
+			has_completed_focus = BGD_nanbu_fazhan
+		}
+
+		visible = {
+			has_completed_focus = BGD_nanbu_fazhan
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			expense_growth_factor = 0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			1340 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			531 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			529 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			530 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			528 = {
+			    add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			1338 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			526 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	BGD_nanbu_bangong = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 100
+		days_remove = 260
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_zhongxiao_qiye
+			has_completed_focus = BGD_nanbu_fazhan
+		}
+
+		visible = {
+			has_completed_focus = BGD_nanbu_fazhan
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			expense_growth_factor = 0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			1340 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}
+			}
+			531 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}
+			}
+			529 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}
+			}
+			530 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}
+			}
+			528 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}
+			}
+			1338 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}
+			}
+			526 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = office_park
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	BGD_beibu_mingong = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 100
+		days_remove = 260
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_fazhan_zhonggong
+			has_completed_focus = BGD_beibu_fazhan
+		}
+
+		visible = {
+			has_completed_focus = BGD_beibu_fazhan
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			expense_growth_factor = 0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			1336 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			1335 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			1333 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			536 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			1334 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	BGD_beibu_jungong = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 100
+		days_remove = 260
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_fazhan_zhonggong
+			has_completed_focus = BGD_beibu_fazhan
+		}
+
+		visible = {
+			has_completed_focus = BGD_beibu_fazhan
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			expense_growth_factor = 0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			1336 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			1335 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			1333 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			536 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			1334 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	BGD_beibu_bangong = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 100
+		days_remove = 260
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_zhongxiao_qiye
+			has_completed_focus = BGD_beibu_fazhan
+		}
+
+		visible = {
+			has_completed_focus = BGD_beibu_fazhan
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			expense_growth_factor = 0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			1336 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}
+			}
+			1335 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}
+			}
+			1333 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}
+			}
+			536 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}
+			}
+			1334 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	BGD_beibu_jijian = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 70
+		days_remove = 180
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_jijian_gongcheng
+			has_completed_focus = BGD_beibu_fazhan
+		}
+
+		visible = {
+			has_completed_focus = BGD_beibu_fazhan
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			expense_growth_factor = 0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			1336 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1335 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1333 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			536 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1334 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	BGD_zhongbu_jijian = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 70
+		days_remove = 180
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_jijian_gongcheng
+			has_completed_focus = BGD_zhongbu_fazhan
+		}
+
+		visible = {
+			has_completed_focus = BGD_zhongbu_fazhan
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			expense_growth_factor = 0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			534 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			535 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			532 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			533 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	BGD_nanbu_jijian = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 70
+		days_remove = 180
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_jijian_gongcheng
+			has_completed_focus = BGD_nanbu_fazhan
+		}
+
+		visible = {
+			has_completed_focus = BGD_nanbu_fazhan
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			expense_growth_factor = 0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			531 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			529 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			530 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			528 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1338 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			526 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	BGD_nanbu_heneng = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 120
+		days_remove = 365
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_xianjin_wenyv
+			has_completed_focus = BGD_nanbu_fazhan
+		}
+
+		visible = {
+			has_completed_focus = BGD_nanbu_fazhan
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.1
+			expense_growth_factor = 0.1
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			1340 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+			531 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+			529 = {
+			    add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+			530 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+			528 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+			1338 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+			526 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	BGD_beibu_heneng = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 120
+		days_remove = 365
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_xianjin_wenyv
+			has_completed_focus = BGD_beibu_fazhan
+		}
+
+		visible = {
+			has_completed_focus = BGD_beibu_fazhan
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.1
+			expense_growth_factor = 0.1
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			1336 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+			1335 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+			1333 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+			536 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+			1334 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	BGD_zhongbu_heneng = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 120
+		days_remove = 365
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_xianjin_wenyv
+			has_completed_focus = BGD_zhongbu_fazhan
+		}
+
+		visible = {
+			has_completed_focus = BGD_zhongbu_fazhan
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.1
+			expense_growth_factor = 0.1
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			282 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+			534 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+			535 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+			532 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+			533 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+			1337 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+			1332 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+			1341 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = nuclear_reactor
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+BGD_guojia_waijiao = {
+	BGD_yaoqing_taiguo = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 30
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_yazi_zuzhi
+		}
+
+		visible = {
+			has_completed_focus = BGD_yazi_zuzhi
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_cost = 1
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		BGD = {
+			add_to_faction = SIA
+		}
+		SIA = {
+			set_country_flag = APFNO_member
+		}
+		}
+	}
+	BGD_yaoqing_maxin = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 30
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_yazi_zuzhi
+		}
+
+		visible = {
+			has_completed_focus = BGD_yazi_zuzhi
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_cost = 1
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		BGD = {
+			add_to_faction = MAL
+			add_to_faction = SIG
+		}
+		MAL = {
+			set_country_flag = APFNO_member
+		}
+		SIG = {
+			set_country_flag = APFNO_member
+		}
+		}
+	}
+	BGD_yaoqing_yinni = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 30
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_yazi_zuzhi
+		}
+
+		visible = {
+			has_completed_focus = BGD_yazi_zuzhi
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_cost = 1
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		BGD = {
+			add_to_faction = INS
+		}
+		INS = {
+			set_country_flag = APFNO_member
+		}
+		}
+	}
+	BGD_yaoqing_feilvbing = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 30
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_yazi_zuzhi
+		}
+
+		visible = {
+			has_completed_focus = BGD_yazi_zuzhi
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_cost = 1
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		BGD = {
+			add_to_faction = PHI
+		}
+		PHI = {
+			set_country_flag = APFNO_member
+		}
+		}
+	}
+	BGD_yaoqing_aoxin = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 30
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_yazi_zuzhi
+		}
+
+		visible = {
+			has_completed_focus = BGD_yazi_zuzhi
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_cost = 1
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		BGD = {
+			add_to_faction = AST
+			add_to_faction = NZL
+			add_to_faction = PNG
+		}
+		AST = {
+			set_country_flag = APFNO_member
+		}
+		NZL = {
+			set_country_flag = APFNO_member
+		}
+		PNG = {
+			set_country_flag = APFNO_member
+		}
+		}
+	}
+	BGD_yaoqing_yindu = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 30
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_yazi_zuzhi
+			PAK = {
+				OR = {
+					has_country_flag = PAK_lost_indo_pakistan_war
+					has_country_flag = PAK_won_indo_pakistan_war
+					is_ally_with = PRC
+				}
+			}
+		}
+
+		visible = {
+			has_completed_focus = BGD_yazi_zuzhi
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_cost = 1
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+		BGD = {
+			add_to_faction = RAJ
+			add_to_faction = BAN
+		}
+		RAJ = {
+			set_country_flag = APFNO_member
+		}
+		BAN = {
+			set_country_flag = APFNO_member
+		}
+		}
+	}
+	BGD_jiena_nanmin = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 45
+		days_remove = 90
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_duikang_dongya
+		}
+
+		visible = {
+			has_completed_focus = BGD_duikang_dongya
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			expense_growth_factor = 0.05
+			political_power_gain = -0.1
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			add_manpower = 250000
+			hidden_effect = {
+				country_event = {
+					id = bgd.93
+				}
+			}
+		}
+	}
+	BGD_jielu_dongya = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 50
+		days_remove = 35
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_guoji_zhichi
+		}
+
+		visible = {
+			has_completed_focus = BGD_guoji_zhichi
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			add_political_power = 60
+			add_war_support = 0.05
+			PRC = {
+				add_stability = -0.15
+				add_war_support = -0.15
+			}
+		}
+	}
+	BGD_chukou_shangpin = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 60
+		days_remove = 180
+
+		fire_only_once = no
+		days_re_enable = 1
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_chengli_jingjiquan
+		}
+
+		visible = {
+			has_completed_focus = BGD_chengli_jingjiquan
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = -0.05
+			income_growth_factor = 0.15
+			industrial_capacity_factory = 0.1
+			industrial_capacity_dockyard = 0.1
+		}
+			
+		complete_effect = {
+			
+		}
+
+		remove_effect = {
+			set_temp_variable = {
+				var = debt_var_temp
+				value = -500
+			}
+			add_debt = yes
+		}
+	}
+	BGD_keji_hezuo = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 100
+		days_remove = 365
+
+		fire_only_once = no
+		days_re_enable = 1
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_keji_xiezuo
+		}
+
+		visible = {
+			has_completed_focus = BGD_keji_xiezuo
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+
+		}
+			
+		complete_effect = {
+			add_research_slot = 1
+		}
+
+		remove_effect = {
+			add_research_slot = -1
+			every_country = {
+				limit = {
+					is_ally_with = BGD
+					NOT = {
+						tag = BGD
+					}
+				}
+				set_temp_variable = {
+			        var = academic_development_var_temp
+			        value = 0.1
+		        }
+		        add_academic_development = yes
+			}
+		}
+	}
+	BGD_zuzhi_jiaoliu = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 40
+		days_remove = 150
+
+		fire_only_once = no
+		days_re_enable = 1
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_wenhua_jiaoliu
+		}
+
+		visible = {
+			has_completed_focus = BGD_wenhua_jiaoliu
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			income_growth_factor = 0.1
+			political_power_gain = 0.1
+			political_power_factor = 0.05
+			society_development_monthly = 0.015
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			add_political_power = 20
+			every_country = {
+				limit = {
+					is_ally_with = BGD
+					NOT = {
+						tag = BGD
+					}
+				}
+				add_popularity = {
+					ideology = social_democrat
+					popularity = 0.05
+				}
+				set_temp_variable = {
+			        var = society_development_var_temp
+			        value = 0.1
+		        }
+		        add_society_development = yes
+			}
+		}
+	}
+	BGD_chuanbo_zhuyi = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 80
+		days_remove = 100
+
+		fire_only_once = no
+		days_re_enable = 1
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_chuanbo_shanyao
+		}
+
+		visible = {
+			has_completed_focus = BGD_chuanbo_shanyao
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.1
+			expense_growth_factor = 0.1
+			political_power_gain = -0.15
+			political_power_factor = -0.1
+			production_speed_buildings_factor = -0.1
+		}
+			
+		complete_effect = {
+			set_temp_variable = {
+				var = debt_var_temp
+				value = 100
+			}
+			add_debt = yes
+		}
+
+		remove_effect = {
+			every_country = {
+				limit = {
+					is_ally_with = BGD
+					NOT = {
+						tag = BGD
+					}
+				}
+				add_popularity = {
+					ideology = social_democrat
+					popularity = 0.1
+				}
+				add_ideas = BGD_shanyao_yingxiang
+			}
+		}
+	}
+	BGD_aoguo_shanyao = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 0
+		days_remove = 50
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_chuanbo_shanyao
+			AST = {
+				social_democrat > 0.5
+			}
+		}
+
+		visible = {
+			has_completed_focus = BGD_chuanbo_shanyao
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = -0.25
+			political_power_factor = -0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+		    add_offsite_building = { 
+			    type = industrial_complex
+			    level = 1
+		    }
+			add_offsite_building = { 
+			    type = arms_factory
+			    level = 1
+		    }
+			add_offsite_building = { 
+			    type = dockyard
+			    level = 1
+		    }
+			AST = {
+			    set_politics = {
+			        ruling_party = social_democrat
+			        elections_allowed = yes
+					election_frequency = 36
+		        }
+				set_party_name = {
+				    ideology = social_democrat
+				    long_name = BGD_aoguo_shanyaodang_long
+				    name = BGD_aoguo_shanyaodang
+			    }
+				add_ideas = BGD_shanyao_guojia
+			}
+		}
+	}
+	BGD_xinxilan_shanyao = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 0
+		days_remove = 50
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_chuanbo_shanyao
+			NZL = {
+				social_democrat > 0.5
+			}
+		}
+
+		visible = {
+			has_completed_focus = BGD_chuanbo_shanyao
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = -0.25
+			political_power_factor = -0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			add_offsite_building = { 
+			    type = industrial_complex
+			    level = 1
+		    }
+			add_offsite_building = { 
+			    type = arms_factory
+			    level = 1
+		    }
+			add_offsite_building = { 
+			    type = dockyard
+			    level = 1
+		    }
+			NZL = {
+			    set_politics = {
+			        ruling_party = social_democrat
+			        elections_allowed = yes
+					election_frequency = 36
+		        }
+				set_party_name = {
+				    ideology = social_democrat
+				    long_name = BGD_xinxilan_shanyaodang_long
+				    name = BGD_xinxilan_shanyaodang
+			    }
+				add_ideas = BGD_shanyao_guojia
+			}
+		}
+	}
+	BGD_bby_shanyao = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 0
+		days_remove = 50
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_chuanbo_shanyao
+			PNG = {
+				social_democrat > 0.5
+			}
+		}
+
+		visible = {
+			has_completed_focus = BGD_chuanbo_shanyao
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = -0.25
+			political_power_factor = -0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			add_offsite_building = { 
+			    type = industrial_complex
+			    level = 1
+		    }
+			add_offsite_building = { 
+			    type = arms_factory
+			    level = 1
+		    }
+			add_offsite_building = { 
+			    type = dockyard
+			    level = 1
+		    }
+			PNG = {
+			    set_politics = {
+			        ruling_party = social_democrat
+			        elections_allowed = yes
+					election_frequency = 60
+		        }
+				set_party_name = {
+				    ideology = social_democrat
+				    long_name = BGD_bby_shanyaodang_long
+				    name = BGD_bby_shanyaodang
+			    }
+				add_ideas = BGD_shanyao_guojia
+			}
+		}
+	}
+	BGD_yinni_shanyao = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 0
+		days_remove = 50
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_chuanbo_shanyao
+			INS = {
+				social_democrat > 0.5
+			}
+		}
+
+		visible = {
+			has_completed_focus = BGD_chuanbo_shanyao
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = -0.25
+			political_power_factor = -0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			add_offsite_building = { 
+			    type = industrial_complex
+			    level = 1
+		    }
+			add_offsite_building = { 
+			    type = arms_factory
+			    level = 1
+		    }
+			add_offsite_building = { 
+			    type = dockyard
+			    level = 1
+		    }
+			INS = {
+			    set_politics = {
+			        ruling_party = social_democrat
+			        elections_allowed = yes
+					election_frequency = 60
+		        }
+				set_party_name = {
+				    ideology = social_democrat
+				    long_name = BGD_yinni_shanyaodang_long
+				    name = BGD_yinni_shanyaodang
+			    }
+				add_ideas = BGD_shanyao_guojia
+			}
+		}
+	}
+	BGD_feilvbing_shanyao = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 0
+		days_remove = 50
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_chuanbo_shanyao
+			PHI = {
+				social_democrat > 0.5
+			}
+		}
+
+		visible = {
+			has_completed_focus = BGD_chuanbo_shanyao
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = -0.25
+			political_power_factor = -0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			add_offsite_building = { 
+			    type = industrial_complex
+			    level = 1
+		    }
+			add_offsite_building = { 
+			    type = arms_factory
+			    level = 1
+		    }
+			add_offsite_building = { 
+			    type = dockyard
+			    level = 1
+		    }
+			PHI = {
+			    set_politics = {
+			        ruling_party = social_democrat
+			        elections_allowed = yes
+					election_frequency = 72
+		        }
+				set_party_name = {
+				    ideology = social_democrat
+				    long_name = BGD_feilvbing_shanyaodang_long
+				    name = BGD_feilvbing_shanyaodang
+			    }
+				add_ideas = BGD_shanyao_guojia
+			}
+		}
+	}
+	BGD_mlxy_shanyao = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 0
+		days_remove = 50
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_chuanbo_shanyao
+			MAL = {
+				social_democrat > 0.5
+			}
+		}
+
+		visible = {
+			has_completed_focus = BGD_chuanbo_shanyao
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = -0.25
+			political_power_factor = -0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			add_offsite_building = { 
+			    type = industrial_complex
+			    level = 1
+		    }
+			add_offsite_building = { 
+			    type = arms_factory
+			    level = 1
+		    }
+			add_offsite_building = { 
+			    type = dockyard
+			    level = 1
+		    }
+			MAL = {
+			    set_politics = {
+			        ruling_party = social_democrat
+			        elections_allowed = yes
+					election_frequency = 48
+		        }
+				set_party_name = {
+				    ideology = social_democrat
+				    long_name = BGD_mlxy_shanyaodang_long
+				    name = BGD_mlxy_shanyaodang
+			    }
+				add_ideas = BGD_shanyao_guojia
+			}
+		}
+	}
+	BGD_xinjiapo_shanyao = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 0
+		days_remove = 50
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_chuanbo_shanyao
+			SIG = {
+				social_democrat > 0.5
+			}
+		}
+
+		visible = {
+			has_completed_focus = BGD_chuanbo_shanyao
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = -0.25
+			political_power_factor = -0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			add_offsite_building = { 
+			    type = industrial_complex
+			    level = 1
+		    }
+			add_offsite_building = { 
+			    type = arms_factory
+			    level = 1
+		    }
+			add_offsite_building = { 
+			    type = dockyard
+			    level = 1
+		    }
+			SIG = {
+			    set_politics = {
+			        ruling_party = social_democrat
+			        elections_allowed = yes
+					election_frequency = 60
+		        }
+				set_party_name = {
+				    ideology = social_democrat
+				    long_name = BGD_xinjiapo_shanyaodang_long
+				    name = BGD_xinjiapo_shanyaodang
+			    }
+				add_ideas = BGD_shanyao_guojia
+			}
+		}
+	}
+	BGD_taiguo_shanyao = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 0
+		days_remove = 50
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_chuanbo_shanyao
+			SIA = {
+				social_democrat > 0.5
+			}
+		}
+
+		visible = {
+			has_completed_focus = BGD_chuanbo_shanyao
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = -0.25
+			political_power_factor = -0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			add_offsite_building = { 
+			    type = industrial_complex
+			    level = 1
+		    }
+			add_offsite_building = { 
+			    type = arms_factory
+			    level = 1
+		    }
+			add_offsite_building = { 
+			    type = dockyard
+			    level = 1
+		    }
+			SIA = {
+			    set_politics = {
+			        ruling_party = social_democrat
+			        elections_allowed = yes
+					election_frequency = 48
+		        }
+				set_party_name = {
+				    ideology = social_democrat
+				    long_name = BGD_taiguo_shanyaodang_long
+				    name = BGD_taiguo_shanyaodang
+			    }
+				add_ideas = BGD_shanyao_guojia
+			}
+		}
+	}
+	BGD_yindu_shanyao = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 0
+		days_remove = 50
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_chuanbo_shanyao
+			RAJ = {
+				social_democrat > 0.5
+			}
+		}
+
+		visible = {
+			has_completed_focus = BGD_chuanbo_shanyao
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = -0.25
+			political_power_factor = -0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			add_offsite_building = { 
+			    type = industrial_complex
+			    level = 1
+		    }
+			add_offsite_building = { 
+			    type = arms_factory
+			    level = 1
+		    }
+			add_offsite_building = { 
+			    type = dockyard
+			    level = 1
+		    }
+			RAJ = {
+			    set_politics = {
+			        ruling_party = social_democrat
+			        elections_allowed = yes
+					election_frequency = 60
+		        }
+				set_party_name = {
+				    ideology = social_democrat
+				    long_name = BGD_yindu_shanyaodang_long
+				    name = BGD_yindu_shanyaodang
+			    }
+				add_ideas = BGD_shanyao_guojia
+			}
+		}
+	}
+	BGD_mengjiala_shanyao = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 0
+		days_remove = 50
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_chuanbo_shanyao
+			BAN = {
+				social_democrat > 0.5
+			}
+		}
+
+		visible = {
+			has_completed_focus = BGD_chuanbo_shanyao
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = -0.25
+			political_power_factor = -0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			add_offsite_building = { 
+			    type = industrial_complex
+			    level = 1
+		    }
+			add_offsite_building = { 
+			    type = arms_factory
+			    level = 1
+		    }
+			add_offsite_building = { 
+			    type = dockyard
+			    level = 1
+		    }
+			BAN = {
+			    set_politics = {
+			        ruling_party = social_democrat
+			        elections_allowed = yes
+					election_frequency = 48
+		        }
+				set_party_name = {
+				    ideology = social_democrat
+				    long_name = BGD_mengjiala_shanyaodang_long
+				    name = BGD_mengjiala_shanyaodang
+			    }
+				add_ideas = BGD_shanyao_guojia
+			}
+		}
+	}
+	BGD_ouzhou_hezuo = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 60
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_tuanjie_shijie
+		}
+
+		visible = {
+			has_completed_focus = BGD_tuanjie_shijie
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = -0.15
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			add_offsite_building = { 
+			    type = industrial_complex
+			    level = 5
+		    }
+			add_ideas = BGD_duiou_hezuo
+		}
+	}
+	BGD_eguo_hezuo = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 60
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_tuanjie_shijie
+		}
+
+		visible = {
+			has_completed_focus = BGD_tuanjie_shijie
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = -0.15
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			add_offsite_building = { 
+			    type = industrial_complex
+			    level = 2
+		    }
+			add_resource = {
+				type = oil
+				amount = 50
+				state = 1332
+			}
+			add_ideas = BGD_duie_hezuo
+		}
+	}
+	BGD_disanshijie_hezuo = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 60
+		days_remove = 60
+
+		fire_only_once = yes
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_tuanjie_shijie
+		}
+
+		visible = {
+			has_completed_focus = BGD_tuanjie_shijie
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			political_power_gain = -0.15
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			add_offsite_building = { 
+			    type = industrial_complex
+			    level = 1
+		    }
+			add_political_power = 100
+			add_ideas = BGD_duidisan_hezuo
+		}
+	}
+	BGD_tuijin_hezuo = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		cost = 70
+		days_remove = 255
+
+		fire_only_once = no
+		days_re_enable = 1
+		
+		allowed = {
+			tag = BGD
+		}
+
+		available = {
+			has_completed_focus = BGD_shendu_hezuo
+		}
+
+		visible = {
+			has_completed_focus = BGD_shendu_hezuo
+        }
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = -0.05
+			income_growth_factor = 0.05
+			production_speed_buildings_factor = 0.05
+			industrial_capacity_factory = 0.05
+			industrial_capacity_dockyard = 0.05
+			production_factory_max_efficiency_factor = 0.05
+		}
+			
+		complete_effect = {
+
+		}
+
+		remove_effect = {
+			every_country = {
+				limit = {
+					is_ally_with = BGD
+					NOT = {
+						tag = BGD
+					}
+				}
+				add_ideas = BGD_yazi_chengyuan
+			}
+		}
+	}
+}
+BGD_dadongya_zhanzheng = {
+	BGD_heping_daolai = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		days_mission_timeout = 365
+		
+		allowed = {
+			tag = BGD
+		}
+
+		activation = {
+			has_country_flag = BGD_gaw_begin_1
+		}
+
+		available = {
+			has_country_flag = BGD_gaw_huosheng
+		}
+
+        is_good = no
+
+		visible = {
+           
+        }
+
+		cancel_trigger = {
+			PRC = {
+				surrender_progress > 0.65
+			}
+		}
+		timeout_effect = {
+			custom_effect_tooltip = BGD_heping_daolai_tt
+			activate_mission = BGD_heping_daolai
+		}
+		cancel_effect = {
+			custom_effect_tooltip = BGD_heping_daolai_1_tt
+			hidden_effect = {
+				country_event = {
+					id = bgd.4981
+				}
+				news_event = {
+					id = news.1217
+				}
+			}
+		}
+	}
+}
+BGD_quanguo_xunyan = {
+	BGD_jianli_yidong_zhengfu = {
+
+	priority = 1
+
+	icon = GFX_JAP_election_day
+
+	cost = 100
+	days_remove = 1
+
+	fire_only_once = yes
+		
+	allowed = {
+		tag = BGD
+	}
+
+	available = {
+		
+	}
+
+	visible = {
+		
+    }
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	modifier = {
+
+	}
+			
+	complete_effect = {
+		add_stability = -0.1
+	}
+
+	remove_effect = {
+		set_country_flag = BGD_yidong_zhengfu_jianli
+		custom_effect_tooltip = BGD_kaishi_xunyan_tt
+	}
+	}
+	BGD_zhongnan_xunyan = {
+
+	priority = 1
+
+	icon = GFX_JAP_election_day
+
+	cost = 30
+	days_remove = 35
+
+	fire_only_once = yes
+		
+	allowed = {
+		tag = BGD
+	}
+
+	available = {
+		check_variable = { xunyan_shangxian < 1 }
+		has_country_flag = BGD_yidong_zhengfu_jianli
+	}
+
+	visible = {
+		
+    }
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	modifier = {
+
+	}
+			
+	complete_effect = {
+		add_to_variable = { xunyan_shangxian = 1 }	
+	}
+
+	remove_effect = {
+		add_to_variable = { xunyan_shangxian = -1 }
+		1332 = {
+			add_dynamic_modifier = {
+				modifier = BGD_xunyan_yingxiang
+			}
+		}
+		282 = {
+			add_dynamic_modifier = {
+				modifier = BGD_xunyan_yingxiang
+			}
+		}
+		1341 = {
+			add_dynamic_modifier = {
+				modifier = BGD_xunyan_yingxiang
+			}
+		}
+		532 = {
+			add_dynamic_modifier = {
+				modifier = BGD_xunyan_yingxiang
+			}
+		}
+		1337 = {
+			add_dynamic_modifier = {
+				modifier = BGD_xunyan_yingxiang
+			}
+		}
+	}
+	}
+	BGD_zhongbei_xunyan = {
+
+	priority = 1
+
+	icon = GFX_JAP_election_day
+
+	cost = 30
+	days_remove = 35
+
+	fire_only_once = yes
+		
+	allowed = {
+		tag = BGD
+	}
+
+	available = {
+		check_variable = { xunyan_shangxian < 1 }
+		has_country_flag = BGD_yidong_zhengfu_jianli
+	}
+
+	visible = {
+		
+    }
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	modifier = {
+
+	}
+			
+	complete_effect = {
+		add_to_variable = { xunyan_shangxian = 1 }	
+	}
+
+	remove_effect = {
+		add_to_variable = { xunyan_shangxian = -1 }
+		533 = {
+			add_dynamic_modifier = {
+				modifier = BGD_xunyan_yingxiang
+			}
+		}
+		534 = {
+			add_dynamic_modifier = {
+				modifier = BGD_xunyan_yingxiang
+			}
+		}
+		535 = {
+			add_dynamic_modifier = {
+				modifier = BGD_xunyan_yingxiang
+			}
+		}
+	}
+	}
+	BGD_benzhou_nanbu_xunyan = {
+
+	priority = 1
+
+	icon = GFX_JAP_election_day
+
+	cost = 30
+	days_remove = 35
+
+	fire_only_once = yes
+		
+	allowed = {
+		tag = BGD
+	}
+
+	available = {
+		check_variable = { xunyan_shangxian < 1 }
+		has_country_flag = BGD_yidong_zhengfu_jianli
+	}
+
+	visible = {
+		
+    }
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	modifier = {
+
+	}
+			
+	complete_effect = {
+		add_to_variable = { xunyan_shangxian = 1 }	
+	}
+
+	remove_effect = {
+		add_to_variable = { xunyan_shangxian = -1 }
+		531 = {
+			add_dynamic_modifier = {
+				modifier = BGD_xunyan_yingxiang
+			}
+		}
+		529 = {
+			add_dynamic_modifier = {
+				modifier = BGD_xunyan_yingxiang
+			}
+		}
+		1340 = {
+			add_dynamic_modifier = {
+				modifier = BGD_xunyan_yingxiang
+			}
+		}
+	}
+	}
+	BGD_benzhou_beibu_xunyan = {
+
+	priority = 1
+
+	icon = GFX_JAP_election_day
+
+	cost = 30
+	days_remove = 35
+
+	fire_only_once = yes
+		
+	allowed = {
+		tag = BGD
+	}
+
+	available = {
+		check_variable = { xunyan_shangxian < 1 }
+		has_country_flag = BGD_yidong_zhengfu_jianli
+	}
+
+	visible = {
+		
+    }
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	modifier = {
+
+	}
+			
+	complete_effect = {
+		add_to_variable = { xunyan_shangxian = 1 }	
+	}
+
+	remove_effect = {
+		add_to_variable = { xunyan_shangxian = -1 }
+		1335 = {
+			add_dynamic_modifier = {
+				modifier = BGD_xunyan_yingxiang
+			}
+		}
+		1336 = {
+			add_dynamic_modifier = {
+				modifier = BGD_xunyan_yingxiang
+			}
+		}
+	}
+	}
+	BGD_beihaidao_xunyan = {
+
+	priority = 1
+
+	icon = GFX_JAP_election_day
+
+	cost = 30
+	days_remove = 35
+
+	fire_only_once = yes
+		
+	allowed = {
+		tag = BGD
+	}
+
+	available = {
+		check_variable = { xunyan_shangxian < 1 }
+		has_country_flag = BGD_yidong_zhengfu_jianli
+	}
+
+	visible = {
+		
+    }
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	modifier = {
+
+	}
+			
+	complete_effect = {
+		add_to_variable = { xunyan_shangxian = 1 }	
+	}
+
+	remove_effect = {
+		add_to_variable = { xunyan_shangxian = -1 }
+		1333 = {
+			add_dynamic_modifier = {
+				modifier = BGD_xunyan_yingxiang
+			}
+		}
+		1334 = {
+			add_dynamic_modifier = {
+				modifier = BGD_xunyan_yingxiang
+			}
+		}
+		536 = {
+			add_dynamic_modifier = {
+				modifier = BGD_xunyan_yingxiang
+			}
+		}
+	}
+	}
+	BGD_jiuzhousiguo_chongsheng_xunyan = {
+
+	priority = 1
+
+	icon = GFX_JAP_election_day
+
+	cost = 30
+	days_remove = 35
+
+	fire_only_once = yes
+		
+	allowed = {
+		tag = BGD
+	}
+
+	available = {
+		check_variable = { xunyan_shangxian < 1 }
+		has_country_flag = BGD_yidong_zhengfu_jianli
+	}
+
+	visible = {
+		
+    }
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	modifier = {
+
+	}
+			
+	complete_effect = {
+		add_to_variable = { xunyan_shangxian = 1 }	
+	}
+
+	remove_effect = {
+		add_to_variable = { xunyan_shangxian = -1 }
+		1338 = {
+			add_dynamic_modifier = {
+				modifier = BGD_xunyan_yingxiang
+			}
+		}
+		530 = {
+			add_dynamic_modifier = {
+				modifier = BGD_xunyan_yingxiang
+			}
+		}
+		528 = {
+			add_dynamic_modifier = {
+				modifier = BGD_xunyan_yingxiang
+			}
+		}
+		526 = {
+			add_dynamic_modifier = {
+				modifier = BGD_xunyan_yingxiang
+			}
+		}
+	}
+	}
+}
+BGD_shaonv_paifa = {
+	BGD_ppp_tuanjie_shehui = {
+
+	priority = 7
+
+	icon = GFX_JAP_election_day
+
+	cost = 0
+	days_remove = 180
+
+	fire_only_once = no
+	days_re_enable = 1
+		
+	allowed = {
+		tag = BGD
+	}
+
+	available = {
+		check_variable = { zhengce_dianshu > 99 }
+	}
+
+	visible = {
+		
+    }
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	modifier = {
+		political_power_cost = -0.15
+		stability_factor = 0.1
+		society_development_monthly = 0.02
+		consumer_goods_factor = -0.12
+		production_speed_buildings_factor = 0.07
+		social_democrat_drift = 0.1
+	}
+			
+	complete_effect = {
+		add_to_variable = { zhengce_dianshu = -100 }
+		custom_effect_tooltip = BGD_zhengce_dianhsu_tishi_tt
+		custom_effect_tooltip = BGD_zhengce_dianhsu_jianshao_tt	
+	}
+
+	remove_effect = {
+		set_temp_variable = {
+			var = society_development_var_temp
+			value = 0.04
+		}
+		add_society_development = yes
+	}
+	}
+	BGD_ppp_peiyang_gaosuzhi_gongmin = {
+
+	priority = 7
+
+	icon = GFX_JAP_election_day
+
+	cost = 0
+	days_remove = 180
+
+	fire_only_once = no
+	days_re_enable = 1
+		
+	allowed = {
+		tag = BGD
+	}
+
+	available = {
+		check_variable = { zhengce_dianshu > 99 }
+	}
+
+	visible = {
+		
+    }
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	modifier = {
+		research_speed_factor = 0.06
+		stability_weekly = 0.003
+		production_factory_max_efficiency_factor = 0.05
+		academic_development_monthly = 0.015
+		society_development_monthly = 0.015
+		poverty_development_monthly = 0.015
+		social_democrat_drift = 0.05
+	}
+			
+	complete_effect = {
+		add_to_variable = { zhengce_dianshu = -100 }
+		custom_effect_tooltip = BGD_zhengce_dianhsu_tishi_tt
+		custom_effect_tooltip = BGD_zhengce_dianhsu_jianshao_tt	
+	}
+
+	remove_effect = {
+		set_temp_variable = {
+			var = poverty_development_var_temp
+			value = 0.05
+		}
+		add_poverty_development = yes
+		set_temp_variable = {
+			var = society_development_var_temp
+			value = 0.05
+		}
+		add_society_development = yes
+		set_temp_variable = {
+			var = academic_development_var_temp
+			value = 0.05
+		}
+		add_academic_development = yes
+	}
+	}
+	BGD_ppp_wenhua_gexin = {
+
+	priority = 7
+
+	icon = GFX_JAP_election_day
+
+	cost = 0
+	days_remove = 180
+
+	fire_only_once = no
+	days_re_enable = 1
+		
+	allowed = {
+		tag = BGD
+	}
+
+	available = {
+		check_variable = { zhengce_dianshu > 99 }
+	}
+
+	visible = {
+		
+    }
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	modifier = {
+		society_development_monthly = 0.025
+		political_power_gain = 0.12
+		political_power_factor = 0.03
+		stability_factor = 0.15
+		social_democrat_drift = 0.05
+		industrial_capacity_factory = 0.07
+		industrial_capacity_dockyard = 0.07
+		income_growth_factor = 0.05
+	}
+			
+	complete_effect = {
+		add_to_variable = { zhengce_dianshu = -100 }
+		custom_effect_tooltip = BGD_zhengce_dianhsu_tishi_tt
+		custom_effect_tooltip = BGD_zhengce_dianhsu_jianshao_tt	
+	}
+
+	remove_effect = {
+		set_temp_variable = {
+			var = society_development_var_temp
+			value = 0.03
+		}
+		add_society_development = yes
+	}
+	}
+	BGD_rose_jishu_guanliao_hezuo = {
+
+	priority = 6
+
+	icon = GFX_JAP_election_day
+
+	cost = 0
+	days_remove = 180
+
+	fire_only_once = no
+	days_re_enable = 1
+		
+	allowed = {
+		tag = BGD
+	}
+
+	available = {
+		check_variable = { zhengce_dianshu > 99 }
+	}
+
+	visible = {
+		
+    }
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	modifier = {
+		production_factory_max_efficiency_factor = 0.12
+		production_factory_efficiency_gain_factor = 0.1
+		research_speed_factor = 0.11
+		consumer_goods_factor = -0.05
+		industrial_development_monthly = 0.015
+		farming_development_monthly = 0.015
+	}
+			
+	complete_effect = {
+		add_to_variable = { zhengce_dianshu = -100 }
+		custom_effect_tooltip = BGD_zhengce_dianhsu_tishi_tt
+		custom_effect_tooltip = BGD_zhengce_dianhsu_jianshao_tt	
+	}
+
+	remove_effect = {
+		set_temp_variable = {
+			var = industrial_development_var_temp
+			value = 0.05
+		}
+		add_industrial_development = yes
+		set_temp_variable = {
+			var = farming_development_var_temp
+			value = 0.05
+		}
+		add_farming_development = yes
+	}
+	}
+	BGD_rose_junshi_zhuanyehua = {
+
+	priority = 6
+
+	icon = GFX_JAP_election_day
+
+	cost = 0
+	days_remove = 180
+
+	fire_only_once = no
+	days_re_enable = 1
+		
+	allowed = {
+		tag = BGD
+	}
+
+	available = {
+		check_variable = { zhengce_dianshu > 99 }
+	}
+
+	visible = {
+		
+    }
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	modifier = {
+		military_development_monthly = 0.025
+		industrial_capacity_factory = 0.1
+		industrial_capacity_dockyard = 0.1
+		war_support_weekly = 0.003
+	}
+			
+	complete_effect = {
+		add_to_variable = { zhengce_dianshu = -100 }
+		custom_effect_tooltip = BGD_zhengce_dianhsu_tishi_tt
+		custom_effect_tooltip = BGD_zhengce_dianhsu_jianshao_tt	
+	}
+
+	remove_effect = {
+		set_temp_variable = {
+			var = military_development_var_temp
+			value = 0.08
+		}
+		add_military_development = yes
+	}
+	}
+	BGD_rose_zhongyang_jiquan = {
+
+	priority = 6
+
+	icon = GFX_JAP_election_day
+
+	cost = 0
+	days_remove = 180
+
+	fire_only_once = no
+	days_re_enable = 1
+		
+	allowed = {
+		tag = BGD
+	}
+
+	available = {
+		check_variable = { zhengce_dianshu > 99 }
+	}
+
+	visible = {
+		
+    }
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	modifier = {
+		production_speed_buildings_factor = 0.12
+		industrial_capacity_factory = 0.06
+		industrial_capacity_dockyard = 0.06
+		production_factory_max_efficiency_factor = 0.03
+		political_power_gain = 0.08
+		political_power_factor = 0.02
+	}
+			
+	complete_effect = {
+		add_to_variable = { zhengce_dianshu = -100 }
+		custom_effect_tooltip = BGD_zhengce_dianhsu_tishi_tt
+		custom_effect_tooltip = BGD_zhengce_dianhsu_jianshao_tt	
+	}
+
+	remove_effect = {
+
+	}
+	}
+	BGD_ag_baozhang_laodongzhe_quanyi = {
+
+	priority = 5
+
+	icon = GFX_JAP_election_day
+
+	cost = 0
+	days_remove = 180
+
+	fire_only_once = no
+	days_re_enable = 1
+		
+	allowed = {
+		tag = BGD
+	}
+
+	available = {
+		check_variable = { zhengce_dianshu > 99 }
+	}
+
+	visible = {
+		
+    }
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	modifier = {
+		poverty_development_monthly = 0.025
+		production_factory_max_efficiency_factor = 0.08
+		production_factory_efficiency_gain_factor = 0.08
+		industrial_capacity_factory = 0.04
+		industrial_capacity_dockyard = 0.04
+		stability_weekly = 0.003
+	}
+			
+	complete_effect = {
+		add_to_variable = { zhengce_dianshu = -100 }
+		custom_effect_tooltip = BGD_zhengce_dianhsu_tishi_tt
+		custom_effect_tooltip = BGD_zhengce_dianhsu_jianshao_tt	
+	}
+
+	remove_effect = {
+		set_temp_variable = {
+			var = poverty_development_var_temp
+			value = 0.03
+		}
+		add_poverty_development = yes
+	}
+	}
+	BGD_ag_baohu_ruoshi_sheui_gongzheng = {
+
+	priority = 5
+
+	icon = GFX_JAP_election_day
+
+	cost = 0
+	days_remove = 180
+
+	fire_only_once = no
+	days_re_enable = 1
+		
+	allowed = {
+		tag = BGD
+	}
+
+	available = {
+		check_variable = { zhengce_dianshu > 99 }
+	}
+
+	visible = {
+		
+    }
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	modifier = {
+		poverty_development_monthly = 0.015
+		society_development_monthly = 0.015
+		stability_factor = 0.1
+		monthly_population = 0.1
+		production_speed_infrastructure_factor = 0.15
+		production_speed_buildings_factor = 0.03
+		stability_weekly = 0.002
+	}
+			
+	complete_effect = {
+		add_to_variable = { zhengce_dianshu = -100 }
+		custom_effect_tooltip = BGD_zhengce_dianhsu_tishi_tt
+		custom_effect_tooltip = BGD_zhengce_dianhsu_jianshao_tt	
+	}
+
+	remove_effect = {
+		set_temp_variable = {
+			var = poverty_development_var_temp
+			value = 0.05
+		}
+		add_poverty_development = yes
+		set_temp_variable = {
+			var = society_development_var_temp
+			value = 0.05
+		}
+		add_society_development = yes
+	}
+	}
+	BGD_ag_ziyou_duli_jingshen = {
+
+	priority = 5
+
+	icon = GFX_JAP_election_day
+
+	cost = 0
+	days_remove = 180
+
+	fire_only_once = no
+	days_re_enable = 1
+		
+	allowed = {
+		tag = BGD
+	}
+
+	available = {
+		check_variable = { zhengce_dianshu > 99 }
+	}
+
+	visible = {
+		
+    }
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	modifier = {
+		research_speed_factor = 0.05
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_efficiency_gain_factor = 0.07
+		consumer_goods_factor = -0.07
+		war_support_weekly = 0.002
+		weekly_manpower = 1000
+	}
+			
+	complete_effect = {
+		add_to_variable = { zhengce_dianshu = -100 }
+		custom_effect_tooltip = BGD_zhengce_dianhsu_tishi_tt
+		custom_effect_tooltip = BGD_zhengce_dianhsu_jianshao_tt	
+	}
+
+	remove_effect = {
+		add_manpower = 5000
+	}
+	}
+	BGD_hhw_daqiye_hezuo = {
+
+		priority = 4
+	
+		icon = GFX_JAP_election_day
+	
+		cost = 0
+		days_remove = 180
+	
+		fire_only_once = no
+		days_re_enable = 1
+			
+		allowed = {
+			tag = BGD
+		}
+	
+		available = {
+			check_variable = { zhengce_dianshu > 99 }
+		}
+	
+		visible = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		modifier = {
+			industrial_capacity_factory = 0.11
+			industrial_capacity_dockyard = 0.11
+			production_speed_buildings_factor = 0.05
+			production_speed_industrial_complex_factor = 0.1
+			industrial_development_monthly = 0.02
+			income_growth_factor = 0.05
+		}
+				
+		complete_effect = {
+			add_to_variable = { zhengce_dianshu = -100 }
+			custom_effect_tooltip = BGD_zhengce_dianhsu_tishi_tt
+			custom_effect_tooltip = BGD_zhengce_dianhsu_jianshao_tt	
+		}
+	
+		remove_effect = {
+			set_temp_variable = {
+				var = industrial_development_var_temp
+				value = 0.04
+			}
+			add_industrial_development = yes
+		}
+		}
+		BGD_hhw_fuchi_zhongxiaowei_qiye = {
+
+			priority = 4
+		
+			icon = GFX_JAP_election_day
+		
+			cost = 0
+			days_remove = 180
+		
+			fire_only_once = no
+			days_re_enable = 1
+				
+			allowed = {
+				tag = BGD
+			}
+		
+			available = {
+				check_variable = { zhengce_dianshu > 99 }
+			}
+		
+			visible = {
+				
+			}
+		
+			ai_will_do = {
+				factor = 1
+			}
+		
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				consumer_goods_factor = -0.1
+				production_speed_office_park_factor = 0.15
+				industrial_development_monthly = 0.015
+				poverty_development_monthly = 0.015
+				income_growth_factor = 0.05
+			}
+					
+			complete_effect = {
+				add_to_variable = { zhengce_dianshu = -100 }
+				custom_effect_tooltip = BGD_zhengce_dianhsu_tishi_tt
+				custom_effect_tooltip = BGD_zhengce_dianhsu_jianshao_tt	
+			}
+		
+			remove_effect = {
+				set_temp_variable = {
+					var = industrial_development_var_temp
+					value = 0.05
+				}
+				add_industrial_development = yes
+				set_temp_variable = {
+					var = poverty_development_var_temp
+					value = 0.05
+				}
+				add_poverty_development = yes
+		    }
+		}
+		BGD_hhw_xiangcun_nongye_zhenxing = {
+
+			priority = 4
+		
+			icon = GFX_JAP_election_day
+		
+			cost = 0
+			days_remove = 180
+		
+			fire_only_once = no
+			days_re_enable = 1
+				
+			allowed = {
+				tag = BGD
+			}
+		
+			available = {
+				check_variable = { zhengce_dianshu > 99 }
+			}
+		
+			visible = {
+				
+			}
+		
+			ai_will_do = {
+				factor = 1
+			}
+		
+			modifier = {
+				monthly_population = 0.15
+				farming_development_monthly = 0.025
+				production_lack_of_resource_penalty_factor = -0.3
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
+				personal_expense_factor = -0.1
+			}
+					
+			complete_effect = {
+				add_to_variable = { zhengce_dianshu = -100 }
+				custom_effect_tooltip = BGD_zhengce_dianhsu_tishi_tt
+				custom_effect_tooltip = BGD_zhengce_dianhsu_jianshao_tt	
+			}
+		
+			remove_effect = {
+				set_temp_variable = {
+					var = farming_development_var_temp
+					value = 0.03
+				}
+				add_farming_development = yes
+		    }
+		}
+		BGD_pp_idol_populism = {
+
+			priority = 3
+		
+			icon = GFX_JAP_election_day
+		
+			cost = 0
+			days_remove = 180
+		
+			fire_only_once = no
+			days_re_enable = 1
+				
+			allowed = {
+				tag = BGD
+			}
+		
+			available = {
+				check_variable = { zhengce_dianshu > 99 }
+			}
+		
+			visible = {
+				
+			}
+		
+			ai_will_do = {
+				factor = 1
+			}
+		
+			modifier = {
+				political_power_gain = 0.1
+				political_power_factor = 0.02
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_factory_max_efficiency_factor = 0.03
+				society_development_monthly = 0.015
+				social_democrat_drift = 0.08
+			}
+					
+			complete_effect = {
+				add_to_variable = { zhengce_dianshu = -100 }
+				custom_effect_tooltip = BGD_zhengce_dianhsu_tishi_tt
+				custom_effect_tooltip = BGD_zhengce_dianhsu_jianshao_tt	
+			}
+		
+			remove_effect = {
+				set_temp_variable = {
+					var = society_development_var_temp
+					value = 0.05
+				}
+				add_society_development = yes
+				add_political_power = 35
+		    }
+		}
+		BGD_pp_jiaoyv_puji = {
+
+			priority = 3
+		
+			icon = GFX_JAP_election_day
+		
+			cost = 0
+			days_remove = 180
+		
+			fire_only_once = no
+			days_re_enable = 1
+				
+			allowed = {
+				tag = BGD
+			}
+		
+			available = {
+				check_variable = { zhengce_dianshu > 99 }
+			}
+		
+			visible = {
+				
+			}
+		
+			ai_will_do = {
+				factor = 1
+			}
+		
+			modifier = {
+				research_speed_factor = 0.13
+				production_factory_max_efficiency_factor = 0.06
+				production_factory_efficiency_gain_factor = 0.06
+				industrial_capacity_factory = 0.03
+				industrial_capacity_dockyard = 0.03
+				academic_development_monthly = 0.025
+			}
+					
+			complete_effect = {
+				add_to_variable = { zhengce_dianshu = -100 }
+				custom_effect_tooltip = BGD_zhengce_dianhsu_tishi_tt
+				custom_effect_tooltip = BGD_zhengce_dianhsu_jianshao_tt	
+			}
+		
+			remove_effect = {
+				set_temp_variable = {
+					var = academic_development_var_temp
+					value = 0.03
+				}
+				add_academic_development = yes
+		    }
+		}
+		BGD_pp_gaige_jiti = {
+
+            priority = 3
+
+            icon = GFX_JAP_election_day
+
+            cost = 0
+            days_remove = 180
+
+            fire_only_once = no
+            days_re_enable = 1
+	
+            allowed = {
+	            tag = BGD
+            }
+
+            available = {
+	            check_variable = { zhengce_dianshu > 99 }
+            }
+
+            visible = {
+	
+            }
+
+            ai_will_do = {
+	            factor = 1
+            }
+
+            modifier = {
+				stability_factor = 0.15
+				war_support_factor = 0.15
+				consumer_goods_factor = -0.08
+				war_support_weekly = 0.001
+				stability_weekly = 0.001
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				political_power_cost = -0.1
+				production_speed_buildings_factor = 0.04
+				society_development_monthly = 0.015
+				poverty_development_monthly = 0.015
+            }
+		
+            complete_effect = {
+	            add_to_variable = { zhengce_dianshu = -100 }
+	            custom_effect_tooltip = BGD_zhengce_dianhsu_tishi_tt
+	            custom_effect_tooltip = BGD_zhengce_dianhsu_jianshao_tt	
+			}
+
+            remove_effect = {
+				set_temp_variable = {
+			        var = poverty_development_var_temp
+			        value = 0.05
+		        }
+		        add_poverty_development = yes
+		        set_temp_variable = {
+			        var = society_development_var_temp
+			        value = 0.05
+		        }
+		        add_society_development = yes
+            }
+        }
+	BGD_zhengcedian_ziran_zengzhang = {
+
+		priority = 1
+
+		icon = GFX_JAP_election_day
+
+		days_mission_timeout = 90
+		
+		allowed = {
+			tag = BGD
+		}
+
+		activation = {
+			has_country_flag = BGD_shaonv_yuedui_paifa
+		}
+
+		available = {
+			always = no
+		}
+
+        is_good = no
+
+		visible = {
+    
+        }
+
+		cancel_trigger = {
+			
+		}
+		timeout_effect = {
+			add_to_variable = { zhengce_dianshu = 150 }
+			activate_mission = BGD_zhengcedian_ziran_zengzhang
+			custom_effect_tooltip = BGD_zhengce_dianhsu_zengjia_tt
+		}
+		cancel_effect = {
+		}
+	}
+	BGD_duihuan_zhengcedian = {
+
+	priority = 1
+
+	icon = GFX_JAP_election_day
+
+	cost = 100
+	days_remove = 1
+
+	fire_only_once = no
+	days_re_enable = 1
+		
+	allowed = {
+		tag = BGD
+	}
+
+	available = {
+		
+	}
+
+	visible = {
+		
+    }
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	modifier = {
+
+	}
+			
+	complete_effect = {
+		add_to_variable = { zhengce_dianshu = 500 }
+		custom_effect_tooltip = BGD_zhengce_dianhsu_zengjia_1_tt
+	}
+
+	remove_effect = {
+
+	}
+	}
+}
+decisions_BGD_cabinet = {
+    BGD_change_cabinet = {
+		icon = GFX_Banned_Moderates
+		name = BGD_decisions_BGD_cabinet
+		fire_only_once = no
+		days_re_enable = 1
+		cost = 0
+		allowed = {
+			always = yes
+		}
+		visible = {
+		}
+		available = {
+			always = no
+		}
+		complete_effect = {
+			}
+		}
+	}
+BGD_osaka_kansai = {
+	BGD_kaimu = {
+
+		priority = 6
+	
+		icon = GFX_jueyi_rimi
+	
+		cost = 0
+		days_remove = 1
+	
+		fire_only_once = yes
+			
+		allowed = {
+			tag = BGD
+		}
+	
+		available = {
+			date > 2025.4.13
+			check_variable = { 
+				shibo_jindu = 100
+				tooltip = check_variable_shibohui_tt
+		    }
+		}
+	
+		visible = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		modifier = {
+	
+		}
+				
+		complete_effect = {
+			custom_effect_tooltip = BGD_kaimu_tt
+		}
+	
+		remove_effect = {
+			custom_effect_tooltip = check_variable_shibohui_jvban_tt
+			if = {
+				limit = {
+					check_variable = { 
+						shibo_zhiliang = 100
+					}
+				}
+				hidden_effect = {
+					country_event = {
+						id = bgd.97
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { 
+						shibo_zhiliang < 100
+						shibo_zhiliang > 64
+					}
+				}
+				hidden_effect = {
+					country_event = {
+						id = bgd.98
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { 
+						shibo_zhiliang < 65
+					}
+				}
+				hidden_effect = {
+					country_event = {
+						id = bgd.99
+					}
+				}
+			}
+		}
+	}
+	BGD_osaka_kansai_daojishi = {
+
+		priority = 1
+
+		icon = GFX_jueyi_rimi
+
+		days_mission_timeout = 1050
+		
+		allowed = {
+			tag = BGD
+		}
+
+		activation = {
+			always = no
+		}
+
+		available = {
+			date > 2025.4.13
+			check_variable = { 
+				shibo_jindu = 100
+				tooltip = check_variable_shibohui_tt
+		    }
+		}
+
+        is_good = no
+
+		visible = {
+    
+        }
+
+		cancel_trigger = {
+			date > 2025.10.13
+			check_variable = { 
+				shibo_jindu < 100
+				tooltip = check_variable_shibohui_yanwu_tt
+		    }
+		}
+		timeout_effect = {
+			
+		}
+		cancel_effect = {
+			country_event = {
+				id = bgd.100
+			}
+		}
+	}
+	BGD_osaka_kansai_shigong = {
+
+		priority = 2
+
+		icon = GFX_jueyi_rimi
+
+		days_mission_timeout = 60
+		
+		allowed = {
+			tag = BGD
+		}
+
+		activation = {
+			always = no
+		}
+
+		available = {
+			always = no
+		}
+
+        is_good = no
+
+		visible = {
+    
+        }
+
+		cancel_trigger = {
+			
+		}
+		timeout_effect = {
+		    add_to_variable = { 
+				shibo_jindu = 3
+				tooltip = shibo_jindu_zengjia_3_tt
+	        }
+			add_to_variable = { 
+				shibo_zhiliang = 2
+				tooltip = shibo_zhiliang_zengjia_2_tt
+	        }
+			clamp_variable = {
+				var = shibo_jindu
+				min = 0
+				max = 100
+			}
+			clamp_variable = {
+				var = shibo_zhiliang
+				min = 0
+				max = 100
+			}
+			activate_mission = BGD_osaka_kansai_shigong
+		}
+		cancel_effect = {
+			
+		}
+	}
+	BGD_jiada_touru = {
+
+		priority = 5
+	
+		icon = GFX_jueyi_rimi
+	
+		cost = 10
+		days_remove = 40
+	
+		fire_only_once = no
+		days_re_enable = 20
+			
+		allowed = {
+			tag = BGD
+		}
+	
+		available = {
+			
+		}
+	
+		visible = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		modifier = {
+			civilian_factory_use = 2
+			expense_growth_factor = 0.1
+		}
+				
+		complete_effect = {
+			add_days_mission_timeout = {
+				mission = BGD_osaka_kansai_shigong
+				days = -35
+			}
+			custom_effect_tooltip = BGD_20days_reenable_tt
+		}
+	
+		remove_effect = {
+			
+		}
+	}
+	BGD_qingqiu_zhongyang = {
+
+		priority = 4
+	
+		icon = GFX_jueyi_rimi
+	
+		cost = 10
+		days_remove = 60
+	
+		fire_only_once = yes
+			
+		allowed = {
+			tag = BGD
+		}
+	
+		available = {
+			
+		}
+	
+		visible = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		modifier = {
+			civilian_factory_use = 3
+			expense_growth_factor = 0.15
+		}
+				
+		complete_effect = {
+			country_event = {
+				id = bgd.101
+			}
+			set_country_flag = BGD_paichu_dachen
+			custom_effect_tooltip = BGD_paichu_dachen_tt
+		}
+	
+		remove_effect = {
+			add_to_variable = { 
+				shibo_jindu = 10
+				tooltip = shibo_jindu_zengjia_10_tt
+	        }
+			add_to_variable = { 
+				shibo_zhiliang = 5
+				tooltip = shibo_zhiliang_zengjia_5_tt
+	        }
+			clamp_variable = {
+				var = shibo_jindu
+				min = 0
+				max = 100
+			}
+			clamp_variable = {
+				var = shibo_zhiliang
+				min = 0
+				max = 100
+			}
+		}
+	}
+	BGD_xiyin_waidi_qiye = {
+
+		priority = 4
+	
+		icon = GFX_jueyi_rimi
+	
+		cost = 20
+		days_remove = 60
+	
+		fire_only_once = yes
+			
+		allowed = {
+			tag = BGD
+		}
+	
+		available = {
+			has_country_flag = BGD_paichu_dachen
+			check_variable = { 
+				shibo_gongzuo < 1
+				tooltip = check_variable_shibo_gongzuo_tt
+		    }
+		}
+	
+		visible = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		modifier = {
+			political_power_cost = 0.1
+			income_growth_factor = 0.05
+		}
+				
+		complete_effect = {
+			add_to_variable = { 
+				shibo_gongzuo = 1
+	        }
+		}
+	
+		remove_effect = {
+			country_event = {
+				id = bgd.102
+			}
+			add_to_variable = { 
+				shibo_jindu = 12
+				tooltip = shibo_jindu_zengjia_12_tt
+	        }
+			add_to_variable = { 
+				shibo_zhiliang = 3
+				tooltip = shibo_zhiliang_zengjia_3_tt
+	        }
+			clamp_variable = {
+				var = shibo_jindu
+				min = 0
+				max = 100
+			}
+			clamp_variable = {
+				var = shibo_zhiliang
+				min = 0
+				max = 100
+			}
+			add_to_variable = { 
+				shibo_gongzuo = -1
+	        }
+		}
+	}
+	BGD_xietiao_weixinhui = {
+
+		priority = 4
+	
+		icon = GFX_jueyi_rimi
+	
+		cost = 35
+		days_remove = 60
+	
+		fire_only_once = yes
+			
+		allowed = {
+			tag = BGD
+		}
+	
+		available = {
+			has_country_flag = BGD_paichu_dachen
+			check_variable = { 
+				shibo_gongzuo < 1
+				tooltip = check_variable_shibo_gongzuo_tt
+		    }
+		}
+	
+		visible = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_gain = -0.15
+		}
+				
+		complete_effect = {
+			add_to_variable = { 
+				shibo_gongzuo = 1
+	        }
+		}
+	
+		remove_effect = {
+			country_event = {
+				id = bgd.103
+			}
+			add_to_variable = { 
+				shibo_jindu = 8
+				tooltip = shibo_jindu_zengjia_8_tt
+	        }
+			add_to_variable = { 
+				shibo_zhiliang = 6
+				tooltip = shibo_zhiliang_zengjia_6_tt
+	        }
+			clamp_variable = {
+				var = shibo_jindu
+				min = 0
+				max = 100
+			}
+			clamp_variable = {
+				var = shibo_zhiliang
+				min = 0
+				max = 100
+			}
+			add_to_variable = { 
+				shibo_gongzuo = -1
+	        }
+		}
+	}
+	BGD_jingchan_zongli = {
+
+		priority = 4
+	
+		icon = GFX_jueyi_rimi
+	
+		cost = 5
+		days_remove = 60
+	
+		fire_only_once = yes
+			
+		allowed = {
+			tag = BGD
+		}
+	
+		available = {
+			has_country_flag = BGD_paichu_dachen
+			check_variable = { 
+				shibo_gongzuo < 1
+				tooltip = check_variable_shibo_gongzuo_tt
+		    }
+		}
+	
+		visible = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		modifier = {
+			production_speed_buildings_factor = -0.05
+			industrial_capacity_factory = 0.08
+			political_power_gain = -0.05
+		}
+				
+		complete_effect = {
+			add_to_variable = { 
+				shibo_gongzuo = 1
+	        }
+		}
+	
+		remove_effect = {
+			country_event = {
+				id = bgd.104
+			}
+			add_to_variable = { 
+				shibo_jindu = 10
+				tooltip = shibo_jindu_zengjia_10_tt
+	        }
+			add_to_variable = { 
+				shibo_zhiliang = 3
+				tooltip = shibo_zhiliang_zengjia_3_tt
+	        }
+			clamp_variable = {
+				var = shibo_jindu
+				min = 0
+				max = 100
+			}
+			clamp_variable = {
+				var = shibo_zhiliang
+				min = 0
+				max = 100
+			}
+			add_to_variable = { 
+				shibo_gongzuo = -1
+	        }
+		}
+	}
+	BGD_mujuan_xingdong = {
+
+		priority = 4
+	
+		icon = GFX_jueyi_rimi
+	
+		cost = 15
+		days_remove = 60
+	
+		fire_only_once = yes
+			
+		allowed = {
+			tag = BGD
+		}
+	
+		available = {
+			has_country_flag = BGD_paichu_dachen
+			check_variable = { 
+				shibo_gongzuo < 1
+				tooltip = check_variable_shibo_gongzuo_tt
+		    }
+		}
+	
+		visible = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		modifier = {
+			income_growth_factor = 0.1
+			consumer_goods_factor = -0.05
+			political_power_factor = -0.06
+		}
+				
+		complete_effect = {
+			add_to_variable = { 
+				shibo_gongzuo = 1
+	        }
+		}
+	
+		remove_effect = {
+			country_event = {
+				id = bgd.105
+			}
+			add_to_variable = { 
+				shibo_jindu = 10
+				tooltip = shibo_jindu_zengjia_8_tt
+	        }
+			add_to_variable = { 
+				shibo_zhiliang = 3
+				tooltip = shibo_zhiliang_zengjia_2_tt
+	        }
+			clamp_variable = {
+				var = shibo_jindu
+				min = 0
+				max = 100
+			}
+			clamp_variable = {
+				var = shibo_zhiliang
+				min = 0
+				max = 100
+			}
+			add_to_variable = { 
+				shibo_gongzuo = -1
+	        }
+		}
+	}
+	BGD_jianshe_zhongmeiguan = {
+
+		priority = 4
+	
+		icon = GFX_jueyi_rimi
+	
+		cost = 30
+		days_remove = 60
+	
+		fire_only_once = yes
+			
+		allowed = {
+			tag = BGD
+		}
+	
+		available = {
+			has_country_flag = BGD_paichu_dachen
+			check_variable = { 
+				shibo_gongzuo < 1
+				tooltip = check_variable_shibo_gongzuo_tt
+		    }
+		}
+	
+		visible = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		modifier = {
+			expense_growth_factor = 0.06
+			political_power_gain = 0.07
+			political_power_factor = 0.02
+		}
+				
+		complete_effect = {
+			add_to_variable = { 
+				shibo_gongzuo = 1
+	        }
+		}
+	
+		remove_effect = {
+			country_event = {
+				id = bgd.106
+			}
+			add_to_variable = { 
+				shibo_jindu = 6
+				tooltip = shibo_jindu_zengjia_6_tt
+	        }
+			add_to_variable = { 
+				shibo_zhiliang = 7
+				tooltip = shibo_zhiliang_zengjia_7_tt
+	        }
+			clamp_variable = {
+				var = shibo_jindu
+				min = 0
+				max = 100
+			}
+			clamp_variable = {
+				var = shibo_zhiliang
+				min = 0
+				max = 100
+			}
+			add_to_variable = { 
+				shibo_gongzuo = -1
+	        }
+		}
+	}
+	BGD_zhongshi_zhiliang = {
+
+		priority = 4
+	
+		icon = GFX_jueyi_rimi
+	
+		cost = 25
+		days_remove = 60
+	
+		fire_only_once = yes
+			
+		allowed = {
+			tag = BGD
+		}
+	
+		available = {
+			has_country_flag = BGD_paichu_dachen
+			check_variable = { 
+				shibo_gongzuo < 1
+				tooltip = check_variable_shibo_gongzuo_tt
+		    }
+			check_variable = { 
+				shibo_jindu > 69
+				tooltip = check_variable_shibo_jindu_zhongshi_zhiliang_tt
+		    }
+		}
+	
+		visible = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		modifier = {
+			production_speed_buildings_factor = -0.04
+			production_factory_max_efficiency_factor = 0.05
+		}
+				
+		complete_effect = {
+			add_to_variable = { 
+				shibo_gongzuo = 1
+	        }
+		}
+	
+		remove_effect = {
+			country_event = {
+				id = bgd.107
+			}
+			add_to_variable = { 
+				shibo_jindu = 3
+				tooltip = shibo_jindu_zengjia_3_tt
+	        }
+			add_to_variable = { 
+				shibo_zhiliang = 9
+				tooltip = shibo_zhiliang_zengjia_9_tt
+	        }
+			clamp_variable = {
+				var = shibo_jindu
+				min = 0
+				max = 100
+			}
+			clamp_variable = {
+				var = shibo_zhiliang
+				min = 0
+				max = 100
+			}
+			add_to_variable = { 
+				shibo_gongzuo = -1
+	        }
+		}
+	}
+	BGD_xuanchuan_shouwei = {
+
+		priority = 4
+	
+		icon = GFX_jueyi_rimi
+	
+		cost = 50
+		days_remove = 60
+	
+		fire_only_once = yes
+			
+		allowed = {
+			tag = BGD
+		}
+	
+		available = {
+			has_country_flag = BGD_paichu_dachen
+			check_variable = { 
+				shibo_gongzuo < 1
+				tooltip = check_variable_shibo_gongzuo_tt
+		    }
+			check_variable = { 
+				shibo_jindu > 84
+				tooltip = check_variable_shibo_jindu_xuanchuan_shouwei_tt
+		    }
+			check_variable = { 
+				shibo_zhiliang > 74
+				tooltip = check_variable_shibo_jindu_xuanchuan_shouwei_1_tt
+		    }
+		}
+	
+		visible = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 1
+		}
+	
+		modifier = {
+			political_power_gain = 0.12
+			political_power_factor = 0.04
+		}
+				
+		complete_effect = {
+			add_to_variable = { 
+				shibo_gongzuo = 1
+	        }
+		}
+	
+		remove_effect = {
+			country_event = {
+				id = bgd.108
+			}
+			add_to_variable = { 
+				shibo_jindu = 5
+				tooltip = shibo_jindu_zengjia_5_tt
+	        }
+			add_to_variable = { 
+				shibo_zhiliang = 5
+				tooltip = shibo_zhiliang_zengjia_5_tt
+	        }
+			clamp_variable = {
+				var = shibo_jindu
+				min = 0
+				max = 100
+			}
+			clamp_variable = {
+				var = shibo_zhiliang
+				min = 0
+				max = 100
+			}
+			add_to_variable = { 
+				shibo_gongzuo = -1
+	        }
+		}
+	}
+}

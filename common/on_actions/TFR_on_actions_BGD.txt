@@ -1,0 +1,167 @@
+on_actions = {
+    on_war = {
+        effect = { 
+        if= {
+                limit = {
+                    BGD = {
+                        has_government = nationalist
+                        has_war_with = DFJ
+                }
+                }
+            BGD = {
+                country_event = {
+                    id = bgd.11
+                    days = 3
+            }
+            add_state_core = 532
+            add_state_core = 533
+            add_state_core = 534
+            add_state_core = 535
+            add_state_core = 531
+            add_state_core = 1340
+            add_state_core = 528
+            add_state_core = 529
+            add_state_core = 1338
+            add_state_core = 526
+            add_state_core = 876
+            add_state_core = 1337
+            add_state_core = 530
+            add_state_core = 645
+        }
+        }
+    }
+}
+    on_peace = {
+        effect = { 
+        if = {
+            limit = {
+                DFJ = {
+                    has_war = no
+                }
+                JAP = {
+                    exists = no
+                }
+            }
+            BGD = {
+                country_event = {
+                    id = bgd.40
+                    days = 3
+                }
+            }
+    }
+}
+}
+ on_startup = {
+        effect = {
+            JAP = {
+                country_event = { 
+                    id = bgd.0
+                }
+            }
+        }
+    }
+    on_peace = {
+        effect = { 
+        if = {
+            limit = {
+                PRC = {
+                    has_war = no
+                }
+                CHI = {
+                    exists = no
+                }
+            }
+            PRC = {
+                country_event = {
+                    id = bgd.1984
+                    days = 7
+                }
+            }
+    }
+}
+}
+on_war = {
+        effect = { 
+        if= {
+                limit = {
+                    BGD = {
+                        has_war_with = PRC
+                }
+                }
+            BGD = {
+                news_event = {
+                    id = news.1218
+                    days = 2
+            }
+        }
+        }
+    }
+}
+on_weekly_BGD = {
+    effect = {
+        if = {
+            limit = {
+                BGD_kasumi_char = { has_trait = kasumi_utopia_off }
+                has_idea = highest_poverty
+                has_idea = highest_industry
+                has_idea = highest_farming
+                has_idea = highest_academic
+                has_idea = highest_society
+            }
+            remove_country_leader_trait = kasumi_utopia_off
+            add_country_leader_trait = kasumi_utopia_on
+        }
+        if = {
+            limit = {
+                BGD_kasumi_char = { has_trait = kasumi_starbeat_off }
+                has_stability > 0.99
+                has_war_support > 0.99
+                social_democrat > 0.64
+            }
+            remove_country_leader_trait = kasumi_starbeat_off
+            add_country_leader_trait = kasumi_starbeat_on
+        }
+        if = {
+            limit = {
+                BGD_kasumi_char = { has_trait = kasumi_APFNO_kiraism_off }
+                has_completed_focus = BGD_tuanjie_shijie
+            }
+            remove_country_leader_trait = kasumi_APFNO_kiraism_off
+            add_country_leader_trait = kasumi_APFNO_kiraism_on
+            every_country = {
+                limit = {
+                    is_ally_with = BGD
+                    NOT = {
+                        tag = BGD
+                    }
+                }
+                add_popularity = {
+					ideology = social_democrat
+					popularity = 0.1
+				}
+            }
+        }
+    }
+    }
+on_weekly_BGD = {
+    effect = { 
+    if = {
+        limit = {
+            check_variable = { chongjian_jindu > 99 }
+            has_dynamic_modifier = {
+				modifier = BGD_neizhan_feixv
+			}
+        }
+        BGD = {
+                country_event = {
+                    id = bgd.55
+                }
+                country_event = {
+                    id = bgd.131
+                    days = 15
+                }
+            }
+    }
+}
+}
+}

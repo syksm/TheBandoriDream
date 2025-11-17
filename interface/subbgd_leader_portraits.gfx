@@ -1,0 +1,7 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_portrait_shounao"
+		texturefile = "gfx\leaders\EAS\shounao.dds"
+	}
+}

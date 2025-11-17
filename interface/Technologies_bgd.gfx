@@ -1,0 +1,363 @@
+spriteTypes = {	
+	
+	SpriteType = {
+		name = "GFX_BGD_infantry_weapons_medium"
+		texturefile = "gfx/interface/technologies/infantry/JAP_infantry_equipment_0.dds"
+	}		
+	
+	SpriteType = {
+		name = "GFX_BGD_infantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/infantry/JAP_infantry1.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_BGD_infantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/infantry/JAP_infantry2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_BGD_infantry_weapons3_medium"
+		texturefile = "gfx/interface/technologies/infantry/JAP_infantry3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_BGD_infantry_weapons4_medium"
+		texturefile = "gfx/interface/technologies/infantry/JAP_infantry4.png"
+	}
+
+	SpriteType = {
+		name = "GFX_BGD_infantry_weapons5_medium"
+		texturefile = "gfx/interface/technologies/infantry/JAP_infantry5.png"
+	}
+
+	SpriteType = {
+		name = "GFX_BGD_infantry_weapons6_medium"
+		texturefile = "gfx/interface/technologies/infantry/JAP_infantry6.png"
+	}
+
+	### ANTI-AIR ###
+
+    SpriteType = {
+		name = "GFX_BGD_interwar_antiair_medium"
+		texturefile = "gfx/interface/technologies/artillery/JAP_antiair_system1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_BGD_antiair2_medium"
+		texturefile = "gfx/interface/technologies/artillery/JAP_antiair_system2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_BGD_antiair4_medium"
+		texturefile = "gfx/interface/technologies/artillery/JAP_antiair_system3.png"
+	}
+
+	### ANTI-TANK ###
+
+	SpriteType = {
+		name = "GFX_BGD_interwar_antitank_medium"
+		texturefile = "gfx/interface/technologies/artillery/JAP_antitank_system1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_BGD_antitank2_medium"
+		texturefile = "gfx/interface/technologies/artillery/JAP_antitank_system2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_BGD_antitank4_medium"
+		texturefile = "gfx/interface/technologies/artillery/JAP_antitank_system3.png"
+	}
+
+	### OTHER ###
+
+
+	SpriteType = {
+		name = "GFX_BGD_rocket_artillery_medium"
+		texturefile = "gfx/interface/technologies/artillery/JAP_rocket_artillery.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_rocket_artillery4_medium"
+		texturefile = "gfx/interface/technologies/artillery/JAP_rocket_artillery2.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_sp_artillery1_medium"
+		texturefile = "gfx/interface/technologies/artillery/JAP_spa_artillery1.png"
+	}	
+	SpriteType = {
+		name = "GFX_BGD_sp_artillery2_medium"
+		texturefile = "gfx/interface/technologies/artillery/JAP_spa_artillery2.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_sp_artillery3_medium"
+		texturefile = "gfx/interface/technologies/artillery/JAP_spa_artillery3.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_self_propelled_aa1_medium"
+		texturefile = "gfx/interface/technologies/artillery/JAP_sp_artillery1.png"
+	}	
+	SpriteType = {
+		name = "GFX_BGD_self_propelled_aa2_medium"
+		texturefile = "gfx/interface/technologies/artillery/JAP_sp_artillery2.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_artillery1_medium"
+		texturefile = "gfx/interface/technologies/artillery/JAP_artillery_system2.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_artillery3_medium"
+		texturefile = "gfx/interface/technologies/artillery/JAP_artillery_system3.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_artillery5_medium"
+		texturefile = "gfx/interface/technologies/artillery/JAP_artillery_system4.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_tank_destroyer1_medium"
+		texturefile = "gfx/interface/technologies/artillery/JAP_tank_destroyer1.png"
+	}	
+	SpriteType = {
+		name = "GFX_BGD_tank_destroyer2_medium"
+		texturefile = "gfx/interface/technologies/artillery/JAP_tank_destroyer2.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_basic_medium_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_modern_tank3.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_improved_medium_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_modern_tank4.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_advanced_medium_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_modern_tank5.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_modern_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_modern_tank6.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_main_battle_tank_chassis_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_modern_tank6.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_iw_large_airframe_medium"
+		texturefile = "gfx/interface/technologies/aircraft/BOMB_1960_B-52_Stratofortress.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_BGD_basic_large_airframe_medium"
+		texturefile = "gfx/interface/technologies/aircraft/BOMB_1980_B-1_Lancer.dds"
+	}		
+
+	SpriteType = {
+		name = "GFX_BGD_improved_large_airframe_medium"
+		texturefile = "gfx/interface/technologies/aircraft/BOMB_2006_B-2_Spirit.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_BGD_advanced_large_airframe_medium" 
+		texturefile = "gfx/interface/technologies/aircraft/BOMB_2018_B-3_Shadow.dds"
+	}
+
+	SpriteType = {  
+		name = "GFX_BGD_iw_small_airframe_medium"
+		texturefile = "gfx/interface/technologies/aircraft/JAP_fighter1.png"
+	}
+
+	SpriteType = {
+		name = "GFX_BGD_basic_small_airframe_medium"
+		texturefile = "gfx/interface/technologies/aircraft/JAP_fighter2.png"
+	}
+
+	SpriteType = {
+		name = "GFX_BGD_improved_small_airframe_medium"
+		texturefile = "gfx/interface/technologies/aircraft/JAP_fighter3.png"
+	}
+
+	SpriteType = {
+		name = "GFX_BGD_advanced_small_airframe_medium"
+		texturefile = "gfx/interface/technologies/aircraft/JAP_fighter4.png"
+	}
+
+	SpriteType = {
+		name = "GFX_BGD_modern_small_airframe_medium"
+		texturefile = "gfx/interface/technologies/aircraft/SOV_fighter8.png"
+	}
+	# Helicopters #
+	SpriteType = {
+		name = "GFX_BGD_utility_helicopter_1_medium"
+		texturefile = "gfx/interface/technologies/aircraft/JAP_utility_helicopter_equipment_1.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_BGD_utility_helicopter_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/aircraft/JAP_utility_helicopter_equipment_1.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_BGD_utility_helicopter_2_medium"
+		texturefile = "gfx/interface/technologies/aircraft/JAP_utility_helicopter_equipment_2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_BGD_utility_helicopter_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/aircraft/JAP_utility_helicopter_equipment_2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_BGD_attack_helicopter_1_medium"
+		texturefile = "gfx/interface/technologies/aircraft/JAP_attack_helicopter_equipment_1.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_BGD_attack_helicopter_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/aircraft/JAP_attack_helicopter_equipment_1.png"
+	}	
+	
+	SpriteType = {
+		name = "GFX_BGD_attack_helicopter_2_medium"
+		texturefile = "gfx/interface/technologies/aircraft/JAP_attack_helicopter_equipment_2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_BGD_attack_helicopter_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/aircraft/JAP_attack_helicopter_equipment_2.png"
+	}
+
+	# CAS #
+	SpriteType = {
+		name = "GFX_BGD_CAS1_medium"
+		texturefile = "gfx/interface/technologies/aircraft/JAP_CAS1.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_BGD_CAS2_medium"
+		texturefile = "gfx/interface/technologies/aircraft/JAP_CAS2.png"
+	}
+	
+	## FIGHTERS ##
+	SpriteType = {
+		name = "GFX_BGD_fighter1_medium"
+		texturefile = "gfx/interface/technologies/aircraft/JAP_fighter1.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_BGD_fighter2_medium"
+		texturefile = "gfx/interface/technologies/aircraft/JAP_fighter2.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_BGD_fighter3_medium"
+		texturefile = "gfx/interface/technologies/aircraft/JAP_fighter3.png"
+	}
+	
+	SpriteType = {
+		name = "GFX_BGD_fighter4_medium"
+		texturefile = "gfx/interface/technologies/aircraft/JAP_fighter4.png"
+	}
+
+	SpriteType = {
+		name = "GFX_BGD_maritime_patrol_plane_medium"
+		texturefile = "gfx/interface/technologies/aircraft/JAP_maritime_patrol_plane.png"
+	}
+	## MAIN BATTLE TANKS ##
+	SpriteType = {
+		name = "GFX_BGD_main_battle_tank1_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_modern_tank1.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_main_battle_tank2_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_modern_tank2.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_main_battle_tank3_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_modern_tank3.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_main_battle_tank4_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_modern_tank4.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_main_battle_tank5_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_modern_tank5.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_main_battle_tank6_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_modern_tank6.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_main_battle_tank7_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_modern_tank7.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_main_battle_tank8_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_modern_tank8.png"
+	}
+	
+	## MECHANIZED ##
+	SpriteType = {
+		name = "GFX_BGD_mechanised_infantry1_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_mechanized1.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_mechanised_infantry2_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_mechanized2.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_mechanised_infantry3_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_mechanized3.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_mechanised_infantry4_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_mechanized4.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_mechanised_infantry5_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_mechanized5.png"
+	}
+
+	SpriteType = {
+		name = "GFX_BGD_amphibious_mechanized_equipment_1_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_amphibious_mechanized_infantry.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_amphibious_mechanized_equipment_2_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_amphibious_mechanized_infantry.png"
+	}
+	
+	## LIGHT MECHANIZED ##
+	SpriteType = {
+		name = "GFX_BGD_light_mechanized_infantry1_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_light_mechanized1.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_light_mechanized_infantry2_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_light_mechanized2.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_light_mechanized_infantry3_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_light_mechanized3.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_light_mechanized_infantry4_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_light_mechanized4.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_light_mechanized_infantry5_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_light_mechanized5.png"
+	}
+
+	SpriteType = {
+		name = "GFX_BGD_motorised_infantry_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_motorised_infantry.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_motorised_infantry2_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_motorised_infantry2.png"
+	}
+	SpriteType = {
+		name = "GFX_BGD_motorised_infantry3_medium"
+		texturefile = "gfx/interface/technologies/armor/JAP_motorised_infantry3.png"
+	}
+}

@@ -1,0 +1,69 @@
+ideas = {
+	mobilization_laws = {
+		law = yes
+		use_list_view = yes
+		BGD_reqing_zhiyuanbing = {
+			cost = 100
+			removal_cost = -1
+			picture = laws_conscription1
+			level = 6
+			allowed = {
+				tag = BGD
+			}
+			available = {
+				has_country_flag = BGD_qiyong_zhuanshu_zhengbing
+			}
+			visible = {
+				has_country_flag = BGD_qiyong_zhuanshu_zhengbing
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			modifier = {
+				conscription = 0.01
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+			ai_will_do = {
+				base = 1
+			}
+			cancel_if_invalid = no
+		}
+	}
+	supervision_laws = {
+		law = yes
+		use_list_view = yes
+		BGD_wangdao_zhishi = {
+			removal_cost = -1
+			cost = 100
+			level = 1
+			picture = laws_higher_supervision
+			cancel_if_invalid = no
+			allowed = {
+				tag = BGD
+			}
+			available = {
+				has_country_flag = BGD_zhuanshu_junshi_jiandu_faan
+			}
+			visible = {
+				has_country_flag = BGD_zhuanshu_junshi_jiandu_faan
+			}
+			allowed_to_remove = {
+				always = no
+			}
+			modifier = {
+				army_attack_factor = -0.12
+				breakthrough_factor = -0.08
+				army_defence_factor = 0.05
+				war_support_factor = 0.15
+				experience_gain_factor = 0.3
+				battalion_upkeep_factor = 0.25
+				military_development_monthly = 0.02
+			}
+			ai_will_do = {
+				base = 1
+			}
+		}
+	}
+}
