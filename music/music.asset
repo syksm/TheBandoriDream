@@ -1,0 +1,160 @@
+music = {
+	name = "maintheme"
+	file = "hoi4mainthemeallies.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - Yes! BanG_Dream!"
+	file = "yesbangdream.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - B.O.F"
+	file = "Poppin'Party - B.O.F.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - Dreamers Go!"
+	file = "Poppin'Party - Dreamers Go!.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - Happy Happy Party!"
+	file = "Poppin'Party - Happy Happy Party!.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - Home Street"
+	file = "Poppin'Party - Home Street.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - Jumpin'"
+	file = "Poppin'Party - Jumpin'.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - Photograph"
+	file = "Poppin'Party - Photograph.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - Returns"
+	file = "Poppin'Party - Returns.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - STAR BEAT!～ホシノコドウ～"
+	file = "Poppin'Party - STAR BEAT!～ホシノコドウ～.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - White Afternoon"
+	file = "Poppin'Party - White Afternoon.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - イニシャル"
+	file = "Poppin'Party - イニシャル.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - イントロダクション"
+	file = "Poppin'Party - イントロダクション.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - キズナミュージック♪"
+	file = "Poppin'Party - キズナミュージック♪.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - ティアドロップス"
+	file = "Poppin'Party - ティアドロップス.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - ときめきエクスペリエンス！"
+	file = "Poppin'Party - ときめきエクスペリエンス！.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - ぽっぴん’しゃっふる"
+	file = "Poppin'Party - ぽっぴん’しゃっふる.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - ぽっぴん'どりーむ！"
+	file = "Poppin'Party - ぽっぴん'どりーむ！.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - 二重の虹(ダブル レインボウ)"
+	file = "Poppin'Party - 二重の虹(ダブル レインボウ).ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - 夢を撃ち抜く瞬間に!"
+	file = "Poppin'Party - 夢を撃ち抜く瞬間に!.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - 私の心はチョココロネ"
+	file = "Poppin'Party - 私の心はチョココロネ.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - 夏空 SUN! SUN! SEVEN!"
+	file = "Poppin'Party - 夏空 SUN! SUN! SEVEN!.ogg"
+	volume = 0.65
+}
+music = {
+	name = "CiRCLE THANKS MUSiC"
+	file = "CiRCLE THANKS MUSiC.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - 1000回潤んだ空"
+	file = "Poppin'Party - 1000回潤んだ空.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - 切ないSandglass"
+	file = "Poppin'Party - 切ないSandglass.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - 八月のif"
+	file = "Poppin'Party - 八月のif.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - 走り始めたばかりのキミに"
+	file = "Poppin'Party - 走り始めたばかりのキミに.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - クリスマスのうた"
+	file = "Poppin'Party - クリスマスのうた.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Poppin'Party - Time Lapse"
+	file = "Poppin'Party - Time Lapse.ogg"
+	volume = 0.65
+}
+music = {
+	name = "大盛り一丁! ガルパ☆ピコ"
+	file = "大盛り一丁! ガルパ☆ピコ.ogg"
+	volume = 0.65
+}
+music = {
+	name = "ピコたるもの、ふぃーばー！"
+	file = "ピコたるもの、ふぃーばー！.ogg"
+	volume = 0.65
+}
+music = {
+	name = "ピコっと！パピっと！！ガルパ☆ピコ！！！"
+	file = "ピコっと！パピっと！！ガルパ☆ピコ！！！.ogg"
+	volume = 0.65
+}

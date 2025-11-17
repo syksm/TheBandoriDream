@@ -1,0 +1,10 @@
+music = {
+	name = "one_minute_of_silence"
+	file = "one_minute_of_silence.ogg"
+	volume = 0.0
+}
+music = {
+	name = "beethoven5"
+	file = "beethoven5.ogg"
+	volume = 0.65
+}

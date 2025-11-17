@@ -1,0 +1,14 @@
+music_station = "a_minute"
+
+music = {
+	song = "one_minute_of_silence"
+	chance = {
+		base = 0	
+	}
+}
+music = {
+	song = "beethoven5"
+	chance = {
+		base = 0	
+	}
+}

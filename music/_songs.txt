@@ -1,0 +1,194 @@
+music_station = "BanGDream"
+
+music = {
+	song = "maintheme"
+	chance = {
+		base = 0
+	}
+}
+music = {
+	song = "Poppin'Party - Yes! BanG_Dream!"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - B.O.F"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - Dreamers Go!"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - Happy Happy Party!"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - Home Street"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - Jumpin'"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - Photograph"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - Returns"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - STAR BEAT!～ホシノコドウ～"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - White Afternoon"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - イニシャル"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - イントロダクション"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - キズナミュージック♪"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - ティアドロップス"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - ときめきエクスペリエンス！"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - ぽっぴん’しゃっふる"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - ぽっぴん'どりーむ！"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - 二重の虹(ダブル レインボウ)"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - 夢を撃ち抜く瞬間に!"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - 私の心はチョココロネ"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - 夏空 SUN! SUN! SEVEN!"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "CiRCLE THANKS MUSiC"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - 1000回潤んだ空"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - 切ないSandglass"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - 八月のif"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - 走り始めたばかりのキミに"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - クリスマスのうた"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "Poppin'Party - Time Lapse"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "大盛り一丁! ガルパ☆ピコ"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "ピコたるもの、ふぃーばー！"
+	chance = {
+        base = 10		
+	}
+}
+music = {
+	song = "ピコっと！パピっと！！ガルパ☆ピコ！！！"
+	chance = {
+        base = 10		
+	}
+}
