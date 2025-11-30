@@ -576,10 +576,15 @@ spriteTypes = { #NVX# Tag for changes
 
 	spriteType = {
 		name = "GFX_pol_view_bg"
-		textureFile = "gfx//interface//pol_view_bg.dds"
+		textureFile = "gfx//interface//pol_view_bg_new.dds"
 	}
 	spriteType = {
 		name = "GFX_pol_view_bg_new"
+		textureFile = "gfx//interface//pol_view_bg_new.dds"
+	}
+
+	spriteType = {
+		name = "GFX_pol_view_bg_no_dlc"
 		textureFile = "gfx//interface//pol_view_bg_new.dds"
 	}
 
@@ -695,7 +700,13 @@ spriteTypes = { #NVX# Tag for changes
 		texturefile = "gfx/interface/ideas/ZZZ_government_type/ZZZ_chinese_political_system.png" 
 		legacy_lazy_load = no
 	}
-	
+
+	spriteType = {
+		name = "GFX_taiwanese_semi_presidential_system"
+		texturefile = "gfx/interface/ideas/ZZZ_government_type/ZZZ_taiwanese_semi_presidential_system.png" 
+		legacy_lazy_load = no
+	}
+
 	spriteType = {
 		name = "GFX_absolute_monarchy" 
 		texturefile = "gfx/interface/ideas/ZZZ_government_type/ZZZ_absolute_monarchy.png" 
@@ -712,7 +723,7 @@ spriteTypes = { #NVX# Tag for changes
 		name = "GFX_constitutional_monarchy" 
 		texturefile = "gfx/interface/ideas/ZZZ_government_type/ZZZ_constitutional_monarchy.png" 
 		legacy_lazy_load = no
-	}
+	} 
 	
 	spriteType = {
 		name = "GFX_american_presidential_republic" 
@@ -745,6 +756,12 @@ spriteTypes = { #NVX# Tag for changes
 	}
 	
 	spriteType = {
+		name = "GFX_personalistic_dictatorship" 
+		texturefile = "gfx/interface/ideas/ZZZ_government_type/ZZZ_personalistic_dictatorship.png" 
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
 		name = "GFX_nazi_dictatorship" 
 		texturefile = "gfx/interface/ideas/ZZZ_government_type/ZZZ_nazi_dictatorship.png" 
 		legacy_lazy_load = no
@@ -759,6 +776,18 @@ spriteTypes = { #NVX# Tag for changes
 	spriteType = {
 		name = "GFX_parliamentary_republic" 
 		texturefile = "gfx/interface/ideas/ZZZ_government_type/ZZZ_parliamentary_republic.png" 
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_directorial_system" 
+		texturefile = "gfx/interface/ideas/ZZZ_government_type/ZZZ_directorial_system.png" 
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_crime_syndicate" 
+		texturefile = "gfx/interface/ideas/ZZZ_government_type/ZZZ_crime_syndicate.png" 
 		legacy_lazy_load = no
 	}
 	
@@ -781,6 +810,12 @@ spriteTypes = { #NVX# Tag for changes
 	}
 	
 	spriteType = {
+		name = "GFX_corporate_council"
+		texturefile = "gfx/interface/ideas/ZZZ_government_type/ZZZ_corporate_council.png" 
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
 		name = "GFX_semi_constitutional_monarchy" 
 		texturefile = "gfx/interface/ideas/ZZZ_government_type/ZZZ_semi_constitutional_monarchy.png" 
 		legacy_lazy_load = no
@@ -795,6 +830,12 @@ spriteTypes = { #NVX# Tag for changes
 	spriteType = {
 		name = "GFX_socialist_republic" 
 		texturefile = "gfx/interface/ideas/ZZZ_government_type/ZZZ_socialist_republic.png" 
+		legacy_lazy_load = no
+	}	
+	
+	spriteType = {
+		name = "GFX_peoples_democracy" 
+		texturefile = "gfx/interface/ideas/ZZZ_government_type/ZZZ_peoples_democracy.png" 
 		legacy_lazy_load = no
 	}	
 	
@@ -819,6 +860,17 @@ spriteTypes = { #NVX# Tag for changes
 	spriteType = {
 		name = "GFX_ai_governance" 
 		texturefile = "gfx/interface/ideas/ZZZ_government_type/ZZZ_ai_governance.png" 
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_counterintelligence_state" 
+		texturefile = "gfx/interface/ideas/ZZZ_government_type/ZZZ_counterintelligence_state.png" 
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_counterintelligence_state_SOV" 
+		texturefile = "gfx/interface/ideas/ZZZ_government_type/ZZZ_counterintelligence_state_SOV.png" 
 		legacy_lazy_load = no
 	}
 	
