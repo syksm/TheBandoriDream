@@ -1,0 +1,28 @@
+objectTypes = {
+
+
+
+#########
+# JAPAN #
+#########
+	
+	pdxmesh = {
+		name = "BGD_armored_car_1_mesh"
+		file = "gfx/models/vehicles/JAP_armored_car_1.mesh"
+
+		animation = { id = "attack"			type = "JAP_armored_car_1_attack_animation" }
+		animation = { id = "idle"			type = "JAP_armored_car_1_idle_animation" }
+		animation = { id = "move"			type = "JAP_armored_car_1_moving_animation" }
+	}
+	
+	pdxmesh = {
+		name = "BGD_armored_car_3_mesh"
+		file = "gfx/models/vehicles/JAP_armored_car_3.mesh"
+
+		animation = { id = "attack"			type = "JAP_armored_car_3_attack_animation" }
+		animation = { id = "idle"			type = "JAP_armored_car_3_idle_animation" }
+		animation = { id = "move"			type = "JAP_armored_car_3_moving_animation" }
+	}
+
+
+}

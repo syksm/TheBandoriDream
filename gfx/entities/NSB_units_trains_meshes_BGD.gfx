@@ -1,0 +1,127 @@
+
+objectTypes = {
+		
+	
+	
+	pdxmesh = {
+		name = "BGD_train_locomotive_equipment_1_mesh"
+		file = "gfx/models/units/trains/USA_train_locomotive_equipment_1.mesh"
+		
+		animation = { id = "move" type = "train_locomotive_1_idle" }
+		animation = { id = "idle" type = "train_locomotive_1_moving" }
+
+		meshsettings = {
+			name = "BGD_train_equipment_1_Shape"
+			index = 0
+			texture_diffuse = "JAP_train_equipment_1_diffuse.dds"
+			texture_normal = "JAP_train_equipment_1_normal.dds"
+			texture_specular = "JAP_train_equipment_1_specular.dds"
+			shader = "PdxMeshTrain"
+		}
+	}
+	
+	pdxmesh = {
+		name = "BGD_train_coal_equipment_1_mesh"
+		file = "gfx/models/units/trains/wagon_1.mesh"
+		
+		animation = { id = "move" type = "train_coal_1_idle" }
+		animation = { id = "idle" type = "train_coal_1_moving" }
+
+		meshsettings = {
+			name = "BGD_train_coal_equipment_1_Shape"
+			index = 0
+			texture_diffuse = "JAP_train_equipment_1_diffuse.dds"
+			texture_normal = "JAP_train_equipment_1_normal.dds"
+			texture_specular = "JAP_train_equipment_1_specular.dds"
+			shader = "PdxMeshTrain"
+		}
+	}
+	
+	pdxmesh = {
+		name = "BGD_train_locomotive_equipment_2_mesh"
+		file = "gfx/models/units/trains/USA_train_locomotive_equipment_1.mesh"
+		
+		animation = { id = "move" type = "train_locomotive_1_idle" }
+		animation = { id = "idle" type = "train_locomotive_1_moving" }
+
+		meshsettings = {
+			name = "BGD_train_locomotive_equipment_2_Shape"
+			index = 0
+			texture_diffuse = "JAP_train_equipment_2_diffuse.dds"
+			texture_normal = "JAP_train_equipment_2_normal.dds"
+			texture_specular = "JAP_train_equipment_2_specular.dds"
+			shader = "PdxMeshTrain"
+		}
+	}
+	
+	pdxmesh = {
+		name = "BGD_train_coal_equipment_2_mesh"
+		file = "gfx/models/units/trains/wagon_1.mesh"
+		
+		animation = { id = "move" type = "train_coal_1_idle" }
+		animation = { id = "idle" type = "train_coal_1_moving" }
+
+		meshsettings = {
+			name = "BGD_train_equipment_2_Shape"
+			index = 0
+			texture_diffuse = "JAP_train_equipment_2_diffuse.dds"
+			texture_normal = "JAP_train_equipment_2_normal.dds"
+			texture_specular = "JAP_train_equipment_2_specular.dds"
+			shader = "PdxMeshTrain"
+		}
+	}
+	
+	pdxmesh = {
+		name = "BGD_train_locomotive_1_equipment_3_mesh"
+		file = "gfx/models/units/trains/USA_train_locomotive_equipment_1.mesh"
+		
+		animation = { id = "move" type = "train_locomotive_1_idle" }
+		animation = { id = "idle" type = "train_locomotive_1_moving" }
+
+		meshsettings = {
+			name = "BGD_train_locomotive_1_equipment_3_Shape"
+			index = 0
+			texture_diffuse = "JAP_train_equipment_3_diffuse.dds"
+			texture_normal = "JAP_train_equipment_3_normal.dds"
+			texture_specular = "JAP_train_equipment_3_specular.dds"
+			shader = "PdxMeshTrain"
+		}
+	}
+	
+	pdxmesh = {
+		name = "BGD_train_locomotive_2_equipment_3_mesh"
+		file = "gfx/models/units/trains/USA_train_locomotive_equipment_1.mesh"
+		
+		animation = { id = "move" type = "train_locomotive_1_idle" }
+		animation = { id = "idle" type = "train_locomotive_1_moving" }
+
+		meshsettings = {
+			name = "BGD_train_locomotive_2_equipment_3_low_Shape"
+			index = 0
+			texture_diffuse = "JAP_train_equipment_3_diffuse.dds"
+			texture_normal = "JAP_train_equipment_3_normal.dds"
+			texture_specular = "JAP_train_equipment_3_specular.dds"
+			shader = "PdxMeshTrain"
+		}
+	}
+	
+	pdxmesh = {
+		name = "BGD_train_coal_equipment_3_mesh"
+		file = "gfx/models/units/trains/wagon_1.mesh"
+		
+		animation = { id = "move" type = "train_coal_1_idle" }
+		animation = { id = "idle" type = "train_coal_1_moving" }
+
+		meshsettings = {
+			name = "BGD_train_coal_equipment_3_Shape"
+			index = 0
+			texture_diffuse = "JAP_train_equipment_3_diffuse.dds"
+			texture_normal = "JAP_train_equipment_3_normal.dds"
+			texture_specular = "JAP_train_equipment_3_specular.dds"
+			shader = "PdxMeshTrain"
+		}
+	}
+	
+	
+	
+}

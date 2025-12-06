@@ -1,0 +1,16 @@
+	objectTypes = {
+	
+	
+	
+	pdxmesh = {
+		name = "BGD_plane_medium_mesh"
+		file = "gfx/models/units/planes/JAP_plane_medium.mesh"
+	}
+	
+	pdxmesh = {
+		name = "BGD_plane_heavy_mesh"
+		file = "gfx/models/units/planes/JAP_plane_heavy.mesh"
+	}
+	
+	
+}

@@ -1,0 +1,14 @@
+objectTypes = {
+
+
+	pdxmesh = {
+		name = "BGD_mechanized_mesh"
+		file = "gfx/models/units/tanks/JAP/JAP_IFV_Type_89.mesh"
+
+		animation = { id = "attack"			type = "JAP_IFV_Type_89_attack_animation" }
+		animation = { id = "idle"			type = "JAP_IFV_Type_89_idle_animation" }
+		animation = { id = "move"			type = "JAP_IFV_Type_89_moving_animation" }
+	}
+	
+	
+}
